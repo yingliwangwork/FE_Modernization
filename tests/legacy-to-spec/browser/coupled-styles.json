@@ -1,0 +1,66 @@
+{
+  "case": "coupled",
+  "scenarios": [
+    {
+      "id": "page-source-styles",
+      "source": "inputs/frontend/styles/base.css:1; source body font-family/max-width/margin/color",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action": "css", "selector": "body", "property": "font-family", "value": "sans-serif"},
+        {"action": "css", "selector": "body", "property": "max-width", "value": "720px"},
+        {"action": "css", "selector": "body", "property": "margin-top", "value": "24px"},
+        {"action": "css", "selector": "body", "property": "margin-left", "value": "24px"},
+        {"action": "css", "selector": "body", "property": "color", "value": "rgb(34, 34, 34)"}
+      ]
+    },
+    {
+      "id": "table-source-styles",
+      "source": "inputs/frontend/styles/base.css:2; source table collapse/width/margin",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action": "css", "selector": "table", "property": "border-collapse", "value": "collapse"},
+        {"action": "css", "selector": "table", "property": "width", "value": "720px"},
+        {"action": "css", "selector": "table", "property": "margin-top", "value": "16px"},
+        {"action": "css", "selector": "table", "property": "margin-bottom", "value": "16px"},
+        {"action": "css", "selector": "table", "property": "margin-left", "value": "0px"}
+      ]
+    },
+    {
+      "id": "table-cell-source-styles",
+      "source": "inputs/frontend/styles/base.css:3; source th/td border/padding/alignment",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action": "css", "selector": "th", "nth": 0, "property": "border-top-width", "value": "1px"},
+        {"action": "css", "selector": "th", "nth": 0, "property": "border-top-style", "value": "solid"},
+        {"action": "css", "selector": "th", "nth": 0, "property": "border-top-color", "value": "rgb(85, 85, 85)"},
+        {"action": "css", "selector": "th", "nth": 0, "property": "padding-top", "value": "6px"},
+        {"action": "css", "selector": "th", "nth": 0, "property": "padding-right", "value": "6px"},
+        {"action": "css", "selector": "th", "nth": 0, "property": "text-align", "value": "left"}
+      ]
+    },
+    {
+      "id": "dynamic-result-cells-use-delivered-css",
+      "source": "Case.jsp:24-30 creates three cells per successful item; base.css:3 applies to td as well as th. Synthetic rows only exercise confirmed presentation.",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action": "click", "role": "button", "name": "查閱"},
+        {"action": "select", "selector": "#response", "value": "DONE"},
+        {"action": "click", "selector": "#deliver"},
+        {"action": "count", "selector": "#rows tr", "value": 2},
+        {"action": "css", "selector": "td", "nth": 0, "property": "border-top-color", "value": "rgb(85, 85, 85)"},
+        {"action": "css", "selector": "td", "nth": 0, "property": "padding-top", "value": "6px"},
+        {"action": "css", "selector": "td", "nth": 0, "property": "text-align", "value": "left"}
+      ]
+    },
+    {
+      "id": "action-area-source-style",
+      "source": "inputs/frontend/styles/base.css:4; action-bar margin-top",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action": "css", "selector": ".action-bar", "property": "margin-top", "value": "8px"},
+        {"action": "click", "role": "button", "name": "查閱"},
+        {"action": "count", "selector": "#rows tr", "value": 0}
+      ]
+    }
+  ]
+}

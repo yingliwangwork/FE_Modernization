@@ -1,0 +1,79 @@
+{
+  "case": "coupled",
+  "scenarios": [
+    {
+      "id": "initial-view",
+      "source": "inputs/frontend/Case.jsp:49-61; no initial query or rows",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action":"value","label":"關鍵字","value":""},
+        {"action":"attribute","label":"關鍵字","attribute":"maxlength","value":"12"},
+        {"action":"count","selector":"#rows tr","value":0},
+        {"action":"content","selector":"#status","value":""}
+      ]
+    },
+    {
+      "id": "query-order-and-trim",
+      "source": "Case.jsp:20-34; clears status before request, retains rows until callback, trims input; two synthetic rows only supply scenario data",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action":"click","role":"button","name":"查閱"},
+        {"action":"select","selector":"#review-result","value":"DONE"},
+        {"action":"click","role":"button","name":"交付展示回應"},
+        {"action":"count","selector":"#rows tr","value":2},
+        {"action":"fill","label":"關鍵字","value":"  Ab  "},
+        {"action":"click","role":"button","name":"查閱"},
+        {"action":"count","selector":"#rows tr","value":2},
+        {"action":"contains","selector":"#review-log","value":"\"Ab\""},
+        {"action":"content","selector":"#status","value":""}
+      ]
+    },
+    {
+      "id": "empty-response",
+      "source": "Case.jsp:24,32-33; contract EMPTY maps legacy NONE",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action":"click","role":"button","name":"查閱"},
+        {"action":"select","selector":"#review-result","value":"NONE"},
+        {"action":"click","role":"button","name":"交付展示回應"},
+        {"action":"count","selector":"#rows tr","value":0},
+        {"action":"content","selector":"#status","value":"沒有項目"}
+      ]
+    },
+    {
+      "id": "denied-response",
+      "source": "Case.jsp:24,34-35; contract DENIED maps legacy BLOCK",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action":"click","role":"button","name":"查閱"},
+        {"action":"select","selector":"#review-result","value":"BLOCK"},
+        {"action":"click","role":"button","name":"交付展示回應"},
+        {"action":"count","selector":"#rows tr","value":0},
+        {"action":"content","selector":"#status","value":"不允許查閱"}
+      ]
+    },
+    {
+      "id": "empty-quantity-rejected",
+      "source": "Case.jsp:41-44; exact empty-string guard and alert",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action":"click","role":"button","name":"送出數量"},
+        {"action":"dialog","value":"數量不得為空"},
+        {"action":"value","label":"數量","value":""},
+        {"action":"content","selector":"#status","value":""}
+      ]
+    },
+    {
+      "id": "nonempty-quantity-stops-at-boundary",
+      "source": "Case.jsp:41-46; whitespace is nonempty; target quantity logic has no API contract, no backend execution may be claimed",
+      "file": "SCR-01.html",
+      "steps": [
+        {"action":"fill","label":"數量","value":" "},
+        {"action":"click","role":"button","name":"送出數量"},
+        {"action":"value","label":"數量","value":" "},
+        {"action":"contains","selector":"#review-log","value":"未計算"},
+        {"action":"content","selector":"#status","value":""}
+      ]
+    }
+  ]
+}
