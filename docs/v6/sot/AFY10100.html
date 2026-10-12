@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hant" data-ir-version="6" data-screen-id="AFY10100">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ir-companion" content="./AFY10100.md">
+<meta name="ir-source" content="sourceCode/AF/AFY10100.jsp">
+<title>AFY10100 — 公會通報查詢（視覺契約）</title>
+<style>
+:root{--bg:#f0fbc6;--blue:#003366;--head:#cfe2f3;--label:#fff3bf;--value:#f8fbff;--line:#69809b;--muted:#53606d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#17212b;font-family:Arial,"Microsoft JhengHei",sans-serif;font-size:13px}
+.snapshot{width:min(100% - 20px,1600px);margin:10px auto;border:1px solid var(--blue);background:#fff;padding:8px;overflow:auto}
+.snapshot>h2{font-size:14px;margin:0 0 8px;color:var(--muted)}.titlebar{display:grid;grid-template-columns:30px 1fr 1fr;align-items:center;background:#d8efaa;padding:4px 8px;border-bottom:4px solid var(--blue)}
+.titlebar strong:last-child{text-align:right}.panel-title{font-weight:bold;padding:6px 4px}.grid{width:100%;border-collapse:separate;border-spacing:1px;background:var(--line);table-layout:fixed}
+.grid td,.grid th{padding:4px;background:white;border:0;text-align:center;vertical-align:middle}.grid .label{background:var(--label);font-weight:600}.grid .value{background:var(--value)}
+.criteria col.label-col{width:8%}.criteria .query-cell{width:10%}.criteria input[type=text]{width:100%}.benefit{min-width:1250px}.premium{min-width:1000px}.edit{min-width:1300px}.results{min-width:1700px}
+input,select,button{font:inherit}button{cursor:default}.actions{display:flex;justify-content:center;gap:6px}.notes td{text-align:left;background:#fff8d8}
+.conditional{border:2px dashed #8a6d1d;background:#fff9db;padding:8px;margin:8px 0}.unknown{color:#694d00}.msg{border:1px solid #cc9a06;background:#fff8d8;padding:6px;margin-top:8px}
+template{display:none}.state-card{padding:8px;border:1px dashed var(--line);background:#f8fafc}.state-card+.state-card{margin-top:8px}
+</style>
+</head>
+<body>
+<main data-ir-id="V-PAGE">
+<section class="snapshot" data-ir-id="ST-DEFAULT" data-state="default-empty">
+<h2>初始／查詢結果空集合</h2>
+<table class="grid" data-ir-id="V-TABLE-01"><tr><td>
+  <table class="grid" data-ir-id="V-TABLE-02"><tr><td>&nbsp;</td></tr></table>
+  <table class="grid titlebar" data-ir-id="V-TABLE-03"><tr><td>●</td><td>公會通報查詢</td><td>畫面編號：AFY10100</td></tr></table>
+</td><td class="value">&nbsp;</td><td class="value">&nbsp;</td><td class="value">&nbsp;</td></tr></table>
+<table class="grid" data-ir-id="V-TABLE-04"><tr><td>&nbsp;</td></tr></table>
+<table class="grid" data-ir-id="V-TABLE-05"><tr><td>&nbsp;</td><td>
+<table class="grid" data-ir-id="V-TABLE-06"><tr><td>
+<table class="grid" data-ir-id="V-TABLE-07"><tr><td class="panel-title">公會通報查詢</td></tr><tr><td>
+<table class="grid" data-ir-id="V-TABLE-08"><tr><td>
+<table class="grid criteria" data-ir-id="V-TABLE-09">
+<colgroup><col class="label-col"><col><col class="label-col"><col><col class="label-col"><col><col class="query-cell"></colgroup>
+<tr>
+<td class="label">身份證字號/統一編號</td><td class="value"><input data-ir-id="F-INPUT-ID" id="inputId" name="inputId" type="text"></td>
+<td class="label">契約角色</td><td class="value"><select data-ir-id="F-ROLE" id="role" name="role"><option value="I">被保人</option><option value="A">要保人</option></select></td>
+<td class="label">保單效力</td><td class="value"><select data-ir-id="F-QUERY-STATUS" id="status" name="status"><option value="Y">有效</option><option value="N">無效</option><option value="A">全部</option></select></td>
+<td class="value" rowspan="3"><button data-ir-id="E-QUERY" data-action-id="E-QUERY" type="button">F2查詢</button></td>
+</tr>
+<tr><td class="label">姓名</td><td class="value"><input data-ir-id="F-NAME" type="text" readonly value=""></td><td class="label">生日</td><td class="value"><output data-ir-id="F-BIRTHDAY">—</output></td><td class="label">公會資料取回日期</td><td class="value" colspan="2"><output data-ir-id="F-LAST-UPDATE-TIME">—</output></td></tr>
+</table>
+<div class="conditional unknown" data-unknown-ref="U-RUNTIME-ISRETURN">「同步更新公會回檔狀態」由 R-IS-RETURN 決定；此預設快照不固定其存在與否。</div>
+<table class="grid benefit" data-ir-id="V-TABLE-10" data-defect-ref="D-BENEFIT-COLSPAN">
+<tr><td colspan="16">保障項目彙整</td></tr>
+<tr><th>項目</th><th>合計</th><th>同業合計</th><th>收件</th><th>承保</th><th>項目</th><th>合計</th><th>同業合計</th><th>收件</th><th>承保</th><th>項目</th><th>合計</th><th>同業合計</th><th>收件</th><th>承保</th></tr>
+<tr><td class="label">身故</td><td class="value"><output data-ir-id="F-SUM-PAY1-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY1-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY1-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY1-LN">—</output></td><td class="label">完全失能或最高級失能</td><td class="value"><output data-ir-id="F-SUM-PAY2-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY2-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY2-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY2-LN">—</output></td><td class="label">失能扶助金</td><td class="value"><output data-ir-id="F-SUM-PAY3-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY3-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY3-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY3-LN">—</output></td></tr>
+<tr><td class="label">特定事故</td><td class="value"><output data-ir-id="F-SUM-PAY4-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY4-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY4-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY4-LN">—</output></td><td class="label">初次罹患</td><td class="value"><output data-ir-id="F-SUM-PAY5-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY5-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY5-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY5-LN">—</output></td><td class="label">醫療限額</td><td class="value"><output data-ir-id="F-SUM-PAY6-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY6-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY6-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY6-LN">—</output></td></tr>
+<tr><td class="label">醫療限額自負</td><td class="value"><output data-ir-id="F-SUM-PAY7-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY7-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY7-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY7-LN">—</output></td><td class="label">醫療日額</td><td class="value"><output data-ir-id="F-SUM-PAY8-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY8-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY8-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY8-LN">—</output></td><td class="label">住院手術</td><td class="value"><output data-ir-id="F-SUM-PAY9-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY9-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY9-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY9-LN">—</output></td></tr>
+<tr><td class="label">門診手術</td><td class="value"><output data-ir-id="F-SUM-PAY10-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY10-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY10-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY10-LN">—</output></td><td class="label">門診</td><td class="value"><output data-ir-id="F-SUM-PAY11-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY11-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY11-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY11-LN">—</output></td><td class="label">重大疾/傷病</td><td class="value"><output data-ir-id="F-SUM-PAY12-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY12-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY12-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY12-LN">—</output></td></tr>
+<tr><td class="label">重大傷燙傷</td><td class="value"><output data-ir-id="F-SUM-PAY13-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY13-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY13-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY13-LN">—</output></td><td class="label">癌症療養</td><td class="value"><output data-ir-id="F-SUM-PAY14-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY14-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY14-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY14-LN">—</output></td><td class="label">出院療養</td><td class="value"><output data-ir-id="F-SUM-PAY15-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY15-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY15-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY15-LN">—</output></td></tr>
+<tr><td class="label">喪失工作能力</td><td class="value"><output data-ir-id="F-SUM-PAY16-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY16-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY16-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY16-LN">—</output></td><td class="label">喪葬費用</td><td class="value"><output data-ir-id="F-SUM-PAY17-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY17-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY17-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY17-LN">—</output></td><td class="label">銜接原醫療限額之自負額</td><td class="value"><output data-ir-id="F-SUM-PAY18-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY18-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY18-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY18-LN">—</output></td></tr>
+<tr><td class="label">分期給付</td><td class="value"><output data-ir-id="F-SUM-PAY19-TOT">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY19-SAME">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY19-RR">—</output></td><td class="value"><output data-ir-id="F-SUM-PAY19-LN">—</output></td><td class="label">&nbsp;</td><td class="value">&nbsp;</td><td class="value">&nbsp;</td><td class="value">&nbsp;</td><td class="value">&nbsp;</td><td class="label">&nbsp;</td><td class="value">&nbsp;</td><td class="value">&nbsp;</td><td class="value">&nbsp;</td><td class="value">&nbsp;</td></tr>
+</table>
+<table class="grid premium" data-ir-id="V-TABLE-11">
+<tr><td colspan="13">保費資料彙整</td></tr>
+<tr><th>項目</th><th>合計</th><th>收件</th><th>承保</th><th>項目</th><th>合計</th><th>收件</th><th>承保</th><th>項目</th><th>合計</th><th>收件</th><th>承保</th><th>操作者</th></tr>
+<tr><td class="label">年繳保費</td><td><output data-ir-id="F-PREM-YEAR-TOT">—</output></td><td><output data-ir-id="F-PREM-YEAR-RR">—</output></td><td><output data-ir-id="F-PREM-YEAR-LN">—</output></td><td class="label">躉繳保費</td><td><output data-ir-id="F-PREM-ONCE-TOT">—</output></td><td><output data-ir-id="F-PREM-ONCE-RR">—</output></td><td><output data-ir-id="F-PREM-ONCE-LN">—</output></td><td class="label">超額(彈性)保險費</td><td><output data-ir-id="F-PREM-FLEX-TOT">—</output></td><td><output data-ir-id="F-PREM-FLEX-RR">—</output></td><td><output data-ir-id="F-PREM-FLEX-LN">—</output></td><td><output data-ir-id="F-UPDATE-ID">—</output></td></tr>
+</table>
+<div class="state-card" data-ir-id="V-RESULTS-EMPTY">新制通報資料明細：目前無資料列。</div>
+<table class="grid notes" data-ir-id="V-TABLE-14">
+<tr><td>1. 銷售通路:1網路投保 2業務員3保經、保代 4電話行銷 5機場櫃檯</td></tr>
+<tr><td>2. 保單分類：1個人；2團體</td></tr>
+<tr><td>3. 險種分類：1人壽保險；2傷害保險；3健康保險 4.年金保險。</td></tr>
+<tr><td>4. 險種：01一般；02特定；03投資型；04日額型；05實支實付型；06日額或實支實付擇一型；07手術型；08重大疾病；09帳戶型；10長期看護型；11喪失工作能力；12防癌；13旅平險；14微型；15微型實支實付；16小額終老保險；17.失能扶助保險；18.登山綜合保險；19定期人壽保險(不含一年期)；20海域活動綜合保險；21一年期</td></tr>
+<tr><td>5. 繳別：1躉繳；2年繳；3半年繳；4季繳；5月繳；6彈性繳；9繳費期滿</td></tr>
+<tr><td>6. 保單狀況： 收件: 01有效；06未承保取消件；07契約註銷；11滿期(契約到期)；12鍵值欄位通報錯誤終止；15通報更正; 50一○七條/一○七條之一承保資料；51一○七條理賠資料（未滿14足歲之未成年人）；52一○七條/一○七條之一理賠資料（精神障礙或其他心智缺陷/受監護宣告尚未撤銷）。 承保: 01有效；02增額；03減額；04展期；05繳清；06契約撤銷； 07停效; 10解除契約；11滿期(契約到期)；12鍵值欄位通報錯誤終止；20終止1:由要保人提出終止契約效力;21.終止2:主被保險人死亡，其他被保險人附同時終止或完全失能或理賠給付後終止附約;30被保險人因自然死身故；31被保險人因意外身故;32被保險人因其他原因故;50一○七條/一○七條之一承保資料；51一○七條理賠資料（未滿14足歲之未成年人）；52一○七條/一○七條之一理賠資料（精神障礙或其他心智缺陷/受監護宣告尚未撤銷）。</td></tr>
+<tr><td>7. 保障及保費彙整欄位，金額依頁面上的筆數加總，含本公司及產、壽險通報資料。</td></tr>
+<tr><td>8. 即時捉取公會資料：輸入身份證字號／統一證號，按F8即時捉取公會資料鈕</td></tr>
+</table>
+<div class="msg unknown" data-ir-id="MSG-EXECUTION" data-unknown-ref="U-RUNTIME-MESSAGE">執行結果訊息區域由共用訊息元件與本次回應共同決定。</div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</section>
+
+<section class="snapshot" data-ir-id="ST-RESULTS" data-state="results-present">
+<h2>候選狀態：查詢結果至少一列（示例資料以「—」標示）</h2>
+<table class="grid results" data-ir-id="V-TABLE-13" data-defect-ref="D-ORPHAN-TD">
+<tr><td colspan="18">新制通報資料明細</td></tr>
+<tr><th>序號</th><th>選取</th><th><button type="button" data-ir-id="E-SORT-INSR-TYPE" data-action-id="E-SORT-INSR-TYPE">通報方式<span aria-hidden="true">▼</span></button></th><th><button type="button" data-ir-id="E-SORT-COMPANY-NAME" data-action-id="E-SORT-COMPANY-NAME">公司別<span aria-hidden="true">▼</span></button></th><th><button type="button" data-ir-id="E-SORT-POLICY-NO" data-action-id="E-SORT-POLICY-NO">保單號碼<span aria-hidden="true">▼</span></button></th><th>銷售通路</th><th>商品代碼</th><th>保單分類</th><th>險種分類</th><th><button type="button" data-ir-id="E-SORT-PROD-KIND" data-action-id="E-SORT-PROD-KIND">險種<span aria-hidden="true">▼</span></button></th><th>保單狀況</th><th>身故保額</th><th>醫療限額</th><th>醫療日額</th><th><button type="button" data-ir-id="E-SORT-ISSUE-DATE" data-action-id="E-SORT-ISSUE-DATE">契約生效日<span aria-hidden="true">▼</span></button></th><th>契約滿期日</th><th>要保人姓名</th><th>通報時間</th></tr>
+<template data-repeat-id="R-RESULT-LIST" data-key-ref="status.index"><tr><td><output data-ir-id="F-ROW-SEQ">1</output></td><td><input data-ir-id="F-ROW-SELECT" type="radio" name="item" aria-label="選取示例列"></td><td><button type="button" data-ir-id="E-OPEN-DETAIL" data-action-id="E-OPEN-DETAIL">A　公會通報</button></td><td><output data-ir-id="F-ROW-COMPANY-NAME">—</output></td><td><output data-ir-id="F-ROW-POLICY-NO">—</output></td><td><output data-ir-id="F-ROW-SALE-CHNL">—</output></td><td><output data-ir-id="F-ROW-PROD-CODE">—</output></td><td><output data-ir-id="F-ROW-POLICY-CAT">—</output></td><td><output data-ir-id="F-ROW-POLICY-DUTY">—</output></td><td><output data-ir-id="F-ROW-PROD-KIND">—</output></td><td><output data-ir-id="F-ROW-STATUS">—</output></td><td><output data-ir-id="F-ROW-PAY-AMT1">—</output></td><td><output data-ir-id="F-ROW-PAY-AMT6">—</output></td><td><output data-ir-id="F-ROW-PAY-AMT8">—</output></td><td><output data-ir-id="F-ROW-ISSUE-DATE">—</output></td><td><output data-ir-id="F-ROW-LPS-DATE">—</output></td><td><output data-ir-id="F-ROW-A-NAME">—</output></td><td><output data-ir-id="F-ROW-UPDATE-TIME">—</output></td></tr></template>
+<tr aria-label="示例資料列"><td><output>1</output></td><td><input type="radio" name="item" aria-label="選取示例列"></td><td><button type="button" data-action-id="E-OPEN-DETAIL">A　公會通報</button></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td><td><output>—</output></td></tr>
+<tr><td colspan="18" class="conditional unknown" data-unknown-ref="U-RUNTIME-ALLOW">F8 即時取回公會資料動作由 R-IS-ALLOW 決定；此候選列不固定其存在與否。</td></tr>
+</table>
+</section>
+
+<section class="snapshot" data-ir-id="ST-SELECTED" data-state="row-selected-edit-visible">
+<h2>選取資料列後：資料編輯區顯示</h2>
+<table class="grid edit" data-ir-id="V-TABLE-12">
+<tr><td colspan="10">資料編輯區</td></tr>
+<tr><td class="label">通報方式</td><td class="value"><output data-ir-id="F-EDIT-INSR-TYPE">—</output></td><td class="label">公司別</td><td class="value"><output data-ir-id="F-EDIT-CMNY-CODE">—</output></td><td class="label">被保人ID</td><td class="value"><output data-ir-id="F-EDIT-I-ID">—</output></td><td class="label">被保人生日</td><td class="value"><output data-ir-id="F-EDIT-I-BIRTHDAY">—</output></td><td class="label">保單號碼</td><td class="value"><output data-ir-id="F-EDIT-POLICY-NO">—</output></td></tr>
+<tr><td class="label">保單分類</td><td class="value"><output data-ir-id="F-EDIT-POLICY-CAT">—</output></td><td class="label">險種分類</td><td class="value"><output data-ir-id="F-EDIT-POLICY-DUTY">—</output></td><td class="label">險種</td><td class="value"><output data-ir-id="F-EDIT-PROD-KIND">—</output></td><td class="label">保單狀況</td><td class="value"><output data-ir-id="F-EDIT-STATUS">—</output></td><td class="label">保單狀況生效日期(受理理賠日、身故日)</td><td class="value"><output data-ir-id="F-EDIT-LST-CHG-DATE">—</output></td></tr>
+<tr><td class="label">主約保單號碼</td><td class="value"><output data-ir-id="F-EDIT-MAIN-POLICY-NO">—</output></td><td class="label">契約生效日</td><td class="value"><output data-ir-id="F-EDIT-ISSUE-DATE">—</output></td><td class="label">契約生效時分</td><td class="value"><output data-ir-id="F-EDIT-ISSUE-TIME">—</output></td><td class="label">契約滿期日</td><td class="value"><output data-ir-id="F-EDIT-LPS-DATE">—</output></td><td class="label">契約滿期時分</td><td class="value"><output data-ir-id="F-EDIT-LPS-TIME">—</output></td></tr>
+<tr><td class="label">要保書填寫日</td><td class="value"><output data-ir-id="F-EDIT-SIGN-DATE">—</output></td><td class="label">保費</td><td class="value"><output data-ir-id="F-EDIT-PREM">—</output></td><td class="label">保費繳別</td><td class="value"><output data-ir-id="F-EDIT-PAY-FREQ">—</output></td><td class="label">保費繳費年期</td><td class="value"><output data-ir-id="F-EDIT-PAY-PERIOD">—</output></td><td class="label">保單狀況生效時分</td><td class="value"><output data-ir-id="F-EDIT-LST-CHG-TIME">—</output></td></tr>
+<tr><td class="label">身故</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT1" type="text" value=""></td><td class="label">完全失能或最高級失能</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT2" type="text" value=""></td><td class="label">失能扶助金</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT3" type="text" value=""></td><td class="label">特定事故</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT4" type="text" value=""></td><td class="label">初次罹患</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT5" type="text" value=""></td></tr>
+<tr><td class="label">醫療限額</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT6" type="text" value=""></td><td class="label">醫療限額自負</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT7" type="text" value=""></td><td class="label">醫療日額</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT8" type="text" value=""></td><td class="label">住院手術</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT9" type="text" value=""></td><td class="label">門診手術</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT10" type="text" value=""></td></tr>
+<tr><td class="label">門診</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT11" type="text" value=""></td><td class="label">重大疾/傷病</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT12" type="text" value=""></td><td class="label">重大傷燙傷</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT13" type="text" value=""></td><td class="label">癌症療養</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT14" type="text" value=""></td><td class="label">出院療養</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT15" type="text" value=""></td></tr>
+<tr><td class="label">喪失工作能力</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT16" type="text" value=""></td><td class="label">喪葬費用</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT17" type="text" value=""></td><td class="label">銜接原醫療限額之自負額</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT18" type="text" value=""></td><td class="label">分期給付</td><td class="value"><input data-ir-id="F-EDIT-PAY-AMT19" type="text" value=""></td><td class="label">保經代分類</td><td class="value"><input data-ir-id="F-EDIT-BROKTYPE" type="text" value=""></td></tr>
+<tr><td class="label">要保人姓名</td><td class="value"><input data-ir-id="F-EDIT-A-NAME" type="text" value=""></td><td class="label">要保人身分證號碼</td><td class="value"><input data-ir-id="F-EDIT-A-ID" type="text" value=""></td><td class="label">要保人出生日期</td><td class="value"><input data-ir-id="F-EDIT-A-BIRTHDAY" type="text" value=""></td><td class="label">要保人與被保險人關係</td><td class="value"><input data-ir-id="F-EDIT-RELATION" type="text" value=""></td><td class="label">資料寫入時間</td><td class="value"><output data-ir-id="F-EDIT-UPDATE-TIME">—</output></td></tr>
+
+<tr><td class="label">被保險人性別</td><td><select data-ir-id="F-EDIT-I-GENDER"><option value="1">男</option><option value="2">女</option></select></td><td class="label">公、自費件</td><td><select data-ir-id="F-EDIT-PAY-TYPE"><option value="0">無</option><option value="1">公費</option><option value="2">自費</option></select></td><td class="label">來源別</td><td><output data-ir-id="F-EDIT-OIU-IND">—</output></td><td class="label">銷售通路</td><td><output data-ir-id="F-EDIT-SALE-CHNL">—</output></td><td class="label">商品代碼</td><td><output data-ir-id="F-EDIT-PROD-CODE">—</output></td></tr>
+<tr><td class="label">公會取回序號</td><td><output data-ir-id="F-EDIT-SER-NO">—</output></td><td class="label">&nbsp;</td><td>&nbsp;</td><td class="label">&nbsp;</td><td>&nbsp;</td><td class="label">&nbsp;</td><td>&nbsp;</td><td class="label">&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td colspan="10"><div class="actions"><button data-ir-id="E-EDIT" data-action-id="E-EDIT" type="button">F9修改</button><button data-ir-id="E-DELETE" data-action-id="E-DELETE" type="button">F10刪除</button><button data-ir-id="E-CANCEL" data-action-id="E-CANCEL" type="button">取消</button></div></td></tr>
+</table>
+</section>
+
+<section class="snapshot" data-ir-id="ST-CANDIDATE-RETURN" data-state="candidate-not-default" data-unknown-ref="U-RUNTIME-ISRETURN">
+<h2>候選快照：R-IS-RETURN 成立</h2><label><input data-ir-id="F-IS-RETURN" type="checkbox" value="Y">同步更新公會回檔狀態</label>
+</section>
+<section class="snapshot" data-ir-id="ST-CANDIDATE-ALLOW" data-state="candidate-not-default" data-unknown-ref="U-RUNTIME-ALLOW">
+<h2>候選快照：R-IS-ALLOW 成立</h2><button data-ir-id="E-ASYNC" data-action-id="E-ASYNC" type="button">F8即時取回公會資料</button>
+</section>
+</main>
+</body>
+</html>

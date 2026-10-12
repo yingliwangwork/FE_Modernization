@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-Hant" data-ir-version="4" data-screen-id="DSC80106">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ir-companion" content="./DSC80106.md">
+  <meta name="ir-source" content="sourceCode/DS/C8/DSC8_0100/DSC80106.jsp">
+  <title>DSC80106 — 貸款年期變更記錄（視覺契約）</title>
+  <style>
+    :root {
+      --page-bg: #f4f6f8;
+      --surface: #fff;
+      --border: #8c98a4;
+      --label-bg: #fff3bf;
+      --value-bg: #e7f5ff;
+      --text: #17212b;
+      --muted: #5b6670;
+      --focus: #1769aa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--page-bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .snapshot {
+      width: calc(100% - 2rem);
+      margin: 1rem auto;
+      padding: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+    .snapshot-label, .contract-note {
+      margin: 0 0 0.75rem;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    .page-header { margin-bottom: 0.75rem; }
+    .page-header p { margin: 0; color: var(--muted); }
+    .page-header h1 { margin: 0.2rem 0 0; font-size: 1.35rem; }
+    .record-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1px;
+      table-layout: auto;
+      background: var(--border);
+    }
+    .record-table td { padding: 0.35rem 0.5rem; vertical-align: middle; }
+    .label { width: 10%; background: var(--label-bg); font-weight: 600; }
+    .value { width: 15%; min-height: 1.75rem; background: var(--value-bg); }
+    .value-slot { min-height: 1.25rem; }
+    .eudc { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .action-cell { text-align: center; background: var(--value-bg); }
+    button { padding: 0.3rem 1rem; font: inherit; }
+    button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .placeholder { color: var(--muted); font-style: italic; }
+    .candidate { border-style: dashed; }
+  </style>
+</head>
+<body>
+  <main data-ir-id="V-PAGE">
+    <section class="snapshot" data-ir-id="ST-INITIAL" data-state="initial-empty">
+      <p class="snapshot-label">初始狀態：頁面骨架已建立、查詢尚未成功回填；空白亦代表查詢未成功或回傳值為假值時的相同外觀。</p>
+
+      <header class="page-header" data-ir-id="V-HEADER" data-unknown-ref="U-PAGEUI-RENDER">
+        <p>變更作業</p>
+        <h1>貸款年期變更記錄</h1>
+      </header>
+
+      <section data-ir-id="V-CONTENT">
+        <form aria-label="貸款年期變更記錄">
+          <table class="record-table" data-ir-id="V-RECORD-TABLE">
+            <tbody>
+              <tr>
+                <td class="label">貸款帳號</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-LOAN-ID"></div></td>
+                <td class="label">變更日期</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-APPLY-DATE"></div></td>
+                <td class="label">序號</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-SEQ-NO"></div></td>
+              </tr>
+              <tr>
+                <td class="label">原貸款期數</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-LOAN-PERIOD1"></div></td>
+                <td class="label">原分期期數</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-SPR-PERIOD1"></div></td>
+                <td class="label">原定期期數</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-FIX-PERIOD1"></div></td>
+              </tr>
+              <tr>
+                <td class="label">原期別</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-TERM-TYPE1"></div></td>
+                <td class="label">原還款方式</td>
+                <td class="value" colspan="3"><div class="value-slot" data-ir-id="F-RETURN-TYPE1"></div></td>
+              </tr>
+              <tr>
+                <td class="label">新貸款期數</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-LOAN-PERIOD2"></div></td>
+                <td class="label">新分期期數</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-SPR-PERIOD2"></div></td>
+                <td class="label">新定期期數</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-FIX-PERIOD2"></div></td>
+              </tr>
+              <tr>
+                <td class="label">新期別</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-TERM-TYPE2"></div></td>
+                <td class="label">新還款方式</td>
+                <td class="value" colspan="3"><div class="value-slot" data-ir-id="F-RETURN-TYPE2"></div></td>
+              </tr>
+              <tr>
+                <td class="label">輸入人員</td>
+                <td class="value">
+                  <div class="value-slot" data-ir-id="F-INPUT-ID"></div>
+                  <div class="value-slot eudc" data-ir-id="F-INPUT-NM"></div>
+                </td>
+                <td class="label">輸入日期</td>
+                <td class="value"><div class="value-slot" data-ir-id="F-INPUT-DATE"></div></td>
+                <td class="label">輸入單位</td>
+                <td class="value">
+                  <div class="value-slot" data-ir-id="F-INPUT-DEPT"></div>
+                  <div class="value-slot" data-ir-id="F-INPUT-DEPT-NM"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="label" rowspan="2">覆核人員</td>
+                <td class="value" rowspan="2">
+                  <div class="value-slot" data-ir-id="F-CONFIRM-ID"></div>
+                  <div class="value-slot eudc" data-ir-id="F-CONFIRM-NM"></div>
+                </td>
+                <td class="label" rowspan="2">覆核日期</td>
+                <td class="value" rowspan="2"><div class="value-slot" data-ir-id="F-CONFIRM-DATE"></div></td>
+                <td class="label" rowspan="2">覆核單位</td>
+                <td class="value" rowspan="2">
+                  <div class="value-slot" data-ir-id="F-CONFIRM-DEPT"></div>
+                  <div class="value-slot" data-ir-id="F-CONFIRM-DEPT-NM"></div>
+                </td>
+              </tr>
+              <tr></tr>
+              <tr>
+                <td class="action-cell" colspan="8" data-ir-id="V-ACTIONS">
+                  <button type="button" data-ir-id="E-CLOSE">關閉視窗</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </section>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-LOADED" data-state="query-success" data-unknown-ref="U-FIELD-DOMAINS">
+      <p class="snapshot-label">查詢成功候選快照：沿用來源同一張表格結構；斜體文字只是鍵名佔位，不宣告格式或實值。</p>
+      <header class="page-header" data-ir-id="V-LOADED-HEADER" data-unknown-ref="U-PAGEUI-RENDER">
+        <p>變更作業</p>
+        <h1>貸款年期變更記錄</h1>
+      </header>
+      <section data-ir-id="V-LOADED-CONTENT">
+        <table class="record-table" data-ir-id="V-LOADED-TABLE" data-unknown-ref="U-DOM-UPDATE">
+          <tbody>
+            <tr><td class="label">貸款帳號</td><td class="value placeholder">LOAN_ID 回傳值</td><td class="label">變更日期</td><td class="value placeholder">APPLY_DATE 回傳值</td><td class="label">序號</td><td class="value placeholder">SEQ_NO 回傳值</td></tr>
+            <tr><td class="label">原貸款期數</td><td class="value placeholder">LOAN_PERIOD1 回傳值</td><td class="label">原分期期數</td><td class="value placeholder">SPR_PERIOD1 回傳值</td><td class="label">原定期期數</td><td class="value placeholder">FIX_PERIOD1 回傳值</td></tr>
+            <tr><td class="label">原期別</td><td class="value placeholder">TERM_TYPE1 回傳值</td><td class="label">原還款方式</td><td class="value placeholder" colspan="3">RETURN_TYPE1 回傳值</td></tr>
+            <tr><td class="label">新貸款期數</td><td class="value placeholder">LOAN_PERIOD2 回傳值</td><td class="label">新分期期數</td><td class="value placeholder">SPR_PERIOD2 回傳值</td><td class="label">新定期期數</td><td class="value placeholder">FIX_PERIOD2 回傳值</td></tr>
+            <tr><td class="label">新期別</td><td class="value placeholder">TERM_TYPE2 回傳值</td><td class="label">新還款方式</td><td class="value placeholder" colspan="3">RETURN_TYPE2 回傳值</td></tr>
+            <tr><td class="label">輸入人員</td><td class="value placeholder">INPUT_ID 回傳值<br>INPUT_NM 回傳值</td><td class="label">輸入日期</td><td class="value placeholder">INPUT_DATE 回傳值</td><td class="label">輸入單位</td><td class="value placeholder">INPUT_DEPT 回傳值<br>INPUT_DEPT_NM 回傳值</td></tr>
+            <tr><td class="label" rowspan="2">覆核人員</td><td class="value placeholder" rowspan="2">CONFIRM_ID 回傳值<br>CONFIRM_NM 回傳值</td><td class="label" rowspan="2">覆核日期</td><td class="value placeholder" rowspan="2">CONFIRM_DATE 回傳值</td><td class="label" rowspan="2">覆核單位</td><td class="value placeholder" rowspan="2">CONFIRM_DEPT 回傳值<br>CONFIRM_DEPT_NM 回傳值</td></tr>
+            <tr></tr>
+            <tr><td class="action-cell" colspan="8" data-ir-id="V-LOADED-ACTIONS"><button type="button" data-action-ref="E-CLOSE">關閉視窗</button></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <aside class="snapshot candidate" data-ir-id="ST-SHARED-CANDIDATE" data-state="candidate-not-current" data-unknown-ref="U-SHARED-RUNTIME">
+      <p class="snapshot-label">候選狀態（非預設、非現況斷言）</p>
+      <p class="contract-note">共用引入層可能增加浮水印、列印／複製管制或訊息呈現；是否出現及外觀須由執行期條件決定，本契約不固定其中一種結果。</p>
+    </aside>
+  </main>
+</body>
+</html>

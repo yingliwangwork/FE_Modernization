@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant" data-ir-version="4" data-screen-id="{{SCREEN_ID}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ir-companion" content="./{{SCREEN_ID}}.md">
+  <meta name="ir-source" content="{{SOURCE_PATH}}">
+  <title>{{SCREEN_ID}} — {{SCREEN_TITLE}}（視覺契約）</title>
+  <style>
+    /*
+      本檔必須完全離線顯示。樣式只重現來源的視覺階層、群組、順序、
+      欄位狀態與主要尺寸關係；不得引入目標框架或可執行業務邏輯。
+    */
+    :root {
+      --ir-page-bg: #f4f6f8;
+      --ir-surface: #ffffff;
+      --ir-border: #9aa5b1;
+      --ir-label-bg: #fff3bf;
+      --ir-value-bg: #e7f5ff;
+      --ir-text: #17212b;
+      --ir-muted: #5b6670;
+      --ir-focus: #1769aa;
+      --ir-error: #b42318;
+      --ir-space: 0.75rem;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ir-text);
+      background: var(--ir-page-bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .ir-snapshot {
+      width: min(100% - 2rem, {{CANVAS_WIDTH}});
+      margin: 1rem auto;
+      padding: 1rem;
+      background: var(--ir-surface);
+      border: 1px solid var(--ir-border);
+    }
+    .ir-snapshot-label {
+      margin: 0 0 0.75rem;
+      color: var(--ir-muted);
+      font-size: 0.875rem;
+    }
+    .ir-toolbar { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .ir-field-grid { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    .ir-field-grid th, .ir-field-grid td { border: 1px solid var(--ir-border); padding: 0.35rem 0.5rem; }
+    .ir-label { background: var(--ir-label-bg); font-weight: 600; }
+    .ir-value { background: var(--ir-value-bg); }
+    .ir-error { color: var(--ir-error); }
+    input, select, textarea, button { font: inherit; }
+    :focus-visible { outline: 2px solid var(--ir-focus); outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <!--
+    產出規則：
+    1. 每個可見區塊、欄位、動作與狀態快照使用唯一 data-ir-id。
+    2. ID 類型：V-* 區塊、F-* 欄位、E-* 動作、ST-* 狀態、MSG-* 訊息。
+    3. data-visible-when / data-enabled-when 只填 Markdown 中的規則 ID，不放運算式。
+    4. 不得加入 script、JSP/EL、API 呼叫、驗證或狀態轉換程式。
+    5. 隱藏送出欄位不是視覺內容，只記在 companion Markdown。
+    6. 來源存在條件渲染或重大狀態差異時，每種可觀察結果各做一個快照。
+    7. 重複區使用 <template data-repeat-id="..." data-key-ref="..."> 保留欄序與列骨架。
+    8. 來源缺陷若無法用有效 HTML 原樣呈現，以 data-defect-ref 指向 Markdown，
+       並以最接近瀏覽器修復結果的快照呈現；不得假裝來源沒有缺陷。
+  -->
+
+  <main data-ir-id="V-PAGE">
+    <section class="ir-snapshot" data-ir-id="ST-DEFAULT" data-state="default">
+      <p class="ir-snapshot-label">{{DEFAULT_STATE_LABEL}}</p>
+
+      <header data-ir-id="V-HEADER">
+        <h1>{{SCREEN_TITLE}}</h1>
+      </header>
+
+      <section data-ir-id="V-CONTENT">
+        <!-- 依來源由上而下重建所有可見區塊、文字、欄位、表格與動作。 -->
+      </section>
+
+      <footer data-ir-id="V-ACTIONS" class="ir-toolbar">
+        <!-- 例：<button type="button" data-ir-id="E-SEARCH">查詢</button> -->
+      </footer>
+    </section>
+
+    <!--
+      依 Markdown §6/§9/§10 所列「可觀察結果」增加 ST-* 快照；
+      不得只寫狀態名稱而省略實際畫面差異。
+    -->
+  </main>
+</body>
+</html>

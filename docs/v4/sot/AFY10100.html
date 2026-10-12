@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant" data-ir-version="4" data-screen-id="AFY10100" data-complexity="高">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ir-companion" content="./AFY10100.md">
+  <meta name="ir-source" content="sourceCode/AF/AFY10100.jsp">
+  <title>AFY10100 — 公會通報查詢（視覺契約）</title>
+  <style>
+    :root{--bg:#f0fbc6;--line:#31536f;--label:#fff3a8;--value:#fff;--head:#c9e5f4;--muted:#65717b;--focus:#1769aa}
+    *{box-sizing:border-box} body{margin:0;background:#eef2f5;color:#17212b;font:14px Arial,"Microsoft JhengHei",sans-serif}
+    .snapshot{width:min(98vw,1500px);margin:16px auto;padding:12px;background:var(--bg);border:1px solid #789}
+    .snapshot>p:first-child{margin:0 0 8px;color:var(--muted)} h1{font-size:18px;margin:0}
+    .titlebar{display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid var(--line);padding:6px 8px;margin-bottom:8px}
+    .panel{border:1px solid var(--line);margin:8px 0;background:white}.panel>h2{font-size:15px;margin:0;padding:7px;background:#d9e7d0}
+    table{width:100%;border-collapse:collapse;table-layout:fixed} th,td{border:1px solid #8d9aa3;padding:4px;vertical-align:middle}
+    th,.label{background:var(--label);font-weight:600}.data-head{background:var(--head)}.value{background:var(--value)}
+    input,select,button{font:inherit} input[type=text],select{width:100%;min-width:5rem;padding:3px}.readonly{display:block;min-height:1.6em;background:#e9ecef;padding:3px}
+    button,.action{display:inline-block;margin:2px;padding:4px 10px;border:1px solid #607080;background:#f7f7f7;color:#111;text-decoration:none}
+    .actions{text-align:center}.scroll{overflow:auto}.wide{min-width:1360px}.edit{min-width:1200px}.notes{margin:0;padding:8px 28px}.notes li{margin:5px 0}
+    .mock{color:#495057;font-style:italic}.empty{padding:18px;text-align:center;color:#667}.compact{max-width:900px}.message{padding:10px;border:1px solid #b42318;background:#fff4f2}
+    :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  </style>
+</head>
+<body>
+<main data-ir-id="V-PAGE">
+  <section class="snapshot" data-ir-id="ST-LOADED" data-state="loaded-with-result-and-permissions">
+    <p>狀態快照：查詢已載入、有結果，且條件式操作均存在。灰字為格式示例。</p>
+    <header class="titlebar" data-ir-id="V-HEADER"><h1>● 公會通報查詢</h1><span>畫面編號：AFY10100</span></header>
+
+    <section class="panel" data-ir-id="V-SEARCH"><h2>公會通報查詢</h2>
+      <table><tbody>
+        <tr>
+          <th>身份證字號/統一編號</th><td><input data-ir-id="F-INPUT-ID" type="text" value="A123456789" aria-label="身份證字號/統一編號"><label><input data-ir-id="F-IS-RETURN" type="checkbox">同步更新公會回檔狀態</label></td>
+          <th>契約角色</th><td><select data-ir-id="F-ROLE"><option>被保人</option><option>要保人</option></select></td>
+          <th>保單效力</th><td><select data-ir-id="F-STATUS"><option>有效</option><option>無效</option><option>全部</option></select></td>
+          <td class="actions" rowspan="2"><button data-ir-id="E-QUERY" type="button">F2查詢</button></td>
+        </tr>
+        <tr><th>姓名</th><td><span class="readonly mock" data-ir-id="F-NAME">王小明（示例）</span></td><th>生日</th><td><span data-ir-id="F-BIRTHDAY" class="mock">1980/01/01（示例）</span></td><th>公會資料取回日期</th><td colspan="2"><span data-ir-id="F-LAST-UPDATE" class="mock">2026/09/22 10:30（示例）</span></td></tr>
+      </tbody></table>
+    </section>
+
+    <section class="panel scroll" data-ir-id="V-BENEFIT-SUMMARY"><h2>保障項目彙整</h2>
+      <table class="wide"><thead><tr>
+        <th class="data-head">項目</th><th class="data-head">合計</th><th class="data-head">同業合計</th><th class="data-head">收件</th><th class="data-head">承保</th>
+        <th class="data-head">項目</th><th class="data-head">合計</th><th class="data-head">同業合計</th><th class="data-head">收件</th><th class="data-head">承保</th>
+        <th class="data-head">項目</th><th class="data-head">合計</th><th class="data-head">同業合計</th><th class="data-head">收件</th><th class="data-head">承保</th>
+      </tr></thead><tbody>
+        <tr><th>身故</th><td data-ir-id="F-SUM-PAY-AMT1">1,000,000</td><td>500,000</td><td>400,000</td><td>600,000</td><th>完全失能或最高級失能</th><td data-ir-id="F-SUM-PAY-AMT2">800,000</td><td>300,000</td><td>350,000</td><td>450,000</td><th>失能扶助金</th><td data-ir-id="F-SUM-PAY-AMT3">30,000</td><td>10,000</td><td>12,000</td><td>18,000</td></tr>
+        <tr><th>特定事故</th><td data-ir-id="F-SUM-PAY-AMT4">100,000</td><td>20,000</td><td>40,000</td><td>60,000</td><th>初次罹患</th><td data-ir-id="F-SUM-PAY-AMT5">200,000</td><td>30,000</td><td>80,000</td><td>120,000</td><th>醫療限額</th><td data-ir-id="F-SUM-PAY-AMT6">300,000</td><td>40,000</td><td>140,000</td><td>160,000</td></tr>
+        <tr><th>醫療限額自負</th><td data-ir-id="F-SUM-PAY-AMT7">50,000</td><td>5,000</td><td>20,000</td><td>30,000</td><th>醫療日額</th><td data-ir-id="F-SUM-PAY-AMT8">2,000</td><td>500</td><td>800</td><td>1,200</td><th>住院手術</th><td data-ir-id="F-SUM-PAY-AMT9">60,000</td><td>8,000</td><td>20,000</td><td>40,000</td></tr>
+        <tr><th>門診手術</th><td data-ir-id="F-SUM-PAY-AMT10">20,000</td><td>3,000</td><td>8,000</td><td>12,000</td><th>門診</th><td data-ir-id="F-SUM-PAY-AMT11">1,000</td><td>200</td><td>400</td><td>600</td><th>重大疾/傷病</th><td data-ir-id="F-SUM-PAY-AMT12">500,000</td><td>50,000</td><td>200,000</td><td>300,000</td></tr>
+        <tr><th>重大傷燙傷</th><td data-ir-id="F-SUM-PAY-AMT13">400,000</td><td>40,000</td><td>150,000</td><td>250,000</td><th>癌症療養</th><td data-ir-id="F-SUM-PAY-AMT14">100,000</td><td>20,000</td><td>40,000</td><td>60,000</td><th>出院療養</th><td data-ir-id="F-SUM-PAY-AMT15">10,000</td><td>1,000</td><td>4,000</td><td>6,000</td></tr>
+        <tr><th>喪失工作能力</th><td data-ir-id="F-SUM-PAY-AMT16">300,000</td><td>30,000</td><td>100,000</td><td>200,000</td><th>喪葬費用</th><td data-ir-id="F-SUM-PAY-AMT17">200,000</td><td>20,000</td><td>80,000</td><td>120,000</td><th>銜接原醫療限額之自負額</th><td data-ir-id="F-SUM-PAY-AMT18">50,000</td><td>5,000</td><td>20,000</td><td>30,000</td></tr>
+        <tr><th>分期給付</th><td data-ir-id="F-SUM-PAY-AMT19">25,000</td><td>2,000</td><td>10,000</td><td>15,000</td><th></th><td></td><td></td><td></td><td></td><th></th><td></td><td></td><td></td><td></td></tr>
+      </tbody></table>
+    </section>
+
+    <section class="panel scroll" data-ir-id="V-PREMIUM-SUMMARY"><h2>保費資料彙整</h2>
+      <table><thead><tr><th class="data-head">項目</th><th class="data-head">合計</th><th class="data-head">收件</th><th class="data-head">承保</th><th class="data-head">項目</th><th class="data-head">合計</th><th class="data-head">收件</th><th class="data-head">承保</th><th class="data-head">項目</th><th class="data-head">合計</th><th class="data-head">收件</th><th class="data-head">承保</th><th class="data-head">操作者</th></tr></thead>
+      <tbody><tr><th>年繳保費</th><td data-ir-id="F-YEAR-PREM">36,000</td><td>16,000</td><td>20,000</td><th>躉繳保費</th><td data-ir-id="F-ONCE-PREM">100,000</td><td>40,000</td><td>60,000</td><th>超額(彈性)保險費</th><td data-ir-id="F-FLEX-PREM">12,000</td><td>5,000</td><td>7,000</td><td data-ir-id="F-UPDATE-ID">OP001</td></tr></tbody></table>
+    </section>
+
+    <section class="panel scroll" data-ir-id="V-RESULT"><h2>新制通報資料明細</h2>
+      <table class="wide"><thead><tr>
+        <th data-ir-id="F-RESULT-SEQ">序號</th><th data-ir-id="F-RESULT-SELECT">選取</th>
+        <th><a class="action" data-ir-id="E-SORT-INSR-TYPE" href="#">通報方式 ▼</a></th><th><a class="action" data-ir-id="E-SORT-CMNY-CODE" href="#">公司別 ▼</a></th><th><a class="action" data-ir-id="E-SORT-POLICY-NO" href="#">保單號碼 ▼</a></th>
+        <th data-ir-id="F-RESULT-SALE-CHNL">銷售通路</th><th data-ir-id="F-RESULT-PROD-CODE">商品代碼</th><th data-ir-id="F-RESULT-POLICY-CAT">保單分類</th><th data-ir-id="F-RESULT-POLICY-DUTY">險種分類</th>
+        <th><a class="action" data-ir-id="E-SORT-PROD-KIND" href="#">險種 ▼</a></th><th data-ir-id="F-RESULT-STATUS">保單狀況</th><th data-ir-id="F-RESULT-PAY-AMT1">身故保額</th><th data-ir-id="F-RESULT-PAY-AMT6">醫療限額</th><th data-ir-id="F-RESULT-PAY-AMT8">醫療日額</th>
+        <th><a class="action" data-ir-id="E-SORT-ISSUE-DATE" href="#">契約生效日 ▼</a></th><th data-ir-id="F-RESULT-LPS-DATE">契約滿期日</th><th data-ir-id="F-RESULT-A-NAME">要保人姓名</th><th data-ir-id="F-RESULT-UPDATE-TIME">通報時間</th>
+      </tr></thead><tbody>
+        <tr class="mock"><td>1</td><td><input data-ir-id="E-SELECT-ROW" type="radio" name="mock-item" aria-label="選取示例列"></td><td><a data-ir-id="E-OPEN-DETAIL" href="#">N 新制（示例）</a></td><td>示例公司</td><td>P00001234</td><td>2</td><td>PROD01</td><td>1</td><td>1</td><td>01</td><td>01</td><td>1,000,000</td><td>300,000</td><td>2,000</td><td>2026/01/01</td><td>2046/01/01</td><td>王小明</td><td>2026/09/22 10:30</td></tr>
+        <template data-repeat-id="R-RESULT-LOOP" data-key-ref="F-HIDDEN-ROW-INDEX"><tr><td>序號</td><td>選取</td><td>通報方式</td><td>公司別</td><td>保單號碼</td><td>銷售通路</td><td>商品代碼</td><td>保單分類</td><td>險種分類</td><td>險種</td><td>保單狀況</td><td>身故保額</td><td>醫療限額</td><td>醫療日額</td><td>契約生效日</td><td>契約滿期日</td><td>要保人姓名</td><td>通報時間</td></tr></template>
+        <tr><td class="actions" colspan="18"><button data-ir-id="E-ASYNC" type="button">F8即時取回公會資料</button></td></tr>
+      </tbody></table>
+    </section>
+
+    <section class="panel" data-ir-id="V-NOTES"><h2>代碼說明</h2><ol class="notes">
+      <li>銷售通路:1網路投保 2業務員3保經、保代 4電話行銷 5機場櫃檯</li>
+      <li>保單分類：1個人；2團體</li>
+      <li>險種分類：1人壽保險；2傷害保險；3健康保險 4.年金保險。</li>
+      <li>險種：01一般；02特定；03投資型；04日額型；05實支實付型；06日額或實支實付擇一型；07手術型；08重大疾病；09帳戶型；10長期看護型；11喪失工作能力；12防癌；13旅平險；14微型；15微型實支實付；16小額終老保險；17.失能扶助保險；18.登山綜合保險；19定期人壽保險(不含一年期)；20海域活動綜合保險；21一年期</li>
+      <li>繳別：1躉繳；2年繳；3半年繳；4季繳；5月繳；6彈性繳；9繳費期滿</li>
+      <li>保單狀況： 收件: 01有效；06未承保取消件；07契約註銷；11滿期(契約到期)；12鍵值欄位通報錯誤終止；15通報更正; 50一○七條/一○七條之一承保資料；51一○七條理賠資料（未滿14足歲之未成年人）；52一○七條/一○七條之一理賠資料（精神障礙或其他心智缺陷/受監護宣告尚未撤銷）。 承保: 01有效；02增額；03減額；04展期；05繳清；06契約撤銷； 07停效; 10解除契約；11滿期(契約到期) ；12鍵值欄位通報錯誤終止；20終止1:由要保人提出終止契約效力;21.終止2:主被保險人死亡，其他被保險人附同時終止或完全失能或理賠給付後終止附約;30被保險人因自然死身故；31被保險人因意外身故;32被保險人因其他原因故;50一○七條/一○七條之一承保資料；51一○七條理賠資料（未滿14足歲之未成年人）；52一○七條/一○七條之一理賠資料（精神障礙或其他心智缺陷/受監護宣告尚未撤銷）。</li>
+      <li>保障及保費彙整欄位，金額依頁面上的筆數加總，含本公司及產、壽險通報資料。</li>
+      <li>即時捉取公會資料：輸入身份證字號／統一證號，按F8即時捉取公會資料鈕</li>
+    </ol></section>
+  </section>
+
+  <section class="snapshot" data-ir-id="ST-SELECTED" data-state="row-selected-edit-visible">
+    <p>狀態快照：選取明細列後，10 欄編輯區顯示，修改、刪除、取消啟用。</p>
+    <section class="panel scroll" data-ir-id="V-EDIT"><h2>資料編輯區</h2>
+      <table class="edit"><tbody>
+        <tr><th>通報方式</th><td><span data-ir-id="F-INSR-TYPE">N</span></td><th>公司別</th><td><span data-ir-id="F-CMNY-CODE">001</span></td><th>被保人ID</th><td><span data-ir-id="F-I-ID">A123456789</span></td><th>被保人生日</th><td><span data-ir-id="F-I-BIRTHDAY">1980/01/01</span></td><th>保單號碼</th><td><span data-ir-id="F-POLICY-NO">P00001234</span></td></tr>
+        <tr><th>保單分類</th><td><span data-ir-id="F-POLICY-CAT">1</span></td><th>險種分類</th><td><span data-ir-id="F-POLICY-DUTY">1</span></td><th>險種</th><td><span data-ir-id="F-PROD-KIND">01</span></td><th>保單狀況</th><td><span data-ir-id="F-EDIT-STATUS">01</span></td><th>保單狀況生效日期(受理理賠日、身故日)</th><td><span data-ir-id="F-LST-CHG-DATE">2026/01/01</span></td></tr>
+        <tr><th>主約保單號碼</th><td><span data-ir-id="F-MAIN-POLICY-NO">P00001000</span></td><th>契約生效日</th><td><span data-ir-id="F-ISSUE-DATE">2026/01/01</span></td><th>契約生效時分</th><td><span data-ir-id="F-ISSUE-TIME">120000</span></td><th>契約滿期日</th><td><span data-ir-id="F-LPS-DATE">2046/01/01</span></td><th>契約滿期時分</th><td><span data-ir-id="F-LPS-TIME">120000</span></td></tr>
+        <tr><th>要保書填寫日</th><td><span data-ir-id="F-SIGN-DATE">2025/12/20</span></td><th>保費</th><td><span data-ir-id="F-PREM">36,000</span></td><th>保費繳別</th><td><span data-ir-id="F-PAY-FREQ">2</span></td><th>保費繳費年期</th><td><span data-ir-id="F-PAY-PERIOD">20</span></td><th>保單狀況生效時分</th><td><span data-ir-id="F-LST-CHG-TIME">120000</span></td></tr>
+        <tr><th>身故</th><td><input data-ir-id="F-PAY-AMT1" type="text" value="1000000"></td><th>完全失能或最高級失能</th><td><input data-ir-id="F-PAY-AMT2" type="text" value="800000"></td><th>失能扶助金</th><td><input data-ir-id="F-PAY-AMT3" type="text" value="30000"></td><th>特定事故</th><td><input data-ir-id="F-PAY-AMT4" type="text" value="100000"></td><th>初次罹患</th><td><input data-ir-id="F-PAY-AMT5" type="text" value="200000"></td></tr>
+        <tr><th>醫療限額</th><td><input data-ir-id="F-PAY-AMT6" type="text" value="300000"></td><th>醫療限額自負</th><td><input data-ir-id="F-PAY-AMT7" type="text" value="50000"></td><th>醫療日額</th><td><input data-ir-id="F-PAY-AMT8" type="text" value="2000"></td><th>住院手術</th><td><input data-ir-id="F-PAY-AMT9" type="text" value="60000"></td><th>門診手術</th><td><input data-ir-id="F-PAY-AMT10" type="text" value="20000"></td></tr>
+        <tr><th>門診</th><td><input data-ir-id="F-PAY-AMT11" type="text" value="1000"></td><th>重大疾/傷病</th><td><input data-ir-id="F-PAY-AMT12" type="text" value="500000"></td><th>重大燒燙傷</th><td><input data-ir-id="F-PAY-AMT13" type="text" value="400000"></td><th>癌症療養</th><td><input data-ir-id="F-PAY-AMT14" type="text" value="100000"></td><th>出院療養</th><td><input data-ir-id="F-PAY-AMT15" type="text" value="10000"></td></tr>
+        <tr><th>喪失工作能力</th><td><input data-ir-id="F-PAY-AMT16" type="text" value="300000"></td><th>喪葬費用</th><td><input data-ir-id="F-PAY-AMT17" type="text" value="200000"></td><th>銜接原醫療限額之自負額</th><td><input data-ir-id="F-PAY-AMT18" type="text" value="50000"></td><th>分期給付</th><td><input data-ir-id="F-PAY-AMT19" type="text" value="25000"></td><th>保經代分類</th><td><input data-ir-id="F-BROKTYPE" type="text" value="1"></td></tr>
+        <tr><th>要保人姓名</th><td><input data-ir-id="F-A-NAME" type="text" value="王小明"></td><th>要保人身分證號碼</th><td><input data-ir-id="F-A-ID" type="text" value="A123456789"></td><th>要保人出生日期</th><td><input data-ir-id="F-A-BIRTHDAY" type="text" value="1980/01/01"></td><th>要保人與被保險人關係</th><td><input data-ir-id="F-RELATION" type="text" value="1"></td><th>資料寫入時間</th><td><span data-ir-id="F-UPDATE-TIME">2026/09/22 10:30</span></td></tr>
+        <tr><th>被保險人性別</th><td><select data-ir-id="F-I-GENDER"><option>男</option><option>女</option></select></td><th>公、自費件</th><td><select data-ir-id="F-PAY-TYPE"><option>無</option><option>公費</option><option>自費</option></select></td><th>來源別</th><td><span data-ir-id="F-OIU-IND">來源說明</span></td><th>銷售通路</th><td><span data-ir-id="F-SALE-CHNL">通路說明</span></td><th>商品代碼</th><td><span data-ir-id="F-PROD-CODE">PROD01</span></td></tr>
+        <tr><th>公會取回序號</th><td><span data-ir-id="F-SER-NO">000001</span></td><th></th><td></td><th></th><td></td><th></th><td></td><th></th><td></td></tr>
+        <tr><td class="actions" colspan="10"><button data-ir-id="E-EDIT" type="button">F9修改</button><button data-ir-id="E-DELETE" type="button">F10刪除</button><button data-ir-id="E-CLEAR" type="button">取消</button></td></tr>
+      </tbody></table>
+    </section>
+  </section>
+
+  <section class="snapshot compact" data-ir-id="ST-INITIAL" data-state="initial-no-selection"><p>狀態快照：初始／未選取。</p><p>資料編輯區不顯示；F9修改、F10刪除、取消為 disabled。查詢區、彙整區、明細欄頭與代碼說明仍存在。</p></section>
+  <section class="snapshot compact" data-ir-id="ST-EMPTY" data-state="empty-result"><p>狀態快照：結果集合為空。</p><table><thead><tr><th>序號</th><th>選取</th><th>通報方式</th><th>公司別</th><th>保單號碼</th><th>銷售通路</th><th>商品代碼</th><th>保單分類</th><th>險種分類</th><th>險種</th><th>保單狀況</th><th>身故保額</th><th>醫療限額</th><th>醫療日額</th><th>契約生效日</th><th>契約滿期日</th><th>要保人姓名</th><th>通報時間</th></tr></thead><tbody></tbody></table><p class="empty">來源沒有空集合提示文字。</p></section>
+  <section class="snapshot compact" data-ir-id="ST-IS-RETURN-ABSENT" data-state="isReturn-false"><p>狀態快照：同步回檔條件不成立。</p><p>「同步更新公會回檔狀態」核取方塊整個不存在。</p></section>
+  <section class="snapshot compact" data-ir-id="ST-ASYNC-ABSENT" data-state="isAllow-false"><p>狀態快照：即時取回權限／條件不成立。</p><p>「F8即時取回公會資料」按鈕所在的整列不存在。</p></section>
+  <section class="snapshot compact" data-ir-id="ST-ID-ERROR-CONFIRM" data-state="async-id-check-error"><p>狀態快照：即時取回前檢核回傳 isIdError=Y。</p><p class="message" data-ir-id="MSG-ID-ERROR-CONFIRM">輸入值 A123456789 不符身份證/統一證號檢核規則，請確認，是否要繼續作業?</p><div class="actions"><button data-ir-id="E-CONFIRM-CONTINUE" type="button">確定</button><button data-ir-id="E-CONFIRM-CANCEL" type="button">取消</button></div></section>
+</main>
+</body>
+</html>

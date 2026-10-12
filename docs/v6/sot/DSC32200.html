@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-Hant" data-ir-version="6" data-screen-id="DSC32200">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ir-companion" content="./DSC32200.md">
+  <meta name="ir-source" content="sourceCode/DS/C3/DSC3_2200/DSC32200.jsp">
+  <title>DSC32200 — 劃撥入人工帳（視覺契約）</title>
+  <style>
+    :root { --border:#8d99a6; --label:#fff3bf; --value:#e7f5ff; --muted:#59636e; --error:#b42318; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:16px; color:#17212b; background:#f4f6f8; font-family:Arial,"Microsoft JhengHei",sans-serif; }
+    .snapshot { max-width:1180px; margin:0 auto 20px; padding:14px; background:#fff; border:1px solid var(--border); }
+    .snapshot-label { margin:0 0 10px; color:var(--muted); font-size:14px; }
+    .page-title { display:flex; gap:12px; align-items:baseline; margin-bottom:10px; }
+    .page-title span { font-weight:700; }
+    table { width:100%; border-collapse:separate; border-spacing:1px; margin:0 0 8px; }
+    th, td { border:1px solid var(--border); padding:5px 7px; }
+    th, .label { background:var(--label); }
+    .value { background:var(--value); }
+    input, select, button { font:inherit; }
+    input[type="text"] { max-width:100%; }
+    .actions { text-align:center; white-space:nowrap; }
+    .bottom-actions { text-align:left; }
+    .grid-wrap { overflow-x:auto; }
+    .grid { min-width:850px; table-layout:auto; }
+    .grid th:nth-child(1) { width:7%; }
+    .grid th:nth-child(2) { width:12%; }
+    .grid th:nth-child(3) { width:18%; }
+    .grid th:nth-child(4) { width:20%; }
+    .grid th:nth-child(5) { width:20%; }
+    .grid th:nth-child(6) { width:23%; }
+    .neutral-check { display:inline-block; min-width:1.3em; text-align:center; border:1px solid #555; background:#fff; }
+    .calendar-action { display:inline-block; min-width:1.5em; text-align:center; border:1px solid var(--border); background:#fff; cursor:default; }
+    .state-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:10px; }
+    .state-card { border:1px solid var(--border); padding:9px; background:#fff; }
+    .state-card h3 { margin:0 0 6px; font-size:15px; }
+    .message { padding:7px; border:1px solid currentColor; color:var(--error); white-space:pre-wrap; }
+    .muted { color:var(--muted); }
+    .mock { font-style:italic; }
+  </style>
+</head>
+<body>
+  <main data-ir-id="V-PAGE">
+    <section class="snapshot" data-ir-id="ST-INITIAL" data-state="initial-loaded">
+      <p class="snapshot-label">初始載入快照；示例值明確標示，未知映射採中立呈現。</p>
+
+      <header class="page-title" data-ir-id="V-PAGEUI-HEADER" data-unknown-ref="U-PAGEUI-PRESENTATION">
+        <span>繳款方式</span><span>劃撥入人工帳</span>
+      </header>
+
+      <section data-ir-id="V-ENTRY-AREA">
+        <table aria-label="劃撥入人工帳輸入區">
+          <tbody>
+            <tr>
+              <td class="label" style="width:20%">單位代號/貸款帳號</td>
+              <td class="value"><input data-ir-id="F-LOAN-ID" type="text" maxlength="10" value="（後端值）" aria-label="單位代號/貸款帳號"></td>
+              <td class="label">暫收原因</td>
+              <td class="value" style="width:15%">
+                <select data-ir-id="F-BALC-REASON" data-unknown-ref="U-BALC-REASON-99" aria-label="暫收原因">
+                  <option value="">請選擇</option>
+                  <option value="99">（代碼 99 顯示文字未知）</option>
+                  <template data-repeat-id="R-BALC-REASON-OPTIONS" data-key-ref="map.key">
+                    <option data-ir-id="V-BALC-REASON-OPTION-TEMPLATE" value="map.key">map.value</option>
+                  </template>
+                </select>
+              </td>
+              <td class="value actions">
+                <button data-ir-id="E-INSERT" type="button">新增</button>
+                <button data-ir-id="E-DELETE" type="button">刪除</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="label" style="width:7%" data-defect-ref="D-UNCLOSED-B"><strong>暫收款資料 合計金額</strong></td>
+              <td class="value" colspan="5" data-defect-ref="D-MISSING-TD-CLOSE"><output data-ir-id="F-TOTAL-AMT">0</output></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="grid-wrap" data-ir-id="V-GRID" data-unknown-ref="U-TABLEUI-PRESENTATION">
+        <table class="grid" aria-label="劃撥資料">
+          <thead>
+            <tr>
+              <th>選取</th><th>劃撥序號</th><th>劃撥帳號</th><th>劃撥日期</th><th>劃撥金額</th><th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="mock">
+              <td><span data-ir-id="F-ROW-SELECT" class="neutral-check" role="checkbox" aria-checked="mixed" data-unknown-ref="U-PRECHECK-MAPPING">−</span></td>
+              <td><span data-ir-id="F-TRANS-SERNO">（後端序號）</span></td>
+              <td><input data-ir-id="F-TRANS-NO" type="text" value="00041496" readonly aria-label="劃撥帳號"></td>
+              <td><input data-ir-id="F-TRANS-DATE" type="text" size="9" maxlength="7" value="（後端日期）" aria-label="劃撥日期"> <span data-ir-id="E-CALENDAR" class="calendar-action" role="button" aria-label="Date" data-unknown-ref="U-CALENDAR-IMAGE">▦</span></td>
+              <td><input data-ir-id="F-TRANS-AMT" type="text" size="15" maxlength="15" value="0" aria-label="劃撥金額"></td>
+              <td><input data-ir-id="F-REMARK" type="text" size="20" maxlength="15" value="" aria-label="備註"></td>
+            </tr>
+          </tbody>
+          <template data-repeat-id="R-GRID-ROWS" data-key-ref="TRANS_NO+TRANS_SERNO">
+            <tr>
+              <td><span role="checkbox" aria-checked="mixed" data-unknown-ref="U-PRECHECK-MAPPING">−</span></td>
+              <td><span>TRANS_SERNO</span></td>
+              <td><input type="text" value="TRANS_NO" readonly></td>
+              <td><input type="text" size="9" maxlength="7" value="TRANS_DATE"> <span class="calendar-action" role="button" aria-label="Date" data-unknown-ref="U-CALENDAR-IMAGE">▦</span></td>
+              <td><input type="text" size="15" maxlength="15" value="TRANS_AMT"></td>
+              <td><input type="text" size="20" maxlength="15" value="REMARK"></td>
+            </tr>
+          </template>
+        </table>
+      </section>
+
+      <footer data-ir-id="V-CONFIRM-AREA">
+        <table aria-label="確認操作區"><tbody><tr><td class="value bottom-actions" colspan="5"><button data-ir-id="E-CONFIRM" type="button">確認</button></td></tr></tbody></table>
+      </footer>
+    </section>
+
+    <section class="snapshot" data-ir-id="V-STATE-OUTCOMES">
+      <p class="snapshot-label">可觀察狀態差異；下列卡片不是同時發生的預設狀態。</p>
+      <div class="state-grid">
+        <article class="state-card" data-ir-id="ST-EMPTY-OPTIONS" data-unknown-ref="U-BALC-REASON-LIST">
+          <h3>暫收原因集合為 null／空</h3><select aria-label="暫收原因空集合"><option>請選擇</option></select>
+        </article>
+        <article class="state-card" data-ir-id="ST-AFTER-INSERT">
+          <h3>新增後</h3><p>表格尾端增加一列；序號遞增，帳號為 00041496，金額為 0，備註空白。</p>
+        </article>
+        <article class="state-card" data-ir-id="ST-INSERT-REJECTED">
+          <h3>新增被拒</h3><div class="message" data-ir-id="MSG-LOAN-REQUIRED">單位代號/貸款帳號不可空白!!</div>
+        </article>
+        <article class="state-card" data-ir-id="ST-DELETE-NONE">
+          <h3>未選列即刪除</h3><div class="message" data-ir-id="MSG-DELETE-NONE">請勾選欲刪除的電匯資料</div>
+        </article>
+        <article class="state-card" data-ir-id="ST-DELETE-ALL">
+          <h3>全部刪除後</h3><p>仍保留一列；序號回到 newSerNO，合計金額為 0。</p>
+        </article>
+        <article class="state-card" data-ir-id="ST-DELETE-PARTIAL">
+          <h3>部分刪除後</h3><p>保留列依序重編，合計金額重算。</p>
+        </article>
+        <article class="state-card" data-ir-id="ST-CONFIRM-REASON-17">
+          <h3>暫收原因 17 的確認</h3><div class="message" data-ir-id="MSG-CONFIRM-17">確定暫收原因為入追償款，且已經輸入貸款貸號？</div>
+        </article>
+        <article class="state-card" data-ir-id="ST-CONFIRM-REASON-15">
+          <h3>暫收原因 15 的確認</h3><div class="message" data-ir-id="MSG-CONFIRM-15">確定暫收原因為入案款，且已經輸入貸款貸號？</div>
+        </article>
+        <article class="state-card" data-ir-id="ST-VALIDATION-ERROR">
+          <h3>欄位檢核失敗</h3><div class="message"><span data-ir-id="MSG-AMT-INVALID">請輸入正確劃撥金額</span><br><span data-ir-id="MSG-DATE-FUTURE">劃撥日期須小於等於作業當時日期</span></div>
+        </article>
+        <article class="state-card" data-ir-id="ST-CONFIRM-ERR" data-unknown-ref="U-CONFIRM-ERROR-CONTENT">
+          <h3>確認回應含 ERR_MSG</h3><div class="message" data-ir-id="MSG-CONFIRM-ERR">（ERR_MSG 原文）</div>
+        </article>
+        <article class="state-card" data-ir-id="ST-CONFIRM-TIPS" data-unknown-ref="U-CONFIRM-TIPS-CONTENT">
+          <h3>確認成功且含 TIPS_MSG</h3><div class="message" data-ir-id="MSG-CONFIRM-TIPS">（TIPS_MSG 原文）</div>
+        </article>
+        <article class="state-card" data-ir-id="ST-CONFIRM-SUCCESS">
+          <h3>確認成功後</h3><p>表格重設為一列：回應序號、回應日期、帳號 00041496、金額 0、備註空白。</p>
+        </article>
+        <article class="state-card" data-ir-id="ST-POPUP" data-unknown-ref="U-POPUP-PRESENTATION">
+          <h3>ERR_MSG 後的外部檢核視窗</h3><p>LINK_TO 為 AIL0_1300 或 AIL1_1000 時開啟對應視窗；外觀未知。</p>
+        </article>
+        <article class="state-card" data-ir-id="ST-SHARED-MESSAGE" data-unknown-ref="U-SHARED-MESSAGE-CHANNEL">
+          <h3>初始共用訊息</h3><p>可能顯示於下方訊息欄或對話框；內容由本次 ReturnMessage 決定。</p>
+        </article>
+        <article class="state-card" data-ir-id="ST-SECURITY-CONTROLS" data-unknown-ref="U-SHARED-SECURITY-FLAGS">
+          <h3>共用資安管制候選狀態</h3><p>PD_CTRL／IS_WATERMARK 啟用時可能出現列印管制與浮水印；本畫面實際旗標未知。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

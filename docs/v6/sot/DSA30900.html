@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="zh-Hant" data-ir-version="6" data-screen-id="DSA30900">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ir-companion" content="./DSA30900.md">
+  <meta name="ir-source" content="sourceCode/DS/A3/DSA3_0900/DSA30900.jsp">
+  <title>DSA30900 — 擔保品行情查詢（視覺契約）</title>
+  <style>
+    :root {
+      --page: #f0fbc6;
+      --surface: #fff;
+      --label: #eeeeee;
+      --value: #fff;
+      --head: #e5e5e5;
+      --line: #7e8f72;
+      --ink: #182018;
+      --muted: #56604f;
+      --accent: #225f89;
+      --danger: #c71919;
+      --blue: #153fba;
+      --green: #08752c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--page);
+      font: 13px/1.45 Arial, "Microsoft JhengHei", sans-serif;
+    }
+    main { width: min(100% - 20px, 1540px); margin: 10px auto 36px; }
+    .snapshot {
+      margin: 0 0 18px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 1px 4px rgba(0,0,0,.12);
+    }
+    .snapshot-label { margin: 0 0 8px; color: var(--muted); font-weight: 700; }
+    .page-title {
+      margin: 0 0 8px;
+      padding: 7px 10px;
+      color: #111;
+      background: #dedede;
+      font-size: 17px;
+    }
+    .mode-bar { padding: 7px; border: 1px solid var(--line); background: var(--label); }
+    .mode-bar label { margin-right: 18px; white-space: nowrap; }
+    table { width: 100%; border-collapse: separate; border-spacing: 1px; background: var(--line); }
+    th, td { padding: 5px 7px; background: var(--surface); vertical-align: middle; }
+    .query-table { table-layout: fixed; }
+    .query-table .label { width: 12%; background: var(--label); text-align: left; font-weight: 700; }
+    .query-table .value { background: var(--value); }
+    .button-cell { width: 10%; background: var(--value); text-align: center; }
+    input, select, button { font: inherit; }
+    input[type="text"], select { max-width: 100%; min-height: 25px; border: 1px solid #75808a; background: #fff; }
+    input[type="text"] { padding: 2px 4px; }
+    button {
+      min-width: 68px;
+      margin: 2px 0;
+      padding: 4px 8px;
+      border: 1px solid #5e6c77;
+      border-radius: 2px;
+      color: #111;
+      background: linear-gradient(#fff, #d9dde0);
+    }
+    .button-cell button { display: block; width: 96px; max-width: 100%; margin: 4px auto; }
+    .calendar {
+      display: inline-grid;
+      width: 20px;
+      height: 18px;
+      place-items: center;
+      margin: 0 3px;
+      border: 1px solid #687885;
+      color: #fff;
+      background: #3f789e;
+      font-size: 11px;
+      vertical-align: middle;
+    }
+    .legend { background: var(--value); }
+    .legend span { margin-right: 14px; white-space: nowrap; }
+    .mark-add { color: var(--danger); font-weight: 800; }
+    .mark-multi { color: var(--blue); font-weight: 800; }
+    .mark-restricted { color: var(--green); font-weight: 800; }
+    .grid-wrap { margin-top: 9px; overflow-x: auto; border: 1px solid var(--line); background: #fff; }
+    .grid { min-width: 2050px; table-layout: auto; }
+    .grid th { position: sticky; top: 0; background: var(--head); white-space: nowrap; }
+    .grid td { white-space: nowrap; text-align: right; }
+    .grid td:nth-child(1), .grid td:nth-child(2), .grid td:nth-child(4),
+    .grid td:nth-child(7), .grid td:nth-child(9), .grid td:nth-child(16),
+    .grid td:nth-child(18) { text-align: left; }
+    .grid a { color: #0645ad; text-decoration: underline; }
+    .notice { padding: 12px; border: 1px dashed #8c957f; background: #fff; color: var(--muted); }
+    .delta { display: grid; gap: 8px; grid-template-columns: 1fr 1fr; }
+    .delta > div { padding: 10px; border: 1px solid var(--line); background: #fff; }
+    .column-order { overflow-x: auto; }
+    .column-order ol { display: flex; min-width: max-content; margin: 0; padding: 0; list-style: none; counter-reset: col; }
+    .column-order li { padding: 5px 8px; border: 1px solid #8ca1ad; border-right: 0; background: var(--head); counter-increment: col; }
+    .column-order li::before { content: counter(col) ". "; color: var(--muted); }
+    .column-order li:last-child { border-right: 1px solid #8ca1ad; }
+    .result-table th { background: var(--head); text-align: left; }
+    .result-table .label { width: 50%; background: var(--head); text-align: center; }
+    .result-table .value { background: var(--value); min-height: 30px; }
+    .error { margin-top: 8px; padding: 8px 10px; color: #8d1717; border: 1px solid #d29292; background: #fff0f0; }
+    .mock { font-size: 11px; color: var(--muted); font-weight: 400; }
+    [data-unknown-ref] { outline: 1px dashed #9a7b18; outline-offset: -2px; }
+    @media (max-width: 850px) {
+      main { width: calc(100% - 10px); }
+      .snapshot { padding: 7px; }
+      .query-table { min-width: 820px; }
+      .query-scroll { overflow-x: auto; }
+      .delta { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-unknown-ref="U-EXTERNAL-VISUAL">
+  <main data-ir-id="V-PAGE">
+    <header data-ir-id="V-HEADER">
+      <h1 class="page-title">鑑價作業｜擔保品行情查詢</h1>
+    </header>
+
+    <section class="snapshot" data-ir-id="ST-PRICE-SHOW-APPLY" data-state="price-query-show-apply-id" data-unknown-ref="U-SHOW-APPLY-ID">
+      <p class="snapshot-label">候選快照：行情查詢模式，後端允許顯示受理編號</p>
+      <section data-ir-id="V-QUERY-FORM" class="query-scroll">
+        <table data-ir-id="V-TABLE-A-PRICE" class="query-table">
+          <tbody>
+            <tr>
+              <td class="mode-bar" colspan="6" data-ir-id="V-MODE-SWITCH">
+                <label><input data-ir-id="E-SWITCH-PRICE" type="radio" name="mode-a" checked> 擔保品行情查詢</label>
+                <label><input data-ir-id="E-SWITCH-AREA" type="radio" name="mode-a"> 承作分區查詢</label>
+              </td>
+              <td class="button-cell" rowspan="7" data-ir-id="V-PRICE-ACTIONS">
+                <button data-ir-id="E-QUERY" type="button">查詢</button>
+                <button data-ir-id="E-LAND-QUERY" type="button">土建融查詢</button>
+                <button data-ir-id="E-GROUP-QUERY" type="button">整批分戶查詢</button>
+                <button data-ir-id="E-COMMUNITY-QUERY" type="button">社區資料查詢</button>
+                <button data-ir-id="E-CLEAR" type="button">清除</button>
+              </td>
+            </tr>
+            <tr>
+              <th class="label">受理編號</th>
+              <td class="value"><input data-ir-id="F-APPLY-ID" type="text" size="15" maxlength="11" aria-label="受理編號"></td>
+              <th class="label">買賣日期</th>
+              <td class="value" colspan="3">
+                <input data-ir-id="F-TRADE-DATE-BEG" type="text" size="8" maxlength="7" aria-label="買賣日期起">
+                <span data-ir-id="E-CAL-TRADE-BEG" class="calendar" role="img" aria-label="開啟買賣日期起日曆">曆</span>~
+                <input data-ir-id="F-TRADE-DATE-END" type="text" size="8" maxlength="7" aria-label="買賣日期訖">
+                <span data-ir-id="E-CAL-TRADE-END" class="calendar" role="img" aria-label="開啟買賣日期訖日曆">曆</span>
+              </td>
+            </tr>
+            <tr>
+              <th class="label">鑑價日期</th>
+              <td class="value">
+                <input data-ir-id="F-APPR-DATE-BEG" type="text" size="8" maxlength="7" aria-label="鑑價日期起">
+                <span data-ir-id="E-CAL-APPR-BEG" class="calendar" role="img" aria-label="開啟鑑價日期起日曆">曆</span>~
+                <input data-ir-id="F-APPR-DATE-END" type="text" size="8" maxlength="7" aria-label="鑑價日期訖">
+                <span data-ir-id="E-CAL-APPR-END" class="calendar" role="img" aria-label="開啟鑑價日期訖日曆">曆</span>
+              </td>
+              <th class="label">使用分區</th>
+              <td class="value"><select data-ir-id="F-USE-AREA" data-unknown-ref="U-LIST-CONTENTS"><option selected disabled>（後端選項未提供）</option></select></td>
+              <th class="label">列管區</th>
+              <td class="value"><select data-ir-id="F-RESTRICT-KIND" data-unknown-ref="U-LIST-CONTENTS"><option selected disabled>（後端選項未提供）</option></select></td>
+            </tr>
+            <tr>
+              <th class="label">縣市別</th>
+              <td class="value">
+                <select data-ir-id="F-CITY" data-action-ref="E-CITY-CHANGE" data-unknown-ref="U-LIST-CONTENTS"><option>縣市別</option></select>
+                <select data-ir-id="F-TOWN" data-unknown-ref="U-TOWN-CONTENTS"><option>鄉鎮區</option></select>
+              </td>
+              <th class="label">地址路名門牌</th>
+              <td class="value" colspan="3"><input data-ir-id="F-ADDRESS" type="text" size="35" aria-label="地址路名門牌"></td>
+            </tr>
+            <tr>
+              <th class="label">總樓層</th>
+              <td class="value">
+                <select data-ir-id="F-EQUAL-SIGN" data-unknown-ref="U-LIST-CONTENTS"><option selected disabled>（後端選項未提供）</option></select>
+                <input data-ir-id="F-FLOOR" type="text" size="4" aria-label="總樓層">
+              </td>
+              <th class="label">類別</th>
+              <td class="value"><select data-ir-id="F-USE-FOR" data-unknown-ref="U-LIST-CONTENTS"><option selected disabled>（後端選項未提供）</option></select></td>
+              <th class="label">屋齡區間</th>
+              <td class="value"><input data-ir-id="F-BUILD-AGE-BEG" type="text" size="4" aria-label="屋齡區間起">~<input data-ir-id="F-BUILD-AGE-END" type="text" size="4" aria-label="屋齡區間訖"></td>
+            </tr>
+            <tr>
+              <th class="label">案名</th>
+              <td class="value"><input data-ir-id="F-CASE-NAME" type="text" size="15" aria-label="案名"></td>
+              <th class="label">地坪</th>
+              <td class="value"><input data-ir-id="F-LAND-MEASURE-BEG" type="text" size="6" aria-label="地坪起">~<input data-ir-id="F-LAND-MEASURE-END" type="text" size="6" aria-label="地坪訖"></td>
+              <th class="label">建坪</th>
+              <td class="value"><input data-ir-id="F-BUILD-MEASURE-BEG" type="text" size="6" aria-label="建坪起">~<input data-ir-id="F-BUILD-MEASURE-END" type="text" size="6" aria-label="建坪訖"></td>
+            </tr>
+            <tr>
+              <th class="label">建築完成日</th>
+              <td class="value" colspan="5">
+                <input data-ir-id="F-FINISH-DATE-BEG" type="text" size="8" maxlength="7" aria-label="建築完成日起">
+                <span data-ir-id="E-CAL-FINISH-BEG" class="calendar" role="img" aria-label="開啟建築完成日起日曆">曆</span>~
+                <input data-ir-id="F-FINISH-DATE-END" type="text" size="8" maxlength="7" aria-label="建築完成日訖">
+                <span data-ir-id="E-CAL-FINISH-END" class="calendar" role="img" aria-label="開啟建築完成日訖日曆">曆</span>
+              </td>
+            </tr>
+            <tr data-defect-ref="D-STRAY-TD">
+              <td class="legend" colspan="7" data-ir-id="V-LEGEND">
+                <span data-ir-id="V-LEGEND-ADD"><b class="mark-add">＊＊</b>表示擔保品有增建情形。</span>
+                <span data-ir-id="V-LEGEND-MULTI"><b class="mark-multi">＠＠</b>表示同一編號含兩筆以上門牌(主建號)。</span>
+                <span data-ir-id="V-LEGEND-RESTRICTED"><b class="mark-restricted">＄＄</b>表示擔保品為非承作區或列管區。</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section data-ir-id="V-RESULTS" class="grid-wrap">
+        <table data-ir-id="V-RESULT-GRID" class="grid" data-unknown-ref="U-TABLEUI-HEADER">
+          <thead>
+            <tr>
+              <th data-ir-id="F-RESULT-APPLY-ID">編號</th><th data-ir-id="F-RESULT-ADDRESS">地址</th>
+              <th data-ir-id="F-RESULT-LAND-MEASURE">地坪</th><th data-ir-id="F-RESULT-PARK-NAME">車位型態</th>
+              <th data-ir-id="F-RESULT-PER-PRICE">單價</th><th data-ir-id="F-RESULT-TOTAL-PRICE">總價</th>
+              <th data-ir-id="F-RESULT-FLOOR">總樓層</th><th data-ir-id="F-RESULT-FINISH-DATE">建築日</th>
+              <th data-ir-id="F-RESULT-USE-FOR">類別</th><th data-ir-id="F-RESULT-TRADE-DATE">買賣日</th>
+              <th data-ir-id="F-RESULT-BUILD-AGE">屋齡</th><th data-ir-id="F-RESULT-BUILD-MEASURE">建坪</th>
+              <th data-ir-id="F-RESULT-PARK-PRICE">車位價</th><th data-ir-id="F-RESULT-LAND-PRICE">地價</th>
+              <th data-ir-id="F-RESULT-AVG-PRICE">均價</th><th data-ir-id="F-RESULT-BUILD-TYPE">樓別</th>
+              <th data-ir-id="F-RESULT-APPR-DATE">鑑估日</th><th data-ir-id="F-RESULT-CASE-NAME">案名</th>
+              <th data-ir-id="F-RESULT-TRADE-AMT">買賣價</th><th data-ir-id="F-RESULT-RENT-PRICE">租金</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-mock="true" title="以下整列為示例資料，非來源事實">
+              <td><a data-ir-id="E-OPEN-RESULT" href="#" aria-disabled="true">A1234567890</a> <span class="mock">整列示例</span></td>
+              <td><span class="mark-add">**</span><span class="mark-multi">@@</span><span class="mark-restricted">$$</span> 台北市示例路1號 <span class="mock">示例</span></td>
+              <td>12.5</td><td>坡道平面</td><td>88.5</td><td>2,380</td><td>15</td><td>0990101</td>
+              <td>住家</td><td>1130101</td><td>14</td><td>36.8</td><td>250</td><td>1,100</td>
+              <td>72.3</td><td>8樓</td><td>1130215</td><td>示例大樓</td><td>2,380</td><td>35</td>
+            </tr>
+          </tbody>
+        </table>
+        <template data-repeat-id="R-RESULT-ROW" data-key-ref="APPLY_ID">
+          <tr>
+            <td data-field-ref="F-RESULT-APPLY-ID" data-action-ref="E-OPEN-RESULT"></td><td data-field-ref="F-RESULT-ADDRESS"></td>
+            <td data-field-ref="F-RESULT-LAND-MEASURE"></td><td data-field-ref="F-RESULT-PARK-NAME"></td>
+            <td data-field-ref="F-RESULT-PER-PRICE"></td><td data-field-ref="F-RESULT-TOTAL-PRICE"></td>
+            <td data-field-ref="F-RESULT-FLOOR"></td><td data-field-ref="F-RESULT-FINISH-DATE"></td>
+            <td data-field-ref="F-RESULT-USE-FOR"></td><td data-field-ref="F-RESULT-TRADE-DATE"></td>
+            <td data-field-ref="F-RESULT-BUILD-AGE"></td><td data-field-ref="F-RESULT-BUILD-MEASURE"></td>
+            <td data-field-ref="F-RESULT-PARK-PRICE"></td><td data-field-ref="F-RESULT-LAND-PRICE"></td>
+            <td data-field-ref="F-RESULT-AVG-PRICE"></td><td data-field-ref="F-RESULT-BUILD-TYPE"></td>
+            <td data-field-ref="F-RESULT-APPR-DATE"></td><td data-field-ref="F-RESULT-CASE-NAME"></td>
+            <td data-field-ref="F-RESULT-TRADE-AMT"></td><td data-field-ref="F-RESULT-RENT-PRICE"></td>
+          </tr>
+        </template>
+      </section>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-PRICE-HIDE-APPLY" data-state="price-query-hide-apply-id" data-unknown-ref="U-SHOW-APPLY-ID">
+      <p class="snapshot-label">候選快照：行情查詢模式，後端不顯示受理編號</p>
+      <div class="notice" data-ir-id="V-HIDDEN-APPLY-DELTA">受理編號／買賣日期列不出現；查詢按鈕儲存格跨 6 列。</div>
+      <div class="query-scroll">
+        <table class="query-table">
+          <tbody>
+            <tr>
+              <td class="mode-bar" colspan="6"><label><input type="radio" name="mode-c" data-action-ref="E-SWITCH-PRICE" checked> 擔保品行情查詢</label><label><input type="radio" name="mode-c" data-action-ref="E-SWITCH-AREA"> 承作分區查詢</label></td>
+              <td class="button-cell" rowspan="6">
+                <button type="button" data-action-ref="E-QUERY">查詢</button><button type="button" data-action-ref="E-LAND-QUERY">土建融查詢</button>
+                <button type="button" data-action-ref="E-GROUP-QUERY">整批分戶查詢</button><button type="button" data-action-ref="E-COMMUNITY-QUERY">社區資料查詢</button>
+                <button type="button" data-action-ref="E-CLEAR">清除</button>
+              </td>
+            </tr>
+            <tr>
+              <th class="label">鑑價日期</th><td class="value"><input data-field-ref="F-APPR-DATE-BEG" type="text" size="8"><span class="calendar" role="img" aria-label="開啟鑑價日期起日曆" data-action-ref="E-CAL-APPR-BEG">曆</span>~<input data-field-ref="F-APPR-DATE-END" type="text" size="8"><span class="calendar" role="img" aria-label="開啟鑑價日期訖日曆" data-action-ref="E-CAL-APPR-END">曆</span></td>
+              <th class="label">使用分區</th><td class="value"><select data-field-ref="F-USE-AREA" data-unknown-ref="U-LIST-CONTENTS"><option selected disabled>（後端選項未提供）</option></select></td>
+              <th class="label">列管區</th><td class="value"><select data-field-ref="F-RESTRICT-KIND" data-unknown-ref="U-LIST-CONTENTS"><option selected disabled>（後端選項未提供）</option></select></td>
+            </tr>
+            <tr>
+              <th class="label">縣市別</th><td class="value"><select data-field-ref="F-CITY" data-action-ref="E-CITY-CHANGE"><option>縣市別</option></select> <select data-field-ref="F-TOWN"><option>鄉鎮區</option></select></td>
+              <th class="label">地址路名門牌</th><td class="value" colspan="3"><input data-field-ref="F-ADDRESS" type="text" size="35"></td>
+            </tr>
+            <tr>
+              <th class="label">總樓層</th><td class="value"><select data-field-ref="F-EQUAL-SIGN" data-unknown-ref="U-LIST-CONTENTS"><option selected disabled>（後端選項未提供）</option></select> <input data-field-ref="F-FLOOR" type="text" size="4"></td>
+              <th class="label">類別</th><td class="value"><select data-field-ref="F-USE-FOR" data-unknown-ref="U-LIST-CONTENTS"><option selected disabled>（後端選項未提供）</option></select></td>
+              <th class="label">屋齡區間</th><td class="value"><input data-field-ref="F-BUILD-AGE-BEG" type="text" size="4">~<input data-field-ref="F-BUILD-AGE-END" type="text" size="4"></td>
+            </tr>
+            <tr>
+              <th class="label">案名</th><td class="value"><input data-field-ref="F-CASE-NAME" type="text" size="15"></td>
+              <th class="label">地坪</th><td class="value"><input data-field-ref="F-LAND-MEASURE-BEG" type="text" size="6">~<input data-field-ref="F-LAND-MEASURE-END" type="text" size="6"></td>
+              <th class="label">建坪</th><td class="value"><input data-field-ref="F-BUILD-MEASURE-BEG" type="text" size="6">~<input data-field-ref="F-BUILD-MEASURE-END" type="text" size="6"></td>
+            </tr>
+            <tr><th class="label">建築完成日</th><td class="value" colspan="5"><input data-field-ref="F-FINISH-DATE-BEG" type="text" size="8"><span class="calendar" role="img" aria-label="開啟建築完成日起日曆" data-action-ref="E-CAL-FINISH-BEG">曆</span>~<input data-field-ref="F-FINISH-DATE-END" type="text" size="8"><span class="calendar" role="img" aria-label="開啟建築完成日訖日曆" data-action-ref="E-CAL-FINISH-END">曆</span></td></tr>
+            <tr><td class="legend" colspan="7"><span><b class="mark-add">＊＊</b>表示擔保品有增建情形。</span><span><b class="mark-multi">＠＠</b>表示同一編號含兩筆以上門牌(主建號)。</span><span><b class="mark-restricted">＄＄</b>表示擔保品為非承作區或列管區。</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid-wrap" data-ir-id="V-REDUCED-GRID">
+        <table class="grid" data-unknown-ref="U-TABLEUI-HEADER">
+          <thead><tr><th>地址</th><th>地坪</th><th>車位型態</th><th>單價</th><th>總價</th><th>總樓層</th><th>建築日</th><th>類別</th><th>屋齡</th><th>建坪</th><th>車位價</th><th>地價</th><th>均價</th><th>樓別</th><th>鑑估日</th><th>案名</th></tr></thead>
+          <tbody><tr data-mock="true" title="以下整列為示例資料，非來源事實"><td>台北市示例路1號 <span class="mock">整列示例</span></td><td>12.5</td><td>坡道平面</td><td>88.5</td><td>2,380</td><td>15</td><td>0990101</td><td>住家</td><td>14</td><td>36.8</td><td>250</td><td>1,100</td><td>72.3</td><td>8樓</td><td>1130215</td><td>示例大樓</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-RESULT-EMPTY" data-state="query-empty-or-application-error" data-unknown-ref="U-TABLEUI-EMPTY">
+      <p class="snapshot-label">中立契約標記（非來源文案）：TableUI 收到空陣列</p>
+      <div class="notice" data-ir-id="MSG-EMPTY-UNKNOWN">實際空結果外觀未由本 JSP 定義。</div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-LOADING" data-state="pageui-loading-unknown" data-unknown-ref="U-PAGEUI-LOADING">
+      <p class="snapshot-label">中立契約標記（非來源文案）：PageUI 已登記 form1、grid、tableC 的 loading 管理</p>
+      <div class="notice">實際顯示內容、開始與結束時機未由本 JSP 定義。</div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-AREA-CODE" data-state="area-code-query">
+      <p class="snapshot-label">承作分區查詢模式</p>
+      <div class="query-scroll">
+        <table data-ir-id="V-TABLE-A-AREA" class="query-table">
+          <tbody>
+            <tr>
+              <td class="mode-bar" colspan="6">
+                <label><input type="radio" name="mode-b" data-action-ref="E-SWITCH-PRICE"> 擔保品行情查詢</label>
+                <label><input type="radio" name="mode-b" data-action-ref="E-SWITCH-AREA" checked> 承作分區查詢</label>
+              </td>
+              <td class="button-cell" rowspan="3"><button data-ir-id="E-AREA-CODE-QUERY" type="button">承作分區查詢</button><button type="button" data-action-ref="E-CLEAR">清除</button></td>
+            </tr>
+            <tr>
+              <th class="label">縣市別</th>
+              <td class="value"><select data-field-ref="F-CITY" data-action-ref="E-CITY-CHANGE"><option>縣市別</option></select> <select data-field-ref="F-TOWN"><option>鄉鎮區</option></select></td>
+              <th class="label">地址路名門牌</th>
+              <td class="value" colspan="3"><input data-field-ref="F-ADDRESS" type="text" size="35" placeholder="請輸入完整門牌"></td>
+            </tr>
+            <tr>
+              <th class="label">經度</th><td class="value"><input data-ir-id="F-LONGITUDE" type="text" size="32" placeholder="精確至小數第6位(例:121.553012)"></td>
+              <th class="label">緯度</th><td class="value" colspan="3"><input data-ir-id="F-LATITUDE" type="text" size="32" placeholder="精確至小數第6位(例:25.033021)"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <table data-ir-id="V-AREA-RESULT" class="result-table">
+        <thead><tr><th colspan="5">承作分區查詢結果</th></tr></thead>
+        <tbody>
+          <tr><td class="label">所在生活圈</td><td class="value" data-ir-id="F-SUBMARKET-NAME"><span class="mock">回應值</span></td></tr>
+          <tr><td class="label">承作分區</td><td class="value" data-ir-id="F-AREA-CODE"><span class="mock">回應值</span></td></tr>
+          <tr><td class="label">備註</td><td class="value" colspan="2" data-ir-id="F-AREA-MEMO"><span class="mock">回應值</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-AREA-CODE-ADDRESS-ERROR" data-state="area-code-invalid-full-address">
+      <p class="snapshot-label">承作分區地址不完整</p>
+      <table class="result-table">
+        <thead><tr><th colspan="5">承作分區查詢結果</th></tr></thead>
+        <tbody>
+          <tr><td class="label">所在生活圈</td><td class="value" data-field-ref="F-SUBMARKET-NAME"></td></tr>
+          <tr><td class="label">承作分區</td><td class="value" data-field-ref="F-AREA-CODE"></td></tr>
+          <tr><td class="label">備註</td><td class="value error" colspan="2" data-field-ref="F-AREA-MEMO"><span data-ir-id="MSG-FULL-ADDRESS">請輸入完整門牌進行查詢</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

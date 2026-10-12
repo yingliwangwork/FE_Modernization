@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-Hant" data-ir-version="4" data-screen-id="DSC80106">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ir-companion" content="./DSC80106.md">
+  <meta name="ir-source" content="sourceCode/DS/C8/DSC8_0100/DSC80106.jsp">
+  <title>DSC80106 — 貸款年期變更記錄（視覺契約）</title>
+  <style>
+    :root {
+      --ir-page-bg: #eef1f4;
+      --ir-surface: #fff;
+      --ir-border: #929aa3;
+      --ir-label-bg: #fff2a8;
+      --ir-value-bg: #e5f4ff;
+      --ir-text: #17212b;
+      --ir-muted: #5b6670;
+      --ir-focus: #1769aa;
+      --ir-action: #e6e6e6;
+      --ir-watermark: rgba(0, 0, 0, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ir-text);
+      background: var(--ir-page-bg);
+      font-family: Arial, "Microsoft JhengHei", sans-serif;
+      font-size: 14px;
+    }
+    main { padding: 1rem; }
+    .ir-snapshot {
+      width: min(100%, 1080px);
+      margin: 0 auto 1.25rem;
+      padding: 0.8rem;
+      background: var(--ir-surface);
+      border: 1px solid var(--ir-border);
+      position: relative;
+      overflow: hidden;
+    }
+    .ir-snapshot-label {
+      margin: 0 0 0.65rem;
+      color: var(--ir-muted);
+      font-size: 0.85rem;
+    }
+    .ir-page-header { border-bottom: 2px solid #59636d; margin-bottom: 0.55rem; }
+    .ir-page-header p { margin: 0 0 0.2rem; color: var(--ir-muted); }
+    .ir-page-header h1 { margin: 0 0 0.45rem; font-size: 1.3rem; }
+    .ir-field-grid { width: 100%; border-collapse: separate; border-spacing: 1px; table-layout: fixed; }
+    .ir-field-grid td { border: 1px solid var(--ir-border); padding: 0.35rem 0.45rem; vertical-align: top; }
+    .ir-label { width: 10%; background: var(--ir-label-bg); font-weight: 700; white-space: nowrap; }
+    .ir-value { width: 15%; min-height: 2.1rem; background: var(--ir-value-bg); }
+    .ir-output { min-height: 1.1rem; overflow-wrap: anywhere; }
+    .ir-output + .ir-output { margin-top: 0.2rem; }
+    .ir-eudc { font-family: "Microsoft JhengHei", sans-serif; }
+    .ir-actions { text-align: center; padding: 0.6rem !important; }
+    button { min-width: 6.5rem; padding: 0.28rem 0.8rem; border: 1px solid #777; background: var(--ir-action); }
+    button:focus-visible { outline: 2px solid var(--ir-focus); outline-offset: 2px; }
+    .ir-mock { color: #315a73; font-style: italic; }
+    .ir-watermark {
+      position: absolute;
+      inset: 4.5rem 1rem 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      pointer-events: none;
+      color: var(--ir-watermark);
+      font-size: 16px;
+      transform: rotate(-17deg);
+      place-items: center;
+      z-index: 2;
+    }
+    .ir-print-notice { min-height: 9rem; display: grid; place-items: center; font-size: 1.1rem; }
+    .ir-note { border-left: 4px solid #8293a3; padding: 0.4rem 0.65rem; color: var(--ir-muted); }
+    @media (max-width: 760px) {
+      .ir-field-grid { table-layout: auto; }
+      .ir-field-grid td { min-width: 7rem; }
+      .ir-table-wrap { overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main data-ir-id="V-PAGE">
+    <section class="ir-snapshot" data-ir-id="ST-INITIAL" data-state="initial-querying">
+      <p class="ir-snapshot-label">初始／查詢進行中：來源未顯示載入指示，23 個資料區皆為空白。</p>
+      <header class="ir-page-header" data-ir-id="V-HEADER">
+        <p data-ir-id="V-PAGE-GROUP">變更作業</p>
+        <h1 data-ir-id="V-PAGE-TITLE">貸款年期變更記錄</h1>
+      </header>
+      <section data-ir-id="V-CONTENT" class="ir-table-wrap">
+        <form data-ir-id="V-FORM" aria-label="貸款年期變更記錄">
+          <table class="ir-field-grid" data-ir-id="V-DETAIL-TABLE">
+            <tbody>
+              <tr data-ir-id="V-ROW-IDENTITY">
+                <td class="ir-label">貸款帳號</td><td class="ir-value"><div class="ir-output" data-ir-id="F-LOAN-ID"></div></td>
+                <td class="ir-label">變更日期</td><td class="ir-value"><div class="ir-output" data-ir-id="F-APPLY-DATE"></div></td>
+                <td class="ir-label">序號</td><td class="ir-value"><div class="ir-output" data-ir-id="F-SEQ-NO"></div></td>
+              </tr>
+              <tr data-ir-id="V-ROW-OLD-PERIODS">
+                <td class="ir-label">原貸款期數</td><td class="ir-value"><div class="ir-output" data-ir-id="F-LOAN-PERIOD-1"></div></td>
+                <td class="ir-label">原分期期數</td><td class="ir-value"><div class="ir-output" data-ir-id="F-SPR-PERIOD-1"></div></td>
+                <td class="ir-label">原定期期數</td><td class="ir-value"><div class="ir-output" data-ir-id="F-FIX-PERIOD-1"></div></td>
+              </tr>
+              <tr data-ir-id="V-ROW-OLD-TYPE">
+                <td class="ir-label">原期別</td><td class="ir-value"><div class="ir-output" data-ir-id="F-TERM-TYPE-1"></div></td>
+                <td class="ir-label">原還款方式</td><td class="ir-value" colspan="3"><div class="ir-output" data-ir-id="F-RETURN-TYPE-1"></div></td>
+              </tr>
+              <tr data-ir-id="V-ROW-NEW-PERIODS">
+                <td class="ir-label">新貸款期數</td><td class="ir-value"><div class="ir-output" data-ir-id="F-LOAN-PERIOD-2"></div></td>
+                <td class="ir-label">新分期期數</td><td class="ir-value"><div class="ir-output" data-ir-id="F-SPR-PERIOD-2"></div></td>
+                <td class="ir-label">新定期期數</td><td class="ir-value"><div class="ir-output" data-ir-id="F-FIX-PERIOD-2"></div></td>
+              </tr>
+              <tr data-ir-id="V-ROW-NEW-TYPE">
+                <td class="ir-label">新期別</td><td class="ir-value"><div class="ir-output" data-ir-id="F-TERM-TYPE-2"></div></td>
+                <td class="ir-label">新還款方式</td><td class="ir-value" colspan="3"><div class="ir-output" data-ir-id="F-RETURN-TYPE-2"></div></td>
+              </tr>
+              <tr data-ir-id="V-ROW-INPUT-AUDIT">
+                <td class="ir-label">輸入人員</td><td class="ir-value"><div class="ir-output" data-ir-id="F-INPUT-ID"></div><div class="ir-output ir-eudc" data-ir-id="F-INPUT-NAME"></div></td>
+                <td class="ir-label">輸入日期</td><td class="ir-value"><div class="ir-output" data-ir-id="F-INPUT-DATE"></div></td>
+                <td class="ir-label">輸入單位</td><td class="ir-value"><div class="ir-output" data-ir-id="F-INPUT-DEPT"></div><div class="ir-output" data-ir-id="F-INPUT-DEPT-NAME"></div></td>
+              </tr>
+              <tr data-ir-id="V-ROW-CONFIRM-AUDIT">
+                <td class="ir-label" rowspan="2">覆核人員</td><td class="ir-value" rowspan="2"><div class="ir-output" data-ir-id="F-CONFIRM-ID"></div><div class="ir-output ir-eudc" data-ir-id="F-CONFIRM-NAME"></div></td>
+                <td class="ir-label" rowspan="2">覆核日期</td><td class="ir-value" rowspan="2"><div class="ir-output" data-ir-id="F-CONFIRM-DATE"></div></td>
+                <td class="ir-label" rowspan="2">覆核單位</td><td class="ir-value" rowspan="2"><div class="ir-output" data-ir-id="F-CONFIRM-DEPT"></div><div class="ir-output" data-ir-id="F-CONFIRM-DEPT-NAME"></div></td>
+              </tr>
+              <tr data-ir-id="V-ROW-CONFIRM-SPAN-CONTINUATION"></tr>
+              <tr data-ir-id="V-ROW-ACTIONS">
+                <td class="ir-actions" colspan="8" data-defect-ref="D-TABLE-COLSPAN"><button type="button" data-ir-id="E-CLOSE">關閉視窗</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </section>
+    </section>
+
+    <section class="ir-snapshot" data-ir-id="ST-LOADED" data-state="query-success-loaded">
+      <p class="ir-snapshot-label">查詢成功且載入資料。以下所有值均為明確標示的示例，不代表來源中的格式或實值。</p>
+      <header class="ir-page-header" data-ir-id="V-LOADED-HEADER">
+        <p>變更作業</p><h1>貸款年期變更記錄</h1>
+      </header>
+      <div class="ir-table-wrap">
+        <table class="ir-field-grid" data-ir-id="V-LOADED-TABLE">
+          <tbody>
+            <tr><td class="ir-label">貸款帳號</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-LOAN-ID">示例：LOAN_ID</div></td><td class="ir-label">變更日期</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-APPLY-DATE">示例：APPLY_DATE</div></td><td class="ir-label">序號</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-SEQ-NO">示例：SEQ_NO</div></td></tr>
+            <tr><td class="ir-label">原貸款期數</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-LOAN-PERIOD-1">示例：LOAN_PERIOD1</div></td><td class="ir-label">原分期期數</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-SPR-PERIOD-1">示例：SPR_PERIOD1</div></td><td class="ir-label">原定期期數</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-FIX-PERIOD-1">示例：FIX_PERIOD1</div></td></tr>
+            <tr><td class="ir-label">原期別</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-TERM-TYPE-1">示例：TERM_TYPE1</div></td><td class="ir-label">原還款方式</td><td class="ir-value" colspan="3"><div class="ir-output ir-mock" data-field-ref="F-RETURN-TYPE-1">示例：RETURN_TYPE1</div></td></tr>
+            <tr><td class="ir-label">新貸款期數</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-LOAN-PERIOD-2">示例：LOAN_PERIOD2</div></td><td class="ir-label">新分期期數</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-SPR-PERIOD-2">示例：SPR_PERIOD2</div></td><td class="ir-label">新定期期數</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-FIX-PERIOD-2">示例：FIX_PERIOD2</div></td></tr>
+            <tr><td class="ir-label">新期別</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-TERM-TYPE-2">示例：TERM_TYPE2</div></td><td class="ir-label">新還款方式</td><td class="ir-value" colspan="3"><div class="ir-output ir-mock" data-field-ref="F-RETURN-TYPE-2">示例：RETURN_TYPE2</div></td></tr>
+            <tr><td class="ir-label">輸入人員</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-INPUT-ID">示例：INPUT_ID</div><div class="ir-output ir-mock ir-eudc" data-field-ref="F-INPUT-NAME">示例：INPUT_NM</div></td><td class="ir-label">輸入日期</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-INPUT-DATE">示例：INPUT_DATE</div></td><td class="ir-label">輸入單位</td><td class="ir-value"><div class="ir-output ir-mock" data-field-ref="F-INPUT-DEPT">示例：INPUT_DEPT</div><div class="ir-output ir-mock" data-field-ref="F-INPUT-DEPT-NAME">示例：INPUT_DEPT_NM</div></td></tr>
+            <tr><td class="ir-label" rowspan="2">覆核人員</td><td class="ir-value" rowspan="2"><div class="ir-output ir-mock" data-field-ref="F-CONFIRM-ID">示例：CONFIRM_ID</div><div class="ir-output ir-mock ir-eudc" data-field-ref="F-CONFIRM-NAME">示例：CONFIRM_NM</div></td><td class="ir-label" rowspan="2">覆核日期</td><td class="ir-value" rowspan="2"><div class="ir-output ir-mock" data-field-ref="F-CONFIRM-DATE">示例：CONFIRM_DATE</div></td><td class="ir-label" rowspan="2">覆核單位</td><td class="ir-value" rowspan="2"><div class="ir-output ir-mock" data-field-ref="F-CONFIRM-DEPT">示例：CONFIRM_DEPT</div><div class="ir-output ir-mock" data-field-ref="F-CONFIRM-DEPT-NAME">示例：CONFIRM_DEPT_NM</div></td></tr>
+            <tr></tr>
+            <tr><td class="ir-actions" colspan="8" data-defect-ref="D-TABLE-COLSPAN"><button type="button" data-action-ref="E-CLOSE">關閉視窗</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="ir-snapshot" data-ir-id="ST-WATERMARK-ENABLED" data-state="shared-watermark-enabled" data-visible-when="R-SHARED-WATERMARK">
+      <p class="ir-snapshot-label">共用浮水印條件成立時的可觀察狀態；文字為格式示例，實際人員識別與伺服器時間未知。</p>
+      <div class="ir-note">貸款年期變更記錄（內容骨架與 ST-LOADED 相同）</div>
+      <div class="ir-watermark" aria-label="浮水印示意">
+        <span>示例人員識別<br>yyyy-MM-dd HH:mm:ss</span><span>示例人員識別<br>yyyy-MM-dd HH:mm:ss</span>
+        <span>示例人員識別<br>yyyy-MM-dd HH:mm:ss</span><span>示例人員識別<br>yyyy-MM-dd HH:mm:ss</span>
+      </div>
+    </section>
+
+    <section class="ir-snapshot" data-ir-id="ST-PRINT-BLOCKED" data-state="shared-print-controlled" data-visible-when="R-SHARED-PRINT-CONTROL">
+      <p class="ir-snapshot-label">共用列印管制條件成立時的列印結果。</p>
+      <div class="ir-print-notice" data-ir-id="MSG-PRINT-BLOCKED">依據資安政策，不開放列印功能</div>
+    </section>
+  </main>
+</body>
+</html>

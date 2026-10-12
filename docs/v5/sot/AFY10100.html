@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-Hant" data-ir-version="5" data-screen-id="AFY10100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ir-companion" content="./AFY10100.md">
+  <meta name="ir-source" content="sourceCode/AF/AFY10100.jsp">
+  <title>AFY10100 — 公會通報查詢（視覺契約）</title>
+  <style>
+    :root { --bg:#f0fbc6; --blue:#d9edf7; --yellow:#fff5bf; --line:#315b7d; --muted:#667; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:#17212b; font-family:Arial,"Noto Sans TC",sans-serif; font-size:14px; }
+    main { min-width:1180px; }
+    .snapshot { margin:12px; border:1px solid var(--line); background:white; padding:10px; overflow:auto; }
+    .snapshot-label { margin:0 0 8px; color:var(--muted); font-size:12px; }
+    .titlebar { display:flex; justify-content:space-between; align-items:center; background:#dcebb0; padding:6px 10px; border-bottom:4px solid #6c8496; }
+    h1,h2 { margin:4px 0; font-size:16px; }
+    table { width:100%; border-collapse:separate; border-spacing:1px; background:#315b7d; margin:8px 0; table-layout:fixed; }
+    th,td { background:white; padding:4px; border:0; vertical-align:middle; text-align:center; }
+    th,.label { background:var(--blue); font-weight:normal; }
+    .value { background:var(--yellow); }
+    input,select,button { font:inherit; }
+    input[type=text] { width:100%; min-width:70px; }
+    .search-grid th { width:8%; text-align:left; }
+    .search-grid td { text-align:left; }
+    .benefits th,.benefits td { font-size:12px; }
+    .toolbar { display:flex; gap:8px; justify-content:center; padding:6px; }
+    .detail { min-width:1500px; }
+    .detail th,.detail td { font-size:12px; white-space:nowrap; }
+    .notes { text-align:left; background:#fff8d8; margin:0; padding:8px 26px; }
+    .editor th,.editor td { width:10%; font-size:12px; }
+    .hidden-contract { display:none; }
+    .empty-body { height:30px; background:white; }
+    a { color:#0645ad; text-decoration:underline; cursor:pointer; }
+  </style>
+</head>
+<body>
+<main data-ir-id="V-PAGE">
+  <section class="snapshot" data-ir-id="ST-INITIAL" data-state="initial-no-selection">
+    <p class="snapshot-label">初始／未選取明細；資料為格式示例，編輯區在來源中隱藏。</p>
+    <header class="titlebar" data-ir-id="V-HEADER">
+      <h1>● 公會通報查詢</h1><span>畫面編號：AFY10100</span>
+    </header>
+
+    <section data-ir-id="V-SEARCH">
+      <h2>公會通報查詢</h2>
+      <table class="search-grid">
+        <tr>
+          <th>身份證字號/統一編號</th>
+          <td><input data-ir-id="F-INPUT-ID" type="text" value="A123456789" aria-label="身份證字號/統一編號"></td>
+          <td class="value"><label><input data-ir-id="F-IS-RETURN" type="checkbox">同步更新公會回檔狀態</label></td>
+          <th>契約角色</th>
+          <td><select data-ir-id="F-ROLE"><option>被保人</option><option>要保人</option></select></td>
+          <th>保單效力</th>
+          <td><select data-ir-id="F-STATUS"><option>有效</option><option>無效</option><option>全部</option></select></td>
+          <td rowspan="2"><button data-ir-id="E-QUERY" type="button">F2查詢</button></td>
+        </tr>
+        <tr>
+          <th>姓名</th><td><input data-ir-id="F-NAME" type="text" readonly value="王小明"></td><td></td>
+          <th>生日</th><td class="value" data-ir-id="F-BIRTHDAY">1980/01/01</td>
+          <th>公會資料取回日期</th><td class="value" data-ir-id="F-LAST-UPDATE">2026/09/22 10:30:00</td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-ir-id="V-BENEFIT-SUMMARY">
+      <h2>保障項目彙整</h2>
+      <table class="benefits">
+        <thead><tr><th>項目</th><th>合計</th><th>同業合計</th><th>收件</th><th>承保</th></tr></thead>
+        <tbody>
+          <tr data-ir-id="F-BENEFIT-01"><td class="label">身故</td><td>1,000,000</td><td>800,000</td><td>200,000</td><td>800,000</td></tr>
+          <tr data-ir-id="F-BENEFIT-02"><td class="label">完全失能或最高級失能</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-03"><td class="label">失能扶助金</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-04"><td class="label">特定事故</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-05"><td class="label">初次罹患</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-06"><td class="label">醫療限額</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-07"><td class="label">醫療限額自負</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-08"><td class="label">醫療日額</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-09"><td class="label">住院手術</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-10"><td class="label">門診手術</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-11"><td class="label">門診</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-12"><td class="label">重大疾/傷病</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-13"><td class="label">重大傷燙傷</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-14"><td class="label">癌症療養</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-15"><td class="label">出院療養</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-16"><td class="label">喪失工作能力</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-17"><td class="label">喪葬費用</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-18"><td class="label">銜接原醫療限額之自負額</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr data-ir-id="F-BENEFIT-19"><td class="label">分期給付</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section data-ir-id="V-PREMIUM-SUMMARY">
+      <h2>保費資料彙整</h2>
+      <table><tr><th>項目</th><th>合計</th><th>收件</th><th>承保</th><th>操作者</th></tr>
+        <tr><td data-ir-id="F-YEAR-PREM">年繳保費</td><td>12,000</td><td>2,000</td><td>10,000</td><td rowspan="3" data-ir-id="F-UPDATE-ID">USER01</td></tr>
+        <tr><td data-ir-id="F-ONCE-PREM">躉繳保費</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td data-ir-id="F-FLEX-PREM">超額(彈性)保險費</td><td>—</td><td>—</td><td>—</td></tr>
+      </table>
+    </section>
+
+    <section data-ir-id="V-DETAIL-LIST">
+      <h2>新制通報資料明細</h2>
+      <table class="detail">
+        <thead><tr>
+          <th>序號</th><th>選取</th>
+          <th><a data-ir-id="E-SORT-INSR-TYPE">通報方式 ▼</a></th>
+          <th><a data-ir-id="E-SORT-COMPANY">公司別 ▼</a></th>
+          <th><a data-ir-id="E-SORT-POLICY-NO">保單號碼 ▼</a></th>
+          <th>銷售通路</th><th>商品代碼</th><th>保單分類</th><th>險種分類</th>
+          <th><a data-ir-id="E-SORT-PROD-KIND">險種 ▼</a></th>
+          <th>保單狀況</th><th>身故保額</th><th>醫療限額</th><th>醫療日額</th>
+          <th><a data-ir-id="E-SORT-ISSUE-DATE">契約生效日 ▼</a></th>
+          <th>契約滿期日</th><th>要保人姓名</th><th>通報時間</th>
+        </tr></thead>
+        <tbody><tr data-ir-id="F-DETAIL-ROW">
+          <td data-ir-id="F-DETAIL-SEQ">1</td><td><input data-ir-id="E-SELECT-ROW" type="radio" name="mock-item"></td>
+          <td data-ir-id="F-DETAIL-INSR-TYPE"><a data-ir-id="E-OPEN-DETAIL">A 通報</a></td>
+          <td data-ir-id="F-DETAIL-COMPANY">示例公司</td><td data-ir-id="F-DETAIL-POLICY-NO">P000001</td>
+          <td data-ir-id="F-DETAIL-SALE-CHNL">2</td><td data-ir-id="F-DETAIL-PROD-CODE">ABC</td>
+          <td data-ir-id="F-DETAIL-POLICY-CAT">1</td><td data-ir-id="F-DETAIL-POLICY-DUTY">1</td>
+          <td data-ir-id="F-DETAIL-PROD-KIND">01</td><td data-ir-id="F-DETAIL-STATUS">01</td>
+          <td data-ir-id="F-DETAIL-PAY-AMT1">1,000,000</td><td data-ir-id="F-DETAIL-PAY-AMT6">300,000</td>
+          <td data-ir-id="F-DETAIL-PAY-AMT8">2,000</td><td data-ir-id="F-DETAIL-ISSUE-DATE">2026/01/01</td>
+          <td data-ir-id="F-DETAIL-LPS-DATE">2046/01/01</td><td data-ir-id="F-DETAIL-A-NAME">王小明</td>
+          <td data-ir-id="F-DETAIL-UPDATE-TIME">2026/09/22 10:30:00</td>
+        </tr></tbody>
+      </table>
+      <div class="toolbar"><button data-ir-id="E-ASYNC" type="button">F8即時取回公會資料</button></div>
+    </section>
+
+    <section data-ir-id="V-NOTES">
+      <ol class="notes">
+        <li>銷售通路:1網路投保 2業務員3保經、保代 4電話行銷 5機場櫃檯</li>
+        <li>保單分類：1個人；2團體</li>
+        <li>險種分類：1人壽保險；2傷害保險；3健康保險 4.年金保險。</li>
+        <li>險種：01一般；02特定；03投資型；04日額型；05實支實付型；06日額或實支實付擇一型；07手術型；08重大疾病；09帳戶型；10長期看護型；11喪失工作能力；12防癌；13旅平險；14微型；15微型實支實付；16小額終老保險；17.失能扶助保險；18.登山綜合保險；19定期人壽保險(不含一年期)；20海域活動綜合保險；21一年期</li>
+        <li>繳別：1躉繳；2年繳；3半年繳；4季繳；5月繳；6彈性繳；9繳費期滿</li>
+        <li>保單狀況： 收件: 01有效；06未承保取消件；07契約註銷；11滿期(契約到期)；12鍵值欄位通報錯誤終止；15通報更正; 50一○七條/一○七條之一承保資料；51一○七條理賠資料（未滿14足歲之未成年人）；52一○七條/一○七條之一理賠資料（精神障礙或其他心智缺陷/受監護宣告尚未撤銷）。承保: 01有效；02增額；03減額；04展期；05繳清；06契約撤銷； 07停效; 10解除契約；11滿期(契約到期)；12鍵值欄位通報錯誤終止；20終止1:由要保人提出終止契約效力;21.終止2:主被保險人死亡，其他被保險人附同時終止或完全失能或理賠給付後終止附約;30被保險人因自然死身故；31被保險人因意外身故;32被保險人因其他原因故;50一○七條/一○七條之一承保資料；51一○七條理賠資料（未滿14足歲之未成年人）；52一○七條/一○七條之一理賠資料（精神障礙或其他心智缺陷/受監護宣告尚未撤銷）。</li>
+        <li>保障及保費彙整欄位，金額依頁面上的筆數加總，含本公司及產、壽險通報資料。</li>
+        <li>即時捉取公會資料：輸入身份證字號／統一證號，按F8即時捉取公會資料鈕</li>
+      </ol>
+    </section>
+  </section>
+
+  <section class="snapshot" data-ir-id="ST-EDITING" data-state="row-selected-edit-area-visible">
+    <p class="snapshot-label">選取明細後：資料編輯區顯示，修改、刪除、取消啟用；10 欄等寬配置。</p>
+    <section data-ir-id="V-EDIT-AREA">
+      <h2>資料編輯區</h2>
+      <table class="editor">
+        <tr><th>通報方式</th><td data-ir-id="F-INSR-TYPE">A</td><th>公司別</th><td data-ir-id="F-CMNY-CODE">001</td><th>被保人ID</th><td data-ir-id="F-I-ID">A123456789</td><th>被保人生日</th><td data-ir-id="F-I-BIRTHDAY">1980/01/01</td><th>保單號碼</th><td data-ir-id="F-POLICY-NO">P000001</td></tr>
+        <tr><th>保單分類</th><td data-ir-id="F-POLICY-CAT">1</td><th>險種分類</th><td data-ir-id="F-POLICY-DUTY">1</td><th>險種</th><td data-ir-id="F-PROD-KIND">01</td><th>保單狀況</th><td data-ir-id="F-RECORD-STATUS">01</td><th>保單狀況生效日期(受理理賠日、身故日)</th><td data-ir-id="F-LST-CHG-DATE">2026/01/01</td></tr>
+        <tr><th>主約保單號碼</th><td data-ir-id="F-MAIN-POLICY-NO">M000001</td><th>契約生效日</th><td data-ir-id="F-ISSUE-DATE">2026/01/01</td><th>契約生效時分</th><td data-ir-id="F-ISSUE-TIME">0000</td><th>契約滿期日</th><td data-ir-id="F-LPS-DATE">2046/01/01</td><th>契約滿期時分</th><td data-ir-id="F-LPS-TIME">0000</td></tr>
+        <tr><th>要保書填寫日</th><td data-ir-id="F-SIGN-DATE">2025/12/20</td><th>保費</th><td data-ir-id="F-PREM">12,000</td><th>保費繳別</th><td data-ir-id="F-PAY-FREQ">2</td><th>保費繳費年期</th><td data-ir-id="F-PAY-PERIOD">20</td><th>保單狀況生效時分</th><td data-ir-id="F-LST-CHG-TIME">1200</td></tr>
+        <tr><th>身故</th><td><input data-ir-id="F-PAY-AMT01" value="1000000"></td><th>完全失能或最高級失能</th><td><input data-ir-id="F-PAY-AMT02" value="0"></td><th>失能扶助金</th><td><input data-ir-id="F-PAY-AMT03" value="0"></td><th>特定事故</th><td><input data-ir-id="F-PAY-AMT04" value="0"></td><th>初次罹患</th><td><input data-ir-id="F-PAY-AMT05" value="0"></td></tr>
+        <tr><th>醫療限額</th><td><input data-ir-id="F-PAY-AMT06" value="300000"></td><th>醫療限額自負</th><td><input data-ir-id="F-PAY-AMT07" value="0"></td><th>醫療日額</th><td><input data-ir-id="F-PAY-AMT08" value="2000"></td><th>住院手術</th><td><input data-ir-id="F-PAY-AMT09" value="0"></td><th>門診手術</th><td><input data-ir-id="F-PAY-AMT10" value="0"></td></tr>
+        <tr><th>門診</th><td><input data-ir-id="F-PAY-AMT11" value="0"></td><th>重大疾/傷病</th><td><input data-ir-id="F-PAY-AMT12" value="0"></td><th>重大燒燙傷</th><td><input data-ir-id="F-PAY-AMT13" value="0"></td><th>癌症療養</th><td><input data-ir-id="F-PAY-AMT14" value="0"></td><th>出院療養</th><td><input data-ir-id="F-PAY-AMT15" value="0"></td></tr>
+        <tr><th>喪失工作能力</th><td><input data-ir-id="F-PAY-AMT16" value="0"></td><th>喪葬費用</th><td><input data-ir-id="F-PAY-AMT17" value="0"></td><th>銜接原醫療限額之自負額</th><td><input data-ir-id="F-PAY-AMT18" value="0"></td><th>分期給付</th><td><input data-ir-id="F-PAY-AMT19" value="0"></td><th>保經代分類</th><td><input data-ir-id="F-BROKTYPE" value=""></td></tr>
+        <tr><th>要保人姓名</th><td><input data-ir-id="F-A-NAME" value="王小明"></td><th>要保人身分證號碼</th><td><input data-ir-id="F-A-ID" value="A123456789"></td><th>要保人出生日期</th><td><input data-ir-id="F-A-BIRTHDAY" value="1980/01/01"></td><th>要保人與被保險人關係</th><td><input data-ir-id="F-RELATION" value="本人"></td><th>資料寫入時間</th><td data-ir-id="F-UPDATE-TIME">2026/09/22 10:30:00</td></tr>
+        <tr><th>被保險人性別</th><td><select data-ir-id="F-I-GENDER"><option>男</option><option>女</option></select></td><th>公、自費件</th><td><select data-ir-id="F-PAY-TYPE"><option>無</option><option>公費</option><option>自費</option></select></td><th>來源別</th><td data-ir-id="F-OIU-IND">示例</td><th>銷售通路</th><td data-ir-id="F-SALE-CHNL">業務員</td><th>商品代碼</th><td data-ir-id="F-PROD-CODE">ABC</td></tr>
+        <tr><th>公會取回序號</th><td data-ir-id="F-SER-NO">000001</td><td colspan="8"></td></tr>
+      </table>
+      <div class="toolbar"><button data-ir-id="E-EDIT" type="button">F9修改</button><button data-ir-id="E-DELETE" type="button">F10刪除</button><button data-ir-id="E-CANCEL" type="button">取消</button></div>
+    </section>
+  </section>
+
+  <section class="snapshot" data-ir-id="ST-EMPTY" data-state="empty-result">
+    <p class="snapshot-label">查詢結果為空：保留「新制通報資料明細」18 欄表頭，沒有重複資料列。</p>
+    <div class="empty-body"></div>
+  </section>
+  <section class="snapshot" data-ir-id="ST-RETURN-CONTROL-ABSENT" data-state="isReturn-false">
+    <p class="snapshot-label">isReturn 為假：不產生「同步更新公會回檔狀態」核取方塊。</p>
+  </section>
+  <section class="snapshot" data-ir-id="ST-ASYNC-ACTION-ABSENT" data-state="isAllow-false">
+    <p class="snapshot-label">isAllow 為假：不產生「F8即時取回公會資料」按鈕列。</p>
+  </section>
+</main>
+</body>
+</html>

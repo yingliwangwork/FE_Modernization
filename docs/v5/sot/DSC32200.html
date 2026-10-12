@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-Hant" data-ir-version="5" data-screen-id="DSC32200">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ir-companion" content="./DSC32200.md">
+  <meta name="ir-source" content="sourceCode/DS/C3/DSC3_2200/DSC32200.jsp">
+  <title>DSC32200 — 劃撥入人工帳（視覺契約）</title>
+  <style>
+    :root { --page:#eef1f4; --surface:#fff; --line:#8a969f; --label:#fff4bd; --value:#e8f5ff; --text:#17212b; --muted:#59636d; --danger:#a61b1b; --button:#e8ebee; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--page); color:var(--text); font:14px/1.45 Arial, "Microsoft JhengHei", sans-serif; }
+    .snapshot { width:min(100% - 24px, 1080px); margin:12px auto; padding:14px; background:var(--surface); border:1px solid var(--line); }
+    .snapshot-label { margin:0 0 10px; color:var(--muted); font-size:12px; }
+    h1 { margin:0 0 10px; font-size:20px; }
+    h2 { margin:0 0 8px; font-size:16px; }
+    table { width:100%; border-collapse:collapse; table-layout:fixed; }
+    th, td { border:1px solid var(--line); padding:6px 8px; vertical-align:middle; }
+    th, .label { background:var(--label); font-weight:700; }
+    .value { background:var(--value); }
+    input, select, button { font:inherit; }
+    input[type="text"], select { max-width:100%; border:1px solid #6f7c86; background:#fff; padding:3px 5px; }
+    button { border:1px solid #707982; border-radius:2px; background:var(--button); padding:4px 14px; }
+    .toolbar { display:flex; gap:7px; align-items:center; flex-wrap:wrap; }
+    .amount { text-align:right; }
+    .readonly { background:#f2f2f2; }
+    .calendar { padding:2px 6px; }
+    .grid-wrap { margin-top:10px; overflow-x:auto; }
+    .grid th:nth-child(1) { width:7%; } .grid th:nth-child(2) { width:12%; } .grid th:nth-child(3) { width:16%; }
+    .grid th:nth-child(4) { width:15%; } .grid th:nth-child(5) { width:18%; } .grid th:nth-child(6) { width:32%; }
+    .footer { margin-top:10px; }
+    .state-diff { border-left:4px solid #58738c; padding:7px 10px; background:#f7fafc; }
+    .dialog { max-width:680px; border:2px solid #6f7c86; padding:12px; background:#fff; box-shadow:0 3px 10px #0002; }
+    .dialog p { margin:0 0 10px; }
+    .error { color:var(--danger); font-weight:700; }
+    .mock { color:var(--muted); font-style:italic; }
+    :focus-visible { outline:2px solid #1769aa; outline-offset:2px; }
+  </style>
+</head>
+<body>
+  <main data-ir-id="V-PAGE">
+    <section class="snapshot" data-ir-id="ST-INITIAL" data-state="initial">
+      <p class="snapshot-label">初始載入（動態值以明確示意標記呈現）</p>
+      <header data-ir-id="V-HEADER">
+        <div>繳款方式</div>
+        <h1>劃撥入人工帳</h1>
+      </header>
+
+      <section data-ir-id="V-QUERY-FORM">
+        <table aria-label="劃撥入人工帳基本資料">
+          <tbody>
+            <tr>
+              <td class="label" style="width:20%">單位代號/貸款帳號</td>
+              <td class="value"><input data-ir-id="F-LOAN-ID" type="text" maxlength="10" value="" aria-label="單位代號/貸款帳號"></td>
+              <td class="label">暫收原因</td>
+              <td class="value" style="width:15%">
+                <select data-ir-id="F-BALC-REASON" aria-label="暫收原因">
+                  <option value="">請選擇</option>
+                  <option value="99" selected class="mock">value=99 的動態文字（示意）</option>
+                </select>
+              </td>
+              <td class="value">
+                <div class="toolbar" data-ir-id="V-ROW-ACTIONS">
+                  <button data-ir-id="E-INSERT" type="button">新增</button>
+                  <button data-ir-id="E-DELETE" type="button">刪除</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><strong>暫收款資料 合計金額</strong></td>
+              <td class="value amount" colspan="4"><output data-ir-id="F-TOTAL-AMT">0</output></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="grid-wrap" data-ir-id="V-TRANSFER-GRID">
+        <table class="grid" aria-label="電匯資料">
+          <thead>
+            <tr>
+              <th>選取</th><th>劃撥序號</th><th>劃撥帳號</th><th>劃撥日期</th><th>劃撥金額</th><th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="value"><input data-ir-id="F-ROW-SELECT" type="checkbox" checked aria-label="選取此列"></td>
+              <td class="value"><output data-ir-id="F-TRANS-SERNO" class="mock">伺服器序號</output></td>
+              <td class="value"><input data-ir-id="F-TRANS-NO" class="readonly" type="text" size="10" value="00041496" readonly></td>
+              <td class="value"><span class="toolbar"><input data-ir-id="F-TRANS-DATE" type="text" size="9" maxlength="7" value="" placeholder="YYY/MM/DD"><button data-ir-id="E-CALENDAR" class="calendar" type="button" aria-label="開啟日期選擇器">Date</button></span></td>
+              <td class="value"><input data-ir-id="F-TRANS-AMT" class="amount" type="text" size="15" maxlength="15" value="0"></td>
+              <td class="value"><input data-ir-id="F-REMARK" type="text" size="20" maxlength="15" value=""></td>
+            </tr>
+          </tbody>
+        </table>
+        <template data-repeat-id="REP-TRANS-ROWS" data-key-ref="TRANS_NO+TRANS_SERNO">
+          <tr data-row-template="transfer"><td data-field-ref="F-ROW-SELECT"></td><td data-field-ref="F-TRANS-SERNO"></td><td data-field-ref="F-TRANS-NO"></td><td data-field-ref="F-TRANS-DATE"></td><td data-field-ref="F-TRANS-AMT"></td><td data-field-ref="F-REMARK"></td></tr>
+        </template>
+      </section>
+
+      <footer class="footer" data-ir-id="V-CONFIRM-ACTIONS">
+        <button data-ir-id="E-CONFIRM" type="button">確認</button>
+      </footer>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-REASON-99-ABSENT" data-state="reason-99-option-absent">
+      <p class="snapshot-label">初始分支：動態選項沒有 value=99</p>
+      <div class="state-diff" data-ir-id="V-REASON-NO-SELECTION">程式指定暫收原因為 99，但清單無對應選項；選單沒有命中的選項。</div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-ROW-ADDED" data-state="row-added">
+      <p class="snapshot-label">新增後</p>
+      <div class="state-diff" data-ir-id="V-ADDED-ROW-DIFF">表格尾端新增一列：序號為原 count + 1、帳號 00041496、伺服器初始日期、金額 0、空白備註，且選取鍵為 Y。</div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-PARTIAL-DELETE" data-state="partial-delete">
+      <p class="snapshot-label">刪除部分選取列後</p>
+      <div class="state-diff" data-ir-id="V-PARTIAL-DELETE-DIFF">保留列依原順序重編序號，合計金額改為保留列金額的整數加總。</div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-ALL-DELETED" data-state="all-selected-delete">
+      <p class="snapshot-label">刪除全部列後</p>
+      <div class="state-diff" data-ir-id="V-ALL-DELETED-DIFF">表格不會成為空集合；改回一列序號 newSerNO、伺服器 TRANS_NO/TRANS_DATE、金額 0、空白備註、選取鍵 Y，合計金額為 0。</div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-CONFIRM-SUCCESS" data-state="confirm-success">
+      <p class="snapshot-label">確認成功且沒有 ERR_MSG</p>
+      <div class="state-diff" data-ir-id="V-CONFIRM-SUCCESS-DIFF">表格重設為一列：回應序號、帳號 00041496、回應日期、金額 0、空白備註、選取鍵 Y；count 與 newSerNO 更新為回應序號。</div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-LOAN-REQUIRED" data-state="insert-loan-empty">
+      <p class="snapshot-label">新增時貸款帳號空白</p>
+      <div class="dialog" role="alertdialog" data-ir-id="MSG-LOAN-REQUIRED"><p class="error">單位代號/貸款帳號不可空白!!</p><button type="button">確定</button></div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-NO-DELETE-SELECTION" data-state="delete-without-selection">
+      <p class="snapshot-label">刪除時沒有選取列</p>
+      <div class="dialog" role="alertdialog" data-ir-id="MSG-NO-DELETE-SELECTION"><p class="error">請勾選欲刪除的電匯資料</p><button type="button">確定</button></div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-REASON-17-CONFIRM" data-state="reason-17-confirmation">
+      <p class="snapshot-label">暫收原因值為 17 時按確認</p>
+      <div class="dialog" role="alertdialog" data-ir-id="MSG-REASON-17-CONFIRM"><p>確定暫收原因為入追償款，且已經輸入貸款貸號？</p><div class="toolbar"><button type="button">確定</button><button type="button">取消</button></div></div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-REASON-15-CONFIRM" data-state="reason-15-confirmation">
+      <p class="snapshot-label">暫收原因值為 15 時按確認</p>
+      <div class="dialog" role="alertdialog" data-ir-id="MSG-REASON-15-CONFIRM"><p>確定暫收原因為入案款，且已經輸入貸款貸號？</p><div class="toolbar"><button type="button">確定</button><button type="button">取消</button></div></div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-AMOUNT-INVALID" data-state="amount-validation-failed">
+      <p class="snapshot-label">劃撥金額驗證失敗</p>
+      <div class="dialog" role="alertdialog" data-ir-id="MSG-AMOUNT-INVALID"><p class="error">請輸入正確劃撥金額</p><button type="button">確定</button></div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-DATE-INVALID" data-state="date-validation-failed">
+      <p class="snapshot-label">劃撥日期驗證失敗</p>
+      <div class="dialog" role="alertdialog" data-ir-id="MSG-DATE-INVALID"><p class="error">劃撥日期須小於等於作業當時日期</p><button type="button">確定</button></div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-BACKEND-ERR" data-state="backend-err-message">
+      <p class="snapshot-label">確認回應含 ERR_MSG</p>
+      <div class="dialog" role="alertdialog" data-ir-id="MSG-BACKEND-ERR"><p class="mock">ERR_MSG 原文（由後端回應）</p><button type="button">確定</button></div>
+    </section>
+
+    <section class="snapshot" data-ir-id="ST-BACKEND-TIPS" data-state="backend-tips-message">
+      <p class="snapshot-label">確認成功回應另含 TIPS_MSG</p>
+      <div class="dialog" role="alertdialog" data-ir-id="MSG-BACKEND-TIPS"><p class="mock">TIPS_MSG 原文（由後端回應）</p><button type="button">確定</button></div>
+    </section>
+  </main>
+</body>
+</html>
