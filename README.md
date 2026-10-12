@@ -16,45 +16,45 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [SKILL.md](.agent/skills/legacy-to-spec/SKILL.md) | 翻新框架、必要規則與執行流程；不含指定技術、框架或業務細節 |
-| [前端系統設計規格](.agent/skills/legacy-to-spec/templates/design/specification.md) | 目的、邊界、角色、資料、UI/UX、狀態、規則、被觸發流程、驗收案例及原型索引 |
-| [HTML prototype](.agent/skills/legacy-to-spec/templates/design/prototype.html) | 可離線開啟的審閱骨架，依來源建立一份或多份真實畫面 |
-| [元件 DESIGN.md](.agent/skills/legacy-to-spec/templates/design/DESIGN.md) + [CSS](.agent/skills/legacy-to-spec/templates/design/component.css) | 有樣式的元件同時產出樣式規格與 prototype 真正載入的 CSS |
-| [DTCG tokens](.agent/skills/legacy-to-spec/templates/design/tokens.json) | 選用機器可讀的樣式值交換格式，與文件／CSS 共用語意 |
-| [翻新計劃](.agent/skills/legacy-to-spec/templates/renovation/plan.md) | 分析前建立；每項任務的依賴、影響、完成條件、契約查找、使用者決策及後續順序 |
-| [翻新執行與持續追蹤](.agent/skills/legacy-to-spec/templates/renovation/tracking.md) | 單一 JSP scope、證據、覆蓋、TODO、驗證執行與增量紀錄 |
-| [API 消費規格](.agent/skills/legacy-to-spec/templates/integration/api-spec.md) | 有 API 需求時，轉寫指定版本的後端產物與前端雙向映射；不另造端點或 schema |
-| [後端責任移交需求](.agent/skills/legacy-to-spec/templates/integration/backend-handoff.md) | 有未承接責任時，保留 JSP 後端邏輯的觸發、資料、規則、順序與副作用 |
+| [SKILL.md](.agents/skills/legacy-to-spec/SKILL.md) | 翻新框架、必要規則與執行流程；不含指定技術、框架或業務細節 |
+| [前端系統設計規格](.agents/skills/legacy-to-spec/templates/design/specification.md) | 目的、邊界、角色、資料、UI/UX、狀態、規則、被觸發流程、驗收案例及原型索引 |
+| [HTML prototype](.agents/skills/legacy-to-spec/templates/design/prototype.html) | 可離線開啟的審閱骨架，依來源建立一份或多份真實畫面 |
+| [元件 DESIGN.md](.agents/skills/legacy-to-spec/templates/design/DESIGN.md) + [CSS](.agents/skills/legacy-to-spec/templates/design/component.css) | 有樣式的元件同時產出樣式規格與 prototype 真正載入的 CSS |
+| [DTCG tokens](.agents/skills/legacy-to-spec/templates/design/tokens.json) | 選用機器可讀的樣式值交換格式，與文件／CSS 共用語意 |
+| [翻新計劃](.agents/skills/legacy-to-spec/templates/renovation/plan.md) | 分析前建立；每項任務的依賴、影響、完成條件、契約查找、使用者決策及後續順序 |
+| [翻新執行與持續追蹤](.agents/skills/legacy-to-spec/templates/renovation/tracking.md) | 單一 JSP scope、證據、覆蓋、TODO、驗證執行與增量紀錄 |
+| [API 消費規格](.agents/skills/legacy-to-spec/templates/integration/api-spec.md) | 有 API 需求時，轉寫指定版本的後端產物與前端雙向映射；不另造端點或 schema |
+| [後端責任移交需求](.agents/skills/legacy-to-spec/templates/integration/backend-handoff.md) | 有未承接責任時，保留 JSP 後端邏輯的觸發、資料、規則、順序與副作用 |
 
 ## 文件職責
 
 | 文件 | 維護的規則與觀點 |
 | --- | --- |
-| [workflow](.agent/skills/legacy-to-spec/guides/workflow.md) | 翻新執行順序、交付位置與續作 |
-| [dependencies](.agent/skills/legacy-to-spec/guides/dependencies.md) | 外部依賴、契約適用性、決策及局部缺口 |
-| [evidence](.agent/skills/legacy-to-spec/guides/evidence.md) | 主張分類、證據定位、中立轉譯、領域引用與 ID |
-| [acceptance](.agent/skills/legacy-to-spec/guides/acceptance.md) | 驗收所需證據、覆蓋與完整／部分交付判定 |
-| [customization](.agent/skills/legacy-to-spec/guides/customization.md) | 範本設定、角色選用優先序與選用紀錄 |
-| [API authority](.agent/skills/legacy-to-spec/references/api/authority.md) | 前後端責任權威、基準版本與衝突 |
-| [backend-profile](.agent/skills/legacy-to-spec/references/api/backend-profile.md) | eBAF 後端產物與自訂工具契約查找 |
-| [API writing-rules](.agent/skills/legacy-to-spec/references/api/writing-rules.md) | API 消費投影、wire 契約與前端雙向映射 |
-| [JSP analysis](.agent/skills/legacy-to-spec/references/legacy/jsp-analysis.md) | JSP 語法、位元組讀取、事件及相依來源解析 |
-| [responsibility-rules](.agent/skills/legacy-to-spec/references/legacy/responsibility-rules.md) | LOGIC 分類、原執行順序與未承接責任移交 |
-| [UI writing-rules](.agent/skills/legacy-to-spec/references/ui/writing-rules.md) | 共用元件用法、prototype 映射與離線互動 |
-| [style-spec](.agent/skills/legacy-to-spec/references/ui/style-spec.md) | DESIGN.md／DTCG 格式、STYLE 與 CSS 映射及呈現核對 |
+| [workflow](.agents/skills/legacy-to-spec/guides/workflow.md) | 翻新執行順序、交付位置與續作 |
+| [dependencies](.agents/skills/legacy-to-spec/guides/dependencies.md) | 外部依賴、契約適用性、決策及局部缺口 |
+| [evidence](.agents/skills/legacy-to-spec/guides/evidence.md) | 主張分類、證據定位、中立轉譯、領域引用與 ID |
+| [acceptance](.agents/skills/legacy-to-spec/guides/acceptance.md) | 驗收所需證據、覆蓋與完整／部分交付判定 |
+| [customization](.agents/skills/legacy-to-spec/guides/customization.md) | 範本設定、角色選用優先序與選用紀錄 |
+| [API authority](.agents/skills/legacy-to-spec/references/api/authority.md) | 前後端責任權威、基準版本與衝突 |
+| [backend-profile](.agents/skills/legacy-to-spec/references/api/backend-profile.md) | eBAF 後端產物與自訂工具契約查找 |
+| [API writing-rules](.agents/skills/legacy-to-spec/references/api/writing-rules.md) | API 消費投影、wire 契約與前端雙向映射 |
+| [JSP analysis](.agents/skills/legacy-to-spec/references/legacy/jsp-analysis.md) | JSP 語法、位元組讀取、事件及相依來源解析 |
+| [responsibility-rules](.agents/skills/legacy-to-spec/references/legacy/responsibility-rules.md) | LOGIC 分類、原執行順序與未承接責任移交 |
+| [UI writing-rules](.agents/skills/legacy-to-spec/references/ui/writing-rules.md) | 共用元件用法、prototype 映射與離線互動 |
+| [style-spec](.agents/skills/legacy-to-spec/references/ui/style-spec.md) | DESIGN.md／DTCG 格式、STYLE 與 CSS 映射及呈現核對 |
 
 guides 管理翻新作業，references 管理來源或領域撰寫規則，templates 提供交付欄位。各文件引用其所需規則；契約索引只連到定義，案例預期與實際驗證結果分開維護。專案領域文件須有權威來源、版本及適用範圍。
 
 ## 範本客製化與樣式
 
-可重用範本統一放在 skill 的 `templates/`，實際成果另存 `artifacts/`。依 [客製化設定](.agent/skills/legacy-to-spec/guides/customization.md)，可直接編輯內建 templates，也可選用 project template root 或逐角色 override；未覆寫角色使用內建範本，選用檔案與雜湊保留於計劃／追蹤。
+可重用範本統一放在 skill 的 `templates/`，實際成果另存 `artifacts/`。依 [客製化設定](.agents/skills/legacy-to-spec/guides/customization.md)，可直接編輯內建 templates，也可選用 project template root 或逐角色 override；未覆寫角色使用內建範本，選用檔案與雜湊保留於計劃／追蹤。
 
-UI 預設採 Google Labs DESIGN.md（alpha），可選加上 DTCG 2025.10 tokens。有樣式的元件須同時建立 DESIGN.md 與 prototype 載入的 CSS，記錄樣式值、狀態、來源及映射，並在瀏覽器核對實際樣式；規則見 [UI 樣式規格](.agent/skills/legacy-to-spec/references/ui/style-spec.md)。範本客製化不替代既有 API 權威或批准產品設計變更。
+UI 預設採 Google Labs DESIGN.md（alpha），可選加上 DTCG 2025.10 tokens。有樣式的元件須同時建立 DESIGN.md 與 prototype 載入的 CSS，記錄樣式值、狀態、來源及映射，並在瀏覽器核對實際樣式；規則見 [UI 樣式規格](.agents/skills/legacy-to-spec/references/ui/style-spec.md)。範本客製化不替代既有 API 權威或批准產品設計變更。
 
 ## 每輪交付結構
 
 ```text
-.agent/skills/legacy-to-spec/                 # 可版本管理的 skill 原始套件
+.agents/skills/legacy-to-spec/                 # 可版本管理的 skill 原始套件
   SKILL.md                            # 翻新框架、必要規則與執行流程
   agents/openai.yaml                  # skill 的顯示資訊
   guides/                             # 工作流程、依賴決策、證據、驗收與客製化
@@ -115,9 +115,9 @@ JSP 的執行位置不決定責任。逐段盤點呈現、業務判斷、資料�
 3. 回覆可執行的 TASK-ID，即開始所選工作；依賴可逐項選先翻新或延後。待決部分保持待決。
 4. 將成果與驗證另存 artifacts，更新計劃；同一入口續作沿用已有選擇與 ID。
 
-skill 的唯一來源在 `.agent/skills/legacy-to-spec/`；[AGENTS.md](AGENTS.md) 將上述文字入口導向此流程。Codex 原生使用 `$legacy-to-spec jsp=<path>` 或 `/skills` 選取，透過 `.agents/skills/legacy-to-spec` 的符號連結探索相同套件；自訂 slash 文字入口不代表已註冊原生選單命令。平台入口依 [官方 skills 文件](https://developers.openai.com/codex/skills)。
+skill 的唯一來源在 `.agents/skills/legacy-to-spec/`；[AGENTS.md](AGENTS.md) 將上述文字入口導向此流程。Codex 原生使用 `$legacy-to-spec jsp=<path>` 或 `/skills` 選取，直接從 `.agents/skills/legacy-to-spec/` 探索套件；自訂 slash 文字入口不代表已註冊原生選單命令。平台入口依 [官方 skills 文件](https://developers.openai.com/codex/skills)。
 
-依賴查找與兩種處理的詳細規則見 [dependencies](.agent/skills/legacy-to-spec/guides/dependencies.md)。plan 管理順序與決策，tracking 保存執行證據；設計規格只描述系統行為及其具體契約缺口。
+依賴查找與兩種處理的詳細規則見 [dependencies](.agents/skills/legacy-to-spec/guides/dependencies.md)。plan 管理順序與決策，tracking 保存執行證據；設計規格只描述系統行為及其具體契約缺口。
 
 HTML 範本可直接在瀏覽器開啟。其配置提示與審閱控制不是產品需求，實際生成時須依證據替換；範本未包含任何示範業務流程。
 
@@ -133,7 +133,7 @@ HTML 範本可直接在瀏覽器開啟。其配置提示與審閱控制不是產
 
 依 [沙盒操作說明](tests/legacy-to-spec/README.md) 建立輸入與 skill 快照，交給獨立代理實際翻新，再分別執行結構、來源語意與本地瀏覽器檢查。只依有證據的失敗修正 skill，保留舊產物並以新快照重測，避免只修測試產物。
 
-來源檔案的行數、雜湊與解碼可用 [source_inventory.py](.agent/skills/legacy-to-spec/scripts/source_inventory.py) 核對；解碼成功不自動證明實際編碼。
+來源檔案的行數、雜湊與解碼可用 [source_inventory.py](.agents/skills/legacy-to-spec/scripts/source_inventory.py) 核對；解碼成功不自動證明實際編碼。
 
 可重跑的測試程式、案例與 fixture 隨工具維護；歷次測試快照、報告、試用產物與截圖分開保存於本地分支 `backup/legacy-to-spec-tests-2026-10-12`。目前分支忽略本地產生的 `sandbox/` 與 `output/playwright/`，原始記錄仍可從備份分支查閱。
 

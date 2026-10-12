@@ -7,7 +7,7 @@ import tempfile
 import unittest
 
 REPO = Path(__file__).resolve().parents[2]
-spec = importlib.util.spec_from_file_location("select_templates", REPO / ".agent/skills/legacy-to-spec/scripts/select_templates.py")
+spec = importlib.util.spec_from_file_location("select_templates", REPO / ".agents/skills/legacy-to-spec/scripts/select_templates.py")
 selector = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(selector)
 

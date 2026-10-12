@@ -46,7 +46,7 @@ def prepare(args):
         raise ValueError("Unsupported sandbox stage")
     try:
         target.mkdir(parents=True)
-        skill = REPO / ".agent" / "skills" / "legacy-to-spec"
+        skill = REPO / ".agents" / "skills" / "legacy-to-spec"
         for source in sorted(skill.rglob("*")):
             if source.is_file() and source.name != ".DS_Store" and "__pycache__" not in source.parts:
                 snapshot(source, target / "skill" / source.relative_to(skill), "skill", records)

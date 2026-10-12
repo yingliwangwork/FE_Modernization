@@ -6,7 +6,7 @@ import tempfile
 import unittest
 
 REPO = Path(__file__).resolve().parents[2]
-spec = importlib.util.spec_from_file_location("source_inventory", REPO / ".agent/skills/legacy-to-spec/scripts/source_inventory.py")
+spec = importlib.util.spec_from_file_location("source_inventory", REPO / ".agents/skills/legacy-to-spec/scripts/source_inventory.py")
 inventory = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(inventory)
 

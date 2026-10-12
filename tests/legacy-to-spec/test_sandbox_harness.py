@@ -148,7 +148,7 @@ class SandboxHarnessTests(unittest.TestCase):
             source = minimal / "sourceCode/AF/AFY10400.jsp"
             source.parent.mkdir(parents=True)
             source.write_bytes(b"<html>partial AF sandbox</html>")
-            skill = minimal / ".agent/skills/legacy-to-spec"
+            skill = minimal / ".agents/skills/legacy-to-spec"
             skill.mkdir(parents=True)
             (skill / "SKILL.md").write_text("# Test skill\n")
             run = "partial-" + uuid.uuid4().hex

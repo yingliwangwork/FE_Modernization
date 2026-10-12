@@ -2,7 +2,7 @@
 
 以單一 JSP 為單位，建立有來源證據的技術中立規格、可審閱原型與獨立翻新紀錄。
 
-**適用套件**：[legacy-to-spec](../.agent/skills/legacy-to-spec/SKILL.md) · **手冊更新日期**：2026-10-12 · **閱讀版本**：[HTML](legacy-to-spec-manual.html)
+**適用套件**：[legacy-to-spec](../.agents/skills/legacy-to-spec/SKILL.md) · **手冊更新日期**：2026-10-12 · **閱讀版本**：[HTML](legacy-to-spec-manual.html)
 
 本手冊依目前專案內的 skill、guides、references 與腳本整理。你只需提供單一 JSP 路徑，由它依 skill 建立計劃，再按你的任務選擇產出；輔助腳本負責來源盤點、範本選用與檢查。規則的維護來源仍是 SKILL.md 及其引用文件。
 
@@ -41,7 +41,7 @@ TASK-03
 
 任務編號以本輪選單為準。已授權的選擇會被保留，同一 JSP 再次啟動時可續作。
 
-**Codex 使用方式**：本專案 [AGENTS.md](../AGENTS.md) 將 `/legacy-to-spec jsp=...` 文字指令導向 `.agent/skills/legacy-to-spec/`。Codex 原生探索目錄是 `.agents/skills/`，本專案以符號連結指向同一套件；原生明確啟動可用 `$legacy-to-spec jsp=...` 或 `/skills` 選取。自訂 slash 文字入口不代表原生選單已註冊同名命令，依 [官方 skills 文件](https://developers.openai.com/codex/skills)。
+**Codex 使用方式**：本專案 [AGENTS.md](../AGENTS.md) 將 `/legacy-to-spec jsp=...` 文字指令導向 `.agents/skills/legacy-to-spec/`。本專案直接將實體套件放在 Codex 原生探索目錄 `.agents/skills/`；原生明確啟動可用 `$legacy-to-spec jsp=...` 或 `/skills` 選取。自訂 slash 文字入口不代表原生選單已註冊同名命令，依 [官方 skills 文件](https://developers.openai.com/codex/skills)。
 
 ## 2. 自動取得與按需補充的輸入
 
@@ -56,7 +56,7 @@ TASK-03
 
 **權威分工**：UI／UX、互動與共用元件以前端為依據；API 與業務能力以指定 eBAF 後端產物為依據。後端工具的 `.github` 只提供方法參考。
 
-詳見 [工作流程](../.agent/skills/legacy-to-spec/guides/workflow.md) 與 [權威分工](../.agent/skills/legacy-to-spec/references/api/authority.md)。
+詳見 [工作流程](../.agents/skills/legacy-to-spec/guides/workflow.md) 與 [權威分工](../.agents/skills/legacy-to-spec/references/api/authority.md)。
 
 ## 3. 計劃與任務選擇
 
@@ -110,11 +110,11 @@ plan 記錄取得材料後的補契約順序及重新驗證任務。
 
 可以逐項決定，不必整組採同一策略。選擇先翻新但材料仍不可取得時，該部分仍需等待材料；決策本身不會證明未知行為。
 
-詳見 [依賴與決策](../.agent/skills/legacy-to-spec/guides/dependencies.md)。
+詳見 [依賴與決策](../.agents/skills/legacy-to-spec/guides/dependencies.md)。
 
 ## 5. 找到與理解交付文件
 
-可重用範本在 `.agent/skills/legacy-to-spec/templates/`，實際成果另存。以下是預設交付位置；有客製設定時，以本輪選用清單與有效連結為準。
+可重用範本在 `.agents/skills/legacy-to-spec/templates/`，實際成果另存。以下是預設交付位置；有客製設定時，以本輪選用清單與有效連結為準。
 
 ```text
 artifacts/
@@ -155,7 +155,7 @@ JSP 可能混合呈現、資料轉換、業務判斷與儲存責任。LLM 需逐
 4. 在瀏覽器確認 CSS 實際載入、selector 命中、computed style 與必要幾何／層疊；只比文字內容不足以證明顯示一致。
 5. 把觀察環境、操作、實際結果與截圖放進 tracking；驗收預期留在契約文件。
 
-**樣式 profile**：`design-md` 使用本套件指定的 DESIGN.md alpha 格式；`design-md+dtcg` 再輸出 DTCG 2025.10 tokens。DESIGN.md frontmatter 與 DTCG JSON 是不同格式。格式細節以 [樣式規則](../.agent/skills/legacy-to-spec/references/ui/style-spec.md) 為準。
+**樣式 profile**：`design-md` 使用本套件指定的 DESIGN.md alpha 格式；`design-md+dtcg` 再輸出 DTCG 2025.10 tokens。DESIGN.md frontmatter 與 DTCG JSON 是不同格式。格式細節以 [樣式規則](../.agents/skills/legacy-to-spec/references/ui/style-spec.md) 為準。
 
 例如來源只證實字型族時，DESIGN.md 的 typography token 要是物件；不為格式完整而添加未確認的字級或行高：
 
@@ -175,7 +175,7 @@ typography:
 
 ### 直接修改範本
 
-可直接編輯 `.agent/skills/legacy-to-spec/templates/` 中對應的文件骨架；下一輪自動採用，計劃記錄實際檔案與雜湊。生成成果另存 `artifacts/`。修改章節、語言與版面時保留必要證據、映射、缺口及驗證欄位，不需新增啟動參數。
+可直接編輯 `.agents/skills/legacy-to-spec/templates/` 中對應的文件骨架；下一輪自動採用，計劃記錄實際檔案與雜湊。生成成果另存 `artifacts/`。修改章節、語言與版面時保留必要證據、映射、缺口及驗證欄位，不需新增啟動參數。
 
 ### 只切換樣式 profile
 
@@ -228,7 +228,7 @@ typography:
 
 可以調整章節、語言、版面與路徑，但必須保留必要資訊、穩定 ID、證據與缺口連結。補充 API／UI／domain 文件是撰寫規則，不能取代後端產物或前端來源的事實；提供風格指南不代表批准改變原系統設計。
 
-詳見 [客製化規則](../.agent/skills/legacy-to-spec/guides/customization.md)。
+詳見 [客製化規則](../.agents/skills/legacy-to-spec/guides/customization.md)。
 
 ## 8. 輔助工具操作
 
@@ -239,7 +239,7 @@ typography:
 這個可執行範例讀取倉庫的合成 JSP，不修改來源：
 
 ```sh
-python3 .agent/skills/legacy-to-spec/scripts/source_inventory.py \
+python3 .agents/skills/legacy-to-spec/scripts/source_inventory.py \
   tests/legacy-to-spec/fixtures/coupled/frontend/Case.jsp \
   --candidate utf-8 --candidate cp950
 ```
@@ -249,13 +249,13 @@ python3 .agent/skills/legacy-to-spec/scripts/source_inventory.py \
 ### 範本選用
 
 ```sh
-python3 .agent/skills/legacy-to-spec/scripts/select_templates.py
+python3 .agents/skills/legacy-to-spec/scripts/select_templates.py
 ```
 
 若有第 7 節設定檔：
 
 ```sh
-python3 .agent/skills/legacy-to-spec/scripts/select_templates.py \
+python3 .agents/skills/legacy-to-spec/scripts/select_templates.py \
   --config config/legacy-to-spec.json
 ```
 
@@ -266,7 +266,7 @@ python3 .agent/skills/legacy-to-spec/scripts/select_templates.py \
 先將下一段的引號內路徑換成已產出的元件 DESIGN.md，再執行。此工具需 Python 環境已提供 PyYAML；缺少時會明確回報未執行，不自動安裝。
 
 ```sh
-python3 .agent/skills/legacy-to-spec/scripts/check_design_metadata.py \
+python3 .agents/skills/legacy-to-spec/scripts/check_design_metadata.py \
   "artifacts/design/<scope-id>/components/<CMP-ID>/DESIGN.md"
 ```
 
@@ -295,7 +295,7 @@ python3 .agent/skills/legacy-to-spec/scripts/check_design_metadata.py \
 
 **完整交付**需要範圍內必要契約已確認、矛盾已解、覆蓋無缺口，且必要驗證完成。其餘情況標為**部分交付**，列出受影響內容與下一步；檔案齊全、測試通過數或 TODO 數歸零不能單獨證明完整。
 
-完整準則見 [驗收規則](../.agent/skills/legacy-to-spec/guides/acceptance.md)。
+完整準則見 [驗收規則](../.agents/skills/legacy-to-spec/guides/acceptance.md)。
 
 ## 10. 續作與關閉待辦
 
@@ -396,7 +396,7 @@ git worktree add ../FE_Modernization-test-backup backup/legacy-to-spec-tests-202
 
 | 問題 | 處理方式 |
 | --- | --- |
-| LLM 找不到 skill | 提供 `.agent/skills/legacy-to-spec/SKILL.md` 的確切路徑，要求讀取及遵循，再核對其能存取的工作區 |
+| LLM 找不到 skill | 提供 `.agents/skills/legacy-to-spec/SKILL.md` 的確切路徑，要求讀取及遵循，再核對其能存取的工作區 |
 | JSP 有亂碼或 codec 結果不一致 | 先登錄原始 bytes、hash、行號與 strict 解碼限制，取得正確來源；不從 replacement 字元猜文案 |
 | 依賴有來源，但沒有中立契約 | 先登錄查找結果、缺口與影響，由使用者決定；有來源不自動授權翻新 |
 | 後端只有方法規格 | 可作已知責任的依據，但不能直接推導 HTTP 操作；API 缺口保留，前端獨立部分繼續 |
@@ -417,6 +417,6 @@ git worktree add ../FE_Modernization-test-backup backup/legacy-to-spec-tests-202
 | R8 | 契約與執行分離 |
 | R9 | 完整性必須能被檢查 |
 
-SKILL.md 的 **E1–E3 是原則示例**；交付文件的 **E-* 是來源證據**，兩者用途不同。其他常用 ID：DEP（依賴）、TASK（任務）、DEC（決策）、TODO（缺口）、AC（驗收預期）、V（驗證執行）、CHANGE（變更）。完整 ID 定義見 [證據規則](../.agent/skills/legacy-to-spec/guides/evidence.md)。
+SKILL.md 的 **E1–E3 是原則示例**；交付文件的 **E-* 是來源證據**，兩者用途不同。其他常用 ID：DEP（依賴）、TASK（任務）、DEC（決策）、TODO（缺口）、AC（驗收預期）、V（驗證執行）、CHANGE（變更）。完整 ID 定義見 [證據規則](../.agents/skills/legacy-to-spec/guides/evidence.md)。
 
 Markdown 與 HTML 是同一份手冊的兩種閱讀形式；維護時同步更新。HTML 正文、樣式與互動可離線使用，專案來源連結需保留 `docs/` 與倉庫的相對目錄結構。
