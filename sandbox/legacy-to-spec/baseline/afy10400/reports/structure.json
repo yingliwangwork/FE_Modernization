@@ -1,0 +1,31 @@
+{
+  "case": "afy10400",
+  "run": "baseline",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 32,
+    "markdown_files": 5,
+    "html_files": 1,
+    "links": 30
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/design/AF-AFY10400/prototypes/SCR-01.html": "9183144a5540aa5bc74777b06a4a791d24cd1e708e520662e6e646520430627d",
+    "artifacts/design/AF-AFY10400/specification.md": "e6e752fa2f345674ad4627842685348d4ac7997060eaf1c40ccbd7870e3e92f8",
+    "artifacts/integration/AF-AFY10400/api-spec.md": "165b5e49ea50e2482d33be5d659e25cab8279c8a8077d093c84e508d1ab58b4c",
+    "artifacts/integration/AF-AFY10400/backend-handoff.md": "fe1a67cdb82fe78b3710dfebb0e190d241693d3b814e70712f933e484f6c392e",
+    "artifacts/renovation/AF-AFY10400/checks/README.md": "86138b65c312b780f45b65d6c05df2d71db21e3da8a15f733e044105d74b0378",
+    "artifacts/renovation/AF-AFY10400/checks/check_interactions.js": "27e96e95db68c8d5888514bc792d6214f191b172a7170d620de9ce8c24f8f4a9",
+    "artifacts/renovation/AF-AFY10400/checks/input-inventory.json": "4dfa43b7765744300802efc8349fc36e6b0df832aa33b7535cfed2f90fd61f00",
+    "artifacts/renovation/AF-AFY10400/checks/interaction-report.json": "02cccd8c575338a225c940ee6bfcb97b777b36ab5b59fe69d7236bceb50a9172",
+    "artifacts/renovation/AF-AFY10400/checks/prototype-script.js": "4395ec69842302b6ee872499edf54b228b243c907e829576da67f55b0b861bf9",
+    "artifacts/renovation/AF-AFY10400/checks/static-report.json": "359da41a1acf7bacccee0927ed9ea9ce4f71ba1aca667b35a0effe3b9f79c342",
+    "artifacts/renovation/AF-AFY10400/checks/verify_static.py": "90aee6890a38df20f4cbd316051dc95f4e31bcb6d51012c6db5e8e257ff8af87",
+    "artifacts/renovation/AF-AFY10400/tracking.md": "9e7446d11355c7d0bebc98c9a6a2eee7656153134f9fdde31cd74da0c2f355b1"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

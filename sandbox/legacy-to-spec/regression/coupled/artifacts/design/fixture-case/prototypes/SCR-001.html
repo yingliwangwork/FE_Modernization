@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>項目查閱</title>
+  <style>
+    body { font-family: sans-serif; max-width: 720px; margin: 24px; color: #222; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+    th, td { border: 1px solid #555; padding: 6px; text-align: left; }
+    .action-bar { margin-top: 8px; }
+    .review { margin-top: 32px; border-top: 1px solid #aaa; padding-top: 12px; }
+    .review p { margin: 8px 0; }
+    .review-controls { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+    .review :focus-visible { outline: 2px solid #222; outline-offset: 2px; }
+    .review pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main id="product-canvas" data-flow-id="FLOW-001" data-scope-id="fixture-case" data-screen-id="SCR-001" data-state-id="ST-001" data-search-state-id="ST-001" data-quantity-state-id="ST-001">
+    <h1 data-ui-id="UI-001">項目查閱</h1>
+    <p data-ui-id="UI-002">審閱者：<span id="reviewer">展示審閱者</span></p>
+    <label for="filter" data-ui-id="UI-003">關鍵字</label><input id="filter" type="text" maxlength="12" data-ui-id="UI-003">
+    <div class="action-bar" data-component-id="CMP-001"><button id="lookup" type="button" data-ui-id="UI-004" data-flow-id="FLOW-002">查閱</button></div>
+    <p id="status" data-ui-id="UI-005"></p>
+    <table data-ui-id="UI-009"><thead><tr><th data-ui-id="UI-006">項目代碼</th><th data-ui-id="UI-007">名稱</th><th data-ui-id="UI-008">排序提示</th></tr></thead><tbody id="rows" data-flow-id="FLOW-003"></tbody></table>
+    <form id="quantity-form" method="post" data-flow-id="FLOW-004">
+      <input type="hidden" name="mode" value="commit">
+      <label for="quantity" data-ui-id="UI-010">數量</label><input id="quantity" name="quantity" type="text" data-ui-id="UI-010">
+      <button type="submit" data-ui-id="UI-011" data-flow-id="FLOW-004">送出數量</button>
+    </form>
+  </main>
+
+  <aside class="review" data-review-only="true" aria-label="審閱工具">
+    <details open>
+      <summary>審閱工具（收合可隱藏說明與情境控制）</summary>
+      <p>產品標籤、順序與樣式依來源重建。此離線展示不呼叫外部系統，不計算費用，不儲存資料，不推導權限。</p>
+      <p>審閱者與以下兩筆項目是合成展示資料；審閱者初始化仍缺少目標承接（TODO-001 / HANDOFF-001）。排序提示只是預寫的 legacy 情境文字，不是排序計算或目標回應欄位（TODO-002 / HANDOFF-002）。</p>
+      <div class="review-controls">
+        <label for="response-scenario">下一次查閱的回應情境
+          <select id="response-scenario">
+            <option value="DONE">Legacy 成功（含合成排序提示）</option>
+            <option value="NONE">沒有項目（EMPTY 對應）</option>
+            <option value="BLOCK">不允許查閱（DENIED 對應）</option>
+            <option value="OTHER">其他 Legacy 結果（非目標結果碼）</option>
+            <option value="TARGET_OK">目標 OK（排序提示缺口）</option>
+          </select>
+        </label>
+        <label for="hold-response"><input id="hold-response" type="checkbox">延後回應，保留既有資料列供檢查</label>
+        <button id="release-response" type="button">交付下一個本機回應</button>
+        <button id="reset-review" type="button">重設審閱</button>
+      </div>
+      <p id="review-status" role="status" aria-live="polite">初始展示。先選情境，再按產品的「查閱」。情境在查閱觸發時擷取。</p>
+      <p>可重複查閱，回應不做防重或最新請求過濾。延後回應按觸發順序交付；可先觸發 BLOCK 再觸發 DONE 觀察成功回應保留前一次回應的訊息。這是本機情境工具，沒有宣告服務順序保證。</p>
+      <p>數量空字串會顯示來源原文 alert「數量不得為空」。非空字串只展示已知交接；空白與非數字也通過來源前端檢核，但後端解析結果、計费及儲存仍未知（TODO-003 / HANDOFF-003）。</p>
+      <pre id="boundary-log" aria-label="本機交接紀錄">尚無交接。</pre>
+      <p>目標 OK 情境只用 rowId、label；第三欄空白是審閱中的缺口展示，沒有確認為改版需求。未知傳輸錯誤與數量後置畫面不假裝成功。尚未比較 legacy 執行畫面，尚未執行瀏覽器驗證。</p>
+      <p><a href="../specification.md">規格與驗收案例</a></p>
+    </details>
+  </aside>
+  <script>
+    // Local review fixtures only. No backend operation, business arithmetic,
+    // trusted-context derivation, real form submission, or external requests.
+    const canvas = document.getElementById('product-canvas');
+    const status = document.getElementById('status');
+    const body = document.getElementById('rows');
+    const note = document.getElementById('review-status');
+    const log = document.getElementById('boundary-log');
+    const responseQueue = [];
+    const scheduledResponses = new Set();
+    const legacyFixtures = {
+      DONE: { businessResult: 'DONE', itemList: [
+        { itemKey: 'DEMO-B', itemText: '展示項目乙', rankHint: '展示提示乙' },
+        { itemKey: 'DEMO-A', itemText: '展示項目甲', rankHint: '展示提示甲' }
+      ] },
+      NONE: { businessResult: 'NONE', itemList: [] },
+      BLOCK: { businessResult: 'BLOCK', itemList: [] },
+      OTHER: { businessResult: 'OTHER', itemList: [] }
+    };
+    const targetFixture = {
+      outcome: 'OK', rows: [
+        { rowId: 'DEMO-B', label: '展示項目乙' },
+        { rowId: 'DEMO-A', label: '展示項目甲' }
+      ]
+    };
+
+    function searchState(id) {
+      canvas.dataset.stateId = id;
+      canvas.dataset.searchStateId = id;
+    }
+    function quantityState(id) {
+      canvas.dataset.stateId = id;
+      canvas.dataset.quantityStateId = id;
+    }
+    function receiveFixture(scenario) {
+      // E-005: clear table before branching; do not clear status here.
+      body.textContent = '';
+      if (scenario === 'TARGET_OK') {
+        targetFixture.rows.forEach(item => {
+          const row = body.insertRow();
+          [item.rowId, item.label, ''].forEach((value, index) => {
+            const cell = row.insertCell();
+            cell.textContent = value;
+            cell.dataset.uiId = ['UI-006', 'UI-007', 'UI-008'][index];
+          });
+        });
+        searchState('ST-003');
+        note.textContent = '本機目標 OK 情境已交付；只含已確認 rowId/label。排序提示缺口 TODO-002，未填入目標 schema。';
+      } else {
+        const result = legacyFixtures[scenario];
+        if (result.businessResult === 'DONE') {
+          result.itemList.forEach(item => {
+            const row = body.insertRow();
+            [item.itemKey, item.itemText, item.rankHint].forEach((value, index) => {
+              const cell = row.insertCell();
+              cell.textContent = value;
+              cell.dataset.uiId = ['UI-006', 'UI-007', 'UI-008'][index];
+            });
+          });
+          searchState('ST-003');
+        } else if (result.businessResult === 'NONE') {
+          status.textContent = '沒有項目';
+          searchState('ST-004');
+        } else if (result.businessResult === 'BLOCK') {
+          status.textContent = '不允許查閱';
+          searchState('ST-005');
+        } else {
+          searchState('ST-006');
+        }
+        note.textContent = '本機 Legacy 情境已交付：' + scenario + '。剩餘延後回應：' + responseQueue.length + '。非正式服務結果。';
+      }
+    }
+    function searchRows() {
+      status.textContent = '';
+      const queryText = document.getElementById('filter').value.trim();
+      const scenario = document.getElementById('response-scenario').value;
+      searchState('ST-002');
+      log.textContent = 'BOUND-001 / API-001，僅本機紀錄，未發出請求\n' + JSON.stringify({ queryText });
+      if (document.getElementById('hold-response').checked) {
+        responseQueue.push(scenario);
+        note.textContent = '已停在查閱交接，既有資料列保留。延後回應：' + responseQueue.length + '。';
+      } else {
+        const timer = setTimeout(() => {
+          scheduledResponses.delete(timer);
+          receiveFixture(scenario);
+        }, 0);
+        scheduledResponses.add(timer);
+      }
+    }
+    function submitQuantity(event) {
+      event.preventDefault(); // This review artifact never submits a real form.
+      if (document.getElementById('quantity').value === '') {
+        quantityState('ST-007');
+        alert('數量不得為空');
+        note.textContent = '來源前端檢核已阻止空數量交接；既有查閱內容保留。';
+        return false;
+      }
+      quantityState('ST-008');
+      log.textContent = 'BOUND-002 / HANDOFF-003：已到已知交接，未計算、未送出、未儲存\n' + JSON.stringify({ mode: 'commit', quantity: document.getElementById('quantity').value });
+      note.textContent = '非空數量通過來源前端檢核。後端承接 TODO-003；不展示未知成功結果。';
+      return true;
+    }
+    document.getElementById('lookup').addEventListener('click', searchRows);
+    document.getElementById('quantity-form').addEventListener('submit', submitQuantity);
+    document.getElementById('release-response').addEventListener('click', () => {
+      if (responseQueue.length) receiveFixture(responseQueue.shift());
+      else note.textContent = '沒有待交付的本機回應。';
+    });
+    document.getElementById('reset-review').addEventListener('click', () => {
+      scheduledResponses.forEach(timer => clearTimeout(timer));
+      scheduledResponses.clear();
+      responseQueue.length = 0;
+      document.getElementById('filter').value = '';
+      document.getElementById('quantity').value = '';
+      document.getElementById('response-scenario').value = 'DONE';
+      document.getElementById('hold-response').checked = false;
+      status.textContent = '';
+      body.textContent = '';
+      searchState('ST-001');
+      canvas.dataset.quantityStateId = 'ST-001';
+      log.textContent = '尚無交接。';
+      note.textContent = '初始展示。先選情境，再按產品的「查閱」。情境在查閱觸發時擷取。';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "kind": "source-lifecycle-browser-check",
+  "checks": [
+    {
+      "id": "cover-window-focus-attempt",
+      "source": "CSRUtil.js:321-326 active control type contains button",
+      "status": "PASS",
+      "observed": {
+        "activeType": "button",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "detached-message-first-key-guard",
+      "source": "CSRUtil.js:1545-1555,1613-1625 detached message returns before stopping key",
+      "status": "PASS",
+      "observed": {
+        "accepted": true,
+        "defaultPrevented": false,
+        "propagated": 1
+      }
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "limits": [
+    "Synthetic keypress checks the source listener condition, not native Escape compatibility.",
+    "A focus-call observer verifies an attempt; it does not prove the operating system changed focus.",
+    "No legacy server or backend is executed."
+  ],
+  "runtimeHashes": {
+    "artifacts/design/AF-AFY10400/prototypes/SCR-01.html": "38a79f7867c7fb6e9277c16da44d90af8d099d5e3f5c5d30710c2d27adda230f",
+    "artifacts/design/AF-AFY10400/prototypes/model.js": "dc2921e208b378216def7be5485c30f4d76a435155fe7e80adc9efd864fc1680",
+    "artifacts/design/AF-AFY10400/prototypes/prototype.js": "a0ff53a73dec8b05721383f04da8663a010be94830c97ad6587eb8ac04e9a6df",
+    "artifacts/design/AF-AFY10400/styles/CMP-COVER.css": "c3c98fb11301edb947d9c4be473fc18331d25d177ffd8a429f7869e9820ae806",
+    "artifacts/design/AF-AFY10400/styles/CMP-FORM.css": "38bb2cf739aacd5920b99b389252007b8820bbff329ebf00ec17e74d93531b0c",
+    "artifacts/design/AF-AFY10400/styles/CMP-MESSAGE.css": "811357b4d07eac7d1b4abead7dbbb9356218e4b145b3af16478884fadea4bf02",
+    "artifacts/design/AF-AFY10400/styles/CMP-PAGE.css": "6bcf510982516af290b9186bbadf6cc3ef315687560c750885db3189c578f1e7",
+    "artifacts/design/AF-AFY10400/styles/review.css": "dc9b2a82c7b1ca2c71aaca502adbdb73f936e485254b9597b3b30a875bc767ec"
+  },
+  "status": "PASS"
+}

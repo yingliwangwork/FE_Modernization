@@ -1,0 +1,47 @@
+# Independent semantic review — AFY10400 regression
+
+Reviewed frozen primary artifacts after the parent completion signal on 2026-10-12. Evidence was restricted to this case's task, manifest, supplied skill and raw input snapshots, then its completed specification, API projection, handoff, prototype and tracking. Other runs, parent sources, test programs/result logs, real endpoints and browser setup were not inspected or executed. Paths below are relative to this case; frontend line numbers refer to strict Big5 decoding of the unchanged raw snapshots.
+
+## Result
+
+Three medium-severity source/contract discrepancies remain. The delivery correctly declares itself partial and preserves the principal screen/export flows, important conditional message branches and selected backend wire contract. It should not be treated as preserving every known shared interaction until the findings below are resolved. No high-severity invented endpoint, billing/query implementation, fabricated backend schema or false claim of actual browser/backend execution was found.
+
+## Findings
+
+### R-001 — Medium: copy-audit timer behavior is silently changed
+
+- Source: `inputs/frontend/sourceCode/CM/header.jsp:157–163`. Every eligible changed selection schedules a new independent 60-second callback that clears the shared last-selection value. The source does not cancel earlier callbacks.
+- Artifact: `artifacts/design/AF-AFY10400/prototypes/SCR-001.html:73` cancels the previous callback with `clearTimeout(copyTimer)` before scheduling the new one. `artifacts/design/AF-AFY10400/specification.md:161`, `artifacts/integration/AF-AFY10400/backend-handoff.md:42` and acceptance case AC-015 describe the general 60-second rule without preserving the consequence of multiple independent timers. Tracking `:111`, `:159–163` has no confirmed change or defect proposal for this behavior.
+- Concrete difference, derived from the supplied code rather than executed in a browser: copy A at t=0, copy different B at t=30, then copy B again at t=61. The original t=0 callback clears the shared last value at t=60, so the source makes the t=61 copy eligible for another audit request. The prototype cancels that callback and suppresses B until t=90. The pending backend audit remains a handoff, but its demonstrated triggering contract has changed.
+- Required resolution: retain the source's independently scheduled resets and record this sequence in the conditional contract/acceptance coverage, or separately document an explicitly confirmed behavior change. Do not present a sliding 60-second window as the recovered legacy fact.
+
+### R-002 — Medium: policy shortcuts do not apply when the document body has focus
+
+- Source: `inputs/frontend/sourceCode/CM/header.jsp:128–147` registers keydown at window scope; when the policy branch is installed, Ctrl+A/X/S/P are handled without requiring the target to be a product descendant. The known reactions include stopping the event and displaying the matching policy text.
+- Artifact: `artifacts/design/AF-AFY10400/prototypes/SCR-001.html:71` returns when `!product.contains(e.target)`. The ordinary page body is outside the product section defined at prototype `:8–9`. There is no body-focus exception. The stated contract at specification `:161` and AC-015 at `:186` does not include this narrower target condition.
+- Concrete difference: select the policy review branch, focus the page body outside the review controls/product descendants, then press Ctrl+A, Ctrl+X, Ctrl+S or Ctrl+P. The delivered handler skips the corresponding block/message; the source's window handler has no such guard. The separate `beforeprint` hook does not reproduce the keydown block or the other shortcuts.
+- Required resolution: preserve the policy on document/body keyboard events while keeping any intentional exemption for review controls explicitly confined to that review layer. Add coverage for the no-product-control-focus condition. Actual browser compatibility remains a separate unexecuted check.
+
+### R-003 — Medium: known custom-message title dragging is omitted from the contract and coverage
+
+- Source: `inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js:1520–1568`. The custom message title registers mousedown; dragging creates a position outline, observes document mousemove/mouseup, and applies the final top/left coordinates to the message window. This is part of the supplied MsgWin component, conditionally selected by the responder at CSRUtil `:626–645`.
+- Artifacts: specification UI-013/CMP-002 at `artifacts/design/AF-AFY10400/specification.md:82`, `:95`, FLOW-006 at `:160` and AC-012/013 at `:183–184` retain message appearance, focus and closure but omit dragging. Prototype title at `artifacts/design/AF-AFY10400/prototypes/SCR-001.html:21`, fixed message positioning at `:5` and handlers at `:53–54`, `:65` have no drag interaction. Tracking `artifacts/renovation/AF-AFY10400/tracking.md:32`, `:64` says the MsgWin source range was read, but coverage `:92` includes only confirmation/focus/keypress; no exclusion or TODO identifies dragging.
+- Impact: a known conditional interaction is lost despite specification `:13` and tracking `:20`, `:47` describing coverage of all known branches. Unknown deployment selection does not make the component's source-defined drag response unknown. The source's browser-specific event handling may require verification; that uncertainty should be recorded rather than dropping the interaction.
+- Required resolution: include the conditional drag trigger and visible outcome in UI/FLOW/AC/coverage; demonstrate it locally or explicitly index the limitation and a specific verification TODO. Narrow the coverage claim until this source-defined behavior has a destination.
+
+## Checks that passed the source comparison
+
+| Area | Source and selected authority | Assessment |
+| --- | --- | --- |
+| Single entry and provenance | `task.txt`; `manifest.json`; root `inputs/frontend/sourceCode/AF/AFY10400.jsp:1–246` | Tracking `:9–40` records one root, Big5/CRLF basis, selected backend hash, dependencies and the unreadable date dependency. No second-root expansion was found. |
+| Initial UI, rows and checks | Root `:22–94`, `:116–124`, `:187–230`; stylesheet `inputs/frontend/sourceCode/CM/css/cm.css` | Specification `:35–90`, `:129–133`, `:155–159` and prototype `:10–18`, `:42–52` preserve zero initial rows, L/AT defaults, options, labels, row controls/dimensions, alternating color, immediate deletion and interleaved empty/duplicate checking. No minimum-row, forced-ten-character or trim rule was invented. |
+| Triggered export and download | Root `:95–113`; `inputs/frontend/sourceCode/CM/js/RPTUtil.js:656–688` | Success writes per-ID results before same-window download; legacy rejection writes results without download. Prototype `:59–62` uses expressly injected synthetic responses and logs a boundary rather than querying, generating a file or determining business results. Existing results are not pre-cleared. |
+| Conditional entry messages | `inputs/frontend/sourceCode/CM/msgDisplayer.jsp:103–185` | Specification `:141–155` preserves error/exception text, code 0/99 suppression, first-message bottom handoff, rollback-flag reset/early return and WI/native selection. Unknown WI/bottom internals are tracked separately. |
+| Conditional asynchronous messages | `inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js:493–499`, `:553–744`, `:1451–1473`, `:1609–1632`, `:1673` | Specification `:143–160` retains callback-before-completion, ordinary/custom/EP strategies, long-ID formatting, bottom message colors, first-keypress consumption, confirmation focus and confirmation-click propagation. The custom drag omission is R-003. |
+| Exact target contract | `inputs/backend/docs/OPENAPI.md:25–67`, `:82–84`, `:502–570` | `artifacts/integration/AF-AFY10400/api-spec.md:22–89` preserves code/msg/data, HTTP200 plus code500/data null, lowercase rtype, export I_ID/POLICY_NO arrays, rtnMap/fileName, download media/header/binary and partial-write uncertainty. Prompt is explicitly unconsumed and does not add date/edit/query UI. No legacy error map or encrypted download fields were invented in the target schema. |
+| Backend ownership and gaps | Root `:98–113`; header trusted configuration/context; selected backend and supplied method semantics | Handoff `:17–48` and tracking `:128–153` preserve rejected per-row feedback, legacy download-chain difference, trusted configuration, auditing, watermark and multiline/zero-row uncertainties. Backend work is not reproduced in the prototype. |
+| Claim limits | Supplied skill acceptance/evidence/visual rules | Tracking `:165–177` explicitly says Node syntax/static checks only; all AC browser/backend execution is unexecuted. No deployed/undeployed inference, pixel-equivalence claim or actual browser/network-check claim was found. The narrower all-known-branch coverage statement is affected by R-003; this is not a fabricated execution claim. |
+
+## Verification limits
+
+All findings above come from independent raw-source versus artifact comparison. The proposed event/time sequences were not run in a browser. Local hash/syntax/static pass records referenced by tracking were not independently inspected or rerun because test programs/result logs were outside this review's scope. Parent browser scenarios are separate evidence and were not consumed here. This review therefore certifies neither those executions nor backend integration, and it does not resolve the delivery's existing TODOs.

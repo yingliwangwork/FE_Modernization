@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "kind": "design-md-metadata-shape-check",
+  "results": [
+    {
+      "file": "artifacts/design/fixture-case/components/CMP-PAGE/DESIGN.md",
+      "findings": []
+    },
+    {
+      "file": "artifacts/design/fixture-case/components/CMP-SEARCH-ACTION/DESIGN.md",
+      "findings": []
+    },
+    {
+      "file": "artifacts/design/fixture-case/components/CMP-TABLE/DESIGN.md",
+      "findings": []
+    }
+  ],
+  "limits": [
+    "Checks name, group shapes and typography field names only.",
+    "Does not validate every value, alias, section, DTCG token or source/style fidelity."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "Static local checks only; no browser/runtime, official schema validator or live backend proof.",
+  "checks": [
+    "All manifest input/skill hashes unchanged",
+    "Local Markdown and HTML resources, anchors and placeholders checked",
+    "Three loaded CSS files concatenate exactly to all 4 source lines; no inline styles",
+    "8 supported DTCG token values and local structure checked; no official validator",
+    "18 impacted DATA/UI/ST/FLOW definition positions reread for local TODO links",
+    "No live network call in prototype script"
+  ],
+  "issues": [],
+  "passed": true
+}

@@ -1,0 +1,33 @@
+{
+  "scope_id": "AF-AFY10400",
+  "events": [
+    {
+      "event": "initial-plan-created",
+      "at": "2026-10-12T12:43:01.157003+00:00",
+      "dependency_analysis_started": false,
+      "source": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+      "sha256": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a"
+    },
+    {
+      "event": "dependency-analysis-and-input-contract-search",
+      "after": "2026-10-12T12:43:01.157003+00:00",
+      "source_lines": 246,
+      "root_only": true,
+      "unavailable_dependency_count": 19
+    },
+    {
+      "event": "plan-and-choice-menu-completed",
+      "at": "2026-10-12T12:51:39.680260+00:00",
+      "selected_execution_tasks": [],
+      "dependency_decisions": "pending",
+      "generated_contracts": []
+    },
+    {
+      "event": "plan-stage-static-checks-passed",
+      "at": "2026-10-12T12:54:02.562933+00:00",
+      "check_count": 13,
+      "selected_execution_tasks": [],
+      "dependency_decisions": "pending"
+    }
+  ]
+}

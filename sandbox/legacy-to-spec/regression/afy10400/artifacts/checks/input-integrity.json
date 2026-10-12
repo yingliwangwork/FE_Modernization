@@ -1,0 +1,194 @@
+[
+  {
+    "path": "skill/SKILL.md",
+    "expected": "db5027f23931b0426005f9cede87b812a486403b7b22ce48e8b36f9bbdefe18b",
+    "actual": "db5027f23931b0426005f9cede87b812a486403b7b22ce48e8b36f9bbdefe18b",
+    "match": true
+  },
+  {
+    "path": "skill/agents/openai.yaml",
+    "expected": "94b757b513e287b82455e774905e3bd3194b0cb4c5e2fd1a4a44eac93da160cc",
+    "actual": "94b757b513e287b82455e774905e3bd3194b0cb4c5e2fd1a4a44eac93da160cc",
+    "match": true
+  },
+  {
+    "path": "skill/assets/design/prototype.html",
+    "expected": "42650370ce9ab508fb9e8e12cce80247f435838585e0f69604ed3cdc2d683a58",
+    "actual": "42650370ce9ab508fb9e8e12cce80247f435838585e0f69604ed3cdc2d683a58",
+    "match": true
+  },
+  {
+    "path": "skill/assets/design/specification.md",
+    "expected": "063f3f3551b46715487d6de297ed78f5d5a7cd8d5ae2ffde195aea5f437b13db",
+    "actual": "063f3f3551b46715487d6de297ed78f5d5a7cd8d5ae2ffde195aea5f437b13db",
+    "match": true
+  },
+  {
+    "path": "skill/assets/integration/api-spec.md",
+    "expected": "7dc723f6590a348cee0b73afd7950bed031c5548a7769d6cada20b03d2230356",
+    "actual": "7dc723f6590a348cee0b73afd7950bed031c5548a7769d6cada20b03d2230356",
+    "match": true
+  },
+  {
+    "path": "skill/assets/integration/backend-handoff.md",
+    "expected": "5b893e9e0c9dc8f60baf1237d49d66375c81f37d06cea00370631ac38b46f3e7",
+    "actual": "5b893e9e0c9dc8f60baf1237d49d66375c81f37d06cea00370631ac38b46f3e7",
+    "match": true
+  },
+  {
+    "path": "skill/assets/renovation/tracking.md",
+    "expected": "355b335ceb2b84f027d1506e9b91621359b1d2f1c722972f16cb91b24a23458a",
+    "actual": "355b335ceb2b84f027d1506e9b91621359b1d2f1c722972f16cb91b24a23458a",
+    "match": true
+  },
+  {
+    "path": "skill/references/acceptance.md",
+    "expected": "16454179e53e7a895a8ef12c1ae71e30db1ba4acf2ea9b7d23ffe198f688cc45",
+    "actual": "16454179e53e7a895a8ef12c1ae71e30db1ba4acf2ea9b7d23ffe198f688cc45",
+    "match": true
+  },
+  {
+    "path": "skill/references/authority.md",
+    "expected": "0cfae912d3e1c63bd95a756e3301e4753b82aa0f918b60deba76adabb1b0fc02",
+    "actual": "0cfae912d3e1c63bd95a756e3301e4753b82aa0f918b60deba76adabb1b0fc02",
+    "match": true
+  },
+  {
+    "path": "skill/references/backend-reference.md",
+    "expected": "88f80e97f8a9427cff6c259f64e614ed3a46797b0a611bf8b458fb69e78517dd",
+    "actual": "88f80e97f8a9427cff6c259f64e614ed3a46797b0a611bf8b458fb69e78517dd",
+    "match": true
+  },
+  {
+    "path": "skill/references/coupled-source.md",
+    "expected": "1eafe3f1fe0ee3b5600681c272a54dbf76701304156a86442b1a705f1aca9b4f",
+    "actual": "1eafe3f1fe0ee3b5600681c272a54dbf76701304156a86442b1a705f1aca9b4f",
+    "match": true
+  },
+  {
+    "path": "skill/references/evidence.md",
+    "expected": "3ec7c025bcb57b31641d8e3c963b3a7719fd20acec40cdbf0a31cc3089adc592",
+    "actual": "3ec7c025bcb57b31641d8e3c963b3a7719fd20acec40cdbf0a31cc3089adc592",
+    "match": true
+  },
+  {
+    "path": "skill/references/integration-contract.md",
+    "expected": "eb7709a1f53111af803ea184ff3d224086c1722487b6cf489a1861eafdb5a2bf",
+    "actual": "eb7709a1f53111af803ea184ff3d224086c1722487b6cf489a1861eafdb5a2bf",
+    "match": true
+  },
+  {
+    "path": "skill/references/source-analysis.md",
+    "expected": "f84c2b299694c142a0460ed75cdd100332b6859c9e3764479c60aa4466a646ab",
+    "actual": "f84c2b299694c142a0460ed75cdd100332b6859c9e3764479c60aa4466a646ab",
+    "match": true
+  },
+  {
+    "path": "skill/references/visual-contract.md",
+    "expected": "cbe02957a622d34b5184c6d142d3c63f560b5fc4a719b6c2afb27eb40c5d2211",
+    "actual": "cbe02957a622d34b5184c6d142d3c63f560b5fc4a719b6c2afb27eb40c5d2211",
+    "match": true
+  },
+  {
+    "path": "skill/references/workflow.md",
+    "expected": "8aa06bfa6185a3b3e2135b8eea8689ca8cf5f2b343a9446f58bba91760ee7779",
+    "actual": "8aa06bfa6185a3b3e2135b8eea8689ca8cf5f2b343a9446f58bba91760ee7779",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+    "expected": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a",
+    "actual": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/header.jsp",
+    "expected": "60508a333aa5411f59f252489e4ec50746a8ff84103c0083d777ec1b7283d44d",
+    "actual": "60508a333aa5411f59f252489e4ec50746a8ff84103c0083d777ec1b7283d44d",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/msgDisplayer.jsp",
+    "expected": "e39c5526a4ee108bcd8561716ca1e25324e8ad12e3743b13681193c42c9a1ec6",
+    "actual": "e39c5526a4ee108bcd8561716ca1e25324e8ad12e3743b13681193c42c9a1ec6",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/css/cm.css",
+    "expected": "92b0ad8c25e35c47d46e6f79391803f5f414046faa731712aa7f8478bfee535f",
+    "actual": "92b0ad8c25e35c47d46e6f79391803f5f414046faa731712aa7f8478bfee535f",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/ajax/prototype.js",
+    "expected": "f727ce3e418c76558c3882064c7b0b4743cd1bcef0e25ebd19d807ad47850636",
+    "actual": "f727ce3e418c76558c3882064c7b0b4743cd1bcef0e25ebd19d807ad47850636",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js",
+    "expected": "d71734e1cd4ec8cd978020cc670101de9b86ff70a96c0daf4c8d875d065a28e6",
+    "actual": "d71734e1cd4ec8cd978020cc670101de9b86ff70a96c0daf4c8d875d065a28e6",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/ui/PageUI.js",
+    "expected": "d733b2884aaf5f6853e4ea75f253117bf72940d0f6c725b4cce71ba18d814f74",
+    "actual": "d733b2884aaf5f6853e4ea75f253117bf72940d0f6c725b4cce71ba18d814f74",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/HotKey.js",
+    "expected": "7501d3cdd52084dec29be7a18b6b5b232de4fa11447c7a7742a4f7f12b94576d",
+    "actual": "7501d3cdd52084dec29be7a18b6b5b232de4fa11447c7a7742a4f7f12b94576d",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/Validator.js",
+    "expected": "ed58fa05914cfa71b96ef79f47ecfa7dfa0c1622393fcc958bb658dcc41d77be",
+    "actual": "ed58fa05914cfa71b96ef79f47ecfa7dfa0c1622393fcc958bb658dcc41d77be",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/RPTUtil.js",
+    "expected": "0b54b047139f08ba233019885d102e095f48d92936a43c536ace524f397638e3",
+    "actual": "0b54b047139f08ba233019885d102e095f48d92936a43c536ace524f397638e3",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/calendar.js",
+    "expected": "f39aadb9e108b0aea6ccf6f192cd601c0bc7eed1ea80a4ec7aee8faf1149d778",
+    "actual": "f39aadb9e108b0aea6ccf6f192cd601c0bc7eed1ea80a4ec7aee8faf1149d778",
+    "match": true
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/date.js",
+    "expected": "acf6883faeb16f97739af0f13b4a29940be97514b10e93fea39ba6dd7f214185",
+    "actual": "acf6883faeb16f97739af0f13b4a29940be97514b10e93fea39ba6dd7f214185",
+    "match": true
+  },
+  {
+    "path": "inputs/backend/docs/OPENAPI.md",
+    "expected": "13307ed1144946124179d6e02148999e64783e031d440aacc8ff54e03c32f1ef",
+    "actual": "13307ed1144946124179d6e02148999e64783e031d440aacc8ff54e03c32f1ef",
+    "match": true
+  },
+  {
+    "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doPrompt.md",
+    "expected": "082f353e384c1bc2484e07aacfaa57536f53b813fe080df8378e3009a5cb38fc",
+    "actual": "082f353e384c1bc2484e07aacfaa57536f53b813fe080df8378e3009a5cb38fc",
+    "match": true
+  },
+  {
+    "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doExport.md",
+    "expected": "8ed2021657fc3f391f71deb9a556c71919ba06cd469781566e22ef07aface20e",
+    "actual": "8ed2021657fc3f391f71deb9a556c71919ba06cd469781566e22ef07aface20e",
+    "match": true
+  },
+  {
+    "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doDownload.md",
+    "expected": "1d07fcd0946717298ce25263901cebc369aa8db7c035efcbed16600d998d1d2c",
+    "actual": "1d07fcd0946717298ce25263901cebc369aa8db7c035efcbed16600d998d1d2c",
+    "match": true
+  }
+]

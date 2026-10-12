@@ -1,0 +1,10 @@
+{
+  "base": "b44b21a596ec970a4b5364b02d320f614ae9a4ed",
+  "tool_packet": "b7e13304e4497156b876162c5fc87134930ac1e8",
+  "branch": "test_v1",
+  "af_files": 6,
+  "moved_nontracked_remnants": [
+    ".DS_Store"
+  ],
+  "staged_files": 1647
+}

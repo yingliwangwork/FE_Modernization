@@ -1,0 +1,31 @@
+{
+  "kind": "actual local prototype controller executed in Node VM with explicit DOM/focus/event doubles",
+  "environment": "v22.18.0",
+  "checks": [
+    {
+      "id": "F-04 actual controller acquisition condition",
+      "status": "PASS"
+    },
+    {
+      "id": "F-04 actual controller acquisition failure diagnostics",
+      "status": "PASS"
+    },
+    {
+      "id": "F-08 actual controller first close key while dragged out",
+      "status": "PASS"
+    },
+    {
+      "id": "F-08 actual controller attached first close key",
+      "status": "PASS"
+    },
+    {
+      "id": "F-03 actual controller result cell excluded from added centers",
+      "status": "PASS"
+    }
+  ],
+  "limits": [
+    "Not a browser: no real click accessibility, computed CSS, native alert, layout or window activation demonstrated.",
+    "Parent independent browser reports are separately attributed; no scenario read or modified.",
+    "No backend, network, file download, audit or business calculations executed."
+  ]
+}

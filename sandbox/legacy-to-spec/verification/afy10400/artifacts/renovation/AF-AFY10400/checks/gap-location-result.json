@@ -1,0 +1,972 @@
+{
+  "locations": [
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 13,
+      "position": "[TODO-01](../../renovation/AF-AFY10400/tracking.md#todo-01)",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 14,
+      "position": "[TODO-02](../../renovation/AF-AFY10400/tracking.md#todo-02)",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 15,
+      "position": "[TODO-03](../../renovation/AF-AFY10400/tracking.md#todo-03)",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 16,
+      "position": "[TODO-04](../../renovation/AF-AFY10400/tracking.md#todo-04)",
+      "gaps": [
+        {
+          "id": "TODO-04",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 17,
+      "position": "[TODO-05](../../renovation/AF-AFY10400/tracking.md#todo-05)",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 18,
+      "position": "[TODO-06](../../renovation/AF-AFY10400/tracking.md#todo-06)",
+      "gaps": [
+        {
+          "id": "TODO-06",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 22,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 33,
+      "position": "DATA-06",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 36,
+      "position": "DATA-09",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        },
+        {
+          "id": "TODO-04",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 41,
+      "position": "BOUND-01",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 42,
+      "position": "BOUND-02",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 43,
+      "position": "BOUND-03",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 44,
+      "position": "BOUND-04",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 45,
+      "position": "BOUND-05",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 53,
+      "position": "UI-01",
+      "gaps": [
+        {
+          "id": "TODO-04",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 54,
+      "position": "UI-02",
+      "gaps": [
+        {
+          "id": "TODO-04",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 61,
+      "position": "UI-09",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 62,
+      "position": "UI-10",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 64,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-06",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 76,
+      "position": "ST-05",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 92,
+      "position": "TR-08",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 100,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 106,
+      "position": "MSG-03",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 107,
+      "position": "MSG-04",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 108,
+      "position": "MSG-05",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 110,
+      "position": "MSG-07",
+      "gaps": [
+        {
+          "id": "TODO-06",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 116,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        },
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        },
+        {
+          "id": "TODO-04",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 128,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        },
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 132,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 136,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 140,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 144,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 148,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        },
+        {
+          "id": "TODO-06",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 160,
+      "position": "AC-05",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        },
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 162,
+      "position": "AC-07",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 163,
+      "position": "AC-08",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 164,
+      "position": "AC-09",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 167,
+      "position": "AC-12",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        },
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 169,
+      "position": "AC-14",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 170,
+      "position": "AC-15",
+      "gaps": [
+        {
+          "id": "TODO-06",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 171,
+      "position": "AC-16",
+      "gaps": [
+        {
+          "id": "TODO-06",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400/specification.md",
+      "line": 183,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        },
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        },
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 7,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 11,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 12,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-04",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 13,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 21,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 27,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 31,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 33,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 37,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-06",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 47,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-06",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 55,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/design/AF-AFY10400-support/contract.md",
+      "line": 61,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-04",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 7,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 8,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 10,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 11,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 12,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 24,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 28,
+      "position": "`insrType`",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 29,
+      "position": "`prodType`",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 30,
+      "position": "`I_ID`",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 31,
+      "position": "`POLICY_NO`",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 33,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 37,
+      "position": "`code`",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 38,
+      "position": "`msg`",
+      "gaps": [
+        {
+          "id": "TODO-02",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+        },
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 39,
+      "position": "`data`",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 40,
+      "position": "`data.rtnMap`",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 43,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 55,
+      "position": "JSON body `fileName` 或form同名`fileName`",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 57,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 59,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        },
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 71,
+      "position": "BOUND-04可信環境/政策／浮水印",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        },
+        {
+          "id": "TODO-04",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 72,
+      "position": "BOUND-03 copy稽核",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 73,
+      "position": "BOUND-01错误回填/訊息格式",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 74,
+      "position": "BOUND-02 JSON下載資訊→檔案",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "line": 75,
+      "position": "UI到JSON换行、0列、部署/授权",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/backend-handoff.md",
+      "line": 9,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-04",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+        },
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/backend-handoff.md",
+      "line": 15,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-01",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/backend-handoff.md",
+      "line": 21,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    },
+    {
+      "document": "artifacts/integration/AF-AFY10400/backend-handoff.md",
+      "line": 27,
+      "position": "prose",
+      "gaps": [
+        {
+          "id": "TODO-05",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+        },
+        {
+          "id": "TODO-03",
+          "href": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+        }
+      ]
+    }
+  ],
+  "decision": "DEC-01",
+  "follow_up_tasks": {
+    "TODO-01": "TASK-06",
+    "TODO-02": "TASK-07",
+    "TODO-03": "TASK-08",
+    "TODO-04": "TASK-07",
+    "TODO-05": "TASK-08",
+    "TODO-06": "TASK-09"
+  },
+  "limit": "Actual linked gap occurrences; does not prove all unknown dependency internals were analyzed."
+}

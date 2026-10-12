@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legacy 規格翻新"
+  short_description: "依來源證據保留互動與業務意圖，產生技術中立規格及視覺原型"
+  default_prompt: "Use $legacy-to-spec to extract an evidence-backed, technology-neutral behavioral specification and visual prototype for one source entry file, with separate renovation tracking."

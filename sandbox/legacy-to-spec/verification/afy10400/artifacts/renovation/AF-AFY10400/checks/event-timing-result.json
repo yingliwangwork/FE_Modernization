@@ -1,0 +1,10 @@
+{
+  "previous_microtask_regression_rejected": true,
+  "actual_failure": "'' == '訊息：已匯出'",
+  "current_task_boundary": "setTimeout(receive,0); explicit zero-time timer flush after document click",
+  "current_mock_groups_passed": 15,
+  "limits": [
+    "This replays only generated prototype code in the improved DOM fixture.",
+    "Actual post-fix Chromium recheck must be supplied separately."
+  ]
+}

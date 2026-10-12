@@ -1,0 +1,360 @@
+{
+  "case": "afy10400",
+  "run": "framework-20261012",
+  "engine": "151.0.7922.34",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "kind": "local-prototype-browser-check",
+  "mode": "scenarios",
+  "checks": [
+    {
+      "id": "initial-zero-rows",
+      "source": "AFY10400.jsp:27-31,199-211,223",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "add-delete-preserve-and-colors",
+      "source": "AFY10400.jsp:33-65,116-123",
+      "status": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "first-empty-exact-message",
+      "source": "AFY10400.jsp:77-85",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "duplicate-before-later-empty",
+      "source": "AFY10400.jsp:77-92",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "zero-row-boundary",
+      "source": "AFY10400.jsp:77-97",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "current-id-response-and-download",
+      "source": "AFY10400.jsp:98-106 live element collection",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "legacy-rejection-results",
+      "source": "AFY10400.jsp:107-113; rejection results do not imply target API supports the same map",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "native-success-format",
+      "source": "CSRUtil.js:626-680 known formatter; response description is synthetic",
+      "status": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "native-error-format",
+      "source": "CSRUtil.js:626-680 native error, msgid length >17",
+      "status": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "empty-message-fallback",
+      "source": "CSRUtil.js:1592-1599",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "accumulated-message-width",
+      "source": "CSRUtil.js:1603-1660 repeated display width cannot shrink",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "message-drag",
+      "source": "CSRUtil.js:1526-1568 title drag intermediate state",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "reopen-key-listener-identity",
+      "source": "CSRUtil.js:1609-1632; synthetic keypress tests source condition, not native Escape compatibility",
+      "status": "FAIL",
+      "assertions": 0,
+      "detail": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#message-ok')\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"確定\" type=\"button\" class=\"button\" id=\"message-ok\" data-flow-id=\"FLOW-09\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <aside class=\"review\" data-review-tools=\"true\">…</aside> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <aside class=\"review\" data-review-tools=\"true\">…</aside> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <aside class=\"review\" data-review-tools=\"true\">…</aside> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "id": "window-keyboard-policy",
+      "source": "header.jsp:136-147 window capture policy",
+      "status": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "independent-copy-expiration",
+      "source": "header.jsp:149-183 independent timers A@0 B@30 B@61",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "button-padding-cascade",
+      "source": "cm.css:162-164 :root .button",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "message-button-global-readonly-cascade",
+      "source": "cm.css global input:read-only; CSRUtil message confirm button is outside root product container",
+      "status": "FAIL",
+      "assertions": 0,
+      "detail": "Expected values to be strictly equal:\n\n'solid' !== 'none'\n"
+    },
+    {
+      "id": "result-alignment-preserved",
+      "source": "AFY10400.jsp:40-58 centers only first three added cells; cm.css has no matching result-cell centering rule",
+      "status": "FAIL",
+      "assertions": 0,
+      "detail": "Expected values to be strictly equal:\n\n'center' !== 'start'\n"
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "snapshots": [
+    {
+      "file": "SCR-01.html",
+      "visibleText": "●\t公會通報下傳作業\t畫面編號：AFY10400\n\n公會補通報作業\n\n\n\n1、此畫面請用Google Chrome使用\n2、收承方式、商品屬性，每次只能針對其中一種組合進行下載，若有多種組合下載，需分多次匯出處理\n3、同一ID查詢多筆保單時，請在保單號碼欄位，輸入多筆且用Enter來分格\n收承方式\t\n承保\n收件\n\t商品屬性\t\n個險\n團險\n意外險\n\n刪除\t被保人ID\t保單號碼\t匯出結果\n審閱工具 — 離線合成情境，非產品功能 · 規格\n不呼叫後端、不產生檔案、不寫入稽核。TODO-01 入口／底部；TODO-02 目標拒絕 data=null／直接檔案差距；TODO-03 訊息選用；TODO-04 可信政策；TODO-05 缺少圖片、字型、日曆 CSS 及浮水印庫；TODO-06 date 載入；TODO-07 瀏覽器檢查。遮罩僅保留已知幾何與阻隔，缺圖沒有替補色。\n\n待交付請求 旧回應代碼 系統模式 \n其他（原生提示）\n自訂訊息模式\nEP\n合成底部接收者存在（仅紀錄）\n\n逐列結果 map（JSON，刻意注入、不是后端承接證據） 檔名（只有旧成功响应消費）动态描述錯誤編號\n\n交付選定旧回應展示目標 code500/data=null 缺口依當前列再建立合成請求\n\n自訂訊息（只測已知元件）顯示訊息合成「政策啟用」上下文（尚未確認部署条件）\n\n入口訊息、外部底部外觀、WIUtil、浮水印及正式下載停在契約边界；它們未由工具模擬為產品能力。产品按鈕冒泡清底部操作只記錄，審閱注入控制获測試工具豁免以免干擾產品訊息。\n\n離線初始：L/AT、0列。入口／底部／政策來源／浮水印與未知載入副作用維持 TODO。",
+      "controls": [
+        {
+          "tag": "SELECT",
+          "id": "insrType",
+          "type": "select-one",
+          "text": "承保收件",
+          "value": "L",
+          "disabled": false,
+          "options": [
+            {
+              "value": "L",
+              "text": "承保"
+            },
+            {
+              "value": "R",
+              "text": "收件"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "id": "prodType",
+          "type": "select-one",
+          "text": "個險團險意外險",
+          "value": "AT",
+          "disabled": false,
+          "options": [
+            {
+              "value": "AT",
+              "text": "個險"
+            },
+            {
+              "value": "BG",
+              "text": "團險"
+            },
+            {
+              "value": "CB",
+              "text": "意外險"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "addBtn",
+          "type": "button",
+          "text": "",
+          "value": "新增一列",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "exportBtn",
+          "type": "button",
+          "text": "",
+          "value": "匯出檔案",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "message-ok",
+          "type": "button",
+          "text": "",
+          "value": "確定",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "request-choice",
+          "type": "select-one",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": []
+        },
+        {
+          "tag": "INPUT",
+          "id": "return-code",
+          "type": "number",
+          "text": "",
+          "value": "0",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "system-mode",
+          "type": "select-one",
+          "text": "其他（原生提示）自訂訊息模式EP",
+          "value": "other",
+          "disabled": false,
+          "options": [
+            {
+              "value": "other",
+              "text": "其他（原生提示）"
+            },
+            {
+              "value": "custom",
+              "text": "自訂訊息模式"
+            },
+            {
+              "value": "EP",
+              "text": "EP"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "bottom-exists",
+          "type": "checkbox",
+          "text": "",
+          "value": "on",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "TEXTAREA",
+          "id": "response-map",
+          "type": "textarea",
+          "text": "{}",
+          "value": "{}",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "file-name",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "response-msg",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "message-id",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "inject",
+          "type": "submit",
+          "text": "交付選定旧回應",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "inject-target",
+          "type": "submit",
+          "text": "展示目標 code500/data=null 缺口",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "enqueue",
+          "type": "submit",
+          "text": "依當前列再建立合成請求",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "custom-msg",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "show-custom",
+          "type": "submit",
+          "text": "顯示訊息",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "policy-on",
+          "type": "checkbox",
+          "text": "",
+          "value": "on",
+          "disabled": false,
+          "options": null
+        }
+      ]
+    }
+  ],
+  "prototypeHashes": {
+    "SCR-01.html": "92ac371cb010d2ed4f5abb0810665e14d50c2104301f286bb2a3c475665f2594"
+  },
+  "styleArtifactHashes": {
+    "artifacts/design/AF-AFY10400/components/CMP-COVER/DESIGN.md": "63a71e9f26e83823088d11364eb009f40e36295d1049946b8c74c2e5a4b0bdbe",
+    "artifacts/design/AF-AFY10400/components/CMP-FORM/DESIGN.md": "9336c9d325cfddd6d5145f23cad30e863caa8cc2a8c7d99c3c51d4a0abb781fb",
+    "artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md": "429151ac0498a94b38cda7bcdbe70c6010d42a9ba89dfd7ef35f9e791f709747",
+    "artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md": "a161a3f7b3f637f19588545ceab3d9140810530cf70ddef907abd69b6759fbdc",
+    "artifacts/design/AF-AFY10400/styles/CMP-COVER.css": "c3c98fb11301edb947d9c4be473fc18331d25d177ffd8a429f7869e9820ae806",
+    "artifacts/design/AF-AFY10400/styles/CMP-FORM.css": "cd32bddd0073df0239176011337b08b7d99c818aa0d30f807ba452d06b86e374",
+    "artifacts/design/AF-AFY10400/styles/CMP-MESSAGE.css": "811357b4d07eac7d1b4abead7dbbb9356218e4b145b3af16478884fadea4bf02",
+    "artifacts/design/AF-AFY10400/styles/CMP-PAGE.css": "a376facd834777f9ffa3b305283ca1230b8c4f677947a3f913d247c8cf8fb8c4",
+    "artifacts/design/AF-AFY10400/styles/review.css": "962df87996820175a45e1afcff3d84101286805f3ff92da6381043d1175eea3c"
+  },
+  "limits": [
+    "Only generated local prototypes are executed; no legacy JSP runtime or real backend is executed.",
+    "Screenshots do not establish pixel equivalence to the legacy runtime."
+  ],
+  "status": "FAIL",
+  "screenshots": "../../../../output/playwright/skill-sandbox/framework-20261012/afy10400"
+}

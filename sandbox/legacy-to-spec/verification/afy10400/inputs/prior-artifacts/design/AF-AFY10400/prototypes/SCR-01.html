@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>公會通報下傳作業 AFY10400</title>
+<style>
+body{margin:0;background:#F0FBC6;font-family:PMingLiU,MingLiU,'Microsoft JhengHei',Arial,sans-serif}input,textarea{font-family:inherit}.subTitle{font-size:10pt;font-weight:bold;color:#339900;letter-spacing:3pt}.tbBox2{background:#C7E49C;border:1px solid #6B8D6D;border-left-color:white;border-top-color:white;font-size:10pt;text-indent:1pt;padding:1pt;line-height:21px}.tbYellow{background:#EEF1A7}.tbYellow2{background:#FAFBE1}.tbBlue{background:#99CCFF}.textBox2{font-size:12px;letter-spacing:1pt;border:1px solid #E1E1E1;border-left-color:#999;border-top-color:#999}.button{font-size:10pt;border:1px solid #6B8D6D;color:#006600;white-space:nowrap;line-height:19px;height:21px;vertical-align:middle;margin:2px;padding:0;background:linear-gradient(to bottom,#eff6ec 0%,white 40%,#cfe4c1 100%)}.titlebar{height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 8px}.panel{width:97%;margin:0 auto;border:1px solid #003366}.heading{margin:0;padding:8px}.formbox{background:white;padding:5px}td{padding:1pt}.review{position:relative;z-index:1500;margin:24px 12px;padding:12px;background:#fff;border:2px dashed #555;font:13px Arial,sans-serif}.review label{display:inline-block;margin:5px}.review pre{white-space:pre-wrap;word-break:break-word}.review-note{color:#555}.cover{position:fixed;inset:0;background:rgba(255,255,255,.35);cursor:progress;z-index:150}.msg-window{position:absolute;z-index:999;border:1px solid #000;background:#0066CC;padding:0 5px 5px;opacity:.95;box-shadow:0 0 10px 2px #000;font:10pt Verdana,Arial,'Microsoft JhengHei',sans-serif}.msg-title{padding:8px 0 8px 2px;color:white;cursor:move}.msg-content{height:105px;overflow:auto;background:white;border:1px solid #000;padding:10px 0 0 15px;text-align:left;white-space:pre-wrap}.msg-bottom{background:#eee;border:1px solid #000;border-top:0;padding:10px;text-align:center}.dragbox{position:absolute;border:1px solid black;z-index:1000;box-sizing:border-box}.gap{color:#8b2929}.review-hidden .review-content{display:none}#review-log{max-height:200px;overflow:auto}
+@media print{body.policy-on>*{display:none!important}body.policy-on::after{content:'依據資安政策，不開放列印功能';display:block!important}}
+</style></head><body>
+<main id="product" data-scope-id="AF-AFY10400" data-screen-id="SCR-01" data-state-id="ST-01">
+<div class="titlebar subTitle" data-ui-id="UI-01"><span>●　公會通報下傳作業</span><span>畫面編號：AFY10400</span></div>
+<section class="panel" data-component-id="CMP-07"><p class="heading tbBox2" data-ui-id="UI-02">公會補通報作業</p><div class="formbox"><form id="frm">
+<table id="table1" class="tbBox2" width="100%"><tbody>
+<tr><td class="tbYellow2" colspan="4" data-ui-id="UI-03">1、此畫面請用<span style="color:red">Google Chrome</span>使用<br>2、收承方式、商品屬性，每次只能針對其中一種組合進行下載，若有多種組合下載，需分多次匯出處理<br>3、同一ID查詢多筆保單時，請在保單號碼欄位，輸入多筆且用<span style="color:red">Enter</span>來分格</td></tr>
+<tr><td class="tbYellow" width="20%" align="center">收承方式</td><td class="tbYellow2" width="20%"><select id="insrType" name="insrType" data-ui-id="UI-04"><option value="L" selected>承保</option><option value="R">收件</option></select></td><td class="tbYellow" width="20%" align="center">商品屬性</td><td class="tbYellow2" width="40%"><select id="prodType" name="prodType" data-ui-id="UI-05"><option value="AT" selected>個險</option><option value="BG">團險</option><option value="CB">意外險</option></select></td></tr>
+<tr class="tbBlue"><td align="center" data-ui-id="UI-06">刪除</td><td align="center" data-ui-id="UI-07">被保人ID <input type="button" value="新增一列" class="button" id="addBtn" data-flow-id="FLOW-02"></td><td align="center" data-ui-id="UI-08">保單號碼</td><td align="center" data-ui-id="UI-09">匯出結果</td></tr>
+</tbody></table>
+<table class="tbBox2" width="100%"><tr><td class="tbYellow2" align="center"><input type="button" id="exportBtn" value="匯出檔案" class="button" data-ui-id="UI-10" data-flow-id="FLOW-04"></td></tr></table>
+</form></div></section></main>
+<aside id="review" class="review"><button type="button" id="hide-review">隱藏／顯示審閱工具</button><div class="review-content"><strong>審閱工具（不是產品功能）</strong>
+<p class="review-note">離線、合成資料。沒有真實查詢、檔案或寫入。回應按鈕是本機回應者替身；審閱區置於 cover 上方以交付回應，產品仍被 cover 阻擋。操作政策與按鈕清底欄仍作用於整頁，審閱區沒有豁免。</p>
+<p class="gap">TODO-01：實際政策、身分與稽核未取得。TODO-02：底欄/WIUtil宿主未知。TODO-03/05：錯誤回填與 binary 相容、環境/換行待確認。TODO-04：邊框圖像、標題圖像、難字字體及浮水印工具未提供，此處未猜造。TODO-06：尚無 legacy 執行畫面比較。</p>
+<label>合成匯出回應 <select id="response-mode"><option value="success">legacy 成功完整映射</option><option value="failure">legacy 拒絕完整映射</option><option value="target-error">目標 code500,data=null 差距</option><option value="no-json">未提供 JSON</option></select></label>
+<label>合成共用訊息分支 <select id="message-mode"><option value="native">非特殊系統／無底欄</option><option value="board">非特殊系統／有底欄</option><option value="custom">自訂窗系統</option><option value="ep">EP 成功不顯示視窗</option></select></label>
+<button type="button" id="respond">交付目前合成回應</button><button type="button" id="sample">填入合成示例列</button>
+<label><input type="checkbox" id="policy">合成政策旗標為 Y</label><label><input type="checkbox" id="bottom-host">合成底欄接收者存在</label>
+<label>入口訊息情境 <select id="entry-mode"><option value="none">code0 無警示</option><option value="99">code99 無警示</option><option value="error">錯誤 description/id</option><option value="exception">例外 exception/sysid</option><option value="rollback">有 rollback 標記</option><option value="wiutil">WIUtil/jQuery 分支（缺實作）</option></select></label><button type="button" id="entry">重播合成入口訊息</button>
+<button type="button" id="modal-fixture">直接審閱合成訊息窗</button>
+<p>合成底欄接收紀錄（不是產品底欄）：<output id="bottom-msg"></output></p><pre id="review-log"></pre><p><a href="../specification.md">行為契約</a> · <a href="../../../renovation/AF-AFY10400/tracking.md">限制與追蹤</a></p>
+</div></aside>
+<div id="cover" class="cover" data-component-id="CMP-03" hidden></div>
+<div id="message-window" class="msg-window" data-component-id="CMP-04" data-state-id="ST-06" hidden><div id="message-title" class="msg-title">網頁訊息</div><div id="message-content" class="msg-content"></div><div class="msg-bottom"><input id="message-ok" type="button" value="確定" class="button" style="padding:0 15px"></div></div>
+<div id="dragbox" class="dragbox" hidden></div>
+<script>
+'use strict';
+const el=id=>document.getElementById(id), product=el('product');
+let serial=0, pending=null, lastCopy='', messages=[], keyHandler=null, drag=null;
+const log=t=>{el('review-log').textContent+=t+'\n';el('review-log').scrollTop=el('review-log').scrollHeight;};
+const state=s=>product.dataset.stateId=s;
+const rows=()=>Array.from(el('table1').rows).slice(3);
+function rowColor(){rows().forEach((r,i)=>r.style.backgroundColor=i%2===0?'#EEF1A7':'#FAFBE1');}
+function addRow(){
+ const r=el('table1').insertRow();r.id='table1_row_'+(++serial);
+ const d=r.insertCell();d.align='center';const b=document.createElement('input');b.type='button';b.value='刪除此列';b.className='button';b.dataset.uiId='UI-06';b.dataset.flowId='FLOW-03';b.onclick=()=>{r.remove();rowColor();state(rows().length?'ST-02':'ST-01');};d.appendChild(b);
+ const c=r.insertCell();c.align='center';const id=document.createElement('input');id.type='text';id.size=12;id.maxLength=10;id.name='I_ID';id.id='I_ID_'+serial;id.className='textBox2';id.dataset.uiId='UI-07';c.appendChild(id);
+ const p=r.insertCell();p.align='center';const policy=document.createElement('textarea');policy.rows=3;policy.cols=30;policy.name='POLICY_NO';policy.id='POLICY_NO_'+serial;policy.className='textBox2';policy.dataset.uiId='UI-08';p.appendChild(policy);
+ r.insertCell().dataset.uiId='UI-09';rowColor();state('ST-02');return r;
+}
+function exportRequest(){
+ const rs=rows(), ids=rs.map(r=>r.cells[1].firstChild.value), policies=rs.map(r=>r.cells[2].firstChild.value);
+ for(let i=0;i<ids.length;i++){
+  if(ids[i]===''||policies[i]===''){state('ST-08');alert('第'+(i+1)+'列的被保人ID或保單號碼不得為空值，若不需要請刪除該列');state(rows().length?'ST-02':'ST-01');return;}
+  for(let j=i+1;j<ids.length;j++)if(ids[i]===ids[j]){state('ST-08');alert('被保人ID：'+ids[i]+'有重覆出現，請合併在同一列處理');state(rows().length?'ST-02':'ST-01');return;}
+ }
+ pending={insrType:el('insrType').value,prodType:el('prodType').value,I_ID:ids,POLICY_NO:policies.map(p=>p.replace(/(\r)?\n/g,'\r\n'))};state('ST-03');el('cover').hidden=false;
+ log('BOUND-01 本機交接（不呼叫 API）：'+JSON.stringify(pending)+'；0列的目標省略/空集合仍是 TODO-05，此摘要不是已核准 wire 範例。');
+}
+function bottom(text){if(el('bottom-host').checked||el('message-mode').value==='board')el('bottom-msg').textContent=text;}
+function clearBottom(){if(el('bottom-host').checked||el('message-mode').value==='board')el('bottom-msg').textContent='';}
+function receive(){
+ if(!pending){log('審閱工具：目前沒有待交付的匯出交換。');return;}
+ const kind=el('response-mode').value;
+ if(kind==='target-error'){el('cover').hidden=true;state('ST-05');log('TODO-03：選定目標 HTTP200/code500/msg為服務錯誤/data=null；未提供逐列映射，保留既有結果，不補造回填或下載。');pending=null;return;}
+ if(kind==='no-json'){el('cover').hidden=true;state(rows().length?'ST-02':'ST-01');log('TR-09：缺 JSON，未執行頁面 callback；無訊息且無活動，complete 解除 cover。');pending=null;return;}
+ const fixture=Object.fromEntries(pending.I_ID.map(id=>[id,kind==='success'?'已匯出':'被保人：'+id+' 查無保單號碼：DEMO。']));
+ // fixture is an explicit authored response, not a query or business calculation.
+ rows().forEach(r=>{r.cells[3].textContent=fixture[r.cells[1].firstChild.value];});
+ log('TR-'+(kind==='success'?'07':'08')+'：合成逐列結果全部回填完成。');
+ if(kind==='success'){state('ST-04');log('BOUND-02：接著交付合成 fileName DEMO.xlsx，不開新窗；TODO-03 原 helper JSON→檔案與目標 binary 差距，未產生檔案。');}else state('ST-05');
+ pending=null;exchangeMessage(kind==='failure','查無資料',kind==='failure'?'DEMO-ERROR-0000000001':'');
+}
+function exchangeMessage(error,desc,id){
+ if(!error)desc='已匯出';
+ bottom('訊息：'+desc);const mode=el('message-mode').value;
+ if(mode==='custom'||mode==='ep'){
+  if(error)showModal((id.length>17?'錯誤編號：\n'+id+'\n訊息說明：\n':'')+desc);
+  else if(mode==='ep')el('cover').hidden=true;else if(desc!=='')showModal(desc);
+ }else{
+  el('cover').hidden=true;
+  if(error)alert((id.length>17?'錯誤編號：\n'+id+'\n':'')+'訊息說明：\n'+desc);
+  else if(desc!==''&&!el('bottom-host').checked&&mode!=='board')alert('訊息說明：\n'+desc);
+ }
+ log('FLOW-09：頁面回填／下載交接之後才執行合成共用 complete 訊息分支 '+mode+'。');
+}
+function entryMessages(){
+ const m=el('entry-mode').value;
+ if(m==='rollback'){log('CMP-02：合成 rollback 旗標重設為空，立即返回；未交付底欄或警示。');return;}
+ const code=m==='99'?99:m==='none'?0:1,desc='查無資料';bottom(desc);
+ if(code===0||code===99){log('CMP-02：先交付第一筆合成底欄，code '+code+' 不產生警示。');return;}
+ if(m==='wiutil'){log('TODO-02：WIUtil 與 jQuery 都存在時應交付組裝訊息給 WIUtil；未提供其內部，未以其他視窗冒充。');return;}
+ alert(m==='exception'?'異常原因:查無資料\n\n程式ID:DEMO\n\n':'訊息說明:\n查無資料\n\n錯誤編號：\nDEMO');
+}
+function closeModal(e){
+ if(e)e.stopPropagation();const w=el('message-window');if(w.hidden)return;w.hidden=true;messages=[];el('message-content').textContent='';if(!pending)el('cover').hidden=true;state(rows().length?'ST-02':'ST-01');
+}
+function showModal(msg){
+ const w=el('message-window'),fresh=w.hidden;
+ if(!messages.includes(msg))messages.push(msg);el('message-content').textContent=messages.join('\n');
+ w.style.width=Math.max(180,Math.min(600,msg.length*15))+'px';w.hidden=false;el('cover').hidden=false;
+ w.style.top=Math.trunc(document.body.clientHeight/4+window.scrollY)+'px';w.style.left=Math.trunc((document.body.clientWidth-w.getBoundingClientRect().width)/2+window.scrollX)+'px';state('ST-06');
+ if(fresh){keyHandler=e=>{document.removeEventListener('keypress',keyHandler);if(['Enter','Escape',' '].includes(e.key)||[13,27,32].includes(e.keyCode)){if(!w.hidden){el('message-ok').click();e.preventDefault();e.stopPropagation();}}};document.addEventListener('keypress',keyHandler);}
+ el('message-ok').focus();
+}
+function dragStart(e){
+ const w=el('message-window'),b=el('dragbox'),rect=w.getBoundingClientRect();drag={dx:e.pageX-(rect.left+window.scrollX),dy:e.pageY-(rect.top+window.scrollY)};
+ b.style.width=rect.width+'px';b.style.height=rect.height+'px';b.style.left=rect.left+window.scrollX+'px';b.style.top=rect.top+window.scrollY+'px';b.hidden=false;
+ el('message-title').removeEventListener('mousedown',dragStart);document.addEventListener('mousemove',dragMove);document.addEventListener('mouseup',dragStop);w.dataset.stateId='ST-07';state('ST-07');
+}
+function dragMove(e){if(!drag)return;e.preventDefault();e.stopPropagation();const b=el('dragbox');b.style.top=e.pageY-drag.dy+'px';b.style.left=e.pageX-drag.dx+'px';el('message-window').hidden=true;}
+function dragStop(e){if(!drag)return;e.preventDefault();e.stopPropagation();document.removeEventListener('mousemove',dragMove);document.removeEventListener('mouseup',dragStop);const w=el('message-window'),b=el('dragbox');w.style.top=parseInt(b.style.top,10)+'px';w.style.left=parseInt(b.style.left,10)+'px';b.hidden=true;w.hidden=false;drag=null;w.dataset.stateId='ST-06';state('ST-06');el('message-title').addEventListener('mousedown',dragStart);}
+const policyMessages={print:'依據資安政策，不開放列印功能',beforeprint:'依據資安政策，不開放列印功能',cut:'依據資安政策，不開放剪下功能',selectAll:'依據資安政策，不開放全選功能',save:'依據資安政策，不開放頁面儲存功能'};
+const enabled=()=>el('policy').checked;
+function blockPolicy(e){if(!enabled())return;e.preventDefault();e.stopPropagation();if(policyMessages[e.type])alert(policyMessages[e.type]);}
+function policyKey(e){if(!enabled()||!e.ctrlKey)return;const k=e.key.toLowerCase(),map={a:'selectAll',x:'cut',s:'save',p:'print'};if(map[k]){e.preventDefault();e.stopPropagation();alert(policyMessages[map[k]]);}}
+function copyPolicy(){
+ if(!enabled())return;const ae=document.activeElement;const selection=ae&&ae.tagName==='TEXTAREA'?ae.value.substring(ae.selectionStart,ae.selectionEnd):window.getSelection().toString();
+ const text=selection.replace(/\s+/g,' ');if(text.length===0||text===lastCopy)return;
+ setTimeout(()=>{lastCopy='';log('FLOW-07：獨立60秒到期清空上筆；其他計時器未取消。');},60000);lastCopy=text;
+ let content=text.length>5000?text.substr(0,4997)+'...':text;
+ for(const [a,b] of [['%','%25'],['#','%23'],['&','%26'],[' ','%20'],['+','%2B'],['?','%3F'],['=','%3D']])content=content.split(a).join(b);
+ log('BOUND-03 本機稽核交接摘要（不寫入）：'+JSON.stringify({content,length:text.length,functionId:'AFY10400',time:Date.now()})+'；TODO-01 未提供目標稽核承接。');
+}
+for(const t of ['contextmenu','print','beforeprint','cut'])document.body.addEventListener(t,blockPolicy,true);
+document.body.addEventListener('copy',copyPolicy,true);window.addEventListener('keydown',policyKey,true);
+document.addEventListener('click',e=>{if(['button','submit'].includes(e.target.type))clearBottom();});
+el('policy').addEventListener('change',()=>document.body.classList.toggle('policy-on',enabled()));
+el('addBtn').onclick=addRow;el('exportBtn').onclick=exportRequest;el('frm').onsubmit=e=>e.preventDefault();el('respond').onclick=receive;el('entry').onclick=entryMessages;
+el('sample').onclick=()=>{const r=addRow();r.cells[1].firstChild.value='DEMO000001';r.cells[2].firstChild.value='DEMO-POL-1\nDEMO-POL-2';log('審閱工具填入合成列；不是產品預設資料。');};
+el('hide-review').onclick=()=>el('review').classList.toggle('review-hidden');el('modal-fixture').onclick=()=>showModal('查無資料');el('message-ok').onclick=closeModal;el('message-title').addEventListener('mousedown',dragStart);
+log('初始 ST-01：0列、L/AT；入口訊息未提供時不生成警示。實際旗標未知，政策默認不啟用；可用合成旗標審閱條件反應。');
+</script></body></html>

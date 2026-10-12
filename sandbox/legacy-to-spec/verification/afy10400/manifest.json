@@ -1,0 +1,309 @@
+{
+  "schema_version": 2,
+  "case": "afy10400",
+  "run": "verification",
+  "scope_id": "AF-AFY10400",
+  "root_entry": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+  "backend_contract": "inputs/backend/docs/OPENAPI.md",
+  "backend_root": "inputs/backend",
+  "dependency_policy": "convert-available",
+  "files": [
+    {
+      "path": "skill/SKILL.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/SKILL.md",
+      "category": "skill",
+      "sha256": "0c1e10dbaf8de82569be48f2b3bf616d54fc28bec1f06aee89285c019bc5eb19"
+    },
+    {
+      "path": "skill/agents/openai.yaml",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/agents/openai.yaml",
+      "category": "skill",
+      "sha256": "65a7d4061f8c5f75d4c4174675876034378673f03e0eb45ef07cbd0f5ee88e1c"
+    },
+    {
+      "path": "skill/assets/design/prototype.html",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/design/prototype.html",
+      "category": "skill",
+      "sha256": "42650370ce9ab508fb9e8e12cce80247f435838585e0f69604ed3cdc2d683a58"
+    },
+    {
+      "path": "skill/assets/design/specification.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/design/specification.md",
+      "category": "skill",
+      "sha256": "2f3d327485cac55989b9e3797a0de7c51d6364cc20d3ee94e96d3adff977aa46"
+    },
+    {
+      "path": "skill/assets/integration/api-spec.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/integration/api-spec.md",
+      "category": "skill",
+      "sha256": "7dc723f6590a348cee0b73afd7950bed031c5548a7769d6cada20b03d2230356"
+    },
+    {
+      "path": "skill/assets/integration/backend-handoff.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/integration/backend-handoff.md",
+      "category": "skill",
+      "sha256": "5b893e9e0c9dc8f60baf1237d49d66375c81f37d06cea00370631ac38b46f3e7"
+    },
+    {
+      "path": "skill/assets/renovation/plan.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/renovation/plan.md",
+      "category": "skill",
+      "sha256": "ed57d29629d7639107480c9c60189c92d4439c73f33b31b5ea2aa7909075cd4f"
+    },
+    {
+      "path": "skill/assets/renovation/tracking.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/renovation/tracking.md",
+      "category": "skill",
+      "sha256": "4cd732ec82892dcf7e6197419a1d7144250bee731a5270441024cc3bbd2c07df"
+    },
+    {
+      "path": "skill/references/acceptance.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/acceptance.md",
+      "category": "skill",
+      "sha256": "4224d0c70610e894a886ff3dc7f1a7cfb58da875bbb78108fe5cdeb19c728e8e"
+    },
+    {
+      "path": "skill/references/authority.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/authority.md",
+      "category": "skill",
+      "sha256": "0cfae912d3e1c63bd95a756e3301e4753b82aa0f918b60deba76adabb1b0fc02"
+    },
+    {
+      "path": "skill/references/backend-reference.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/backend-reference.md",
+      "category": "skill",
+      "sha256": "42519b76f45c5dc4c84e91856408ee1497d0f343807d96c57a0ce6d1e9e85108"
+    },
+    {
+      "path": "skill/references/coupled-source.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/coupled-source.md",
+      "category": "skill",
+      "sha256": "1eafe3f1fe0ee3b5600681c272a54dbf76701304156a86442b1a705f1aca9b4f"
+    },
+    {
+      "path": "skill/references/dependencies.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/dependencies.md",
+      "category": "skill",
+      "sha256": "e821e9150456a516317b97714ed3c5c4183f91106e03070a9ff7ed903627d24f"
+    },
+    {
+      "path": "skill/references/evidence.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/evidence.md",
+      "category": "skill",
+      "sha256": "0e457bded779806a4e65c788651a8c70700c05981587e4466b0c8b8563710138"
+    },
+    {
+      "path": "skill/references/integration-contract.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/integration-contract.md",
+      "category": "skill",
+      "sha256": "c2691a359763ea1026689268809530f87e868647b2b129d87b72fda6fec55f2a"
+    },
+    {
+      "path": "skill/references/source-analysis.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/source-analysis.md",
+      "category": "skill",
+      "sha256": "e20bde7de1b6069be30240fa3c254554cb4e5ee93723a5c3ba6c31b5f7c07361"
+    },
+    {
+      "path": "skill/references/visual-contract.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/visual-contract.md",
+      "category": "skill",
+      "sha256": "304e73216d2a9e52069c7c6c81d432610fe9191552e516b2f4e94f708a7eb591"
+    },
+    {
+      "path": "skill/references/workflow.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/workflow.md",
+      "category": "skill",
+      "sha256": "eeaecab11424325f0b281fd471971be56749a848955b76f32f480dea0247d0bf"
+    },
+    {
+      "path": "skill/scripts/source_inventory.py",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/scripts/source_inventory.py",
+      "category": "skill",
+      "sha256": "9e6630f6c7e018091d5a170ce2dab06065a203022fa4b7d140cfb440e10a9da7"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/AF/AFY10400.jsp",
+      "category": "source",
+      "sha256": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/header.jsp",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/header.jsp",
+      "category": "source",
+      "sha256": "60508a333aa5411f59f252489e4ec50746a8ff84103c0083d777ec1b7283d44d"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/msgDisplayer.jsp",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/msgDisplayer.jsp",
+      "category": "source",
+      "sha256": "e39c5526a4ee108bcd8561716ca1e25324e8ad12e3743b13681193c42c9a1ec6"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/css/cm.css",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/css/cm.css",
+      "category": "source",
+      "sha256": "92b0ad8c25e35c47d46e6f79391803f5f414046faa731712aa7f8478bfee535f"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/ajax/prototype.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/ajax/prototype.js",
+      "category": "source",
+      "sha256": "f727ce3e418c76558c3882064c7b0b4743cd1bcef0e25ebd19d807ad47850636"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/ajax/CSRUtil.js",
+      "category": "source",
+      "sha256": "d71734e1cd4ec8cd978020cc670101de9b86ff70a96c0daf4c8d875d065a28e6"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/ui/PageUI.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/ui/PageUI.js",
+      "category": "source",
+      "sha256": "d733b2884aaf5f6853e4ea75f253117bf72940d0f6c725b4cce71ba18d814f74"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/HotKey.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/HotKey.js",
+      "category": "source",
+      "sha256": "7501d3cdd52084dec29be7a18b6b5b232de4fa11447c7a7742a4f7f12b94576d"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/Validator.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/Validator.js",
+      "category": "source",
+      "sha256": "ed58fa05914cfa71b96ef79f47ecfa7dfa0c1622393fcc958bb658dcc41d77be"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/RPTUtil.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/RPTUtil.js",
+      "category": "source",
+      "sha256": "0b54b047139f08ba233019885d102e095f48d92936a43c536ace524f397638e3"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/calendar.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/calendar.js",
+      "category": "source",
+      "sha256": "f39aadb9e108b0aea6ccf6f192cd601c0bc7eed1ea80a4ec7aee8faf1149d778"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/date.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/date.js",
+      "category": "source",
+      "sha256": "acf6883faeb16f97739af0f13b4a29940be97514b10e93fea39ba6dd7f214185"
+    },
+    {
+      "path": "inputs/backend/docs/OPENAPI.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/AF_DEMO/AF_SRC/docs/OPENAPI.md",
+      "category": "source",
+      "sha256": "13307ed1144946124179d6e02148999e64783e031d440aacc8ff54e03c32f1ef"
+    },
+    {
+      "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doPrompt.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/AF_DEMO/AF_SRC/docs/specs/AFY1_0400/AFY1_0400_doPrompt.md",
+      "category": "source",
+      "sha256": "082f353e384c1bc2484e07aacfaa57536f53b813fe080df8378e3009a5cb38fc"
+    },
+    {
+      "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doExport.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/AF_DEMO/AF_SRC/docs/specs/AFY1_0400/AFY1_0400_doExport.md",
+      "category": "source",
+      "sha256": "8ed2021657fc3f391f71deb9a556c71919ba06cd469781566e22ef07aface20e"
+    },
+    {
+      "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doDownload.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/AF_DEMO/AF_SRC/docs/specs/AFY1_0400/AFY1_0400_doDownload.md",
+      "category": "source",
+      "sha256": "1d07fcd0946717298ce25263901cebc369aa8db7c035efcbed16600d998d1d2c"
+    },
+    {
+      "path": "inputs/prior-artifacts/design/AF-AFY10400/prototypes/SCR-01.html",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/design/AF-AFY10400/prototypes/SCR-01.html",
+      "category": "source",
+      "sha256": "9293ae3c9e5fe4b3450d8f50b25c26ce942da7182457852132ee553e405f0009"
+    },
+    {
+      "path": "inputs/prior-artifacts/design/AF-AFY10400/specification.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/design/AF-AFY10400/specification.md",
+      "category": "source",
+      "sha256": "d0d4d39e9aee4868e1667b40fd1f0d843deabc7f03ed7b50d681a2ac6f5d7718"
+    },
+    {
+      "path": "inputs/prior-artifacts/design/AF-AFY10400-support/contract.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/design/AF-AFY10400-support/contract.md",
+      "category": "source",
+      "sha256": "b11e3ba9753401737fb3b74728fd3de21dbccb41b2faf342bc716a414da16826"
+    },
+    {
+      "path": "inputs/prior-artifacts/integration/AF-AFY10400/api-spec.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/integration/AF-AFY10400/api-spec.md",
+      "category": "source",
+      "sha256": "ae87ae7e1b833f849665e22a3be6b938625ac461161c555ed3c51c2cc5617ce4"
+    },
+    {
+      "path": "inputs/prior-artifacts/integration/AF-AFY10400/backend-handoff.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/integration/AF-AFY10400/backend-handoff.md",
+      "category": "source",
+      "sha256": "d6d4981a767fbffe39c9b9e114ef2757048ddaaa057bd9fb8eaaf224f9b05552"
+    },
+    {
+      "path": "inputs/prior-artifacts/renovation/AF-AFY10400/checks/mock-result.json",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/renovation/AF-AFY10400/checks/mock-result.json",
+      "category": "source",
+      "sha256": "0fb56e5b92d90c8bf36d2d55c8e000a1770924d616f2f47beb4785f85d8feeb4"
+    },
+    {
+      "path": "inputs/prior-artifacts/renovation/AF-AFY10400/checks/prototype-script.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/renovation/AF-AFY10400/checks/prototype-script.js",
+      "category": "source",
+      "sha256": "aa2818ff3f10576f637499a631bc8bc9c25a9ca9fe9dc34f92b8fe1f200c9fbf"
+    },
+    {
+      "path": "inputs/prior-artifacts/renovation/AF-AFY10400/checks/prototype_mock_check.cjs",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/renovation/AF-AFY10400/checks/prototype_mock_check.cjs",
+      "category": "source",
+      "sha256": "706d9f4afb6c2013d9bfb34dbcd13a3420b5fe55cd2e07566150216274d7079f"
+    },
+    {
+      "path": "inputs/prior-artifacts/renovation/AF-AFY10400/checks/static-result.json",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/renovation/AF-AFY10400/checks/static-result.json",
+      "category": "source",
+      "sha256": "7cea62b578626e7a1ce0068236070753d2cc6baea19ea9fdd43594bf225a8469"
+    },
+    {
+      "path": "inputs/prior-artifacts/renovation/AF-AFY10400/checks/static_check.py",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/renovation/AF-AFY10400/checks/static_check.py",
+      "category": "source",
+      "sha256": "dd24ab0adf935ace65bbb28e16cf2acc25edb8027d60bdc0d9f38919ff3e397f"
+    },
+    {
+      "path": "inputs/prior-artifacts/renovation/AF-AFY10400/plan.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/renovation/AF-AFY10400/plan.md",
+      "category": "source",
+      "sha256": "8561c4ba8821796b555bf5180a266810101d6a4ac23686265097f818ac83c2a8"
+    },
+    {
+      "path": "inputs/prior-artifacts/renovation/AF-AFY10400/source-inventory.json",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/renovation/AF-AFY10400/source-inventory.json",
+      "category": "source",
+      "sha256": "cd8145f2d83d1aaaa89b720235df1767567fcfd1c9281aa75c10b9c0515cd111"
+    },
+    {
+      "path": "inputs/prior-artifacts/renovation/AF-AFY10400/tracking.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/artifacts/renovation/AF-AFY10400/tracking.md",
+      "category": "source",
+      "sha256": "fa0c7d18da18fe033d1f3f4eb19bb42980232bb07711e4dd3e2f66ae8128d62f"
+    },
+    {
+      "path": "inputs/prior-review.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/refinement/afy10400/reports/semantic-review.md",
+      "category": "source",
+      "sha256": "4806a6ed725972cdcc1d8fb3ef196656a334e2fb5230715ba08c4a7a9cda4d5f"
+    }
+  ],
+  "mode": "review-guided-continuation",
+  "prior_delivery": "inputs/prior-artifacts",
+  "prior_review": "inputs/prior-review.md"
+}

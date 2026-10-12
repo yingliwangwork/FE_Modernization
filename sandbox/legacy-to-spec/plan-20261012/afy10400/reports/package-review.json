@@ -1,0 +1,20 @@
+{
+  "kind": "package-responsibility-review",
+  "files": 26,
+  "canonical_root": ".agent/skills/legacy-to-spec",
+  "duplicate_package": false,
+  "meta_prose_matches": [],
+  "owners": {
+    "SKILL.md": "翻新框架、原則及流程入口",
+    "guides/workflow.md": "單行輸入、自動準備、任務分類／順序／選擇與續作",
+    "guides/dependencies.md": "依賴查找、重用、先翻新／延後決策與局部缺口",
+    "guides/customization.md": "範本編輯、專案設定與選用清單",
+    "references": "領域及來源撰寫規則",
+    "templates": "可重用交付骨架",
+    "scripts": "確定性輔助檢查"
+  },
+  "limits": [
+    "Phrase scan supplements file review; absence of matches does not establish semantic completeness.",
+    "Runtime skill discovery and native custom slash-menu registration were not tested; repository routing and symlink targets were checked."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "audit_kind": "Independent bounded static source/style/customization audit",
+  "runtime_checks_performed": false,
+  "official_format_validator_used": false,
+  "prohibited_evaluation_files_read": false,
+  "manifest_hash_mismatches": [],
+  "inventory_hash_or_line_mismatches": [],
+  "template_selection_hash_mismatches": [],
+  "config_hash_matches": true,
+  "supplementary_reference_hashes_match": true,
+  "source_css_equals_combined_delivery_css": true,
+  "source_css_rule_count": 4,
+  "source_css_declaration_count": 11,
+  "prototype_local_stylesheets": [
+    {
+      "href": "../styles/CMP-PAGE.css",
+      "exists": true
+    },
+    {
+      "href": "../styles/CMP-TABLE.css",
+      "exists": true
+    },
+    {
+      "href": "../styles/CMP-SEARCH-ACTION.css",
+      "exists": true
+    }
+  ],
+  "inline_style_elements_or_attributes": [],
+  "remote_html_asset_or_action_references": [],
+  "bounded_token_value_checks": {
+    "page.maxWidth": true,
+    "page.margin": true,
+    "page.textColor": true,
+    "table.marginBlock": true,
+    "table.borderWidth": true,
+    "table.borderColor": true,
+    "table.cellPadding": true,
+    "action.marginTop": true
+  },
+  "component_style_ids": {
+    "CMP-TABLE": [
+      "STYLE-05",
+      "STYLE-06",
+      "STYLE-07",
+      "STYLE-08",
+      "STYLE-09",
+      "STYLE-10"
+    ],
+    "CMP-SEARCH-ACTION": [
+      "STYLE-11"
+    ],
+    "CMP-PAGE": [
+      "STYLE-01",
+      "STYLE-02",
+      "STYLE-03",
+      "STYLE-04"
+    ]
+  },
+  "missing_markdown_local_target_files": [],
+  "snapshot_sha256": {
+    "artifacts/design/fixture-case/specification.md": "cadd3afd5d1fcbf4fc1e4f5987c1a9d1a1fe64108a483ac4aa3d328ed3bed857",
+    "artifacts/design/fixture-case/dependency-contracts.md": "ceaacb0b80ceb1771fde6f4c45dbb3c8ac38d98a7e1605d23ac0dccf77ed721e",
+    "artifacts/design/fixture-case/styles/CMP-SEARCH-ACTION.css": "9343cfba5a7a6b07fbfb2b37ad825289d651bb89ab1b56f1595bcbc3d2d1dc96",
+    "artifacts/design/fixture-case/styles/CMP-TABLE.css": "3dc2355a010cc64fc22d0ed7e3e864a35bc66c2e52e93f83706b2fcaa7aa9220",
+    "artifacts/design/fixture-case/styles/CMP-PAGE.css": "8a099c0ec0062caa1768b498fa5cc527021705a378a459ade636ef1b60643356",
+    "artifacts/design/fixture-case/styles/tokens.json": "e631928b73beaf88d737d4cf7b089201b746e1ef508a6db9401f54702f26189a",
+    "artifacts/design/fixture-case/components/CMP-TABLE/DESIGN.md": "f3ac5a29fac38bf439ecc5a08fbd825938ffe9634b7647a5a08709710e640f72",
+    "artifacts/design/fixture-case/components/CMP-SEARCH-ACTION/DESIGN.md": "b43168cb131281ac7d677afb1c52c7ac6f8a5792e14a0b4e2200e8886adf6bd5",
+    "artifacts/design/fixture-case/components/CMP-PAGE/DESIGN.md": "085aea670930a68d5fad2128193a98f6c0650b17c3482909f4bb6daaa88da403",
+    "artifacts/design/fixture-case/prototypes/prototype.js": "6e845ab0a47c43de876335f826965baeca2ae5e928404e755f92c029af3ddb6a",
+    "artifacts/design/fixture-case/prototypes/SCR-01.html": "331f40851377d368715ba49ce5ff1c3043c1b305ec82148b1663a2839325f244",
+    "artifacts/integration/fixture-case/api-spec.md": "e51076f402e375403d02ce4affcbe6107b28b18a14860b840baeaca045099033",
+    "artifacts/integration/fixture-case/backend-handoff.md": "396c5d2aedf145e466583fafee8d5f1a1f177b949228764002fe889a453216cc",
+    "artifacts/renovation/fixture-case/artifact-hashes.json": "b618c36f49b7e6224435bf24d4ad0e916aef1d09e70d32dba37b39f930ecd332",
+    "artifacts/renovation/fixture-case/source-inventory.json": "abee7659e5a5383eac5c594109357fb2fc3f7847bc0a6aca0e4169dd4e307ed2",
+    "artifacts/renovation/fixture-case/tracking.md": "9e7ed781f548c77dff9cbdff96e9d45ad6f447ed0ec484b1f78386ab7c443c19",
+    "artifacts/renovation/fixture-case/plan.md": "fe833cfc3f639b952d869dceaac803af64634ac5ada688ffb9dbd6ca1fa6f813",
+    "artifacts/renovation/fixture-case/template-selection.json": "84368060a9cef826a77ed8a4f45e740f2be6e0ecbf9cd9333e122e550c9358ff"
+  },
+  "limits": [
+    "Stylesheet href existence and static declaration equality do not prove browser loading or computed-style/geometry equality.",
+    "Token checks cover eight supplied values and their dimension/color shapes; no full DESIGN alpha or DTCG schema validation was performed.",
+    "Prototype behavior was compared to raw source by inspection; no original JSP/backend/runtime execution occurred."
+  ],
+  "final_artifact_hashes_checked": 17,
+  "final_artifact_hash_mismatches": [],
+  "final_disposition": {
+    "F-01": "Open: low-severity source-range documentation inconsistency",
+    "F-02": "Withdrawn: full DATA-06/DATA-07 IDs are present in the final tracking file"
+  },
+  "review_correction": {
+    "reason": "The original semantic report carried an earlier tracking-content read into final findings without rereading the final table.",
+    "final_tracking_sha256": "9e7ed781f548c77dff9cbdff96e9d45ad6f447ed0ec484b1f78386ab7c443c19",
+    "matches_prior_bounded_snapshot": true,
+    "rechecked_lines": {
+      "112": "| TODO-03 | [DATA-06](../../design/fixture-case/specification.md#data-06) | 定義列／段内 [TODO-03](#todo-03) 已回讀 | TASK-06/DEC-01 |",
+      "113": "| TODO-03 | [DATA-07](../../design/fixture-case/specification.md#data-07) | 定義列／段内 [TODO-03](#todo-03) 已回讀 | TASK-06/DEC-01 |",
+      "115": "| TODO-03 | [ST-SUBMIT](../../design/fixture-case/specification.md#st-submit) | 定義列／段内 [TODO-03](#todo-03) 已回讀 | TASK-06/DEC-01 |",
+      "116": "| TODO-03 | [FLOW-03](../../design/fixture-case/specification.md#flow-03) | 定義列／段内 [TODO-03](#todo-03) 已回讀 | TASK-06/DEC-01 |"
+    },
+    "earlier_content_read_hash_recorded": false,
+    "artifacts_changed_by_this_audit": false
+  }
+}

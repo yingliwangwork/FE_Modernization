@@ -1,0 +1,31 @@
+{
+  "case": "afy10400",
+  "run": "regression",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 32,
+    "markdown_files": 4,
+    "html_files": 1,
+    "links": 28
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/checks/check_artifacts.py": "485b0be60b37f10f0684db0f11dbaf8686a86cdeb2a8bce095a4796dcbd67a14",
+    "artifacts/checks/input-integrity-final.json": "9842d0d96bdb889db4ac0d46f6d07554b7d89676e26674bf9186f3d398a0bbfb",
+    "artifacts/checks/input-integrity.json": "d36c6144d3d4fe41fc0a4aa4e972be06d8202179940b67d8351401d43d78c97f",
+    "artifacts/checks/local-checks-first.json": "660a0e26668f84eaa42a2d373b6eb8cdcf1003f1ed06879965411d3d32bc5692",
+    "artifacts/checks/local-checks-output.txt": "dad4654a6f35195c9c95b995d720b419e132f548ef68120a0e83b05c249c6279",
+    "artifacts/checks/local-checks.json": "6aecc815f04ba8d01938095589655a0c144f967a456400a17a409903441c0704",
+    "artifacts/checks/prototype-script.js": "f84dcfc46978251fb4c48239ebac947bb6d6cfb144fa2efc8228a9964d6eefe1",
+    "artifacts/design/AF-AFY10400/prototypes/SCR-001.html": "6a421513ed97f7146ea687016c6af15ce962f315b1e22e54074cf9539a15ec34",
+    "artifacts/design/AF-AFY10400/specification.md": "7f408c080b92e338ccff7933ea74188e49179d7619afdaf2a072feca91e61e83",
+    "artifacts/integration/AF-AFY10400/api-spec.md": "f427bd556e18e9b1eec57af2f461d56e8cecab31e929f129e8d57d35a1588d46",
+    "artifacts/integration/AF-AFY10400/backend-handoff.md": "a465315bc9fe4a84adf78ad9040e8568b63b8f7751b082c761f0dd6e7f08a8f3",
+    "artifacts/renovation/AF-AFY10400/tracking.md": "73ab7a349923cf4c0e223bc20ec923270f9b62d318c51ed3891bd7b81a5134e2"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

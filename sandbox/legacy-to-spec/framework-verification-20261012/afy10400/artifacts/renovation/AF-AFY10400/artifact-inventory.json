@@ -1,0 +1,159 @@
+{
+  "scope": "AF-AFY10400",
+  "files": [
+    {
+      "path": "artifacts/checks/behavior-check.cjs",
+      "sha256": "326ec13188ff83cee0477298c5e4c92726e02f68c8b771a7761f93c14eb676ea",
+      "bytes": 5896
+    },
+    {
+      "path": "artifacts/checks/finish_docs.py",
+      "sha256": "503468723ca70c7787a5d987fcfc5aae22a06ea3708a23deed66d7fb33203678",
+      "bytes": 20727
+    },
+    {
+      "path": "artifacts/checks/generate_delivery.py",
+      "sha256": "432c39903d553189b4176cc548a6a76397b5d42bf7bd19bb113bbfe54a19f34d",
+      "bytes": 37007
+    },
+    {
+      "path": "artifacts/checks/legacy-root.js",
+      "sha256": "1481375b75f683341941cfbae25301a8aa216b3c135f543f3480f582204879bc",
+      "bytes": 3199
+    },
+    {
+      "path": "artifacts/checks/structural-check.py",
+      "sha256": "071e7e39eb2ce546ba144805483fbdc32b0e81032a226393f80fb33232bea9ef",
+      "bytes": 5507
+    },
+    {
+      "path": "artifacts/checks/write_tracking.py",
+      "sha256": "5e092929b0df6698ce95d86ac9a71b52141cd5923f709f2111645a6ad0eb1728",
+      "bytes": 25744
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/common-contracts.md",
+      "sha256": "31ef3a6c570e7708fc0e20b9fd5f52084bc06aace440b6c6d2fd2cfe47199cf9",
+      "bytes": 8857
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/components/CMP-COVER/DESIGN.md",
+      "sha256": "63a71e9f26e83823088d11364eb009f40e36295d1049946b8c74c2e5a4b0bdbe",
+      "bytes": 4296
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/components/CMP-FORM/DESIGN.md",
+      "sha256": "9336c9d325cfddd6d5145f23cad30e863caa8cc2a8c7d99c3c51d4a0abb781fb",
+      "bytes": 10949
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md",
+      "sha256": "429151ac0498a94b38cda7bcdbe70c6010d42a9ba89dfd7ef35f9e791f709747",
+      "bytes": 9815
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md",
+      "sha256": "a161a3f7b3f637f19588545ceab3d9140810530cf70ddef907abd69b6759fbdc",
+      "bytes": 8675
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/prototypes/SCR-01.html",
+      "sha256": "92ac371cb010d2ed4f5abb0810665e14d50c2104301f286bb2a3c475665f2594",
+      "bytes": 5038
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/prototypes/model.js",
+      "sha256": "13237e522da663283a0484bb95641a5338a02b9ee49f94af10bf94b9aa7e3789",
+      "bytes": 3376
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/prototypes/prototype.js",
+      "sha256": "f7a12391cd4336a45cc67d4489c3aea0eb8686664d94a8429a082082eaf86775",
+      "bytes": 8603
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/specification.md",
+      "sha256": "99fbffe4216805fa532295631d4a18ac9ccfb3f4c068f18c1f2058ca5f92dbc2",
+      "bytes": 22182
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/styles/CMP-COVER.css",
+      "sha256": "c3c98fb11301edb947d9c4be473fc18331d25d177ffd8a429f7869e9820ae806",
+      "bytes": 253
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/styles/CMP-FORM.css",
+      "sha256": "cd32bddd0073df0239176011337b08b7d99c818aa0d30f807ba452d06b86e374",
+      "bytes": 1422
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/styles/CMP-MESSAGE.css",
+      "sha256": "811357b4d07eac7d1b4abead7dbbb9356218e4b145b3af16478884fadea4bf02",
+      "bytes": 968
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/styles/CMP-PAGE.css",
+      "sha256": "a376facd834777f9ffa3b305283ca1230b8c4f677947a3f913d247c8cf8fb8c4",
+      "bytes": 936
+    },
+    {
+      "path": "artifacts/design/AF-AFY10400/styles/review.css",
+      "sha256": "962df87996820175a45e1afcff3d84101286805f3ff92da6381043d1175eea3c",
+      "bytes": 464
+    },
+    {
+      "path": "artifacts/integration/AF-AFY10400/api-spec.md",
+      "sha256": "3233047d2b7db6a662715e42d0a8ffc9c755eee977773452f7fd54d3dd708171",
+      "bytes": 9017
+    },
+    {
+      "path": "artifacts/integration/AF-AFY10400/backend-handoff.md",
+      "sha256": "d235596cc9636181a960f81964679323e7759872defb213e18f8e9d5133077ac",
+      "bytes": 5078
+    },
+    {
+      "path": "artifacts/renovation/AF-AFY10400/behavior-check.json",
+      "sha256": "3d6a1cab07610d266b36c860a802cab460a8823c19e851916b29cce1187862a7",
+      "bytes": 1472
+    },
+    {
+      "path": "artifacts/renovation/AF-AFY10400/design-metadata-check.json",
+      "sha256": "fdbc3602b9b4d127acba16a106a193c686be2379508950a7e122382800658abd",
+      "bytes": 705
+    },
+    {
+      "path": "artifacts/renovation/AF-AFY10400/plan.md",
+      "sha256": "4c6d29428639b297f602bda6553ff767ec9a226aced047a486fd6317378392f5",
+      "bytes": 8808
+    },
+    {
+      "path": "artifacts/renovation/AF-AFY10400/source-inventory.json",
+      "sha256": "64546573a92d1a88a167fc1d3067b73e9518e7c858542fef823afad0cb33df2e",
+      "bytes": 9292
+    },
+    {
+      "path": "artifacts/renovation/AF-AFY10400/structural-check.json",
+      "sha256": "d93d0016663e6603a354e496816e3ff214c98d12a085c4721c38de41fcdf3d96",
+      "bytes": 100201
+    },
+    {
+      "path": "artifacts/renovation/AF-AFY10400/structural-first-run.json",
+      "sha256": "47ae23f39248a3a57ef0169380ff8e1f503222c83c8c397eed5c99abbd4e488a",
+      "bytes": 100401
+    },
+    {
+      "path": "artifacts/renovation/AF-AFY10400/template-selection.json",
+      "sha256": "65d13fcffda8a240d8987a8437853dde5887b141f1700fe866dd9a6d8c889099",
+      "bytes": 3319
+    },
+    {
+      "path": "artifacts/renovation/AF-AFY10400/tracking.md",
+      "sha256": "fb1eed9bf5f86191574269e29543b137c95d21b30a4bc886fb32a547b8a907d1",
+      "bytes": 75179
+    }
+  ],
+  "limits": [
+    "Inventory itself is excluded from its own hash list.",
+    "Generated files only; does not assert behavior completeness."
+  ]
+}

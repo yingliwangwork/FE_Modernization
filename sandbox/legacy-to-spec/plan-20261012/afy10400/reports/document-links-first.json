@@ -1,0 +1,14 @@
+{
+  "files": 23,
+  "links": 150,
+  "failures": [
+    [
+      "docs/legacy-to-spec-manual.md",
+      "#2-準備本輪輸入"
+    ],
+    [
+      "docs/legacy-to-spec-manual.md",
+      "#3-一輪翻新的操作流程"
+    ]
+  ]
+}

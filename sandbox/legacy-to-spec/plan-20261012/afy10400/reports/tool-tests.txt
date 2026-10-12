@@ -1,0 +1,31 @@
+test_css_property_name_inside_typography_is_rejected (test_design_metadata.DesignMetadataTests) ... ok
+test_css_string_typography_entry_is_rejected (test_design_metadata.DesignMetadataTests) ... ok
+test_source_only_font_family_object_is_accepted (test_design_metadata.DesignMetadataTests) ... ok
+test_authorized_dependency_scope_uses_its_own_specification (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_case_escape_is_rejected (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_deferred_dependency_cannot_add_another_conversion_scope (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_invalid_generated_javascript_is_rejected (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_missing_todo_anchor_is_rejected (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_modified_input_is_rejected_and_original_preserved (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_new_run_requires_a_separate_plan (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_partial_af_preparation_needs_only_root_and_reports_missing_inputs (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_plan_stage_accepts_plan_and_tracking_without_design (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_prepare_defaults_to_awaiting_dependency_decisions (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_unfilled_component_css_and_tokens_are_rejected (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_unfilled_template_is_rejected (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_well_formed_package_has_only_structural_pass (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_wrong_prototype_scope_is_rejected (test_sandbox_harness.SandboxHarnessTests) ... ok
+test_invalid_bytes_cannot_be_hidden_by_replacement_decoding (test_source_inventory.SourceInventoryTests) ... ok
+test_multiple_valid_codecs_do_not_choose_intended_encoding (test_source_inventory.SourceInventoryTests) ... ok
+test_physical_lines_newlines_and_hash_match_raw_bytes (test_source_inventory.SourceInventoryTests) ... ok
+test_custom_root_used_and_its_change_changes_digest (test_template_selection.TemplateSelectionTests) ... ok
+test_defaults_have_real_files_and_provenance (test_template_selection.TemplateSelectionTests) ... ok
+test_dtcg_profile_and_domain_reference_are_recorded (test_template_selection.TemplateSelectionTests) ... ok
+test_explicit_missing_override_and_missing_root_fail (test_template_selection.TemplateSelectionTests) ... ok
+test_override_precedes_custom_root_and_missing_roles_fall_back (test_template_selection.TemplateSelectionTests) ... ok
+test_typos_invalid_profiles_and_missing_references_fail (test_template_selection.TemplateSelectionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 2.963s
+
+OK

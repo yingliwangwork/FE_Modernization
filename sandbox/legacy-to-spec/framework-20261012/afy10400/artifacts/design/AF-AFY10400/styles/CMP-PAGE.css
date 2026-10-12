@@ -1,0 +1,15 @@
+/* E-02/E-20: source-backed page values; unavailable images/fonts/calendar CSS: TODO-05. */
+body { margin:0; background:#F0FBC6; font-family:'PMingLiU','MingLiU','Microsoft JhengHei','Meiryo','Arial','Arial Unicode MS','Helvetica','sans-serif','Verdana','Trebuchet MS'; }
+.product-title { position:absolute; left:0; top:0; width:100%; z-index:9; visibility:visible; height:30px; }
+.product-title table { width:100%; border-spacing:0; }
+.subTitle { font-size:10pt; font-weight:bold; color:#339900; letter-spacing:3pt; }
+.title-spacer {height:30px;}
+.outer {width:100%; border-spacing:0;}
+.main-frame {width:97%; margin:0 auto; border-spacing:1px; background:#003366;}
+.form-body {background:#fff; padding:5px;}
+.red {color:red;}
+.policy-enabled .product { }
+@media print {
+ body.policy-enabled > * {display:none !important;}
+ body.policy-enabled::after {content:'依據資安政策，不開放列印功能'; display:block !important;}
+}

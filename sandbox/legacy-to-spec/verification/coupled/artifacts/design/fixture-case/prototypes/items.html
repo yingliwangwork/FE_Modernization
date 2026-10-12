@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>項目查閱</title>
+<style>
+body { font-family: sans-serif; max-width: 720px; margin: 24px; color: #222; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+th, td { border: 1px solid #555; padding: 6px; text-align: left; }
+.action-bar { margin-top: 8px; }
+.review { margin-top: 30px; border-top: 1px dashed #999; padding-top: 12px; }
+.review p { font-size: 13px; }
+.review button, .review select { margin: 3px; }
+.review :focus-visible { outline: 2px solid #333; outline-offset: 2px; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main id="product" data-scope-id="fixture-case" data-screen-id="SCR-01" data-state-id="ST-01">
+<h1 data-ui-id="UI-01">項目查閱</h1>
+<p data-ui-id="UI-02">審閱者：<span id="reviewer">示例審閱者</span></p>
+<label for="filter" data-ui-id="UI-03">關鍵字</label><input id="filter" type="text" maxlength="12" data-ui-id="UI-03">
+<div class="action-bar" data-component-id="CMP-01"><button id="search" type="button" data-ui-id="UI-04" data-flow-id="FLOW-02">查閱</button></div>
+<p id="status" data-ui-id="UI-06"></p>
+<table data-ui-id="UI-05"><thead><tr><th>項目代碼</th><th>名稱</th><th>排序提示</th></tr></thead><tbody id="rows"></tbody></table>
+<form id="quantity-form" data-flow-id="FLOW-04">
+<input type="hidden" name="mode" value="commit">
+<label for="quantity" data-ui-id="UI-07">數量</label><input id="quantity" name="quantity" type="text" data-ui-id="UI-07">
+<button type="submit" data-ui-id="UI-08" data-flow-id="FLOW-04">送出數量</button>
+</form>
+</main>
+<button id="toggle-review" type="button" data-review-only="true">隱藏／顯示審閱工具</button>
+<aside id="review" class="review" data-review-only="true" aria-label="審閱工具">
+<h2>審閱工具</h2>
+<p>合成展示資料：「示例審閱者」、項目與排序提示。以下按鈕不屬於產品。此檔只展示已知可見行為，不執行查閱服務、計費、寫入或外部導覽。</p>
+<p>UI-02／FLOW-01：<a href="../../../renovation/fixture-case/tracking.md#todo-01">TODO-01</a> 可信名稱未承接。UI-05第三欄／FLOW-03：<a href="../../../renovation/fixture-case/tracking.md#todo-02">TODO-02</a> 目標未提供排序提示；合成第三欄不代表API支援。</p>
+<p>UI-08／FLOW-04／05：<a href="../../../renovation/fixture-case/tracking.md#todo-03">TODO-03</a> 數量非空時停於交接，不模擬計費與儲存。FLOW-02／03：<a href="../../../renovation/fixture-case/tracking.md#todo-04">TODO-04</a> 認證與未定義錯誤。樣式 SCR-01／CMP-01／02／UI-01～08／ST-01～08：<a href="../../../renovation/fixture-case/tracking.md#todo-06">TODO-06</a> 獨立樣式契約延後，已知整頁字體／內容區、表格及查閱區間距仍保留。傳輸 FLOW-02／03／BOUND-02：同一 TODO-06 的共用 bridge 契約延後。</p>
+<p>本檔回應按鈕注入的是已知 legacy 形狀的合成資料；API-01 wire 案例在介接文件另行定義，未在此呼叫或驗證服務。先點產品「查閱」，再選擇待回應事件並注入回應；可先啟動多次查閱、任意順序注入。AC-06：關鍵字「甲」啟動 A，再以「乙」啟動 B；先選 B 注入無項目，觀察空列、「沒有項目」且 A 仍待回應；再選 A 注入成功，觀察兩行三欄及保留「沒有項目」。注入成功不會清除較早回應留下的狀態訊息。</p>
+<label for="pending">待回應事件</label><select id="pending"></select>
+<div>
+<button id="reply-ok" type="button">注入成功資料</button>
+<button id="reply-empty" type="button">注入無項目</button>
+<button id="reply-denied" type="button">注入拒絕</button>
+<button id="reply-other" type="button">注入其他 legacy 結果</button>
+<button id="reset" type="button">重設合成情境</button>
+</div>
+<p id="review-status" aria-live="polite">展示初始畫面。尚無外部呼叫。</p>
+<p><a href="../specification.md">規格</a> · <a href="../../../renovation/fixture-case/tracking.md#todo-05">TODO-05：瀏覽器與實際 legacy 視覺驗證限制</a></p>
+</aside>
+<script>
+// This is a local review substitute; it contains no service call or business calculation.
+const product = document.getElementById('product');
+const filter = document.getElementById('filter');
+const status = document.getElementById('status');
+const rows = document.getElementById('rows');
+const pending = document.getElementById('pending');
+const reviewStatus = document.getElementById('review-status');
+let nextRequest = 1;
+let requests = [];
+function note(text) { reviewStatus.textContent = text; }
+function renderPending() {
+  pending.textContent = '';
+  requests.forEach(request => {
+    const option = document.createElement('option');
+    option.value = String(request.id);
+    option.textContent = '事件 ' + request.id + '／關鍵字：' + request.query;
+    pending.appendChild(option);
+  });
+}
+document.getElementById('search').addEventListener('click', () => {
+  status.textContent = '';
+  const request = {id: nextRequest++, query: filter.value.trim()};
+  requests.push(request);
+  product.dataset.stateId = 'ST-02';
+  renderPending();
+  note('已記錄查閱交接事件 ' + request.id + '；關鍵字「' + request.query + '」。舊資料列保留，等待審閱回應。');
+});
+function receive(kind) {
+  const index = requests.findIndex(request => String(request.id) === pending.value);
+  if (index < 0) { note('沒有待回應查閱事件；請先點產品查閱。'); return; }
+  const request = requests.splice(index, 1)[0];
+  rows.textContent = '';
+  if (kind === 'DONE') {
+    // These values represent the evidenced legacy shape, not the target API schema.
+    const samples = [ ['DEMO-01', '示例項目甲', '示例提示甲'], ['DEMO-02', '示例項目乙', '示例提示乙'] ];
+    samples.forEach(item => { const row = rows.insertRow(); item.forEach(value => row.insertCell().textContent = value); });
+    product.dataset.stateId = 'ST-03';
+  } else if (kind === 'NONE') {
+    status.textContent = '沒有項目'; product.dataset.stateId = 'ST-04';
+  } else if (kind === 'BLOCK') {
+    status.textContent = '不允許查閱'; product.dataset.stateId = 'ST-05';
+  } else {
+    product.dataset.stateId = 'ST-08';
+  }
+  renderPending();
+  note('事件 ' + request.id + ' 的合成回應已到達；仍有 ' + requests.length + ' 筆待回應。排序提示僅為 legacy 合成形狀，TODO-02未解。');
+}
+document.getElementById('reply-ok').addEventListener('click', () => receive('DONE'));
+document.getElementById('reply-empty').addEventListener('click', () => receive('NONE'));
+document.getElementById('reply-denied').addEventListener('click', () => receive('BLOCK'));
+document.getElementById('reply-other').addEventListener('click', () => receive('OTHER'));
+document.getElementById('quantity-form').addEventListener('submit', event => {
+  event.preventDefault(); // Review safety boundary; never send the legacy form.
+  if (document.getElementById('quantity').value === '') {
+    const previous = product.dataset.stateId;
+    product.dataset.stateId = 'ST-06';
+    alert('數量不得為空');
+    product.dataset.stateId = previous;
+    note('空數量已被原生警示阻斷；原畫面資料保持。');
+    return;
+  }
+  product.dataset.stateId = 'ST-07';
+  note('非空數量已到達未承接的交接邊界：TODO-03。沒有計算費用、呼叫後端或宣告寫入成功。');
+});
+document.getElementById('reset').addEventListener('click', () => {
+  filter.value = ''; document.getElementById('quantity').value = '';
+  status.textContent = ''; rows.textContent = '';
+  requests = []; nextRequest = 1; renderPending();
+  product.dataset.stateId = 'ST-01'; note('展示初始畫面。尚無外部呼叫。');
+});
+document.getElementById('toggle-review').addEventListener('click', () => {
+  const review = document.getElementById('review'); review.hidden = !review.hidden;
+});
+</script>
+</body>
+</html>

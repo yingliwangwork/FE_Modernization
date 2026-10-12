@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant" data-scope-id="fixture-case" data-screen-id="SCR-01" data-state-id="ST-INIT">
+<head>
+<meta charset="UTF-8"><title>項目查閱</title>
+<link rel="stylesheet" href="../styles/CMP-PAGE.css">
+<link rel="stylesheet" href="../styles/CMP-TABLE.css">
+<link rel="stylesheet" href="../styles/CMP-SEARCH-ACTION.css">
+<script src="prototype.js" defer></script>
+</head>
+<body data-component-id="CMP-PAGE">
+<h1 data-ui-id="UI-01">項目查閱</h1>
+<p data-ui-id="UI-02">審閱者：<span id="reviewer">示範審閱者</span></p>
+<label for="filter" data-ui-id="UI-03">關鍵字</label><input id="filter" type="text" maxlength="12" data-ui-id="UI-03">
+<div class="action-bar" data-component-id="CMP-SEARCH-ACTION"><button id="search" type="button" data-ui-id="UI-04" data-flow-id="FLOW-02">查閱</button></div>
+<p id="status" data-ui-id="UI-05"></p>
+<table data-component-id="CMP-TABLE" data-ui-id="UI-06"><thead><tr><th>項目代碼</th><th>名稱</th><th>排序提示</th></tr></thead><tbody id="rows"></tbody></table>
+<form id="quantityForm" data-flow-id="FLOW-03">
+<input type="hidden" name="mode" value="commit">
+<label for="quantity" data-ui-id="UI-07">數量</label><input id="quantity" name="quantity" type="text" data-ui-id="UI-07">
+<button type="submit" data-ui-id="UI-07" data-flow-id="FLOW-03">送出數量</button>
+</form>
+<details id="reviewTools" open>
+<summary>審閱工具（非產品 UI，可收合）</summary>
+<p>離線合成展示資料。審閱者名稱為替身，不代表服務端情境。TODO-01：<a href="../../../renovation/fixture-case/tracking.md#todo-01">初始化承接缺口</a>，對應審閱者區。TODO-02：<a href="../../../renovation/fixture-case/tracking.md#todo-02">排序提示缺口</a>，第三欄展示只依 legacy 形狀，不宣稱目標提供欄位。</p>
+<p>按產品「查閱」後選擇請求，再交付合成回應。資料成功時不會再次清除產品狀態文字，可測試交錯順序。沒有對外連線。</p>
+<label for="pending">待回應請求</label><select id="pending"></select>
+<label for="response">合成結果</label><select id="response"><option value="DONE">成功兩列</option><option value="NONE">無項目</option><option value="BLOCK">不允許</option><option value="OTHER">未識別可讀結果（來源分支，目標未定義）</option></select>
+<button type="button" id="deliver">交付回應</button>
+<p id="reviewLog">尚未發起查閱。</p>
+<p>TODO-03：<a href="../../../renovation/fixture-case/tracking.md#todo-03">數量責任未承接</a>；非空輸入停止於交接，不計费、不儲存、不顯示成功。</p>
+<p id="handoffNote"></p>
+<p>TODO-04：<a href="../../../renovation/fixture-case/tracking.md#todo-04">認證與未定義失敗</a>；未模擬 transport 或解析失敗為通用訊息。</p>
+<p><a href="../specification.md">規格及驗收案例</a></p>
+</details>
+</body></html>

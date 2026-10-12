@@ -1,0 +1,188 @@
+{
+  "case": "coupled",
+  "run": "verification",
+  "engine": "151.0.7922.34",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "kind": "local-prototype-browser-check",
+  "mode": "scenarios",
+  "checks": [
+    {
+      "id": "initial-view",
+      "source": "inputs/frontend/Case.jsp:49-61; no initial query or rows",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "query-order-and-trim",
+      "source": "Case.jsp:20-34; clears status before request, retains rows until callback, trims input; two synthetic rows only supply scenario data",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "empty-response",
+      "source": "Case.jsp:24,32-33; contract EMPTY maps legacy NONE",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "denied-response",
+      "source": "Case.jsp:24,34-35; contract DENIED maps legacy BLOCK",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "empty-quantity-rejected",
+      "source": "Case.jsp:41-44; exact empty-string guard and alert",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "nonempty-quantity-stops-at-boundary",
+      "source": "Case.jsp:41-46; whitespace is nonempty; target quantity logic has no API contract, no backend execution may be claimed",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "overlapping-callbacks-keep-previous-message",
+      "source": "Case.jsp:20,24-35; triggers clear status, DONE callback does not clear status written by another callback; supplied response order is only a local test fixture",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "reverse-identified-responses",
+      "source": "Case.jsp:20-35; AC-06: request A started first then B, B EMPTY then A DONE retains B message and replaces rows",
+      "status": "PASS",
+      "assertions": 6
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "snapshots": [
+    {
+      "file": "items.html",
+      "visibleText": "項目查閱\n\n審閱者：示例審閱者\n\n關鍵字\n查閱\n\n項目代碼\t名稱\t排序提示\n數量 送出數量\n隱藏／顯示審閱工具\n審閱工具\n\n合成展示資料：「示例審閱者」、項目與排序提示。以下按鈕不屬於產品。此檔只展示已知可見行為，不執行查閱服務、計費、寫入或外部導覽。\n\nUI-02／FLOW-01：TODO-01 可信名稱未承接。UI-05第三欄／FLOW-03：TODO-02 目標未提供排序提示；合成第三欄不代表API支援。\n\nUI-08／FLOW-04／05：TODO-03 數量非空時停於交接，不模擬計費與儲存。FLOW-02／03：TODO-04 認證與未定義錯誤。樣式 SCR-01／CMP-01／02／UI-01～08／ST-01～08：TODO-06 獨立樣式契約延後，已知整頁字體／內容區、表格及查閱區間距仍保留。傳輸 FLOW-02／03／BOUND-02：同一 TODO-06 的共用 bridge 契約延後。\n\n本檔回應按鈕注入的是已知 legacy 形狀的合成資料；API-01 wire 案例在介接文件另行定義，未在此呼叫或驗證服務。先點產品「查閱」，再選擇待回應事件並注入回應；可先啟動多次查閱、任意順序注入。AC-06：關鍵字「甲」啟動 A，再以「乙」啟動 B；先選 B 注入無項目，觀察空列、「沒有項目」且 A 仍待回應；再選 A 注入成功，觀察兩行三欄及保留「沒有項目」。注入成功不會清除較早回應留下的狀態訊息。\n\n待回應事件\n注入成功資料 注入無項目 注入拒絕 注入其他 legacy 結果 重設合成情境\n\n展示初始畫面。尚無外部呼叫。\n\n規格 · TODO-05：瀏覽器與實際 legacy 視覺驗證限制",
+      "controls": [
+        {
+          "tag": "INPUT",
+          "id": "filter",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "search",
+          "type": "button",
+          "text": "查閱",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "",
+          "type": "hidden",
+          "text": "",
+          "value": "commit",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "quantity",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "type": "submit",
+          "text": "送出數量",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "toggle-review",
+          "type": "button",
+          "text": "隱藏／顯示審閱工具",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "pending",
+          "type": "select-one",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": []
+        },
+        {
+          "tag": "BUTTON",
+          "id": "reply-ok",
+          "type": "button",
+          "text": "注入成功資料",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "reply-empty",
+          "type": "button",
+          "text": "注入無項目",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "reply-denied",
+          "type": "button",
+          "text": "注入拒絕",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "reply-other",
+          "type": "button",
+          "text": "注入其他 legacy 結果",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "reset",
+          "type": "button",
+          "text": "重設合成情境",
+          "value": "",
+          "disabled": false,
+          "options": null
+        }
+      ]
+    }
+  ],
+  "prototypeHashes": {
+    "items.html": "11d7bae5267cf6b797bace8ac3fa04c1cd1b24cd7219fc8c0a05d59440da30b9"
+  },
+  "limits": [
+    "Only generated local prototypes are executed; no legacy JSP runtime or real backend is executed.",
+    "Screenshots do not establish pixel equivalence to the legacy runtime."
+  ],
+  "status": "PASS",
+  "screenshots": "../../../../output/playwright/skill-sandbox/verification/coupled"
+}

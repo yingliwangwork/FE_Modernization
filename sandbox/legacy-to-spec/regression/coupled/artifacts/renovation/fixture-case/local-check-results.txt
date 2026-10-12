@@ -1,0 +1,13 @@
+PASS: all 22 frozen input/skill SHA-256 values unchanged
+PASS: five primary artifacts: no template placeholders; relative links and tracking anchors resolve
+PASS: scope/screen/state attributes, all DOM product IDs and script state/cell IDs map to specification; HTML id attributes unique
+PASS: static prototype has no fetched resources, network/storage APIs, charge calculation or Ledger invocation
+PASS: Node --check passes for actual inline prototype script
+PASS: AC-002/003: status clears before callback; old rows/input retained; trim logged; success renders supplied order and static hints
+PASS: AC-004/005/006: no-items, denied and unmatched legacy branches clear rows and preserve sourced messages/no extra message
+PASS: AC-012: two held calls accepted; denied then success leaves denied status beside success rows, matching source sequence
+PASS: AC-007: actual quantity listener blocks empty text, alerts exact message, retains prior rows/status/search state
+PASS: AC-008: whitespace/nonnumeric/3/4 pass only exact-empty check; boundary reached; form posting prevented and no charge computed
+PASS: AC-013: target fixture has only confirmed identifier/name data; ranking gap blank and disclosed in review layer
+PASS: review reset restores initial local values and all state attributes
+LIMIT: minimal DOM doubles execute actual script only. No native maxlength/keyboard/focus/layout/dialog behavior, browser console/network observation, JSP runtime, backend call, persistence, auth or deployment check. AC-001/009/010/011/014 are not fully runtime-executed.

@@ -1,0 +1,32 @@
+{
+  "case": "afy10400",
+  "run": "plan-20261012",
+  "stage": "plan",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 27,
+    "markdown_files": 4,
+    "html_files": 0,
+    "links": 173
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/build_plan.py": "03aa8e6fce5ded8d87e80a0a678ce5d177d56e8adbe94638ab7acc8b4981ea19",
+    "artifacts/check_plan.py": "344874df18775f920988f132bc9f79413b0314751b5feffae6be21b4954550ef",
+    "artifacts/renovation/AF-AFY10400/checks.json": "9d603138a4958b41d25971b899ef62beb31a6d6ace8b780659db22c19cb7c757",
+    "artifacts/renovation/AF-AFY10400/contract-search.json": "571ccdfbc838d8679648066d1f54de7b709e58b226f48cdb6781ff8a48e61470",
+    "artifacts/renovation/AF-AFY10400/dependency-inventory.json": "9852f33e162c8371d982a971fced4f76fe08590254f001c71fc840b4e85f52e2",
+    "artifacts/renovation/AF-AFY10400/plan.initial.md": "e1b2ba0c0beb7d707bdad4df2e737702eb4313bb959bf4d0bbfe923419746c20",
+    "artifacts/renovation/AF-AFY10400/plan.md": "0dd01f371c0050eee361b016828499d83cc13b3ec2909602d74eb88db7b235b7",
+    "artifacts/renovation/AF-AFY10400/run-log.json": "742e4ff2632230849a0d09b423db40e6629126d58df0fa4fcb79ada49786ba90",
+    "artifacts/renovation/AF-AFY10400/source-inventory.json": "0791504655b00fd58951037a4392c29f631d294332392afdacd0c2ef596981d0",
+    "artifacts/renovation/AF-AFY10400/template-selection.json": "092a7234c43fffc272e4a13009fee10d404cecdc2b63715a891fbafeace5a237",
+    "artifacts/renovation/AF-AFY10400/tracking.md": "55bbcf2deabf8f059ac2d24f12eff9b8ffd9f1b455f4fbd0de7ff7fa2efa3ed4",
+    "artifacts/renovation/AF-AFY10400/user-response.md": "0e6b977a49c028d01a84b68f1a6bd829437bceba36f222318feb3bd4a209fb10"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

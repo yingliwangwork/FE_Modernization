@@ -1,0 +1,21 @@
+{
+  "engine": "v22.18.0",
+  "mode": "Node vm with minimal mocked DOM; prototype script only; no legacy source executed",
+  "checks_passed": [
+    "AC-01/02: initial zero rows, L/AT; delete retains remaining values, recolors and serial is not reused.",
+    "AC-03/04: exact empty warning and earlier duplicate precedes later empty row.",
+    "AC-13: zero-row request reaches local boundary; whitespace does not trigger empty guard.",
+    "AC-05: synthetic local response fills row before download handoff before complete message; LF normalized to CRLF in boundary summary.",
+    "AC-06: target error gap preserves prior result, does not fabricate a new map or download.",
+    "AC-10: first Escape closes; letter then Escape leaves window open; confirm receives initial focus.",
+    "AC-11: down shows drag frame and real window; move hides real window; up restores and rebuilds listeners.",
+    "AC-08: mock window Ctrl+A prevents default with exact policy message; mock body contextmenu prevents default.",
+    "AC-09: independent fake timers retain old deadlines; t60 clears newer B, repeat at t61 records again, old B at t90 clears; 5001-character input carries original length."
+  ],
+  "limitations": [
+    "No real browser rendering, console or network panel observation.",
+    "Pointer/key event bubbling and browser default behavior are mocked; no claim of browser equivalence.",
+    "Timers use controlled fake time, not a 60-second real-time observation.",
+    "No API, FileDownload, backend, or trusted identity service executed."
+  ]
+}

@@ -1,0 +1,10 @@
+User input: /legacy-to-spec jsp=inputs/frontend/sourceCode/AF/AFY10400.jsp
+Use the skill at skill/SKILL.md to handle this user input.
+Work only inside this case directory. Read manifest.json for inputs and scope.
+Backend baseline: not supplied; use only provided input snapshots.
+Write only under artifacts/. Do not modify skill/, inputs/, or manifest.json.
+Missing dependencies remain unknown. Do not query or call external systems.
+Create plan before dependency analysis. Existing dependency contracts may be under inputs/specs/.
+No execution task has been selected. Return the first response for the user to choose; do not send questions to the real user from this sandbox.
+No dependency expansion or deferral decision is pre-authorized. Report concrete choices and continue independent work only.
+Carry out the skill's applicable checks; report actual limits and output paths.

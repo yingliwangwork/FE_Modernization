@@ -1,0 +1,23 @@
+{
+  "artifacts/design/fixture-case/components/CMP-PAGE/DESIGN.md": "d2c4714e6051afdfe92bd912c034eb4ffa770441abea943e119d2c4a26830f97",
+  "artifacts/design/fixture-case/components/CMP-SEARCH-ACTION/DESIGN.md": "934b6f59edc43c4af0af98de97fff7ecda5fe28d330ab2ba024160122a48b627",
+  "artifacts/design/fixture-case/components/CMP-TABLE/DESIGN.md": "c338bc8c35207883f4878d7ac45d14abedbf117d71ea2d3f7ea5a5c3d4028265",
+  "artifacts/design/fixture-case/dependency-contracts.md": "d217b9e598ef176d81f7563ff547fd414467514878b48dddc0c2e5fb84414562",
+  "artifacts/design/fixture-case/prototypes/SCR-01.html": "331f40851377d368715ba49ce5ff1c3043c1b305ec82148b1663a2839325f244",
+  "artifacts/design/fixture-case/prototypes/prototype.js": "6e845ab0a47c43de876335f826965baeca2ae5e928404e755f92c029af3ddb6a",
+  "artifacts/design/fixture-case/specification.md": "cadd3afd5d1fcbf4fc1e4f5987c1a9d1a1fe64108a483ac4aa3d328ed3bed857",
+  "artifacts/design/fixture-case/styles/CMP-PAGE.css": "8a099c0ec0062caa1768b498fa5cc527021705a378a459ade636ef1b60643356",
+  "artifacts/design/fixture-case/styles/CMP-SEARCH-ACTION.css": "9343cfba5a7a6b07fbfb2b37ad825289d651bb89ab1b56f1595bcbc3d2d1dc96",
+  "artifacts/design/fixture-case/styles/CMP-TABLE.css": "3dc2355a010cc64fc22d0ed7e3e864a35bc66c2e52e93f83706b2fcaa7aa9220",
+  "artifacts/design/fixture-case/styles/tokens.json": "e631928b73beaf88d737d4cf7b089201b746e1ef508a6db9401f54702f26189a",
+  "artifacts/integration/fixture-case/api-spec.md": "e51076f402e375403d02ce4affcbe6107b28b18a14860b840baeaca045099033",
+  "artifacts/integration/fixture-case/backend-handoff.md": "396c5d2aedf145e466583fafee8d5f1a1f177b949228764002fe889a453216cc",
+  "artifacts/renovation/fixture-case/checks/interaction-check.cjs": "4b038092db464678bbcd5906b0f8e15e239d2e4bcb3c2a0f0969dfc24c881996",
+  "artifacts/renovation/fixture-case/checks/interaction-results.json": "a480d3297b3f1d06b7c107be8e9b4d073d33a19cf68ac34bc8810cd591c1685d",
+  "artifacts/renovation/fixture-case/checks/static-check.py": "d3de86685d5a49702c7bfb36f8adb1683b2c82dbb10c57a261f5d99c700dc345",
+  "artifacts/renovation/fixture-case/checks/static-results.json": "50b67a7cb0da8982369cc97a5d3a9a63a44464aaa3e984b5f2ea9036013953ef",
+  "artifacts/renovation/fixture-case/plan.md": "4468559a359639c9e80db57a0ed7918104f907f7acce538a3f2c21480b68f964",
+  "artifacts/renovation/fixture-case/source-inventory.json": "abee7659e5a5383eac5c594109357fb2fc3f7847bc0a6aca0e4169dd4e307ed2",
+  "artifacts/renovation/fixture-case/template-selection.json": "6a2cb391c63819851dcdaceefb031cfeff5fbd5b4274d62aa2df0a16319618af",
+  "artifacts/renovation/fixture-case/tracking.md": "8cd9a832144d6dc0b88cb9374ffcc5ffd5324afce5b9b308e914ed45ccf0b1f7"
+}

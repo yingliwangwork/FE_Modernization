@@ -1,0 +1,59 @@
+{
+  "environment": "v22.18.0",
+  "kind": "Node model + extracted root script with explicit DOM/transport test doubles",
+  "results": [
+    {
+      "id": "AC-01",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-02",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-03 legacy comparison",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-04 legacy comparison",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-05 legacy comparison",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-06",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-07 legacy current-ID comparison",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-08 legacy overlapping-request comparison",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-09 legacy refusal comparison",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-12 modeled message lifecycle",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-13 modeled independent listener identity",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-16 independent policy timers",
+      "status": "PASS"
+    }
+  ],
+  "limits": [
+    "No browser, computed style, native alert, event propagation, dragging or real timers executed.",
+    "Selected root validations and callbacks ran from original CP950-decoded script; common message/policy checks execute local models, not the original dependency runtime.",
+    "No HTTP, backend, file creation/download, authorization, audit side effects or business calculations tested."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "branch": "test_v1",
+  "commit": "b4c3377360e7ed7501f5130dfa47387eaed370ff",
+  "initial": "b44b21a596ec970a4b5364b02d320f614ae9a4ed",
+  "tracked_source": [
+    "sourceCode/AF/AFY10100.jsp",
+    "sourceCode/AF/AFY10100_detail.jsp",
+    "sourceCode/AF/AFY10300.jsp",
+    "sourceCode/AF/AFY10400.jsp",
+    "sourceCode/AF/ATA08110.jsp",
+    "sourceCode/AF/ATA08120.jsp"
+  ],
+  "source_matches_baseline": true,
+  "skill_snapshots_match_current": true,
+  "discovery_link": "../../.agent/skills/legacy-to-spec"
+}

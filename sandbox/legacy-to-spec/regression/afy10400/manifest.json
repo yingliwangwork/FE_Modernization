@@ -1,0 +1,202 @@
+{
+  "case": "afy10400",
+  "run": "regression",
+  "scope_id": "AF-AFY10400",
+  "root_entry": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+  "backend_contract": "inputs/backend/docs/OPENAPI.md",
+  "backend_root": "inputs/backend",
+  "files": [
+    {
+      "path": "skill/SKILL.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/SKILL.md",
+      "category": "skill",
+      "sha256": "db5027f23931b0426005f9cede87b812a486403b7b22ce48e8b36f9bbdefe18b"
+    },
+    {
+      "path": "skill/agents/openai.yaml",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/agents/openai.yaml",
+      "category": "skill",
+      "sha256": "94b757b513e287b82455e774905e3bd3194b0cb4c5e2fd1a4a44eac93da160cc"
+    },
+    {
+      "path": "skill/assets/design/prototype.html",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/design/prototype.html",
+      "category": "skill",
+      "sha256": "42650370ce9ab508fb9e8e12cce80247f435838585e0f69604ed3cdc2d683a58"
+    },
+    {
+      "path": "skill/assets/design/specification.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/design/specification.md",
+      "category": "skill",
+      "sha256": "063f3f3551b46715487d6de297ed78f5d5a7cd8d5ae2ffde195aea5f437b13db"
+    },
+    {
+      "path": "skill/assets/integration/api-spec.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/integration/api-spec.md",
+      "category": "skill",
+      "sha256": "7dc723f6590a348cee0b73afd7950bed031c5548a7769d6cada20b03d2230356"
+    },
+    {
+      "path": "skill/assets/integration/backend-handoff.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/integration/backend-handoff.md",
+      "category": "skill",
+      "sha256": "5b893e9e0c9dc8f60baf1237d49d66375c81f37d06cea00370631ac38b46f3e7"
+    },
+    {
+      "path": "skill/assets/renovation/tracking.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/assets/renovation/tracking.md",
+      "category": "skill",
+      "sha256": "355b335ceb2b84f027d1506e9b91621359b1d2f1c722972f16cb91b24a23458a"
+    },
+    {
+      "path": "skill/references/acceptance.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/acceptance.md",
+      "category": "skill",
+      "sha256": "16454179e53e7a895a8ef12c1ae71e30db1ba4acf2ea9b7d23ffe198f688cc45"
+    },
+    {
+      "path": "skill/references/authority.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/authority.md",
+      "category": "skill",
+      "sha256": "0cfae912d3e1c63bd95a756e3301e4753b82aa0f918b60deba76adabb1b0fc02"
+    },
+    {
+      "path": "skill/references/backend-reference.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/backend-reference.md",
+      "category": "skill",
+      "sha256": "88f80e97f8a9427cff6c259f64e614ed3a46797b0a611bf8b458fb69e78517dd"
+    },
+    {
+      "path": "skill/references/coupled-source.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/coupled-source.md",
+      "category": "skill",
+      "sha256": "1eafe3f1fe0ee3b5600681c272a54dbf76701304156a86442b1a705f1aca9b4f"
+    },
+    {
+      "path": "skill/references/evidence.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/evidence.md",
+      "category": "skill",
+      "sha256": "3ec7c025bcb57b31641d8e3c963b3a7719fd20acec40cdbf0a31cc3089adc592"
+    },
+    {
+      "path": "skill/references/integration-contract.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/integration-contract.md",
+      "category": "skill",
+      "sha256": "eb7709a1f53111af803ea184ff3d224086c1722487b6cf489a1861eafdb5a2bf"
+    },
+    {
+      "path": "skill/references/source-analysis.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/source-analysis.md",
+      "category": "skill",
+      "sha256": "f84c2b299694c142a0460ed75cdd100332b6859c9e3764479c60aa4466a646ab"
+    },
+    {
+      "path": "skill/references/visual-contract.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/visual-contract.md",
+      "category": "skill",
+      "sha256": "cbe02957a622d34b5184c6d142d3c63f560b5fc4a719b6c2afb27eb40c5d2211"
+    },
+    {
+      "path": "skill/references/workflow.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/skills/legacy-to-spec/references/workflow.md",
+      "category": "skill",
+      "sha256": "8aa06bfa6185a3b3e2135b8eea8689ca8cf5f2b343a9446f58bba91760ee7779"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/AF/AFY10400.jsp",
+      "category": "source",
+      "sha256": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/header.jsp",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/header.jsp",
+      "category": "source",
+      "sha256": "60508a333aa5411f59f252489e4ec50746a8ff84103c0083d777ec1b7283d44d"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/msgDisplayer.jsp",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/msgDisplayer.jsp",
+      "category": "source",
+      "sha256": "e39c5526a4ee108bcd8561716ca1e25324e8ad12e3743b13681193c42c9a1ec6"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/css/cm.css",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/css/cm.css",
+      "category": "source",
+      "sha256": "92b0ad8c25e35c47d46e6f79391803f5f414046faa731712aa7f8478bfee535f"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/ajax/prototype.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/ajax/prototype.js",
+      "category": "source",
+      "sha256": "f727ce3e418c76558c3882064c7b0b4743cd1bcef0e25ebd19d807ad47850636"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/ajax/CSRUtil.js",
+      "category": "source",
+      "sha256": "d71734e1cd4ec8cd978020cc670101de9b86ff70a96c0daf4c8d875d065a28e6"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/ui/PageUI.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/ui/PageUI.js",
+      "category": "source",
+      "sha256": "d733b2884aaf5f6853e4ea75f253117bf72940d0f6c725b4cce71ba18d814f74"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/HotKey.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/HotKey.js",
+      "category": "source",
+      "sha256": "7501d3cdd52084dec29be7a18b6b5b232de4fa11447c7a7742a4f7f12b94576d"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/Validator.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/Validator.js",
+      "category": "source",
+      "sha256": "ed58fa05914cfa71b96ef79f47ecfa7dfa0c1622393fcc958bb658dcc41d77be"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/RPTUtil.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/RPTUtil.js",
+      "category": "source",
+      "sha256": "0b54b047139f08ba233019885d102e095f48d92936a43c536ace524f397638e3"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/calendar.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/calendar.js",
+      "category": "source",
+      "sha256": "f39aadb9e108b0aea6ccf6f192cd601c0bc7eed1ea80a4ec7aee8faf1149d778"
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/date.js",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sourceCode/CM/js/date.js",
+      "category": "source",
+      "sha256": "acf6883faeb16f97739af0f13b4a29940be97514b10e93fea39ba6dd7f214185"
+    },
+    {
+      "path": "inputs/backend/docs/OPENAPI.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/AF_DEMO/AF_SRC/docs/OPENAPI.md",
+      "category": "source",
+      "sha256": "13307ed1144946124179d6e02148999e64783e031d440aacc8ff54e03c32f1ef"
+    },
+    {
+      "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doPrompt.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/AF_DEMO/AF_SRC/docs/specs/AFY1_0400/AFY1_0400_doPrompt.md",
+      "category": "source",
+      "sha256": "082f353e384c1bc2484e07aacfaa57536f53b813fe080df8378e3009a5cb38fc"
+    },
+    {
+      "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doExport.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/AF_DEMO/AF_SRC/docs/specs/AFY1_0400/AFY1_0400_doExport.md",
+      "category": "source",
+      "sha256": "8ed2021657fc3f391f71deb9a556c71919ba06cd469781566e22ef07aface20e"
+    },
+    {
+      "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doDownload.md",
+      "origin": "/Users/cfh00911058/Desktop/AI in IT/Workspace/AF_DEMO/AF_SRC/docs/specs/AFY1_0400/AFY1_0400_doDownload.md",
+      "category": "source",
+      "sha256": "1d07fcd0946717298ce25263901cebc369aa8db7c035efcbed16600d998d1d2c"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "markdown_links_checked": 164,
+  "html_unique_ids": 28,
+  "source_hashes_verified": 16,
+  "manifest_hashes_verified": 49,
+  "source_byte_records_verified": 16,
+  "linked_gap_positions": 82,
+  "unconfirmed_source_encodings": [
+    "inputs/frontend/sourceCode/CM/js/date.js"
+  ],
+  "effective_button_padding_checked": true,
+  "neutral_root_flows_checked": true,
+  "source_product_and_review_layer_order_checked": {
+    "cover": 150,
+    "review": 151,
+    "msg-window": 999,
+    "dragbox": 1000
+  },
+  "external_resource_references": [],
+  "failures": [],
+  "limitations": [
+    "Static parsing is not browser rendering or network observation.",
+    "API baseline is Markdown; no invented OpenAPI JSON/YAML parser check."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "case": "afy10400",
+  "run": "refinement",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 34,
+    "markdown_files": 6,
+    "html_files": 1,
+    "links": 96
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/design/AF-AFY10400/prototypes/SCR-01.html": "9293ae3c9e5fe4b3450d8f50b25c26ce942da7182457852132ee553e405f0009",
+    "artifacts/design/AF-AFY10400/specification.md": "d0d4d39e9aee4868e1667b40fd1f0d843deabc7f03ed7b50d681a2ac6f5d7718",
+    "artifacts/design/AF-AFY10400-support/contract.md": "b11e3ba9753401737fb3b74728fd3de21dbccb41b2faf342bc716a414da16826",
+    "artifacts/integration/AF-AFY10400/api-spec.md": "ae87ae7e1b833f849665e22a3be6b938625ac461161c555ed3c51c2cc5617ce4",
+    "artifacts/integration/AF-AFY10400/backend-handoff.md": "d6d4981a767fbffe39c9b9e114ef2757048ddaaa057bd9fb8eaaf224f9b05552",
+    "artifacts/renovation/AF-AFY10400/checks/mock-result.json": "0fb56e5b92d90c8bf36d2d55c8e000a1770924d616f2f47beb4785f85d8feeb4",
+    "artifacts/renovation/AF-AFY10400/checks/prototype-script.js": "aa2818ff3f10576f637499a631bc8bc9c25a9ca9fe9dc34f92b8fe1f200c9fbf",
+    "artifacts/renovation/AF-AFY10400/checks/prototype_mock_check.cjs": "706d9f4afb6c2013d9bfb34dbcd13a3420b5fe55cd2e07566150216274d7079f",
+    "artifacts/renovation/AF-AFY10400/checks/static-result.json": "7cea62b578626e7a1ce0068236070753d2cc6baea19ea9fdd43594bf225a8469",
+    "artifacts/renovation/AF-AFY10400/checks/static_check.py": "dd24ab0adf935ace65bbb28e16cf2acc25edb8027d60bdc0d9f38919ff3e397f",
+    "artifacts/renovation/AF-AFY10400/plan.md": "8561c4ba8821796b555bf5180a266810101d6a4ac23686265097f818ac83c2a8",
+    "artifacts/renovation/AF-AFY10400/source-inventory.json": "cd8145f2d83d1aaaa89b720235df1767567fcfd1c9281aa75c10b9c0515cd111",
+    "artifacts/renovation/AF-AFY10400/tracking.md": "fa0c7d18da18fe033d1f3f4eb19bb42980232bb07711e4dd3e2f66ae8128d62f"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

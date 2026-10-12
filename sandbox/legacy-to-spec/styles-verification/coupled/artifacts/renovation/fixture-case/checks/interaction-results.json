@@ -1,0 +1,34 @@
+{
+  "environment": "v22.18.0",
+  "kind": "Minimal DOM adapter; does not establish native browser or original runtime behavior.",
+  "checks": [
+    {
+      "name": "AC-02: clear status, retain existing rows, trim request",
+      "result": "pass"
+    },
+    {
+      "name": "AC-03: success appends exact response order and fields",
+      "result": "pass"
+    },
+    {
+      "name": "AC-04/05: empty and denied clear rows and exact message",
+      "result": "pass"
+    },
+    {
+      "name": "AC-10: R2 delivered before R1, success retains prior message",
+      "result": "pass"
+    },
+    {
+      "name": "AC-11: readable unknown result clears rows and preserves status",
+      "result": "pass"
+    },
+    {
+      "name": "AC-06: quantity empty alert prevents submit, restores product state",
+      "result": "pass"
+    },
+    {
+      "name": "AC-07: nonempty and whitespace stop at submit boundary",
+      "result": "pass"
+    }
+  ]
+}

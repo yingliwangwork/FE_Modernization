@@ -1,0 +1,412 @@
+{
+  "case": "afy10400",
+  "run": "verification",
+  "engine": "151.0.7922.34",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "kind": "local-prototype-browser-check",
+  "mode": "scenarios",
+  "checks": [
+    {
+      "id": "initial-defaults-and-zero-rows",
+      "source": "AFY10400.jsp:27-31,199-211,223; source has no initial data row",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "add-delete-and-preserve-selections",
+      "source": "AFY10400.jsp:33-65; append empty row, remove specified row, preserve option values",
+      "status": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "blank-row-rejected-exact-message",
+      "source": "AFY10400.jsp:77-85; exact-empty guard and first-row alert",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "duplicate-check-before-later-row-blank",
+      "source": "AFY10400.jsp:77-92; first row blank check then later-ID duplicate, before later row blank check",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "zero-row-export-reaches-boundary",
+      "source": "AFY10400.jsp:77-97; zero rows skip validation and still initiate export",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "accepted-results-and-download-boundary",
+      "source": "AFY10400.jsp:98-106; update all rows, then hand filename to download; synthesis only supplies callback fixture",
+      "status": "FAIL",
+      "assertions": 1,
+      "detail": "Expected values to be strictly equal:\n\n'' !== '已匯出'\n"
+    },
+    {
+      "id": "legacy-rejection-updates-without-download",
+      "source": "AFY10400.jsp:107-113; legacy rejection map updates result cells, does not trigger download; selected target error data=null remains a gap",
+      "status": "FAIL",
+      "assertions": 0,
+      "detail": "Expected values to be strictly equal:\n+ actual - expected\n\n+ ''\n- '被保人：TEST000001 查無保單號碼：DEMO。'\n"
+    },
+    {
+      "id": "native-async-success",
+      "source": "CSRUtil.js:626-680 native success without bottom message",
+      "status": "FAIL",
+      "assertions": 0,
+      "detail": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- '訊息說明：\\n已匯出'\n"
+    },
+    {
+      "id": "native-async-error-with-id",
+      "source": "CSRUtil.js:626-680 native error msgid >17",
+      "status": "FAIL",
+      "assertions": 0,
+      "detail": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- '錯誤編號：\\nDEMO-ERROR-0000000001\\n訊息說明：\\n查無資料'\n"
+    },
+    {
+      "id": "global-keyboard-policy",
+      "source": "CM/header.jsp:136-147 listener registered on window",
+      "status": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "message-title-drag",
+      "source": "CSRUtil.js:1526-1568 title pointer down/move/up moves message window",
+      "status": "FAIL",
+      "assertions": 1,
+      "detail": "Drag target must be visible"
+    },
+    {
+      "id": "independent-copy-timers",
+      "source": "CM/header.jsp:149-183 A@0 B@30s B@61s independent timers clear shared state",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "message-empty-fallback",
+      "source": "CSRUtil.js:1592-1599 known gray placeholder for empty/null/undefined message",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "message-null-fallback",
+      "source": "CSRUtil.js:1592-1599 known gray placeholder for empty/null/undefined message",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "message-undefined-fallback",
+      "source": "CSRUtil.js:1592-1599 known gray placeholder for empty/null/undefined message",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "accumulated-message-width",
+      "source": "CSRUtil.js:1603-1660 repeated messages accumulate, existing width does not shrink for short added message",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "processing-exception-diagnostic-and-completion",
+      "source": "CSRUtil.js:684-692,2620-2637 and prototype.js:1942-1963 registered exception diagnostic precedes complete feedback; synthetic response drives callback exception",
+      "status": "FAIL",
+      "assertions": 0,
+      "detail": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ []\n- [\n-   'Error :\\nurl : DEMO-EXCHANGE\\nparams: DEMO-PARAMETERS\\nException: \\n',\n-   '訊息說明：\\n已匯出'\n- ]\n"
+    },
+    {
+      "id": "source-button-cascade",
+      "source": "CM/css/cm.css:162-164 :root .button overrides padding to 0px 10px",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "bottom-receiver-after-callback",
+      "source": "msgDisplayer.jsp click clears message when product trigger starts; CSRUtil.js:626-680 later complete forwards response to existing bottom receiver; review response injection is not a second product click",
+      "status": "FAIL",
+      "assertions": 0,
+      "detail": "The expression evaluated to a falsy value:\n\n  assert((await locator(step).innerText()).includes(step.value))\n"
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "snapshots": [
+    {
+      "file": "SCR-01.html",
+      "visibleText": "●　公會通報下傳作業\n畫面編號：AFY10400\n\n公會補通報作業\n\n1、此畫面請用Google Chrome使用\n2、收承方式、商品屬性，每次只能針對其中一種組合進行下載，若有多種組合下載，需分多次匯出處理\n3、同一ID查詢多筆保單時，請在保單號碼欄位，輸入多筆且用Enter來分格\n收承方式\t\n承保\n收件\n\t商品屬性\t\n個險\n團險\n意外險\n\n刪除\t被保人ID \t保單號碼\t匯出結果\n隱藏／顯示審閱工具\n審閱工具（不是產品功能）\n\n離線、合成資料。沒有真實查詢、檔案或寫入。回應按鈕是本機回應者替身；審閱區置於 cover 上方以交付回應，產品仍被 cover 阻擋。操作政策與按鈕清底欄仍作用於整頁，審閱區沒有豁免。\n\nTODO-01：實際政策、身分與稽核未取得。TODO-02：底欄/WIUtil宿主未知。TODO-03/05：錯誤回填與 binary 相容、環境/換行待確認。TODO-04：邊框圖像、標題圖像、難字字體及浮水印工具未提供，此處未猜造。TODO-06：尚無 legacy 執行畫面比較。\n\n合成匯出回應 \nlegacy 成功完整映射\nlegacy 拒絕完整映射\n目標 code500,data=null 差距\n未提供 JSON\nlegacy 可讀成功回應／逐列映射損壞\nlegacy 可讀失敗回應／逐列映射損壞\n 合成共用訊息分支 \n非特殊系統／無底欄\n非特殊系統／有底欄\n自訂窗系統\nEP 成功不顯示視窗\n 交付目前合成回應填入合成示例列 合成政策旗標為 Y合成底欄接收者存在 入口訊息情境 \ncode0 無警示\ncode99 無警示\n錯誤 description/id\n例外 exception/sysid\n有 rollback 標記\nWIUtil/jQuery 分支（缺實作）\n重播合成入口訊息 合成訊息窗輸入 \n文字\n空字串\nnull\nundefined\n顯示／追加合成訊息\n\n合成底欄接收紀錄（不是產品底欄）：\n\n初始 ST-01：0列、L/AT；入口訊息未提供時不生成警示。實際旗標未知，政策默認不啟用；可用合成旗標審閱條件反應。\n\n\n行為契約 · 限制與追蹤",
+      "controls": [
+        {
+          "tag": "SELECT",
+          "id": "insrType",
+          "type": "select-one",
+          "text": "承保收件",
+          "value": "L",
+          "disabled": false,
+          "options": [
+            {
+              "value": "L",
+              "text": "承保"
+            },
+            {
+              "value": "R",
+              "text": "收件"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "id": "prodType",
+          "type": "select-one",
+          "text": "個險團險意外險",
+          "value": "AT",
+          "disabled": false,
+          "options": [
+            {
+              "value": "AT",
+              "text": "個險"
+            },
+            {
+              "value": "BG",
+              "text": "團險"
+            },
+            {
+              "value": "CB",
+              "text": "意外險"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "addBtn",
+          "type": "button",
+          "text": "",
+          "value": "新增一列",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "exportBtn",
+          "type": "button",
+          "text": "",
+          "value": "匯出檔案",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "hide-review",
+          "type": "button",
+          "text": "隱藏／顯示審閱工具",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "response-mode",
+          "type": "select-one",
+          "text": "legacy 成功完整映射legacy 拒絕完整映射目標 code500,data=null 差距未提供 JSONlegacy 可讀成功回應／逐列映射損壞legacy 可讀失敗回應／逐列映射損壞",
+          "value": "success",
+          "disabled": false,
+          "options": [
+            {
+              "value": "success",
+              "text": "legacy 成功完整映射"
+            },
+            {
+              "value": "failure",
+              "text": "legacy 拒絕完整映射"
+            },
+            {
+              "value": "target-error",
+              "text": "目標 code500,data=null 差距"
+            },
+            {
+              "value": "no-json",
+              "text": "未提供 JSON"
+            },
+            {
+              "value": "processing-exception",
+              "text": "legacy 可讀成功回應／逐列映射損壞"
+            },
+            {
+              "value": "processing-exception-failure",
+              "text": "legacy 可讀失敗回應／逐列映射損壞"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "id": "message-mode",
+          "type": "select-one",
+          "text": "非特殊系統／無底欄非特殊系統／有底欄自訂窗系統EP 成功不顯示視窗",
+          "value": "native",
+          "disabled": false,
+          "options": [
+            {
+              "value": "native",
+              "text": "非特殊系統／無底欄"
+            },
+            {
+              "value": "board",
+              "text": "非特殊系統／有底欄"
+            },
+            {
+              "value": "custom",
+              "text": "自訂窗系統"
+            },
+            {
+              "value": "ep",
+              "text": "EP 成功不顯示視窗"
+            }
+          ]
+        },
+        {
+          "tag": "BUTTON",
+          "id": "respond",
+          "type": "button",
+          "text": "交付目前合成回應",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "sample",
+          "type": "button",
+          "text": "填入合成示例列",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "policy",
+          "type": "checkbox",
+          "text": "",
+          "value": "on",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "bottom-host",
+          "type": "checkbox",
+          "text": "",
+          "value": "on",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "entry-mode",
+          "type": "select-one",
+          "text": "code0 無警示code99 無警示錯誤 description/id例外 exception/sysid有 rollback 標記WIUtil/jQuery 分支（缺實作）",
+          "value": "none",
+          "disabled": false,
+          "options": [
+            {
+              "value": "none",
+              "text": "code0 無警示"
+            },
+            {
+              "value": "99",
+              "text": "code99 無警示"
+            },
+            {
+              "value": "error",
+              "text": "錯誤 description/id"
+            },
+            {
+              "value": "exception",
+              "text": "例外 exception/sysid"
+            },
+            {
+              "value": "rollback",
+              "text": "有 rollback 標記"
+            },
+            {
+              "value": "wiutil",
+              "text": "WIUtil/jQuery 分支（缺實作）"
+            }
+          ]
+        },
+        {
+          "tag": "BUTTON",
+          "id": "entry",
+          "type": "button",
+          "text": "重播合成入口訊息",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "modal-kind",
+          "type": "select-one",
+          "text": "文字空字串nullundefined",
+          "value": "text",
+          "disabled": false,
+          "options": [
+            {
+              "value": "text",
+              "text": "文字"
+            },
+            {
+              "value": "empty",
+              "text": "空字串"
+            },
+            {
+              "value": "null",
+              "text": "null"
+            },
+            {
+              "value": "undefined",
+              "text": "undefined"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "modal-text",
+          "type": "text",
+          "text": "",
+          "value": "查無資料",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "modal-fixture",
+          "type": "button",
+          "text": "顯示／追加合成訊息",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "message-ok",
+          "type": "button",
+          "text": "",
+          "value": "確定",
+          "disabled": false,
+          "options": null
+        }
+      ]
+    }
+  ],
+  "prototypeHashes": {
+    "SCR-01.html": "67542ed2b9c9afb52195502c1b9bdbb9723eb62694a09e695723531b6bea5828"
+  },
+  "limits": [
+    "Only generated local prototypes are executed; no legacy JSP runtime or real backend is executed.",
+    "Screenshots do not establish pixel equivalence to the legacy runtime."
+  ],
+  "status": "FAIL",
+  "screenshots": "../../../../output/playwright/skill-sandbox/verification/afy10400"
+}

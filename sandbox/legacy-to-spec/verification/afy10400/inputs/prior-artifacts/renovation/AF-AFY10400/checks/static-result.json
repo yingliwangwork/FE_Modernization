@@ -1,0 +1,11 @@
+{
+  "markdown_links_checked": 94,
+  "html_unique_ids": 26,
+  "source_hashes_verified": 16,
+  "external_resource_references": [],
+  "failures": [],
+  "limitations": [
+    "Static parsing is not browser rendering or network observation.",
+    "API baseline is Markdown; no invented OpenAPI JSON/YAML parser check."
+  ]
+}

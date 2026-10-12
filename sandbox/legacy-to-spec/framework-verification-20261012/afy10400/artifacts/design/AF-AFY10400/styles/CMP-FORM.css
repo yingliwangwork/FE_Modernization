@@ -1,0 +1,19 @@
+/* E-01/E-03/E-20; native select geometry preserved. */
+.product input,.product textarea,#message input,#message textarea {font-family:'PMingLiU','MingLiU','Microsoft JhengHei','Meiryo','Arial','Arial Unicode MS','Helvetica','sans-serif','Verdana','Trebuchet MS';}
+.tbBox2 {background-color:#C7E49C; border:1px solid; border-color:#FFFFFF #6B8D6D #6B8D6D #FFFFFF; font-size:10pt; text-indent:1pt; padding:1pt; line-height:21px;}
+.tbYellow {background-color:#EEF1A7;}
+.tbYellow2 {background-color:#FAFBE1;}
+.tbBlue {background-color:#99CCFF;}
+.data-table,.export-table {width:100%;}
+.data-table .label-cell,.data-table .tbBlue td,.data-table .center-cell {text-align:center;}
+.data-table .instructions,.data-table .value-cell {text-align:left;}
+.label-cell {width:20%;}
+.value-cell.first {width:20%;}
+.value-cell.second {width:40%;}
+.textBox2 {font-size:12px; text-decoration:none; letter-spacing:1pt; border-top:1px solid #999999; border-right:1px solid #E1E1E1; border-bottom:1px solid #E1E1E1; border-left:1px solid #999999;}
+.button {font-size:10pt; border:1px solid #6B8D6D; color:#006600; white-space:nowrap; line-height:19px; height:21px; vertical-align:middle; margin:2px; padding:0; background:linear-gradient(to bottom,#eff6ec 0%,#ffffff 40%,#cfe4c1 100%);}
+:root .button {padding:0px 10px;}
+.product input:read-only,.product textarea:read-only,#message input:read-only,#message textarea:read-only {background-color:transparent; border:none;}
+.export-table td {text-align:center;}
+.row-odd {background-color:#EEF1A7;}
+.row-even {background-color:#FAFBE1;}

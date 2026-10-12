@@ -1,0 +1,33 @@
+{
+  "files_reviewed": 26,
+  "files": [
+    "skills/legacy-to-spec/SKILL.md",
+    "skills/legacy-to-spec/agents/openai.yaml",
+    "skills/legacy-to-spec/guides/acceptance.md",
+    "skills/legacy-to-spec/guides/customization.md",
+    "skills/legacy-to-spec/guides/dependencies.md",
+    "skills/legacy-to-spec/guides/evidence.md",
+    "skills/legacy-to-spec/guides/workflow.md",
+    "skills/legacy-to-spec/references/api/authority.md",
+    "skills/legacy-to-spec/references/api/backend-profile.md",
+    "skills/legacy-to-spec/references/api/writing-rules.md",
+    "skills/legacy-to-spec/references/legacy/jsp-analysis.md",
+    "skills/legacy-to-spec/references/legacy/responsibility-rules.md",
+    "skills/legacy-to-spec/references/ui/style-spec.md",
+    "skills/legacy-to-spec/references/ui/writing-rules.md",
+    "skills/legacy-to-spec/scripts/check_design_metadata.py",
+    "skills/legacy-to-spec/scripts/select_templates.py",
+    "skills/legacy-to-spec/scripts/source_inventory.py",
+    "skills/legacy-to-spec/templates/design/DESIGN.md",
+    "skills/legacy-to-spec/templates/design/component.css",
+    "skills/legacy-to-spec/templates/design/prototype.html",
+    "skills/legacy-to-spec/templates/design/specification.md",
+    "skills/legacy-to-spec/templates/design/tokens.json",
+    "skills/legacy-to-spec/templates/integration/api-spec.md",
+    "skills/legacy-to-spec/templates/integration/backend-handoff.md",
+    "skills/legacy-to-spec/templates/renovation/plan.md",
+    "skills/legacy-to-spec/templates/renovation/tracking.md"
+  ],
+  "link_findings": [],
+  "repeated_full_paragraphs": []
+}

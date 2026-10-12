@@ -1,0 +1,360 @@
+{
+  "case": "afy10400",
+  "run": "regression",
+  "engine": "151.0.7922.34",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "kind": "local-prototype-browser-check",
+  "mode": "scenarios",
+  "checks": [
+    {
+      "id": "initial-defaults-and-zero-rows",
+      "source": "AFY10400.jsp:27-31,199-211,223; source has no initial data row",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "add-delete-and-preserve-selections",
+      "source": "AFY10400.jsp:33-65; append empty row, remove specified row, preserve option values",
+      "status": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "blank-row-rejected-exact-message",
+      "source": "AFY10400.jsp:77-85; exact-empty guard and first-row alert",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "duplicate-check-before-later-row-blank",
+      "source": "AFY10400.jsp:77-92; first row blank check then later-ID duplicate, before later row blank check",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "zero-row-export-reaches-boundary",
+      "source": "AFY10400.jsp:77-97; zero rows skip validation and still initiate export",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "accepted-results-and-download-boundary",
+      "source": "AFY10400.jsp:98-106; update all rows, then hand filename to download; synthesis only supplies callback fixture",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "legacy-rejection-updates-without-download",
+      "source": "AFY10400.jsp:107-113; legacy rejection map updates result cells, does not trigger download; selected target error data=null remains a gap",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "native-async-success",
+      "source": "CSRUtil.js:626-680 native success without bottom message",
+      "status": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "native-async-error-with-id",
+      "source": "CSRUtil.js:626-680 native error msgid >17",
+      "status": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "global-keyboard-policy",
+      "source": "CM/header.jsp:136-147 listener registered on window",
+      "status": "FAIL",
+      "assertions": 0,
+      "detail": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- '依據資安政策，不開放全選功能'\n"
+    },
+    {
+      "id": "message-title-drag",
+      "source": "CSRUtil.js:1526-1568 title pointer down/move/up moves message window",
+      "status": "FAIL",
+      "assertions": 1,
+      "detail": "Window horizontal position must follow drag"
+    },
+    {
+      "id": "independent-copy-timers",
+      "source": "CM/header.jsp:149-183 A@0 B@30s B@61s independent timers clear shared state",
+      "status": "FAIL",
+      "assertions": 2,
+      "detail": "Expected values to be strictly equal:\n\n2 !== 3\n"
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "snapshots": [
+    {
+      "file": "SCR-001.html",
+      "visibleText": "●\t公會通報下傳作業\t畫面編號：AFY10400\n\n公會補通報作業\n\n\n\n1、此畫面請用Google Chrome使用\n2、收承方式、商品屬性，每次只能針對其中一種組合進行下載，若有多種組合下載，需分多次匯出處理\n3、同一ID查詢多筆保單時，請在保單號碼欄位，輸入多筆且用Enter來分格\n收承方式\t\n承保\n收件\n\t商品屬性\t\n個險\n團險\n意外險\n\n刪除\t被保人ID \t保單號碼\t匯出結果\n隱藏／顯示審閱工具\n審閱工具（合成情境，非產品操作）\n\n初始零列、承保／個險。新增列、Enter 多行、刪除、匯出檢核保留來源行為。匯出只停在已知邊界；不連網、不運算業務、不產檔。回應資料與宿主模式由下列工具明確注入，不能證明目標或正式系統支援。圖片／字型、WI 本體與浮水印引擎未提供（TODO-005）；本檔無像素等價主張。\n\n設計規格 · 重設審閱情境 · ST-001\n\n共用宿主替身（實際部署選用未知 TODO-001）\n存在底部訊息宿主非同步呈現策略 \n一般宿主：原生警示\n特定宿主：網頁訊息\n特定 EP 宿主\n共用成功訊息啟用\n\n底部訊息宿主替身：\n\n網頁訊息：確定先取得焦點；第一次按鍵是 Enter／Esc／空格才關閉。先按其他鍵会解除單次監聽。\n\n入口訊息審閱（CMP-001）\n合成入口情境 \n0碼空訊息\n0碼有描述\n99碼通知\n錯誤碼，有編號\n0碼，有異常原因\n底部宿主帶回退旗標合成描述 注入入口情境\n\nWI＋其宿主依賴未提供，未以原生警示冒充其內部畫面；這裡僅展示已證實的原生分支。\n\n回應審閱（須先按產品「匯出檔案」，預設不注入）\n合成回應情境 \n舊成功，逐列「已匯出」＋檔名\n舊拒絕，逐列檢查文字\n目標錯誤 code500／data null\n非結構文字回應\n合成描述 合成錯誤編號 注入指定合成回應逐列結果合成值 \n\n舊成功／拒絕是已知前端分支的展示，不是目標錯誤 schema；目標 data=null 會停在差距，保留現有結果，不捏造拒絕逐列 map（TODO-002）。\n\n條件政策審閱（CMP-004）\n選用來源 PD_CTRL=Y 分支\n\n條件式 Ctrl+A／X／S／P、剪下、列印、右鍵限制；複製允許，只記錄本機交接展示。服務端設定／稽核未承接（TODO-004），審閱開關不是可由使用者設定的產品權限。\n\n已知入口狀態；尚未執行匯出。",
+      "controls": [
+        {
+          "tag": "SELECT",
+          "id": "insrType",
+          "type": "select-one",
+          "text": "承保收件",
+          "value": "L",
+          "disabled": false,
+          "options": [
+            {
+              "value": "L",
+              "text": "承保"
+            },
+            {
+              "value": "R",
+              "text": "收件"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "id": "prodType",
+          "type": "select-one",
+          "text": "個險團險意外險",
+          "value": "AT",
+          "disabled": false,
+          "options": [
+            {
+              "value": "AT",
+              "text": "個險"
+            },
+            {
+              "value": "BG",
+              "text": "團險"
+            },
+            {
+              "value": "CB",
+              "text": "意外險"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "addBtn",
+          "type": "button",
+          "text": "",
+          "value": "新增一列",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "exportBtn",
+          "type": "button",
+          "text": "",
+          "value": "匯出檔案",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "msg-confirm",
+          "type": "button",
+          "text": "",
+          "value": "確定",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "toggle-review",
+          "type": "button",
+          "text": "隱藏／顯示審閱工具",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "reset-review",
+          "type": "button",
+          "text": "重設審閱情境",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "has-bottom",
+          "type": "checkbox",
+          "text": "",
+          "value": "on",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "message-mode",
+          "type": "select-one",
+          "text": "一般宿主：原生警示特定宿主：網頁訊息特定 EP 宿主",
+          "value": "ordinary",
+          "disabled": false,
+          "options": [
+            {
+              "value": "ordinary",
+              "text": "一般宿主：原生警示"
+            },
+            {
+              "value": "custom",
+              "text": "特定宿主：網頁訊息"
+            },
+            {
+              "value": "ep",
+              "text": "特定 EP 宿主"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "success-message",
+          "type": "checkbox",
+          "text": "",
+          "value": "on",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "entry-case",
+          "type": "select-one",
+          "text": "0碼空訊息0碼有描述99碼通知錯誤碼，有編號0碼，有異常原因",
+          "value": "none",
+          "disabled": false,
+          "options": [
+            {
+              "value": "none",
+              "text": "0碼空訊息"
+            },
+            {
+              "value": "zero",
+              "text": "0碼有描述"
+            },
+            {
+              "value": "notice",
+              "text": "99碼通知"
+            },
+            {
+              "value": "error",
+              "text": "錯誤碼，有編號"
+            },
+            {
+              "value": "exception",
+              "text": "0碼，有異常原因"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "rollback",
+          "type": "checkbox",
+          "text": "",
+          "value": "on",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "entry-description",
+          "type": "text",
+          "text": "",
+          "value": "合成入口描述",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "entry-inject",
+          "type": "button",
+          "text": "注入入口情境",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "response-case",
+          "type": "select-one",
+          "text": "舊成功，逐列「已匯出」＋檔名舊拒絕，逐列檢查文字目標錯誤 code500／data null非結構文字回應",
+          "value": "success",
+          "disabled": false,
+          "options": [
+            {
+              "value": "success",
+              "text": "舊成功，逐列「已匯出」＋檔名"
+            },
+            {
+              "value": "reject",
+              "text": "舊拒絕，逐列檢查文字"
+            },
+            {
+              "value": "target-error",
+              "text": "目標錯誤 code500／data null"
+            },
+            {
+              "value": "raw",
+              "text": "非結構文字回應"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "response-description",
+          "type": "text",
+          "text": "",
+          "value": "success",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "response-msgid",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "inject-response",
+          "type": "button",
+          "text": "注入指定合成回應",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "row-result",
+          "type": "text",
+          "text": "",
+          "value": "ID長度預為10碼",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "policy-enabled",
+          "type": "checkbox",
+          "text": "",
+          "value": "on",
+          "disabled": false,
+          "options": null
+        }
+      ]
+    }
+  ],
+  "prototypeHashes": {
+    "SCR-001.html": "6a421513ed97f7146ea687016c6af15ce962f315b1e22e54074cf9539a15ec34"
+  },
+  "limits": [
+    "Only generated local prototypes are executed; no legacy JSP runtime or real backend is executed.",
+    "Screenshots do not establish pixel equivalence to the legacy runtime."
+  ],
+  "status": "FAIL",
+  "screenshots": "../../../../output/playwright/skill-sandbox/regression/afy10400"
+}

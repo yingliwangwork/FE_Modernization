@@ -1,0 +1,160 @@
+{
+  "case": "coupled",
+  "run": "styles",
+  "engine": "151.0.7922.34",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "kind": "local-prototype-browser-check",
+  "mode": "scenarios",
+  "checks": [
+    {
+      "id": "page-source-styles",
+      "source": "inputs/frontend/styles/base.css:1; source body font-family/max-width/margin/color",
+      "status": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "table-source-styles",
+      "source": "inputs/frontend/styles/base.css:2; source table collapse/width/margin",
+      "status": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "table-cell-source-styles",
+      "source": "inputs/frontend/styles/base.css:3; source th/td border/padding/alignment",
+      "status": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "dynamic-result-cells-use-delivered-css",
+      "source": "Case.jsp:24-30 creates three cells per successful item; base.css:3 applies to td as well as th. Synthetic rows only exercise confirmed presentation.",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "action-area-source-style",
+      "source": "inputs/frontend/styles/base.css:4; action-bar margin-top",
+      "status": "PASS",
+      "assertions": 2
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "snapshots": [
+    {
+      "file": "SCR-01.html",
+      "visibleText": "項目查閱\n\n審閱者：示範審閱者\n\n關鍵字\n查閱\n\n項目代碼\t名稱\t排序提示\n數量 送出數量\n審閱工具（非產品 UI，可收合）\n\n離線合成展示資料。審閱者名稱為替身，不代表服務端情境。TODO-01：初始化承接缺口，對應審閱者區。TODO-02：排序提示缺口，第三欄展示只依 legacy 形狀，不宣稱目標提供欄位。\n\n按產品「查閱」後選擇請求，再交付合成回應。資料成功時不會再次清除產品狀態文字，可測試交錯順序。沒有對外連線。\n\n待回應請求 合成結果\n成功兩列\n無項目\n不允許\n未識別可讀結果（來源分支，目標未定義）\n 交付回應\n\n尚未發起查閱。\n\nTODO-03：數量責任未承接；非空輸入停止於交接，不計费、不儲存、不顯示成功。\n\nTODO-04：認證與未定義失敗；未模擬 transport 或解析失敗為通用訊息。\n\n規格及驗收案例",
+      "controls": [
+        {
+          "tag": "INPUT",
+          "id": "filter",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "search",
+          "type": "button",
+          "text": "查閱",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "",
+          "type": "hidden",
+          "text": "",
+          "value": "commit",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "quantity",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "type": "submit",
+          "text": "送出數量",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "pending",
+          "type": "select-one",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": []
+        },
+        {
+          "tag": "SELECT",
+          "id": "response",
+          "type": "select-one",
+          "text": "成功兩列無項目不允許未識別可讀結果（來源分支，目標未定義）",
+          "value": "DONE",
+          "disabled": false,
+          "options": [
+            {
+              "value": "DONE",
+              "text": "成功兩列"
+            },
+            {
+              "value": "NONE",
+              "text": "無項目"
+            },
+            {
+              "value": "BLOCK",
+              "text": "不允許"
+            },
+            {
+              "value": "OTHER",
+              "text": "未識別可讀結果（來源分支，目標未定義）"
+            }
+          ]
+        },
+        {
+          "tag": "BUTTON",
+          "id": "deliver",
+          "type": "button",
+          "text": "交付回應",
+          "value": "",
+          "disabled": false,
+          "options": null
+        }
+      ]
+    }
+  ],
+  "prototypeHashes": {
+    "SCR-01.html": "331f40851377d368715ba49ce5ff1c3043c1b305ec82148b1663a2839325f244"
+  },
+  "styleArtifactHashes": {
+    "artifacts/design/fixture-case/components/CMP-PAGE/DESIGN.md": "085aea670930a68d5fad2128193a98f6c0650b17c3482909f4bb6daaa88da403",
+    "artifacts/design/fixture-case/components/CMP-SEARCH-ACTION/DESIGN.md": "b43168cb131281ac7d677afb1c52c7ac6f8a5792e14a0b4e2200e8886adf6bd5",
+    "artifacts/design/fixture-case/components/CMP-TABLE/DESIGN.md": "f3ac5a29fac38bf439ecc5a08fbd825938ffe9634b7647a5a08709710e640f72",
+    "artifacts/design/fixture-case/styles/CMP-PAGE.css": "8a099c0ec0062caa1768b498fa5cc527021705a378a459ade636ef1b60643356",
+    "artifacts/design/fixture-case/styles/CMP-SEARCH-ACTION.css": "9343cfba5a7a6b07fbfb2b37ad825289d651bb89ab1b56f1595bcbc3d2d1dc96",
+    "artifacts/design/fixture-case/styles/CMP-TABLE.css": "3dc2355a010cc64fc22d0ed7e3e864a35bc66c2e52e93f83706b2fcaa7aa9220",
+    "artifacts/design/fixture-case/styles/tokens.json": "e631928b73beaf88d737d4cf7b089201b746e1ef508a6db9401f54702f26189a"
+  },
+  "limits": [
+    "Only generated local prototypes are executed; no legacy JSP runtime or real backend is executed.",
+    "Screenshots do not establish pixel equivalence to the legacy runtime."
+  ],
+  "status": "PASS",
+  "screenshots": "../../../../output/playwright/skill-sandbox/styles/coupled"
+}

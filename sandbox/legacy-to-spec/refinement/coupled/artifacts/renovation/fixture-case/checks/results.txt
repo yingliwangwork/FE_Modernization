@@ -1,0 +1,8 @@
+PASS V-01: all manifest snapshot hashes unchanged; source UTF-8/LF.
+PASS V-02a: Markdown/HTML local links and fragments resolve; no template placeholders.
+PASS V-02b: source visual constants, UI/FLOW/CMP IDs and local-only prototype structure checked.
+PASS V-02c: known selected API identifiers/fields/results retained; handoffs and explicit gaps present.
+LIMIT: these are static checks; browser rendering, actual authentication/transport and backend business execution unverified.
+PASS V-03: generated prototype script syntax and local DOM reactions executed.
+PASS: AC-01 visible initial subset; AC-02 trim/status/old-row timing; AC-03 synthetic rows; AC-04 EMPTY; AC-05 DENIED; AC-06 out-of-order response/status retention; AC-07 native alert invocation/block; AC-08 nonempty boundary subset; AC-10 other result; review reset/toggle.
+LIMIT: minimal fake DOM, not a browser; native dialog presentation, layout, focus, network panel and real initialization/API/business execution are unverified.

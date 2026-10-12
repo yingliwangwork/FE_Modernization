@@ -1,0 +1,35 @@
+{
+  "scope": "AF-AFY10400",
+  "input_files": [
+    "inputs/frontend/sourceCode/AF/AFY10400.jsp"
+  ],
+  "search_boundaries": [
+    "inputs/specs (未提供)",
+    "inputs 的全部提供檔案；只有根 JSP"
+  ],
+  "contract_candidates": [],
+  "matches": {
+    "header.jsp": [],
+    "msgDisplayer.jsp": [],
+    "cm.css": [],
+    "prototype.js": [],
+    "CSRUtil": [],
+    "PageUI": [],
+    "HotKey": [],
+    "Validator": [],
+    "RPTUtil": [],
+    "calendar": [],
+    "date.js": [],
+    "border_01.gif": [],
+    "border_02.gif": [],
+    "border_03.gif": [],
+    "ecblank.gif": [],
+    "icon_dot11.gif": [],
+    "AFY1_0400": [],
+    "ListOrderedMap": []
+  },
+  "limits": [
+    "沒有搜尋案例外 artifacts、索引或 backend。",
+    "未找到只適用於提供材料，不表示整個系統無契約。"
+  ]
+}

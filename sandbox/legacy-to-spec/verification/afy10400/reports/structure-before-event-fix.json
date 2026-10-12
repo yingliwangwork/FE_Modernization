@@ -1,0 +1,34 @@
+{
+  "case": "afy10400",
+  "run": "verification",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 49,
+    "markdown_files": 6,
+    "html_files": 1,
+    "links": 155
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/design/AF-AFY10400/prototypes/SCR-01.html": "40caa23ad10c58537dbf4197e1abf36ec3fc909d34d6c18abb81d584090b4031",
+    "artifacts/design/AF-AFY10400/specification.md": "3396f065a2bb6702afcb3cef27ab57d68a466e36f61c7185e385ab55fb3a5e1a",
+    "artifacts/design/AF-AFY10400-support/contract.md": "94ea593a0477111b98bf59b3305bbe0fa13f17a27df6a08745d8f92d7439fe7d",
+    "artifacts/integration/AF-AFY10400/api-spec.md": "3a280ed3b397b168d7541bc4d244e517b04ab3b9fdc9d45df19914f0fb3d8c7c",
+    "artifacts/integration/AF-AFY10400/backend-handoff.md": "5caf98a77f4ec3ec097536393e16cab0507283cafa4f4274a31749e44ccc568b",
+    "artifacts/renovation/AF-AFY10400/checks/gap-location-result.json": "dd17dcc607c53ac9d05b1e6d43014f30a59bb4ed5d765fbe94c4016c9347e449",
+    "artifacts/renovation/AF-AFY10400/checks/mock-result.json": "f850b4d3ef562a9cf0b5bdfb22902974cc4d9656af96b5b080d78c7c041acecd",
+    "artifacts/renovation/AF-AFY10400/checks/prototype-script.js": "d153ef3dac247ce4cb286e17c09b30c14541608e69cd84e2fd91d0ec989bbe01",
+    "artifacts/renovation/AF-AFY10400/checks/prototype_mock_check.cjs": "75423297df2ac837c87639d36765c694d774d6b57495e6f9915f156a0eaf1495",
+    "artifacts/renovation/AF-AFY10400/checks/source-byte-result.json": "d4f09597887a9a57160acfd10ea3f3a48266863d3fc0e96c098304a1ed21dca4",
+    "artifacts/renovation/AF-AFY10400/checks/static-result.json": "e261d646b1570b90baac44edf493ca124f19212b8fec988b32a813d84871dcbd",
+    "artifacts/renovation/AF-AFY10400/checks/static_check.py": "f247d11f88bfbe9336840b8c5d4de2d2843059ae7d8217f4927e1524352cf955",
+    "artifacts/renovation/AF-AFY10400/plan.md": "68c42c2a92e60d609d9aebd350d251fdea6d7d36c466bea63027efb4ac5e42ac",
+    "artifacts/renovation/AF-AFY10400/source-inventory.json": "de6bbd1c8685ee86d4b311bb36e5f222671c52c55e58b71184b24eb48d7be8f1",
+    "artifacts/renovation/AF-AFY10400/tracking.md": "a2eea0ad970bae99341ca38a0d0ab8b96d136c01b42e367e936892a7c7fd30b2"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

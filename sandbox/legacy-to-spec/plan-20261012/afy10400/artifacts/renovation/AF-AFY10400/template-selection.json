@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "config": null,
+  "config_sha256": null,
+  "style_profile": "design-md",
+  "output_root": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/artifacts",
+  "templates": {
+    "specification": {
+      "path": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/skill/templates/design/specification.md",
+      "selected_by": "builtin",
+      "sha256": "478c8042c3328e74e48b6222316e65c6666c9915fa98d68b2c0de5fffea4232c"
+    },
+    "prototype": {
+      "path": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/skill/templates/design/prototype.html",
+      "selected_by": "builtin",
+      "sha256": "e818de41afeeb515d36c3d547a0d744c87c405754f9892765660eafa074966c1"
+    },
+    "component-design": {
+      "path": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/skill/templates/design/DESIGN.md",
+      "selected_by": "builtin",
+      "sha256": "31cef4d2970384ebcdb224a040204a18854aa33d23d86f84239963716710a13e"
+    },
+    "component-css": {
+      "path": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/skill/templates/design/component.css",
+      "selected_by": "builtin",
+      "sha256": "b2c651c1f788386aaa7792e06dd3c5c1c4819b5f45b7b05f2a04cf14844b99c3"
+    },
+    "tokens": {
+      "path": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/skill/templates/design/tokens.json",
+      "selected_by": "builtin",
+      "sha256": "3f9a75f61823f2ccc5d9f0e50ef3bdb880c777e63eaf6a356098c1459e58b690"
+    },
+    "api-spec": {
+      "path": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/skill/templates/integration/api-spec.md",
+      "selected_by": "builtin",
+      "sha256": "e2bb8328c11edf1812a519199e1bd094bb16f9dcba7bbf746f4a4bcb3e86a5a2"
+    },
+    "backend-handoff": {
+      "path": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/skill/templates/integration/backend-handoff.md",
+      "selected_by": "builtin",
+      "sha256": "5b893e9e0c9dc8f60baf1237d49d66375c81f37d06cea00370631ac38b46f3e7"
+    },
+    "plan": {
+      "path": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/skill/templates/renovation/plan.md",
+      "selected_by": "builtin",
+      "sha256": "cca01b5a90fe3d38c1ca7280e9d76c62c3514d5910cf424d578c647b72830d55"
+    },
+    "tracking": {
+      "path": "/Users/cfh00911058/Desktop/AI in IT/Workspace/Lab_1/FE_Modernization/sandbox/legacy-to-spec/plan-20261012/afy10400/skill/templates/renovation/tracking.md",
+      "selected_by": "builtin",
+      "sha256": "772d0a61ca71c3413126433315e15dd1729907b5db7c574d3cd2a8e5c20b5f0a"
+    }
+  },
+  "references": {},
+  "limits": [
+    "Selection does not validate template completeness or authorize design changes.",
+    "Only applicable template roles should be used for a scope."
+  ]
+}

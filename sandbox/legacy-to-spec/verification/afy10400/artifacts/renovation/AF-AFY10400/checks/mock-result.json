@@ -1,0 +1,28 @@
+{
+  "engine": "v22.18.0",
+  "mode": "Node vm with minimal mocked DOM; prototype script only; no legacy source executed",
+  "checks_passed": [
+    "AC-01/02: initial zero rows, L/AT; delete retains remaining values, recolors and serial is not reused.",
+    "AC-03/04: exact empty warning and earlier duplicate precedes later empty row.",
+    "AC-13: zero-row request reaches local boundary; whitespace does not trigger empty guard.",
+    "AC-05: synthetic local response fills row before download handoff before complete message; LF normalized to CRLF in boundary summary.",
+    "AC-06: target error gap preserves prior result, does not fabricate a new map or download.",
+    "AC-10: first Escape closes; letter then Escape leaves window open; confirm receives initial focus.",
+    "AC-11: down shows drag frame and real window; move hides real window; up restores and rebuilds listeners.",
+    "AC-08: mock window Ctrl+A prevents default with exact policy message; mock body contextmenu prevents default.",
+    "AC-09: independent fake timers retain old deadlines; t60 clears newer B, repeat at t61 records again, old B at t90 clears; 5001-character input carries original length.",
+    "AC-16: long then short/repeated messages accumulate once without shrinking; grow to 600; confirm clears and next short resets to 180.",
+    "AC-16: empty/null/undefined normalize and deduplicate to gray placeholder; 33 transformed characters size to 495; gray remains when a normal message is appended.",
+    "AC-16: literal and actual LF normalize to the same transformed content/240px sizing; append does not rearm the one-shot key handler; review control supports null.",
+    "AC-15: exact diagnostic dynamic fields and enumerated properties; Error nonenumerable fields are not invented; malformed map alert precedes complete, no fill/download and cover completes.",
+    "AC-15: malformed failure map also diagnoses before its ordinary failure message; previous result remains, no download, complete removes cover.",
+    "AC-07/10: product export button clears old bottom message; response injection waits for a later task after click bubbling and preserves forwarded response; modal confirm does not clear it.",
+    "AC-10: mouse confirm then reopen retains old listener until first key; letter consumes each show-local listener; later Escape does not close; fresh third-show Escape closes."
+  ],
+  "limitations": [
+    "No real browser rendering, console or network panel observation.",
+    "Pointer/key event bubbling and browser default behavior are mocked; click uses the pre-bubbling microtask checkpoint observed in the supplied Chromium failure; later timer task is explicitly flushed; no claim of browser equivalence.",
+    "Timers use controlled fake time, not a 60-second real-time observation.",
+    "No API, FileDownload, backend, or trusted identity service executed."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "case": "coupled",
+  "run": "baseline",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 22,
+    "markdown_files": 4,
+    "html_files": 1,
+    "links": 28
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/design/fixture-case/prototypes/SCR-01.html": "0d99f90c5daae7d0a13846fceb36983011470762542682ee82d7c57e28535953",
+    "artifacts/design/fixture-case/specification.md": "4bb61ac853ba46e27a03e1c5d122f0c7a2ddb67fedc28c176a7ee10c8345fbb4",
+    "artifacts/integration/fixture-case/api-spec.md": "86afa5d7bd209a17af553a278eb4108051d777bc8e63e5af1dbfe8e0cf8546f1",
+    "artifacts/integration/fixture-case/backend-handoff.md": "e1839208f9afe8953c20640c8ac27e6e64ac2eef542d55cd000c7c3ce9dc1b8a",
+    "artifacts/renovation/fixture-case/prototype-script.js": "fec5437ea31c68c41871b9abdd4fd45c592666830755eba55bc4bf4b06bdee99",
+    "artifacts/renovation/fixture-case/tracking.md": "b54d1b508f67314a7ff3306b3bff24ada6f5ed4b9c3e90e98df5dc61ee709b49",
+    "artifacts/renovation/fixture-case/verification.json": "0e289601f44bd3e12641285741bb386d6ebd7d24650536927d37cee98b040a3c",
+    "artifacts/renovation/fixture-case/verify.py": "a8317e4f57fd6e01374927eeb82ca60504c2667fe8ffe781d669177a3f01ad6e"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

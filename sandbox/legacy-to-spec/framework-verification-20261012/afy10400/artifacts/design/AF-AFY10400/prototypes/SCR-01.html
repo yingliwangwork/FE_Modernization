@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><title>AFY10400 公會通報下傳作業</title>
+<link rel="stylesheet" href="../styles/CMP-PAGE.css"><link rel="stylesheet" href="../styles/CMP-FORM.css"><link rel="stylesheet" href="../styles/CMP-COVER.css"><link rel="stylesheet" href="../styles/CMP-MESSAGE.css"><link rel="stylesheet" href="../styles/review.css">
+</head><body>
+<main class="product" id="product" data-scope-id="AF-AFY10400" data-screen-id="SCR-01" data-state-id="ST-01" data-component-id="CMP-PAGE">
+<div class="product-title" data-ui-id="UI-01"><table width="100%" height="30" border="0" cellpadding="0" cellspacing="0"><tr>
+<td width="4"><span class="asset-slot border-side" data-missing-asset="border_01.gif" aria-hidden="true"></span></td>
+<td valign="top" bgcolor="#F0FBC6"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="4"><span class="asset-slot border-top" data-missing-asset="border_03.gif" aria-hidden="true"></span></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="0" class="subTitle"><tr><td width="20" height="24"><div align="center"><font size="-5">●</font></div></td><td>公會通報下傳作業</td><td><div align="right">畫面編號：AFY10400</div></td></tr></table></td>
+<td width="4"><span class="asset-slot border-side" data-missing-asset="border_02.gif" aria-hidden="true"></span></td><td width="5" class="tbBox"><span class="asset-slot border-blank" data-missing-asset="ecblank.gif" aria-hidden="true"></span></td>
+</tr></table></div><div class="title-spacer"></div>
+<table class="outer"><tr><td valign="top"><table class="main-frame"><tr><td class="tbBox2" data-ui-id="UI-02"><p><span class="asset-slot section-icon" data-missing-asset="icon_dot11.gif" aria-hidden="true"></span>公會補通報作業</p></td></tr><tr><td class="form-body">
+<form id="frm" data-component-id="CMP-FORM"><table id="table1" class="tbBox2 data-table">
+<tbody id="rows"><tr><td class="tbYellow2 instructions" colspan="4">1、此畫面請用<span class="red">Google Chrome</span>使用<br>2、收承方式、商品屬性，每次只能針對其中一種組合進行下載，若有多種組合下載，需分多次匯出處理<br>3、同一ID查詢多筆保單時，請在保單號碼欄位，輸入多筆且用<span class="red">Enter</span>來分格</td></tr>
+<tr><td class="tbYellow label-cell">收承方式</td><td class="tbYellow2 value-cell first"><select id="insrType" name="insrType" aria-label="收承方式" data-ui-id="UI-03"><option value="L" selected>承保</option><option value="R">收件</option></select></td><td class="tbYellow label-cell">商品屬性</td><td class="tbYellow2 value-cell second"><select id="prodType" name="prodType" aria-label="商品屬性" data-ui-id="UI-04"><option value="AT" selected>個險</option><option value="BG">團險</option><option value="CB">意外險</option></select></td></tr>
+<tr class="tbBlue"><td>刪除</td><td>被保人ID<input type="button" value="新增一列" id="addBtn" class="button" data-ui-id="UI-05" data-flow-id="FLOW-02"></td><td>保單號碼</td><td>匯出結果</td></tr></tbody></table>
+<table class="tbBox2 export-table"><tr><td class="tbYellow2"><input type="button" value="匯出檔案" id="exportBtn" class="button" data-ui-id="UI-09" data-flow-id="FLOW-04"></td></tr></table></form>
+</td></tr></table></td></tr></table></main>
+<div id="cover" hidden data-component-id="CMP-COVER" data-ui-id="UI-09"></div>
+<div id="message" hidden data-component-id="CMP-MESSAGE" data-ui-id="UI-10"><div id="message-title" data-flow-id="FLOW-10">網頁訊息</div><div id="message-content"></div><div id="message-bottom"><input type="button" value="確定" id="message-ok" class="button" data-flow-id="FLOW-09"></div></div>
+<div id="drag-frame" hidden></div>
+<aside class="review" data-review-tools="true">
+<strong>審閱工具 — 離線合成情境，非產品功能（工具層在遮罩之上、訊息視窗之下）</strong> · <a href="../specification.md">規格</a><br>
+不呼叫後端、不產生檔案、不寫入稽核。TODO-01 入口／底部；TODO-02 目標拒絕 data=null／直接檔案差距；TODO-03 訊息選用；TODO-04 可信政策；TODO-05 缺少圖片、字型、日曆 CSS 及浮水印庫；圖像位置只保留來源空槽幾何，●是來源文字並非替代圖片；TODO-06 date 載入；TODO-07 瀏覽器檢查。遮罩僅保留已知幾何與阻隔，缺圖沒有替補色。
+<p><label>待交付請求 <select id="request-choice"></select></label><label>旧回應代碼 <input id="return-code" type="number" value="0"></label><label>系統模式 <select id="system-mode"><option value="other">其他（原生提示）</option><option value="custom">自訂訊息模式</option><option value="EP">EP</option></select></label><label><input id="bottom-exists" type="checkbox">合成底部接收者存在（仅紀錄）</label></p>
+<label>逐列結果 map（JSON，刻意注入、不是后端承接證據）</label><textarea id="response-map">{}</textarea>
+<label>檔名（只有旧成功响应消費）<input id="file-name" value=""></label><label>动态描述<input id="response-msg" value=""></label><label>錯誤編號<input id="message-id" value=""></label>
+<p><button id="inject">交付選定旧回應</button><button id="inject-target">展示目標 code500/data=null 缺口</button><button id="enqueue">依當前列再建立合成請求</button></p>
+<label>自訂訊息（只測已知元件）<input id="custom-msg" value=""></label><button id="show-custom">顯示訊息</button><label><input id="policy-on" type="checkbox">合成「政策啟用」上下文（尚未確認部署条件）</label>
+<p>入口訊息、外部底部外觀、WIUtil、浮水印及正式下載停在契約边界；它們未由工具模擬為產品能力。产品按鈕冒泡清底部操作只記錄，審閱注入控制获測試工具豁免以免干擾產品訊息。</p>
+<pre id="review-log" aria-live="polite"></pre>
+</aside>
+<script src="model.js"></script><script src="prototype.js"></script>
+</body></html>

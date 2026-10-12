@@ -1,0 +1,42 @@
+{
+  "kind": "offline-manual-browser-check",
+  "checks": [
+    {
+      "id": "desktop-layout-and-contents",
+      "status": "PASS"
+    },
+    {
+      "id": "keyboard-skip-link",
+      "status": "PASS"
+    },
+    {
+      "id": "offline-prompt-copy-feedback",
+      "status": "PASS"
+    },
+    {
+      "id": "chapter-navigation",
+      "status": "PASS"
+    },
+    {
+      "id": "print-action-and-layout",
+      "status": "PASS"
+    },
+    {
+      "id": "mobile-layout-and-menu",
+      "status": "PASS"
+    },
+    {
+      "id": "no-runtime-errors-or-http-requests",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "htmlSha256": "4846c3031f99c01f2337081cd34691dd885c8008110b0d5fc6817e5d1c1fe2ca",
+  "screenshots": [
+    "desktop.png",
+    "customization.png",
+    "mobile.png"
+  ],
+  "status": "PASS"
+}

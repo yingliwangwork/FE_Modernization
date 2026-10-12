@@ -1,0 +1,178 @@
+{
+  "scope_id": "AF-AFY10400",
+  "stage": "plan",
+  "checked_at": "2026-10-12T12:54:02.690318+00:00",
+  "result": "pass",
+  "checks": [
+    {
+      "name": "single-root-and-byte-version",
+      "result": "pass",
+      "actual": {
+        "root": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+        "sha256": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a",
+        "physical_lines": 246
+      }
+    },
+    {
+      "name": "physical-line-and-strict-decoding-metadata",
+      "result": "pass",
+      "actual": {
+        "path": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+        "sha256": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a",
+        "bytes": 8966,
+        "physical_lines": 246,
+        "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+        "crlf": 246,
+        "lf": 0,
+        "cr": 0,
+        "encoding_conclusion": "unconfirmed",
+        "strict_decoding": {
+          "utf-8": {
+            "status": "invalid",
+            "byte_offset": 1152
+          },
+          "cp950": {
+            "status": "valid"
+          }
+        }
+      }
+    },
+    {
+      "name": "persisted-plan-precedes-analysis",
+      "result": "pass",
+      "actual": {
+        "initial_mtime": 1791808981.1587448,
+        "source_inventory_mtime": 1791809000.7890463,
+        "sequence": "plan + initial snapshot persisted before source content analysis; immutable initial text retained"
+      }
+    },
+    {
+      "name": "scope-boundaries-and-pending-decisions",
+      "result": "pass",
+      "actual": {
+        "dep_count": 19,
+        "decision_status": "pending",
+        "no_expansion_or_deferral_authorized": true
+      }
+    },
+    {
+      "name": "no-template-placeholder",
+      "result": "pass",
+      "actual": {
+        "errors": [],
+        "documents": [
+          "plan.md",
+          "tracking.md",
+          "user-response.md",
+          "plan.initial.md"
+        ]
+      }
+    },
+    {
+      "name": "markdown-table-column-consistency",
+      "result": "pass",
+      "actual": {
+        "errors": [],
+        "documents": [
+          "plan.md",
+          "tracking.md",
+          "user-response.md",
+          "plan.initial.md"
+        ]
+      }
+    },
+    {
+      "name": "actual-local-links-and-anchors",
+      "result": "pass",
+      "actual": {
+        "errors": [],
+        "checked_link_count": 173
+      }
+    },
+    {
+      "name": "raw-byte-line-reference-ranges",
+      "result": "pass",
+      "actual": {
+        "errors": [],
+        "maximum_line": 246
+      }
+    },
+    {
+      "name": "dep-todo-decision-and-task-location-coverage",
+      "result": "pass",
+      "actual": {
+        "dependency_rows": 19,
+        "actual_todo_sections": 19,
+        "all_pending": true,
+        "design_locations": "not created in plan stage; not claimed checked"
+      }
+    },
+    {
+      "name": "task-menu-required-optional-and-status",
+      "result": "pass",
+      "actual": {
+        "task_count": 11,
+        "available_first_tasks": [
+          "TASK-02",
+          "TASK-08"
+        ],
+        "optional": [
+          "TASK-07"
+        ],
+        "all_execution_tasks_unselected": true
+      }
+    },
+    {
+      "name": "actually-used-template-hashes",
+      "result": "pass",
+      "actual": {
+        "roles": [
+          "plan",
+          "tracking"
+        ],
+        "errors": [],
+        "other_roles": "selected for traceability, not generated"
+      }
+    },
+    {
+      "name": "unselected-contracts-not-generated",
+      "result": "pass",
+      "actual": {
+        "design_exists": false,
+        "integration_exists": false,
+        "phase": "first-response plan"
+      }
+    },
+    {
+      "name": "input-source-unchanged",
+      "result": "pass",
+      "actual": {
+        "sha256": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a",
+        "original_bytes_preserved": true
+      }
+    }
+  ],
+  "not_executed": [
+    {
+      "check": "check_design_metadata.py",
+      "reason": "Design documents/prototypes/styles are intentionally not created at the first choice gate; this checker is not applicable to plan-only delivery."
+    },
+    {
+      "check": "browser/render/computed-style/interaction",
+      "reason": "No execution task selected; no prototype or acquired shared style/scripts."
+    },
+    {
+      "check": "backend execution/integration",
+      "reason": "Backend baseline/environment not supplied; task prohibits backend execution and external calls."
+    },
+    {
+      "check": "local design TODO placement",
+      "reason": "No design/API/prototype exists in plan phase. Root impact locations and actual tracking TODO anchors checked instead; design placement remains future work."
+    }
+  ],
+  "limits": [
+    "No behavior-completeness or deployment claim.",
+    "No external/other-workspace data read.",
+    "All dependencies and execution task choices remain pending."
+  ]
+}

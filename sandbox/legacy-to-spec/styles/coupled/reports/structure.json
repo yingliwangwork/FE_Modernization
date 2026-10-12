@@ -1,0 +1,41 @@
+{
+  "case": "coupled",
+  "run": "styles",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 36,
+    "markdown_files": 9,
+    "html_files": 1,
+    "links": 148
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/design/fixture-case/components/CMP-PAGE/DESIGN.md": "085aea670930a68d5fad2128193a98f6c0650b17c3482909f4bb6daaa88da403",
+    "artifacts/design/fixture-case/components/CMP-SEARCH-ACTION/DESIGN.md": "b43168cb131281ac7d677afb1c52c7ac6f8a5792e14a0b4e2200e8886adf6bd5",
+    "artifacts/design/fixture-case/components/CMP-TABLE/DESIGN.md": "f3ac5a29fac38bf439ecc5a08fbd825938ffe9634b7647a5a08709710e640f72",
+    "artifacts/design/fixture-case/dependency-contracts.md": "ceaacb0b80ceb1771fde6f4c45dbb3c8ac38d98a7e1605d23ac0dccf77ed721e",
+    "artifacts/design/fixture-case/prototypes/SCR-01.html": "331f40851377d368715ba49ce5ff1c3043c1b305ec82148b1663a2839325f244",
+    "artifacts/design/fixture-case/prototypes/prototype.js": "6e845ab0a47c43de876335f826965baeca2ae5e928404e755f92c029af3ddb6a",
+    "artifacts/design/fixture-case/specification.md": "cadd3afd5d1fcbf4fc1e4f5987c1a9d1a1fe64108a483ac4aa3d328ed3bed857",
+    "artifacts/design/fixture-case/styles/CMP-PAGE.css": "8a099c0ec0062caa1768b498fa5cc527021705a378a459ade636ef1b60643356",
+    "artifacts/design/fixture-case/styles/CMP-SEARCH-ACTION.css": "9343cfba5a7a6b07fbfb2b37ad825289d651bb89ab1b56f1595bcbc3d2d1dc96",
+    "artifacts/design/fixture-case/styles/CMP-TABLE.css": "3dc2355a010cc64fc22d0ed7e3e864a35bc66c2e52e93f83706b2fcaa7aa9220",
+    "artifacts/design/fixture-case/styles/tokens.json": "e631928b73beaf88d737d4cf7b089201b746e1ef508a6db9401f54702f26189a",
+    "artifacts/integration/fixture-case/api-spec.md": "e51076f402e375403d02ce4affcbe6107b28b18a14860b840baeaca045099033",
+    "artifacts/integration/fixture-case/backend-handoff.md": "396c5d2aedf145e466583fafee8d5f1a1f177b949228764002fe889a453216cc",
+    "artifacts/renovation/fixture-case/artifact-hashes.json": "b618c36f49b7e6224435bf24d4ad0e916aef1d09e70d32dba37b39f930ecd332",
+    "artifacts/renovation/fixture-case/checks/interaction-check.cjs": "4b038092db464678bbcd5906b0f8e15e239d2e4bcb3c2a0f0969dfc24c881996",
+    "artifacts/renovation/fixture-case/checks/interaction-results.json": "a480d3297b3f1d06b7c107be8e9b4d073d33a19cf68ac34bc8810cd591c1685d",
+    "artifacts/renovation/fixture-case/checks/static-check.py": "d3de86685d5a49702c7bfb36f8adb1683b2c82dbb10c57a261f5d99c700dc345",
+    "artifacts/renovation/fixture-case/checks/static-results.json": "50b67a7cb0da8982369cc97a5d3a9a63a44464aaa3e984b5f2ea9036013953ef",
+    "artifacts/renovation/fixture-case/plan.md": "fe833cfc3f639b952d869dceaac803af64634ac5ada688ffb9dbd6ca1fa6f813",
+    "artifacts/renovation/fixture-case/source-inventory.json": "abee7659e5a5383eac5c594109357fb2fc3f7847bc0a6aca0e4169dd4e307ed2",
+    "artifacts/renovation/fixture-case/template-selection.json": "84368060a9cef826a77ed8a4f45e740f2be6e0ecbf9cd9333e122e550c9358ff",
+    "artifacts/renovation/fixture-case/tracking.md": "9e7ed781f548c77dff9cbdff96e9d45ad6f447ed0ec484b1f78386ab7c443c19"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

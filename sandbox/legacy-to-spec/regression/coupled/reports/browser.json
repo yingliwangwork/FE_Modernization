@@ -1,0 +1,176 @@
+{
+  "case": "coupled",
+  "run": "regression",
+  "engine": "151.0.7922.34",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "kind": "local-prototype-browser-check",
+  "mode": "scenarios",
+  "checks": [
+    {
+      "id": "initial-view",
+      "source": "inputs/frontend/Case.jsp:49-61; no initial query or rows",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "query-order-and-trim",
+      "source": "Case.jsp:20-34; clears status before request, retains rows until callback, trims input; two synthetic rows only supply scenario data",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "empty-response",
+      "source": "Case.jsp:24,32-33; contract EMPTY maps legacy NONE",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "denied-response",
+      "source": "Case.jsp:24,34-35; contract DENIED maps legacy BLOCK",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "empty-quantity-rejected",
+      "source": "Case.jsp:41-44; exact empty-string guard and alert",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "nonempty-quantity-stops-at-boundary",
+      "source": "Case.jsp:41-46; whitespace is nonempty; target quantity logic has no API contract, no backend execution may be claimed",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "overlapping-callbacks-keep-previous-message",
+      "source": "Case.jsp:20,24-35; triggers clear status, DONE callback does not clear status written by another callback; supplied response order is only a local test fixture",
+      "status": "PASS",
+      "assertions": 3
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "snapshots": [
+    {
+      "file": "SCR-001.html",
+      "visibleText": "項目查閱\n\n審閱者：展示審閱者\n\n關鍵字\n查閱\n\n項目代碼\t名稱\t排序提示\n數量 送出數量\n審閱工具（收合可隱藏說明與情境控制）\n\n產品標籤、順序與樣式依來源重建。此離線展示不呼叫外部系統，不計算費用，不儲存資料，不推導權限。\n\n審閱者與以下兩筆項目是合成展示資料；審閱者初始化仍缺少目標承接（TODO-001 / HANDOFF-001）。排序提示只是預寫的 legacy 情境文字，不是排序計算或目標回應欄位（TODO-002 / HANDOFF-002）。\n\n下一次查閱的回應情境 \nLegacy 成功（含合成排序提示）\n沒有項目（EMPTY 對應）\n不允許查閱（DENIED 對應）\n其他 Legacy 結果（非目標結果碼）\n目標 OK（排序提示缺口）\n延後回應，保留既有資料列供檢查\n交付下一個本機回應\n重設審閱\n\n初始展示。先選情境，再按產品的「查閱」。情境在查閱觸發時擷取。\n\n可重複查閱，回應不做防重或最新請求過濾。延後回應按觸發順序交付；可先觸發 BLOCK 再觸發 DONE 觀察成功回應保留前一次回應的訊息。這是本機情境工具，沒有宣告服務順序保證。\n\n數量空字串會顯示來源原文 alert「數量不得為空」。非空字串只展示已知交接；空白與非數字也通過來源前端檢核，但後端解析結果、計费及儲存仍未知（TODO-003 / HANDOFF-003）。\n\n尚無交接。\n\n目標 OK 情境只用 rowId、label；第三欄空白是審閱中的缺口展示，沒有確認為改版需求。未知傳輸錯誤與數量後置畫面不假裝成功。尚未比較 legacy 執行畫面，尚未執行瀏覽器驗證。\n\n規格與驗收案例",
+      "controls": [
+        {
+          "tag": "INPUT",
+          "id": "filter",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "lookup",
+          "type": "button",
+          "text": "查閱",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "",
+          "type": "hidden",
+          "text": "",
+          "value": "commit",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "quantity",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "type": "submit",
+          "text": "送出數量",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "SELECT",
+          "id": "response-scenario",
+          "type": "select-one",
+          "text": "Legacy 成功（含合成排序提示）\n            沒有項目（EMPTY 對應）\n            不允許查閱（DENIED 對應）\n            其他 Legacy 結果（非目標結果碼）\n            目標 OK（排序提示缺口）",
+          "value": "DONE",
+          "disabled": false,
+          "options": [
+            {
+              "value": "DONE",
+              "text": "Legacy 成功（含合成排序提示）"
+            },
+            {
+              "value": "NONE",
+              "text": "沒有項目（EMPTY 對應）"
+            },
+            {
+              "value": "BLOCK",
+              "text": "不允許查閱（DENIED 對應）"
+            },
+            {
+              "value": "OTHER",
+              "text": "其他 Legacy 結果（非目標結果碼）"
+            },
+            {
+              "value": "TARGET_OK",
+              "text": "目標 OK（排序提示缺口）"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "hold-response",
+          "type": "checkbox",
+          "text": "",
+          "value": "on",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "release-response",
+          "type": "button",
+          "text": "交付下一個本機回應",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "reset-review",
+          "type": "button",
+          "text": "重設審閱",
+          "value": "",
+          "disabled": false,
+          "options": null
+        }
+      ]
+    }
+  ],
+  "prototypeHashes": {
+    "SCR-001.html": "2cf2becb600da735646f26016955e0c0a19bbd59fbdbb29e756d96873f0f4776"
+  },
+  "limits": [
+    "Only generated local prototypes are executed; no legacy JSP runtime or real backend is executed.",
+    "Screenshots do not establish pixel equivalence to the legacy runtime."
+  ],
+  "status": "PASS",
+  "screenshots": "../../../../output/playwright/skill-sandbox/regression/coupled"
+}

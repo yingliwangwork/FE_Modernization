@@ -1,0 +1,957 @@
+BODY {
+	scrollbar-face-color:#C7E49C;
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-3dlight-color:#C7E49C;
+	scrollbar-darkshadow-color:#2B4B21;
+	scrollbar-shadow-color:#96B469;
+	scrollbar-arrow-color:#4F6828;
+	scrollbar-track-color:#C7E49C;
+    font-family: 'PMingLiU', 'MingLiU', 'Microsoft JhengHei', 'Meiryo', 'Arial', 'Arial Unicode MS', 'Helvetica', 'sans-serif', 'Verdana', 'Trebuchet MS';
+}
+
+input, textarea{
+	/* 針對輸入的input物件設置css。解決ie11顯示難字問題 */
+	font-family: 'PMingLiU', 'MingLiU', 'Microsoft JhengHei', 'Meiryo', 'Arial', 'Arial Unicode MS', 'Helvetica', 'sans-serif', 'Verdana', 'Trebuchet MS';
+}
+
+table .grid * {
+	font-size: 10pt;
+}
+.text10 {
+	font-size: 10pt;
+	line-height: normal;
+	color: #000000;
+	font-weight: normal;
+}
+.text13 {
+	font-size: 13pt;
+	line-height: normal;
+	color: #000000;
+	font-weight: normal;
+}
+.textError {
+	font-size: 12pt;
+	color: #FF0000;
+	font-weight: bold;
+}
+.textWarning {
+	font-size: 12pt;
+	color: #FFCC00;
+	font-weight: bold;
+}
+.textNotify {
+	font-size: 12pt;
+	color: blue;
+	font-weight: bold;
+}
+.textBox {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #ADC891;
+	border-right-color: #F2F9EC;
+	border-bottom-color: #F2F9EC;
+	border-left-color: #ADC891;
+	font-size: 10pt;
+	text-decoration: none;
+}
+.textBox2 {
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+}
+.textBox3 {
+	font-size: 14px;
+	color: #0000FF;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-style:none;
+	background-color: #FAFBE1;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+}
+.textBox4 {
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+	text-align:right;
+}
+.textBox5 {
+	font-size: 10pt;
+	text-align: center;
+	text-decoration: none;
+	border-style:none;
+	background-color: #F0F8FF;
+}
+.textDisable {
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	background-color:transparent;
+	border:none;
+}
+.button {
+	font-size: 10pt;
+	border: 1px solid #6B8D6D;
+	color: #006600;
+    white-space: nowrap;
+    line-height: 19px;
+    height: 21px;
+	vertical-align: middle;
+    margin: 2px;
+	padding: 0px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eff6ec+0,ffffff+35,cfe4c1+100 */
+    background: url(../../../images/CM/bt_bg.gif);
+    background: -moz-linear-gradient(top, #eff6ec 0%, #ffffff 40%, #cfe4c1 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #eff6ec 0%,#ffffff 40%,#cfe4c1 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #eff6ec 0%,#ffffff 40%,#cfe4c1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: url(../../../images/CM/bt_bg.gif) \9;
+    
+    
+}
+.button1 {
+	font-size: 9pt;
+	border: 1px solid #6B8D6D;
+	color: #44774A;
+	height: 17px;
+    line-height: 16px;
+    vertical-align: middle;
+	margin: 2px;
+    padding: 0px;
+    background: url(../../../images/CM/bt_bg.gif);
+    background: -moz-linear-gradient(top, #eff6ec 0%, #ffffff 40%, #cfe4c1 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #eff6ec 0%,#ffffff 40%,#cfe4c1 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #eff6ec 0%,#ffffff 40%,#cfe4c1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: url(../../../images/CM/bt_bg.gif) \9;
+}
+.buttonRed {
+	font-size: 10pt;
+	border: 1px solid #990000;
+	color: #990000;
+	white-space: nowrap;
+    line-height: 19px;
+    height: 21px;
+	vertical-align: middle;
+    margin: 2px;
+	padding: 0px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff0f0+0,ffffff+35,ffdddd+100 */
+    background: #ffdddd; /* Old browsers */
+    background: -moz-linear-gradient(top, #fff0f0 0%, #ffffff 35%, #ffdddd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fff0f0 0%,#ffffff 35%,#ffdddd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fff0f0 0%,#ffffff 35%,#ffdddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff0f0', endColorstr='#ffdddd',GradientType=0 ); /* IE6-9 */
+    -background: #ffdddd;
+    -filter: alpha(opacity=20,finishopacity=90,style=1,startx=0,starty=-50,finishx=0,finishy=200);
+}
+
+:root .button, :root .button1, :root .buttonRed{
+    padding: 0px 10px;    
+}
+
+.tbBox {
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #6B8D6D;
+	border-bottom-color: #6B8D6D;
+	border-left-color: #FFFFFF;
+	font-size: 10pt;
+	background-color: #C7E49C;
+}
+
+.tbBox2 {
+	background-color: #C7E49C;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #6B8D6D;
+	border-bottom-color: #6B8D6D;
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+	font-size: 10pt;
+	text-indent: 1pt;
+	padding: 1pt;
+	line-height: 21px;
+}
+.tbBox3 {
+	background-color: #EECE6C;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #6B8D6D;
+	border-bottom-color: #6B8D6D;
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+	font-size: 10pt;
+	text-decoration: none;
+	height: 20px;
+}
+.tbBox4 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #6B8D6D;
+	border-bottom-color: #6B8D6D;
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+	font-size: 10pt;
+}
+.tbBoxDK {
+	background-color: #C7E49C;
+	border-right-color: #6B8D6D;
+	border-bottom-color: #6B8D6D;
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+	font-size: 10pt;
+	text-indent: 1pt;
+	padding: 1pt;
+	line-height: 21px;
+}
+a:link {
+	font-size: 10pt;
+	color: #0066CC;
+	text-decoration: underline;
+}
+a:hover {
+	font-size: 10pt;
+	color: #FF9900;
+	text-decoration: underline;
+}
+a:visited {
+	font-size: 10pt;
+	color: #0066FF;
+	text-decoration: underline;
+}
+.subTitle {
+	font-size: 10pt;
+	font-weight: bold;
+	color: #339900;
+	letter-spacing: 3pt;
+}
+.tbRed {
+	background-color: #FF0000;
+	color: white;
+}
+.tbYellow0 {
+	background-color: #DEC87C;
+}
+.tbYellow {
+	background-color: #EEF1A7;
+}
+.tbYellow2 {
+	background-color: #FAFBE1;
+}
+.tbYellow3 {
+	background-color: #FCFDEE;
+}
+.tbBlue {
+	background-color: #99CCFF;
+}
+.tbBlue2 {
+	background-color: #DFEFFF;
+}
+.tbBlue3 {
+	background-color: #F0F8FF;
+}
+.textGray {
+	font-size: 10pt;
+	color: #6F6F88;
+}
+.textGreen {
+	font-size: 10pt;
+	color: #00AA00;
+}
+.textBlue {
+	font-size: 10pt;
+	background: #99CCFF;
+	color: #0066CC;
+	border: dotted 0;
+}
+.textBlue2 {
+	font-size: 10pt;
+	background: #DFEFFF;
+	color: black;
+	border: dotted 0;
+}
+.textBlue3 {
+	font-size: 10pt;
+	background: #F0F8FF;
+	color: black;
+	border: dotted 0;
+}
+.textYellow {
+	font-size: 10pt;
+	background: #EEF1A7;
+	color: black;
+	border: dotted 0;
+}
+.textYellow2 {
+	font-size: 10pt;
+	background: #FAFBE1;
+	color: black;
+	border: dotted 0;
+}
+.textRed {
+	font-size: 10pt;
+	color: #FF0000;
+}
+.textRedBold {
+	font-size: 10pt;
+	font-weight: bold;
+	color: #FF0000;
+}
+.textBold {
+	font-size: 10pt;
+	font-weight: bold;
+	line-height: 21px;
+}
+.tbRec {
+	background-color: #FAFBE1;
+	font-size: 10pt;
+}
+.self_display_yellow{
+	background: "#FAFBE1";
+	color: black;
+	border: dotted 0;
+}
+.menuDisable {
+	font-size: 10pt;
+	color: #C4944D;
+	text-decoration: none;
+}
+.tbLayer {
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #003366;
+	border-bottom-color: #003366;
+	border-left-color: #003366;
+}
+.textBoxDisable {
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+	background-color: #FFFFCC;
+}
+.textBoxDisable2 {
+	font-size: 12px;
+	color: #0000FF;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+	background-color: #FFFFCC;
+}
+.textBoxDisableB {
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+	background-color: #FFFFCC;
+	color: #FF0000;
+	text-align: right;
+}
+.BoxCase {
+	visibility: hidden;
+	position: absolute;
+	border-right: 2px outset;
+	padding-right: 6px;
+	border-top: 2px outset;
+	padding-left: 6px;
+	background: #e8e4dc;
+	padding-bottom: 6px;
+	border-left: 2px outset;
+	color: #000000;
+	padding-top: 6px;
+	border-bottom: 2px outset;
+	text-align: left;            
+	font-size: 13px;
+	line-height: 17px;
+	letter-spacing: 2px            
+}
+.textBoxNew {
+	font-size: 11px;
+	color: #666666;
+	background-color: #FFFFFF;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	border: 1px solid #8F9D7B;
+}
+.listType{
+	font-size: 10pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+}
+/** Delete at 2016-09-02
+.print {
+  display: none;
+}
+#print {
+  display: none;
+}
+
+*/
+
+/* for ie11 */
+input[type="text"]:disabled, input[type="date"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="button"]:disabled, button:disabled{
+    color: #999;
+    text-shadow: #FFF 1px 1px 0px;
+}
+
+input[type=checkbox], input[type=radio]{
+    color: #BBB;
+}
+
+
+
+table.grid {
+    font-size: 10pt;
+    border:1px solid #C7E49C;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+}
+table.grid td {
+    margin: 0px;
+    padding: 2px;
+    padding-top: 5px;
+    border:1px solid #C7E49C;
+}
+table.grid th {
+    margin: 0px;
+    padding: 2px;
+    padding-top: 5px;
+    border:1px solid #C7E49C;
+}
+/* 增加calendar.js所需的CSS，參考CXLWeb 第17版calendar部分樣式 */
+.calendarTable{
+	background-color: #444;
+	border: 3px double #CCC;
+	position: absolute;
+	z-index: 10;
+}
+.calendarTable table table{
+	border: none;
+}
+.calendarTable th {
+	margin: 0px;
+	border-collapse:collapse;
+	border:medium none #000;
+	background-color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	
+}
+.calendarTable td {
+	border-collapse:collapse;
+	border:1px solid #FFF;
+	background-color: #EEE;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+	overflow:hidden;
+	
+}
+.calendarTable .subTitle { 
+	background: #FFF; 
+	color: #000;
+	font-weight: bold;
+}
+.calendarTable .colorGray{ 
+	color:#FFF; 
+	background: #CCC;
+}
+.calendarTable .selectBlock{ 
+	background: #FAC574;
+	color:#000; 
+	border-color: #FC6;
+}
+.calendarTable .linkCursor{ cursor: pointer; }
+.calendarTable .linkCursor :hover{ font-size:16px; }
+.calendarImg{
+	background: url('../../../images/CM/calendar.gif') no-repeat;
+	display : inline-block;
+	width: 16px;
+	height: 16px;
+}
+/*
+input.disabled, input:disabled, textarea.disabled, textarea:disabled {
+	border: 1px solid #F2F2F2;
+	background-color: #F2F2F2;
+}
+*/
+
+input:read-only, textarea:read-only {
+	background-color: transparent;
+	border: none;
+}
+.panel {
+	clear: both;
+	display: none;
+	border: 3px solid #CCC;
+	padding: 1em;
+}
+	.panel.active-tab-body {
+		display: block;
+	}
+/* for ui/validation.js */
+input.required, textarea.required {
+	border: 1px solid #00A8E6;
+}
+.validation-failed, .m_validation-failed {
+	border: 1px solid #FF3300;
+	color: #FF3300;
+}
+.validation-passed {
+	border: 1px solid #00CC00;
+	color: #000;
+}
+.validator-failed, .m_validator-failed {
+	background: #FFB0AF;
+}
+.validator-passed {
+	border: 1px solid #3CF;
+	color: #000;
+}
+.validation-advice {
+	margin: 5px 0;
+	padding: 5px;
+	background-color: #FF3300;
+	color: #FFF;
+	font-weight: bold;
+}
+.custom-advice {
+	margin: 5px 0;
+	padding: 5px;
+	background-color: #C8AA00;
+	color: #FFF;
+	font-weight: bold;
+}
+fieldset {
+	padding: 1em;
+	margin-bottom: 0.5em;
+}
+label {
+	font-weight: bold;
+}
+.form-row {
+	clear: both;
+	padding: 0.5em;
+}
+.field-label {
+}
+.field-widget {
+}
+/* rb 的索引元件圖示 */
+.x-grid-del_icon {
+	background-image: url("/RBWeb/images/CM/icon_del.gif") !important;
+}
+.x-grid-index_icon {
+	background-image: url("/RBWeb/images/CM/gif06.gif") !important;
+}
+/* PaperUI 2011-09 */
+.overDiv {
+	overflow: auto;
+}
+.PaperUI {
+	font-size: 14px;
+	font-family: 'Microsoft JhengHei', 'Meiryo', 'PMingLiU', 'MingLiU', 'Arial', 'Arial Unicode MS', 'Helvetica', 'sans-serif', 'Verdana', 'Trebuchet MS';
+	border-spacing: 0px;
+	margin: 0px;
+}
+	.PaperUI a {
+		font-size: 14px;
+		font-family: 'Microsoft JhengHei', 'Meiryo', 'PMingLiU', 'MingLiU', 'Arial', 'Arial Unicode MS', 'Helvetica', 'sans-serif', 'Verdana', 'Trebuchet MS';
+		text-decoration: underline;
+	}
+		.PaperUI a:link {
+			color: #009;
+			text-decoration: underline;
+		}
+		.PaperUI a:hover {
+			color: #F60;
+		}
+		.PaperUI a:visited {
+			color: #009;
+		}
+	.PaperUI th {
+		border: solid #B27000 0px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		padding-left: 7px;
+		padding-right: 7px;
+		margin: 0px;
+	}
+	.PaperUI td {
+		border: solid #B27000 0px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		padding-left: 7px;
+		padding-right: 7px;
+		margin: 0px;
+	}
+	.PaperUI .allBorder {
+		border-width: 1px;
+	}
+	.PaperUI .topBorder {
+		border-top-width: 1px;
+	}
+	.PaperUI .bottomBorder {
+		border-bottom-width: 1px;
+	}
+	.PaperUI .leftBorder {
+		border-left-width: 1px;
+	}
+	.PaperUI .rightBorder {
+		border-right-width: 1px;
+	}
+	.PaperUI .headSetting1 {
+		background: #99CCFF;
+		font-weight: bolder;
+	}
+	.PaperUI .headSetting2 {
+		background: #66B3FF;
+		font-weight: bolder;
+	}
+	.PaperUI .recordSetting1_1 {
+		background: #F2EAC2;
+	}
+	.PaperUI .recordSetting1_2 {
+		background: #FBF8E9;
+	}
+	.PaperUI .recordSetting2_1 {
+		background: #CCE2F8;
+	}
+	.PaperUI .recordSetting2_2 {
+		background: #E7F3F9;
+	}
+/* PageUI 2011-11 */
+body {
+	margin: 0px;
+}
+.PageUI {
+	width: 100%;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	background: #F0FBC6;
+	font-size: 10pt;
+}
+.titleBar {
+	z-index: 150;
+	position: relative;
+	top: expression( (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop|| 0)+'px');
+}
+.borderTop {
+	background-image: url(../../../images/CM/border_03.gif);
+	background-repeat: repeat-x;
+	background-position: top center;
+	height: 4px;
+}
+.borderTopLeft {
+	background-image: url(../../../images/CM/border_01.gif);
+	background-repeat: repeat-y;
+	background-position: left center;
+	width: 4px;
+}
+.borderTopRight {
+	background-image: url(../../../images/CM/border_02.gif);
+	background-repeat: repeat-y;
+	background-position: right center;
+	width: 4px;
+}
+.borderText {
+	font-size: 10pt;
+	font-weight: bold;
+	color: #339900;
+	letter-spacing: 3pt;
+	padding: 3px 6px 1px 6px;
+	margin: 0px;
+	height: 25px;
+	border-bottom: 1px solid #D8F466;
+}
+.subTable {
+	padding: 5px 10px 5px 10px;
+	vertical-align: top;
+}
+	.subTable .overDiv {
+		overflow-x: visible;
+		overflow-y: auto;
+		padding: 0px 3px 0px 0px;
+	}
+.contents {
+	border: 1px solid black;
+	width: 100%;
+	background: #FFF;
+}
+.contentsTh {
+	background: #C7E49C;
+	font-size: 10pt;
+	margin-left: 3px;
+	margin-right: 3px;
+	text-align: left;
+	line-height: 21px;
+	border: solid 1px;
+	border-right-color: #6B8D6D;
+	border-bottom-color: #6B8D6D;
+	border-left-color: #FFFFFF;
+	border-top-color: #FFFFFF;
+}
+.contentsTd {
+	border-top: #000 1px solid;
+	padding: 4px;
+	padding-bottom: 0px;
+}
+.contentDiv {
+	border: #000 solid 1px;
+	border-bottom-width: 0px;
+	margin-bottom: 2px;
+	padding: 0px;
+	width: 100%;
+	vertical-align: middle;
+	border-right-color: #669027;
+	border-left-color: #EBFAEB;
+	border-top-color: #EBFAEB;
+}
+.contentDivTable {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+.contentDivTh {
+	background-color: #DEC87C;
+	font-size: 10pt;
+	text-align: center;
+	font-weight: bold;
+	line-height: 20px;
+	border-width: 0px;
+	border-bottom: #000 0px solid;
+}
+.contentDivTd {
+	margin: 0px;
+	padding: 0px;
+	border-width: 0px;
+	border-bottom: #000 1px solid;
+	border-bottom-color: #669027;
+	background: #C7E49C;
+}
+
+.contentTable {
+	padding: 1px;
+	border-top: solid 1px #C7E49C;
+	border-left: solid 1px #C7E49C;
+	width: 100%;
+}
+	.contentTable td {
+		width: auto;
+		text-align: left;
+		padding: 1px;
+		border-bottom: solid 1px #C7E49C;
+		;
+		border-right: solid 1px #C7E49C;
+	}
+	.contentTable .header {
+		padding: 2px;
+		background: #EEF1A7;
+		min-height: 16px;
+		font-size: 10pt;
+	}
+	.contentTable .content {
+		background: #FAFBE1;
+		font-size: 10pt;
+	}
+		.contentTable .content * {
+			margin: 0px 1px 0px 1px;
+		}
+	.contentTable .buttons {
+		background: #EEF1A7;
+		vertical-align: middle;
+	}
+.contentBlue .header {
+	background: #99CCFF;
+	font-weight: bolder;
+	text-align: center;
+}
+.contentBlue .content {
+	background: #DFEFFF;
+	text-align: center;
+}
+.contentBlue .buttons {
+	background: #F0F8FF;
+	text-align: center;
+}
+.contents .inputText, .contents textarea, .contents select {
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border: 1px solid #6B8D6D;
+	border-top-color: #096;
+	border-left-color: #096;
+	padding: 1px;
+}
+.buttons input {
+	background-image: url(../../../images/CM/bt_bg.gif);
+	font-size: 10pt;
+	border: 1px solid #6B8D6D;
+	color: #006600;
+	height: 19px;
+	margin: 2px;
+	padding: 1px 8px 1px 8px;
+}
+/* 業管單位負責人新增 2017-10 */
+span.pageSupporters{
+	font-family: 'Microsoft JhengHei', 'Meiryo', 'PMingLiU', 'MingLiU', 'Arial', 'Arial Unicode MS', 'Helvetica', 'sans-serif', 'Verdana', 'Trebuchet MS';
+	position: relative;
+	letter-spacing: 0px;
+	white-space: nowrap;
+	text-align: left;
+	*display: none;
+}
+
+span.pageSupporters button#icon-button{
+	padding : 1px 3px;
+	margin-left: 5px;
+	color: #FFF;
+	font-weight: bold;
+	border: 1px solid #006600;
+	border-radius: 3px;
+	background: #006600;
+	text-align: center;
+}
+
+
+span.pageSupporters div#personInChargeShowDiv{
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	z-index: 99;
+	box-shadow: #333 0px 0px 5px;
+	background-color: #FFF;
+	border: 1px solid #006600;
+	cursor: default !important;
+	display: none;
+}
+
+#bar1 span.pageSupporters div#personInChargeShowDiv{
+	top: 20px;
+}
+
+
+span.pageSupporters.active div#personInChargeShowDiv{
+	display: block;
+}
+
+span.pageSupporters div.empty-msg{
+	padding:25px;
+	color: #666;
+}
+
+span.pageSupporters div.support-group{
+	margin: 10px;
+}
+
+span.pageSupporters h3{
+	text-align: center;
+	padding: 2px 25px;
+	margin: 5px;
+	color: #006600;
+	border-bottom: 2px solid #006600;
+	border-collapse: collapse;
+
+}
+
+span.pageSupporters div.supporter{
+	margin: 5px;
+	padding: 5px;
+	border-collapse: collapse;
+	border-radius: 3px;
+	background-color: #EEF1A7;
+	letter-spacing: 1px;
+	color: #666;
+}
+
+span.pageSupporters div.supporter-div{
+	padding-bottom: 3px;
+}
+
+span.pageSupporters div.supporter-name{
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #333;
+}
+
+span.pageSupporters div.supporter-ext{
+	display: inline-block;
+	padding-left: 10px;
+	letter-spacing: 2px;
+	color: #333;
+}
+
+span.pageSupporters div.supporter-memo{
+	padding-top: 3px;
+	margin-top: 3px;
+	border-top: 1px solid #FFF;
+
+}
+
+

@@ -1,0 +1,282 @@
+{
+  "result": "PASS",
+  "phase": "planning-continuation",
+  "validation_id": "V-06",
+  "date": "2026-10-12",
+  "checks": [
+    "29 manifest snapshots match; 7 source inputs UTF-8/LF; unique root 60 lines",
+    "existing source evidence rows and all IDs preserved",
+    "component source hash and root use still match fixture-component-v1",
+    "Markdown local file targets and anchors valid; no template placeholders",
+    "DEC-02/03/04 pending; grouped notice scopes cover TODO-01–06",
+    "only four planning/tracking/check artifacts; no dependent contracts generated"
+  ],
+  "links": [
+    {
+      "from": "artifacts/renovation/fixture-case/tracking.md",
+      "target": "plan.md",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/tracking.md",
+      "target": "source-check.json",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/tracking.md",
+      "target": "plan.md#3-任務與影響",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/tracking.md",
+      "target": "plan.md#3-任務與影響",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/tracking.md",
+      "target": "plan.md#3-任務與影響",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/tracking.md",
+      "target": "plan.md#3-任務與影響",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/tracking.md",
+      "target": "plan.md#3-任務與影響",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/tracking.md",
+      "target": "plan.md#3-任務與影響",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/plan.md",
+      "target": "source-check.json",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/plan.md",
+      "target": "../../../inputs/specs/action-bar.md#cmp-search-action",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/plan.md",
+      "target": "tracking.md#8-增量與變更紀錄",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/plan.md",
+      "target": "tracking.md#5-todo-與契約缺口",
+      "exists_and_anchor_valid": true
+    },
+    {
+      "from": "artifacts/renovation/fixture-case/plan.md",
+      "target": "tracking.md#7-驗證執行與交付判定",
+      "exists_and_anchor_valid": true
+    }
+  ],
+  "failures": [],
+  "not_executed": [
+    "JSP runtime",
+    "browser visual and interaction validation",
+    "backend requests",
+    "per-contract TODO placement validation: contract documents do not exist in this phase"
+  ],
+  "delivery": "partial planning continuation; no dependency decision received",
+  "decisions": {
+    "DEC-02": "pending",
+    "DEC-03": "pending",
+    "DEC-04": "pending"
+  },
+  "notice_coverage": {
+    "DEC-02": {
+      "deps": [
+        "DEP-02",
+        "DEP-03"
+      ],
+      "todos": [
+        "TODO-01",
+        "TODO-02"
+      ],
+      "tasks": [
+        "TASK-07",
+        "TASK-08"
+      ]
+    },
+    "DEC-03": {
+      "deps": [
+        "DEP-04",
+        "DEP-05"
+      ],
+      "todos": [
+        "TODO-03",
+        "TODO-04"
+      ],
+      "tasks": [
+        "TASK-09"
+      ]
+    },
+    "DEC-04": {
+      "deps": [
+        "DEP-06"
+      ],
+      "todos": [
+        "TODO-03",
+        "TODO-04",
+        "TODO-05",
+        "TODO-06"
+      ],
+      "tasks": [
+        "TASK-10"
+      ]
+    }
+  },
+  "snapshot_count": 29,
+  "ids_retained": [
+    "CHANGE-01",
+    "CHANGE-02",
+    "DEC-01",
+    "DEC-02",
+    "DEC-03",
+    "DEC-04",
+    "DEP-01",
+    "DEP-02",
+    "DEP-03",
+    "DEP-04",
+    "DEP-05",
+    "DEP-06",
+    "E-01",
+    "E-02",
+    "E-03",
+    "E-04",
+    "E-05",
+    "E-06",
+    "E-07",
+    "E-08",
+    "E-09",
+    "E-10",
+    "E-11",
+    "LOGIC-01",
+    "LOGIC-02",
+    "LOGIC-03",
+    "LOGIC-04",
+    "LOGIC-05",
+    "LOGIC-06",
+    "LOGIC-07",
+    "LOGIC-08",
+    "LOGIC-09",
+    "TASK-01",
+    "TASK-02",
+    "TASK-03",
+    "TASK-04",
+    "TASK-05",
+    "TASK-06",
+    "TASK-07",
+    "TASK-08",
+    "TASK-09",
+    "TASK-10",
+    "TODO-01",
+    "TODO-02",
+    "TODO-03",
+    "TODO-04",
+    "TODO-05",
+    "TODO-06",
+    "V-01",
+    "V-02",
+    "V-03",
+    "V-04",
+    "V-05"
+  ],
+  "new_ids": [
+    "CHANGE-03",
+    "V-06"
+  ],
+  "prior_check_record": {
+    "result": "PASS",
+    "checks": [
+      "input and skill snapshot hashes unchanged",
+      "Markdown local targets and anchors valid",
+      "no template placeholders",
+      "DEC-02/03/04 remain pending",
+      "only planning, tracking and check artifacts created"
+    ],
+    "links": [
+      {
+        "from": "artifacts/renovation/fixture-case/tracking.md",
+        "target": "plan.md",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/tracking.md",
+        "target": "source-check.json",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/tracking.md",
+        "target": "plan.md#3-任務與影響",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/tracking.md",
+        "target": "plan.md#3-任務與影響",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/tracking.md",
+        "target": "plan.md#3-任務與影響",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/tracking.md",
+        "target": "plan.md#3-任務與影響",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/tracking.md",
+        "target": "plan.md#3-任務與影響",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/tracking.md",
+        "target": "plan.md#3-任務與影響",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/plan.md",
+        "target": "source-check.json",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/plan.md",
+        "target": "../../../inputs/specs/action-bar.md#cmp-search-action",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/plan.md",
+        "target": "tracking.md#8-增量與變更紀錄",
+        "exists_and_anchor_valid": true
+      },
+      {
+        "from": "artifacts/renovation/fixture-case/plan.md",
+        "target": "tracking.md#5-todo-與契約缺口",
+        "exists_and_anchor_valid": true
+      }
+    ],
+    "failures": [],
+    "not_executed": [
+      "JSP runtime",
+      "browser visual and interaction validation",
+      "backend requests"
+    ],
+    "delivery": "partial planning phase; no dependency decision received"
+  },
+  "limits": [
+    "Prior check results preserved as historical record; current pass is limited to the listed static checks.",
+    "Initial editable copies matched immutable prior byte-for-byte before editing. Prior plan-before-analysis order has not been independently verified.",
+    "Legacy handler, Ledger implementation and session providers not supplied; no external systems accessed.",
+    "No new system specification, HTML prototype, API projection or HANDOFF; dependency choices remain pending."
+  ]
+}

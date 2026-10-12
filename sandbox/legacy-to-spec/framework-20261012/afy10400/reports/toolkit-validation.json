@@ -1,0 +1,40 @@
+{
+  "skill_commit": "e107caa",
+  "test_branch_commit": "ac035cf",
+  "checks": [
+    {
+      "check": "skill quick_validate.py",
+      "status": "PASS"
+    },
+    {
+      "check": "python unittest discover tests/legacy-to-spec test_*.py",
+      "status": "PASS",
+      "tests": 24
+    },
+    {
+      "check": "skill documents relative links and anchors",
+      "status": "PASS",
+      "files": 26
+    },
+    {
+      "check": "duplicate full paragraphs across skill documents",
+      "status": "PASS",
+      "note": "No identical paragraphs of over 100 characters; semantic responsibility review performed separately."
+    },
+    {
+      "check": "offline manual browser checks",
+      "status": "PASS",
+      "checks": 7,
+      "report": "output/playwright/skill-manual-framework/browser-check.json"
+    },
+    {
+      "check": "AF test branch source allowlist and original SHA-256",
+      "status": "PASS",
+      "AF": 6,
+      "shared": 17
+    }
+  ],
+  "limits": [
+    "Toolkit and documentation checks do not establish renovation semantic completeness or real backend integration."
+  ]
+}

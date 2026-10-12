@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+      "sha256": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a",
+      "bytes": 8966,
+      "physical_lines": 246,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 246,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 1152
+        },
+        "cp950": {
+          "status": "valid"
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Strict decoding does not alone prove intended encoding.",
+    "No input bytes modified."
+  ]
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "path": "skill/SKILL.md",
+    "sha256": "c12a5e8bb0160f42cd78390205ef26346376370cfd88b588b148a125f018a6a5",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/agents/openai.yaml",
+    "sha256": "94b757b513e287b82455e774905e3bd3194b0cb4c5e2fd1a4a44eac93da160cc",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/assets/design/prototype.html",
+    "sha256": "42650370ce9ab508fb9e8e12cce80247f435838585e0f69604ed3cdc2d683a58",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/assets/design/specification.md",
+    "sha256": "45b3661bf2dda434ad6cd34fd32606c60aa21b90e6c4a323ae2611bdbf546b33",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/assets/integration/api-spec.md",
+    "sha256": "8b06c95f50daca5d729a442ee80460bf91d470e1a726042344bac37cbb1c2a40",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/assets/integration/backend-handoff.md",
+    "sha256": "5b893e9e0c9dc8f60baf1237d49d66375c81f37d06cea00370631ac38b46f3e7",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/assets/renovation/tracking.md",
+    "sha256": "355b335ceb2b84f027d1506e9b91621359b1d2f1c722972f16cb91b24a23458a",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/references/acceptance.md",
+    "sha256": "54fc4db9488976aecd3680d6a4c6add3526ecb7a1df9a222200468c61b73337f",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/references/authority.md",
+    "sha256": "3d6ab3eb74f34b95c7a771267fab609e2f46c00b3416597a4aa074744aef83f1",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/references/backend-reference.md",
+    "sha256": "88f80e97f8a9427cff6c259f64e614ed3a46797b0a611bf8b458fb69e78517dd",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/references/coupled-source.md",
+    "sha256": "1eafe3f1fe0ee3b5600681c272a54dbf76701304156a86442b1a705f1aca9b4f",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/references/evidence.md",
+    "sha256": "ac07a413edc293e622b2a205b3e0915f1b079393c070e102b3c7b5e955fbc8a6",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/references/integration-contract.md",
+    "sha256": "eb7709a1f53111af803ea184ff3d224086c1722487b6cf489a1861eafdb5a2bf",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/references/source-analysis.md",
+    "sha256": "13f58194be0e4aa5e8bd0cf607b24e191d41fbfca37a63ea4f76bcca0b94cc4b",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/references/visual-contract.md",
+    "sha256": "cbe02957a622d34b5184c6d142d3c63f560b5fc4a719b6c2afb27eb40c5d2211",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "skill/references/workflow.md",
+    "sha256": "e9516e44d5ab7e9e24b4cc1e730df6aba8979f79e4849fcaca9001be59ef57e2",
+    "matches_manifest": true,
+    "encoding_read": "not attempted",
+    "lines": null
+  },
+  {
+    "path": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+    "sha256": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 246
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/header.jsp",
+    "sha256": "60508a333aa5411f59f252489e4ec50746a8ff84103c0083d777ec1b7283d44d",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 413
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/msgDisplayer.jsp",
+    "sha256": "e39c5526a4ee108bcd8561716ca1e25324e8ad12e3743b13681193c42c9a1ec6",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 188
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/css/cm.css",
+    "sha256": "92b0ad8c25e35c47d46e6f79391803f5f414046faa731712aa7f8478bfee535f",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 957
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/ajax/prototype.js",
+    "sha256": "f727ce3e418c76558c3882064c7b0b4743cd1bcef0e25ebd19d807ad47850636",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 7745
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js",
+    "sha256": "d71734e1cd4ec8cd978020cc670101de9b86ff70a96c0daf4c8d875d065a28e6",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 2638
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/ui/PageUI.js",
+    "sha256": "d733b2884aaf5f6853e4ea75f253117bf72940d0f6c725b4cce71ba18d814f74",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 3428
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/HotKey.js",
+    "sha256": "7501d3cdd52084dec29be7a18b6b5b232de4fa11447c7a7742a4f7f12b94576d",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 107
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/Validator.js",
+    "sha256": "ed58fa05914cfa71b96ef79f47ecfa7dfa0c1622393fcc958bb658dcc41d77be",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 372
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/RPTUtil.js",
+    "sha256": "0b54b047139f08ba233019885d102e095f48d92936a43c536ace524f397638e3",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 764
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/calendar.js",
+    "sha256": "f39aadb9e108b0aea6ccf6f192cd601c0bc7eed1ea80a4ec7aee8faf1149d778",
+    "matches_manifest": true,
+    "encoding_read": "big5",
+    "lines": 1430
+  },
+  {
+    "path": "inputs/frontend/sourceCode/CM/js/date.js",
+    "sha256": "acf6883faeb16f97739af0f13b4a29940be97514b10e93fea39ba6dd7f214185",
+    "matches_manifest": true,
+    "encoding_read": "strict decoding unknown (utf-8/big5/cp950/big5hkscs failed)",
+    "lines": null
+  },
+  {
+    "path": "inputs/backend/docs/OPENAPI.md",
+    "sha256": "13307ed1144946124179d6e02148999e64783e031d440aacc8ff54e03c32f1ef",
+    "matches_manifest": true,
+    "encoding_read": "utf-8",
+    "lines": 751
+  },
+  {
+    "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doPrompt.md",
+    "sha256": "082f353e384c1bc2484e07aacfaa57536f53b813fe080df8378e3009a5cb38fc",
+    "matches_manifest": true,
+    "encoding_read": "utf-8",
+    "lines": 35
+  },
+  {
+    "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doExport.md",
+    "sha256": "8ed2021657fc3f391f71deb9a556c71919ba06cd469781566e22ef07aface20e",
+    "matches_manifest": true,
+    "encoding_read": "utf-8",
+    "lines": 515
+  },
+  {
+    "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doDownload.md",
+    "sha256": "1d07fcd0946717298ce25263901cebc369aa8db7c035efcbed16600d998d1d2c",
+    "matches_manifest": true,
+    "encoding_read": "utf-8",
+    "lines": 46
+  }
+]

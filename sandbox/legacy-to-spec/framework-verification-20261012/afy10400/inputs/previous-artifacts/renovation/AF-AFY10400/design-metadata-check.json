@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "kind": "design-md-metadata-shape-check",
+  "results": [
+    {
+      "file": "artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md",
+      "findings": []
+    },
+    {
+      "file": "artifacts/design/AF-AFY10400/components/CMP-FORM/DESIGN.md",
+      "findings": []
+    },
+    {
+      "file": "artifacts/design/AF-AFY10400/components/CMP-COVER/DESIGN.md",
+      "findings": []
+    },
+    {
+      "file": "artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md",
+      "findings": []
+    }
+  ],
+  "limits": [
+    "Checks name, group shapes and typography field names only.",
+    "Does not validate every value, alias, section, DTCG token or source/style fidelity."
+  ]
+}

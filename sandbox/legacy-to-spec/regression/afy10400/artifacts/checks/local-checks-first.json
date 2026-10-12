@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-12T14:36:05.528186",
+  "environment": "local Python and node, no browser or backend calls",
+  "records": [
+    {
+      "check": "HTML identifiers unique",
+      "passed": true,
+      "actual": {
+        "ids": 33,
+        "unique": 33
+      }
+    },
+    {
+      "check": "Root metadata",
+      "passed": true,
+      "actual": "Scope, screen and initial state metadata found"
+    },
+    {
+      "check": "Initial rows and defaults",
+      "passed": true,
+      "actual": "Parsed initial HTML contains no generated data row; defaults L and AT"
+    },
+    {
+      "check": "No external resource declarations",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "check": "Embedded JavaScript syntax",
+      "passed": true,
+      "actual": {
+        "command": "node --check artifacts/checks/prototype-script.js",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "check": "No network call primitives",
+      "passed": true,
+      "actual": "No call to fetch, XMLHttpRequest or WebSocket found; static check only"
+    },
+    {
+      "check": "Markdown local links",
+      "passed": false,
+      "actual": {
+        "checked": 26,
+        "missing": [
+          {
+            "file": "artifacts/renovation/AF-AFY10400/tracking.md",
+            "target": "../../checks/local-checks.json"
+          }
+        ]
+      }
+    },
+    {
+      "check": "No unfilled template scaffold",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "check": "Prototype product identifiers resolve in specification",
+      "passed": true,
+      "actual": {
+        "identifiers": [
+          "CMP-001",
+          "CMP-002",
+          "CMP-003",
+          "CMP-004",
+          "FLOW-002",
+          "FLOW-003",
+          "FLOW-004",
+          "FLOW-006",
+          "SCR-001",
+          "ST-001",
+          "ST-002",
+          "ST-003",
+          "ST-004",
+          "ST-005",
+          "ST-006",
+          "ST-007",
+          "ST-008",
+          "UI-001",
+          "UI-002",
+          "UI-003",
+          "UI-004",
+          "UI-005",
+          "UI-006",
+          "UI-007",
+          "UI-008",
+          "UI-009",
+          "UI-010",
+          "UI-011",
+          "UI-012",
+          "UI-013"
+        ],
+        "unknown": []
+      }
+    },
+    {
+      "check": "Evidence identifiers resolve in tracking",
+      "passed": true,
+      "actual": {
+        "references": [
+          "E-001",
+          "E-002",
+          "E-003",
+          "E-004",
+          "E-005",
+          "E-006",
+          "E-007",
+          "E-008",
+          "E-009",
+          "E-010",
+          "E-010B",
+          "E-011",
+          "E-012",
+          "E-012D",
+          "E-012P",
+          "E-013",
+          "E-014"
+        ],
+        "unknown": []
+      }
+    },
+    {
+      "check": "Immutable source and skill snapshot hashes",
+      "passed": true,
+      "actual": {
+        "files_checked": 32,
+        "matched": 32
+      }
+    }
+  ],
+  "passed": false,
+  "browser_scenarios": "not executed; parent will run independently",
+  "backend_integration": "not executed; forbidden by task"
+}

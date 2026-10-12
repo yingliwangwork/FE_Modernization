@@ -1,0 +1,26 @@
+{
+  "case": "coupled",
+  "run": "regression",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 22,
+    "markdown_files": 4,
+    "html_files": 1,
+    "links": 33
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/design/fixture-case/prototypes/SCR-001.html": "2cf2becb600da735646f26016955e0c0a19bbd59fbdbb29e756d96873f0f4776",
+    "artifacts/design/fixture-case/specification.md": "ea3387db63b79603faea10f75eabf16846048296235cd0b9d389b45b1d818dc1",
+    "artifacts/integration/fixture-case/api-spec.md": "c8ef3f5966e78fa73ba0abedae6c93edc0872e92c34bec1d7c26f8c7f82c3371",
+    "artifacts/integration/fixture-case/backend-handoff.md": "588e1e9f7b0dd43a8d04d4420a00ed8c41e38c666e33b71fafcb06f49506828d",
+    "artifacts/renovation/fixture-case/local-check-results.txt": "78df1e87fc4fe394bfb0ef127f29fcf81e8e7acfc17d0ae2a14d8e5720e44a40",
+    "artifacts/renovation/fixture-case/local-checks.mjs": "d14dd6afbe38dbb4956d6ff8ef1eeffacebad34226e6696e29811e93b3729910",
+    "artifacts/renovation/fixture-case/tracking.md": "293ff4b37bee5ec96556bca1758287054cd1903597f197f46b3f99c80b3114d7"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

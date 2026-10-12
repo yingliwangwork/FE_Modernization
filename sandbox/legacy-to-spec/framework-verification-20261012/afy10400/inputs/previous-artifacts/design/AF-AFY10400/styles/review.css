@@ -1,0 +1,7 @@
+/* Review tools only. Not a product design requirement. */
+.review {position:relative;z-index:2000;background:white;border:1px dashed #888;margin:16px;padding:12px;font:13px/1.5 Arial,sans-serif;}
+.review textarea {width:100%;box-sizing:border-box;min-height:80px;}
+.review .small {width:220px;}
+.review pre {white-space:pre-wrap;overflow-wrap:anywhere;max-height:220px;overflow:auto;}
+.review label {display:inline-block;margin:4px;}
+.review button {margin:4px;}

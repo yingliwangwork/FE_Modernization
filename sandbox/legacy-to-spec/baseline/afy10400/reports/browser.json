@@ -1,0 +1,177 @@
+{
+  "case": "afy10400",
+  "run": "baseline",
+  "engine": "151.0.7922.34",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "kind": "local-prototype-browser-check",
+  "mode": "scenarios",
+  "checks": [
+    {
+      "id": "initial-defaults-and-zero-rows",
+      "source": "AFY10400.jsp:27-31,199-211,223; source has no initial data row",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "add-delete-and-preserve-selections",
+      "source": "AFY10400.jsp:33-65; append empty row, remove specified row, preserve option values",
+      "status": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "blank-row-rejected-exact-message",
+      "source": "AFY10400.jsp:77-85; exact-empty guard and first-row alert",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "duplicate-check-before-later-row-blank",
+      "source": "AFY10400.jsp:77-92; first row blank check then later-ID duplicate, before later row blank check",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "zero-row-export-reaches-boundary",
+      "source": "AFY10400.jsp:77-97; zero rows skip validation and still initiate export",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "accepted-results-and-download-boundary",
+      "source": "AFY10400.jsp:98-106; update all rows, then hand filename to download; synthesis only supplies callback fixture",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "legacy-rejection-updates-without-download",
+      "source": "AFY10400.jsp:107-113; legacy rejection map updates result cells, does not trigger download; selected target error data=null remains a gap",
+      "status": "PASS",
+      "assertions": 3
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "snapshots": [
+    {
+      "file": "SCR-01.html",
+      "visibleText": "●\t公會通報下傳作業\t畫面編號：AFY10400\n公會補通報作業\n1、此畫面請用Google Chrome使用\n2、收承方式、商品屬性，每次只能針對其中一種組合進行下載，若有多種組合下載，需分多次匯出處理\n3、同一ID查詢多筆保單時，請在保單號碼欄位，輸入多筆且用Enter來分格\n收承方式\t\n承保\n收件\n\t商品屬性\t\n個險\n團險\n意外險\n\n刪除\t被保人ID \t保單號碼\t匯出結果\n審閱工具（不屬產品畫面）\n\n離線來源還原；合成資料沒有真實個資。TODO-01：新舊匯出／拒絕交換差距。TODO-02：下載交接差距。TODO-03／04：未展示條件保護、浮水印、外層訊息。缺圖檔保留空間，等待覆蓋不補造載入圖示。\n\n填入合成輸入（兩列）注入舊接受回應注入舊拒絕回應重設審閱隱藏審閱工具\n初始 ST-01：零列；入口訊息來源未知，未模擬訊息。\n\n接受回應注入後結果為合成「已匯出」；拒絕回應為方法規格已述「ID長度預為10碼」。它們只展示已知形狀，並非由輸入運算所得。原型從不產生檔案、稽核或對外連線。隱藏後重新載入可恢復審閱工具。\n\n規格",
+      "controls": [
+        {
+          "tag": "SELECT",
+          "id": "insrType",
+          "type": "select-one",
+          "text": "承保收件",
+          "value": "L",
+          "disabled": false,
+          "options": [
+            {
+              "value": "L",
+              "text": "承保"
+            },
+            {
+              "value": "R",
+              "text": "收件"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "id": "prodType",
+          "type": "select-one",
+          "text": "個險團險意外險",
+          "value": "AT",
+          "disabled": false,
+          "options": [
+            {
+              "value": "AT",
+              "text": "個險"
+            },
+            {
+              "value": "BG",
+              "text": "團險"
+            },
+            {
+              "value": "CB",
+              "text": "意外險"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "id": "addBtn",
+          "type": "button",
+          "text": "",
+          "value": "新增一列",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "exportBtn",
+          "type": "button",
+          "text": "",
+          "value": "匯出檔案",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "fixture",
+          "type": "button",
+          "text": "填入合成輸入（兩列）",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "accept",
+          "type": "button",
+          "text": "注入舊接受回應",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "reject",
+          "type": "button",
+          "text": "注入舊拒絕回應",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "reset",
+          "type": "button",
+          "text": "重設審閱",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "hide",
+          "type": "button",
+          "text": "隱藏審閱工具",
+          "value": "",
+          "disabled": false,
+          "options": null
+        }
+      ]
+    }
+  ],
+  "prototypeHashes": {
+    "SCR-01.html": "9183144a5540aa5bc74777b06a4a791d24cd1e708e520662e6e646520430627d"
+  },
+  "limits": [
+    "Only generated local prototypes are executed; no legacy JSP runtime or real backend is executed.",
+    "Screenshots do not establish pixel equivalence to the legacy runtime."
+  ],
+  "status": "PASS",
+  "screenshots": "../../../../output/playwright/skill-sandbox/baseline/afy10400"
+}

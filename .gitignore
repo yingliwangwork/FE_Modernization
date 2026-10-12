@@ -1,11 +1,8 @@
-# Local operating-system and Python caches
-.DS_Store
-__pycache__/
-*.py[cod]
+# # Local operating-system and Python caches
+# .DS_Store
+# __pycache__/
+# *.py[cod]
 
-# Test-run records are archived on the backup branch.
-/sandbox/
-/output/playwright/
-
-# Local SSH material
-/ssh_key.txt
+# # Test-run records are archived on the backup branch.
+# /sandbox/
+# /output/playwright/

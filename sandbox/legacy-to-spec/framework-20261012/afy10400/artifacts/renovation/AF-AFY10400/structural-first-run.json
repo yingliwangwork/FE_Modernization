@@ -1,0 +1,2931 @@
+{
+  "status": "FAIL",
+  "counts": {
+    "checks": 582,
+    "failures": 4,
+    "source_manifest_files": 43
+  },
+  "checks": [
+    {
+      "check": "unchanged skill/SKILL.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/agents/openai.yaml",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/guides/acceptance.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/guides/customization.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/guides/dependencies.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/guides/evidence.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/guides/workflow.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/references/api/authority.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/references/api/backend-profile.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/references/api/writing-rules.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/references/legacy/jsp-analysis.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/references/legacy/responsibility-rules.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/references/ui/style-spec.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/references/ui/writing-rules.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/scripts/check_design_metadata.py",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/scripts/select_templates.py",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/scripts/source_inventory.py",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/.DS_Store",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/design/DESIGN.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/design/component.css",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/design/prototype.html",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/design/specification.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/design/tokens.json",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/integration/api-spec.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/integration/backend-handoff.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/renovation/plan.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged skill/templates/renovation/tracking.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/AF/AFY10400.jsp",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/header.jsp",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/msgDisplayer.jsp",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/css/cm.css",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/js/ajax/prototype.js",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/js/ui/PageUI.js",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/js/HotKey.js",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/js/Validator.js",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/js/RPTUtil.js",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/js/calendar.js",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/frontend/sourceCode/CM/js/date.js",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/backend/docs/OPENAPI.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doPrompt.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doExport.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "unchanged inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doDownload.md",
+      "status": "PASS",
+      "detail": "manifest SHA-256 compare"
+    },
+    {
+      "check": "no template placeholder artifacts/design/AF-AFY10400/specification.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: 證據與追蹤",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: 本頁共用契約",
+      "status": "PASS",
+      "detail": "common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: 原型",
+      "status": "PASS",
+      "detail": "prototypes/SCR-01.html"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: API 消費",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: tracking 缺口",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-06",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: common-contracts",
+      "status": "PASS",
+      "detail": "common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-06",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: DESIGN",
+      "status": "PASS",
+      "detail": "components/CMP-PAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: CSS",
+      "status": "PASS",
+      "detail": "styles/CMP-PAGE.css"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: DESIGN",
+      "status": "PASS",
+      "detail": "components/CMP-FORM/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: CSS",
+      "status": "PASS",
+      "detail": "styles/CMP-FORM.css"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: DESIGN",
+      "status": "PASS",
+      "detail": "components/CMP-COVER/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: CSS",
+      "status": "PASS",
+      "detail": "styles/CMP-COVER.css"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: DESIGN",
+      "status": "PASS",
+      "detail": "components/CMP-MESSAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: CSS",
+      "status": "PASS",
+      "detail": "styles/CMP-MESSAGE.css"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-06",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: SCR-01.html",
+      "status": "PASS",
+      "detail": "prototypes/SCR-01.html"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: API-01/02",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/specification.md: HANDOFF-01..04",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "no template placeholder artifacts/design/AF-AFY10400/common-contracts.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: tracking",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/common-contracts.md: TODO-06",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+    },
+    {
+      "check": "no template placeholder artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md: tracking",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md: CSS",
+      "status": "PASS",
+      "detail": "../../styles/CMP-MESSAGE.css"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md: prototype",
+      "status": "PASS",
+      "detail": "../../prototypes/SCR-01.html"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "no template placeholder artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md: tracking",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md: CSS",
+      "status": "PASS",
+      "detail": "../../styles/CMP-PAGE.css"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md: prototype",
+      "status": "PASS",
+      "detail": "../../prototypes/SCR-01.html"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md: TODO-06",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-06"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-PAGE/DESIGN.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "no template placeholder artifacts/design/AF-AFY10400/components/CMP-FORM/DESIGN.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-FORM/DESIGN.md: tracking",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-FORM/DESIGN.md: CSS",
+      "status": "PASS",
+      "detail": "../../styles/CMP-FORM.css"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-FORM/DESIGN.md: prototype",
+      "status": "PASS",
+      "detail": "../../prototypes/SCR-01.html"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-FORM/DESIGN.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-FORM/DESIGN.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "no template placeholder artifacts/design/AF-AFY10400/components/CMP-COVER/DESIGN.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-COVER/DESIGN.md: tracking",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-COVER/DESIGN.md: CSS",
+      "status": "PASS",
+      "detail": "../../styles/CMP-COVER.css"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-COVER/DESIGN.md: prototype",
+      "status": "PASS",
+      "detail": "../../prototypes/SCR-01.html"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-COVER/DESIGN.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/design/AF-AFY10400/components/CMP-COVER/DESIGN.md: TODO-07",
+      "status": "PASS",
+      "detail": "../../../../renovation/AF-AFY10400/tracking.md#todo-07"
+    },
+    {
+      "check": "no template placeholder artifacts/integration/AF-AFY10400/api-spec.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: 前端規格",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: 移交需求",
+      "status": "PASS",
+      "detail": "backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: tracking",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: HANDOFF-01",
+      "status": "PASS",
+      "detail": "backend-handoff.md#handoff-01"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: HANDOFF-04",
+      "status": "PASS",
+      "detail": "backend-handoff.md#handoff-04"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/api-spec.md: HANDOFF-02",
+      "status": "PASS",
+      "detail": "backend-handoff.md#handoff-02"
+    },
+    {
+      "check": "no template placeholder artifacts/integration/AF-AFY10400/backend-handoff.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/backend-handoff.md: 設計",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/backend-handoff.md: API",
+      "status": "PASS",
+      "detail": "api-spec.md"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/backend-handoff.md: tracking",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/backend-handoff.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/backend-handoff.md: TODO-02",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-02"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/backend-handoff.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/backend-handoff.md: TODO-01",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-01"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/backend-handoff.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "local link artifacts/integration/AF-AFY10400/backend-handoff.md: TODO-04",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-04"
+    },
+    {
+      "check": "no template placeholder artifacts/renovation/AF-AFY10400/tracking.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: plan",
+      "status": "PASS",
+      "detail": "plan.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 設計",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 共用契約",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: API",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: handoff",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: source-inventory.json",
+      "status": "PASS",
+      "detail": "source-inventory.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: plan依赖表",
+      "status": "PASS",
+      "detail": "plan.md#2-依賴與契約查找"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: AFY10400.jsp",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/AF/AFY10400.jsp"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: AFY10400.jsp",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/AF/AFY10400.jsp"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: AFY10400.jsp",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/AF/AFY10400.jsp"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: AFY10400.jsp",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/AF/AFY10400.jsp"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: AFY10400.jsp",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/AF/AFY10400.jsp"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: header.jsp",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/header.jsp"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: header.jsp",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/header.jsp"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: header.jsp",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/header.jsp"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: msgDisplayer.jsp",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/msgDisplayer.jsp"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: prototype.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/ajax/prototype.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: CSRUtil.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: CSRUtil.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: CSRUtil.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: PageUI.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/ui/PageUI.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: HotKey.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/HotKey.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: Validator.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/Validator.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: RPTUtil.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/RPTUtil.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: calendar.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/calendar.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: date.js",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/js/date.js"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: cm.css",
+      "status": "PASS",
+      "detail": "../../../inputs/frontend/sourceCode/CM/css/cm.css"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: OPENAPI.md",
+      "status": "PASS",
+      "detail": "../../../inputs/backend/docs/OPENAPI.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: OPENAPI.md",
+      "status": "PASS",
+      "detail": "../../../inputs/backend/docs/OPENAPI.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: AFY1_0400_doExport.md",
+      "status": "PASS",
+      "detail": "../../../inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doExport.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: AFY1_0400_doPrompt.md",
+      "status": "PASS",
+      "detail": "../../../inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doPrompt.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: AFY1_0400_doDownload.md",
+      "status": "PASS",
+      "detail": "../../../inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doDownload.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: template-selection",
+      "status": "PASS",
+      "detail": "template-selection.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: artifact-inventory.json",
+      "status": "FAIL",
+      "detail": "artifact-inventory.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TASK-08／DEC",
+      "status": "PASS",
+      "detail": "plan.md#3-任務與影響"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TASK-08／DEC",
+      "status": "PASS",
+      "detail": "plan.md#3-任務與影響"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TASK-08／DEC",
+      "status": "PASS",
+      "detail": "plan.md#3-任務與影響"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TASK-08／DEC",
+      "status": "PASS",
+      "detail": "plan.md#3-任務與影響"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TASK-08／DEC",
+      "status": "PASS",
+      "detail": "plan.md#3-任務與影響"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TASK-08／DEC",
+      "status": "PASS",
+      "detail": "plan.md#3-任務與影響"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TASK-08／DEC",
+      "status": "PASS",
+      "detail": "plan.md#3-任務與影響"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-06",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-06",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-06",
+      "status": "PASS",
+      "detail": "#todo-06"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-06",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-06",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-06"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-06",
+      "status": "PASS",
+      "detail": "#todo-06"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: specification.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/specification.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "../../renovation/AF-AFY10400/tracking.md#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: common-contracts.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-06",
+      "status": "PASS",
+      "detail": "#todo-06"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-03",
+      "status": "PASS",
+      "detail": "#todo-03"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-MESSAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-PAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-PAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-PAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-PAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-06",
+      "status": "PASS",
+      "detail": "#todo-06"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-PAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-PAGE/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-FORM/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-FORM/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-FORM/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-FORM/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-COVER/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-COVER/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-05",
+      "status": "PASS",
+      "detail": "#todo-05"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: DESIGN.md",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-COVER/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/components/CMP-COVER/DESIGN.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-07",
+      "status": "PASS",
+      "detail": "#todo-07"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: api-spec.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: api-spec.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: api-spec.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: api-spec.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: api-spec.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: api-spec.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: api-spec.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/api-spec.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: backend-handoff.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: backend-handoff.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-02",
+      "status": "PASS",
+      "detail": "#todo-02"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: backend-handoff.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: backend-handoff.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-01",
+      "status": "PASS",
+      "detail": "#todo-01"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: backend-handoff.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: backend-handoff.md",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: 實際位置",
+      "status": "PASS",
+      "detail": "../../integration/AF-AFY10400/backend-handoff.md"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: TODO-04",
+      "status": "PASS",
+      "detail": "#todo-04"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: source-inventory",
+      "status": "PASS",
+      "detail": "source-inventory.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: structural-check",
+      "status": "FAIL",
+      "detail": "structural-check.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: template-selection",
+      "status": "PASS",
+      "detail": "template-selection.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: behavior-check",
+      "status": "PASS",
+      "detail": "behavior-check.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: design-metadata-check",
+      "status": "PASS",
+      "detail": "design-metadata-check.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/tracking.md: structural-check",
+      "status": "FAIL",
+      "detail": "structural-check.json"
+    },
+    {
+      "check": "no template placeholder artifacts/renovation/AF-AFY10400/plan.md",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/plan.md: template-selection.json",
+      "status": "PASS",
+      "detail": "template-selection.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/plan.md: source-inventory.json",
+      "status": "PASS",
+      "detail": "source-inventory.json"
+    },
+    {
+      "check": "local link artifacts/renovation/AF-AFY10400/plan.md: 本頁共用契約",
+      "status": "PASS",
+      "detail": "../../design/AF-AFY10400/common-contracts.md"
+    },
+    {
+      "check": "static HTML ids unique",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "scope/screen/state markers",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML local asset ../styles/CMP-PAGE.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML local asset ../styles/CMP-FORM.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML local asset ../styles/CMP-COVER.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML local asset ../styles/CMP-MESSAGE.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML local asset ../styles/review.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML local asset model.js",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML local asset prototype.js",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML flow documented FLOW-02",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML flow documented FLOW-04",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML flow documented FLOW-10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML flow documented FLOW-09",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML UI documented UI-01",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML UI documented UI-02",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML UI documented UI-03",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML UI documented UI-04",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML UI documented UI-05",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML UI documented UI-09",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML UI documented UI-09",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HTML UI documented UI-10",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no network primitive model.js",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no network primitive prototype.js",
+      "status": "FAIL",
+      "detail": ""
+    },
+    {
+      "check": "CSS no remote/missing url review.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "CSS no remote/missing url CMP-COVER.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "CSS no remote/missing url CMP-PAGE.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "CSS no remote/missing url CMP-FORM.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "CSS no remote/missing url CMP-MESSAGE.css",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "neutral root avoids endpoint/framework syntax",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token afy10400DoExport",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token /afy10400/export",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token afy10400DoDownload",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token /afy10400/download",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token application/octet-stream",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token I_ID",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token POLICY_NO",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token rtnMap",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token fileName",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token code",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token msg",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "API baseline token data",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no invented API target fields",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all four DESIGN metadata",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all twelve behavior checks",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "delivery marked partial",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "findings": [
+    "local link artifacts/renovation/AF-AFY10400/tracking.md: artifact-inventory.json: artifact-inventory.json",
+    "local link artifacts/renovation/AF-AFY10400/tracking.md: structural-check: structural-check.json",
+    "local link artifacts/renovation/AF-AFY10400/tracking.md: structural-check: structural-check.json",
+    "no network primitive prototype.js: "
+  ],
+  "limits": [
+    "Static HTML parsing cannot establish browser DOM recovery, computed styles, native UI, performance or pixel equivalence.",
+    "API token comparison is a supplemental locator check; actual wire meanings were manually compared with selected Markdown baseline.",
+    "No official OpenAPI/DESIGN format validator, live HTTP or external system was called."
+  ]
+}

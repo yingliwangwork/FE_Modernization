@@ -1,0 +1,227 @@
+{
+  "date": "2026-10-12",
+  "scope": "fixture-case",
+  "status": "partial",
+  "checks": [
+    {
+      "check": "manifest hashes (provided skill and input snapshots)",
+      "passed": true,
+      "detail": {
+        "entries": 22,
+        "sources": [
+          {
+            "path": "inputs/backend/api-contract.md",
+            "sha256": "04215f381bc195b357b184c89d90e6f4fba521580feb7147c141a25cdb1ca802",
+            "matches_manifest": true,
+            "encoding": "UTF-8",
+            "line_endings": "LF",
+            "lines": 27
+          },
+          {
+            "path": "inputs/backend/business-rules.md",
+            "sha256": "35e4253d281cacc662c065ed690337ae8a71f04233df8289c065828aba7614b7",
+            "matches_manifest": true,
+            "encoding": "UTF-8",
+            "line_endings": "LF",
+            "lines": 6
+          },
+          {
+            "path": "inputs/frontend/Case.jsp",
+            "sha256": "90f46177654b8276566c96686c667dac1352f2a398fae3d7c50ec930636c1154",
+            "matches_manifest": true,
+            "encoding": "UTF-8",
+            "line_endings": "LF",
+            "lines": 60
+          },
+          {
+            "path": "inputs/frontend/components/action-bar.jspf",
+            "sha256": "61f70725865ae2fc7e49b2aea291e420255f4b1e5049728fc48740431871ff9e",
+            "matches_manifest": true,
+            "encoding": "UTF-8",
+            "line_endings": "LF",
+            "lines": 1
+          },
+          {
+            "path": "inputs/frontend/legacy-bridge.js",
+            "sha256": "f008cb043d31d427d923e66ae33e1e98c13dd1dc9dd3f668c2fd3faf72eda09a",
+            "matches_manifest": true,
+            "encoding": "UTF-8",
+            "line_endings": "LF",
+            "lines": 8
+          },
+          {
+            "path": "inputs/frontend/styles/base.css",
+            "sha256": "447252200c775df2b42ee0656df20334a806d91799a20602cc8f8b71d8debd99",
+            "matches_manifest": true,
+            "encoding": "UTF-8",
+            "line_endings": "LF",
+            "lines": 4
+          }
+        ]
+      }
+    },
+    {
+      "check": "exact one scoped root",
+      "passed": true,
+      "detail": "inputs/frontend/Case.jsp"
+    },
+    {
+      "check": "no unresolved template placeholders or skeleton",
+      "passed": true,
+      "detail": [
+        "artifacts/design/fixture-case/specification.md",
+        "artifacts/integration/fixture-case/api-spec.md",
+        "artifacts/integration/fixture-case/backend-handoff.md",
+        "artifacts/renovation/fixture-case/tracking.md",
+        "artifacts/design/fixture-case/prototypes/SCR-01.html"
+      ]
+    },
+    {
+      "check": "local document links and anchors",
+      "passed": true,
+      "detail": {
+        "links": 28,
+        "errors": []
+      }
+    },
+    {
+      "check": "unique DOM IDs",
+      "passed": true,
+      "detail": [
+        "review-result",
+        "review-deliver",
+        "review-reset",
+        "review-log",
+        "product",
+        "reviewer",
+        "filter",
+        "search",
+        "status",
+        "rows",
+        "quantity-form",
+        "quantity"
+      ]
+    },
+    {
+      "check": "product UI IDs exact specification set",
+      "passed": true,
+      "detail": [
+        "UI-01",
+        "UI-02",
+        "UI-03",
+        "UI-04",
+        "UI-05",
+        "UI-06",
+        "UI-07",
+        "UI-08",
+        "UI-09",
+        "UI-10",
+        "UI-11"
+      ]
+    },
+    {
+      "check": "product flow and component IDs",
+      "passed": true,
+      "detail": {
+        "flows": [
+          "FLOW-02",
+          "FLOW-04"
+        ],
+        "components": [
+          "CMP-01"
+        ]
+      }
+    },
+    {
+      "check": "scope screen initial state mapping",
+      "passed": true,
+      "detail": {
+        "lang": "zh-Hant",
+        "data-scope-id": "fixture-case",
+        "data-screen-id": "SCR-01",
+        "data-state-id": "ST-01"
+      }
+    },
+    {
+      "check": "all prototype contract attributes exist in specification",
+      "passed": true,
+      "detail": "Attribute values reverse checked against specification"
+    },
+    {
+      "check": "dynamic state IDs declared",
+      "passed": true,
+      "detail": [
+        "ST-02",
+        "ST-03",
+        "ST-04",
+        "ST-05",
+        "ST-06",
+        "ST-07",
+        "ST-01"
+      ]
+    },
+    {
+      "check": "offline resources and connection code",
+      "passed": true,
+      "detail": {
+        "resources": [],
+        "connection_primitives": []
+      }
+    },
+    {
+      "check": "quantity has no local backend calculation/store",
+      "passed": true,
+      "detail": "Prototype only checks exact empty string and records original text at boundary"
+    },
+    {
+      "check": "JavaScript syntax via node --check",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "check": "known operation identifiers and wire terms preserved",
+      "passed": true,
+      "detail": [
+        "searchItems",
+        "POST /v2/items/search",
+        "application/json",
+        "queryText",
+        "unitId",
+        "outcome",
+        "rows",
+        "rowId",
+        "label",
+        "OK",
+        "EMPTY",
+        "DENIED"
+      ]
+    },
+    {
+      "check": "no invented integration endpoints",
+      "passed": true,
+      "detail": [
+        "/v2/items/search"
+      ]
+    },
+    {
+      "check": "source coverage row count",
+      "passed": true,
+      "detail": {
+        "rows": 25,
+        "unknown_dependency_internals_excluded": true
+      }
+    }
+  ],
+  "all_static_checks_passed": true,
+  "not_executed": [
+    "Browser render and actual interaction",
+    "Browser console and network observation",
+    "Legacy runtime comparison",
+    "Real backend integration or Ledger persistence"
+  ],
+  "claims_limited_to": "Provided source and documents plus static checks; no runtime behavior, pixel equivalence or deployed API verification"
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "skill-directory-migration",
+  "directory": ".agents/skills/legacy-to-spec",
+  "real_directory": true,
+  "skill_file_content_unchanged": true,
+  "unit_tests": 26,
+  "unit_tests_status": "PASS",
+  "skill_validation": "PASS",
+  "local_links_checked": 165,
+  "broken_links": [],
+  "historical_snapshots": "unchanged"
+}

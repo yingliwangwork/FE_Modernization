@@ -1,0 +1,10 @@
+{
+  "old_shared_closure_regression_rejected": true,
+  "actual_failure": "1 == 0",
+  "current_fix": "Each fresh show creates a local const firstKeyHandler; first keypress removes itself.",
+  "current_mock_groups_passed": 16,
+  "limits": [
+    "Generated prototype only; no legacy execution.",
+    "Actual Chromium reopen sequence must be checked separately."
+  ]
+}

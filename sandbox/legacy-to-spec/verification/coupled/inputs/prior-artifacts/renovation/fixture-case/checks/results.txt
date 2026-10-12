@@ -1,0 +1,30 @@
+Historical revision 0.1 evidence (not proof of 0.2):
+PASS V-01: all manifest snapshot hashes unchanged; source UTF-8/LF.
+PASS V-02a: Markdown/HTML local links and fragments resolve; no template placeholders.
+PASS V-02b: source visual constants, UI/FLOW/CMP IDs and local-only prototype structure checked.
+PASS V-02c: known selected API identifiers/fields/results retained; handoffs and explicit gaps present.
+LIMIT: these are static checks; browser rendering, actual authentication/transport and backend business execution unverified.
+PASS V-03: generated prototype script syntax and local DOM reactions executed.
+PASS: AC-01 visible initial subset; AC-02 trim/status/old-row timing; AC-03 synthetic rows; AC-04 EMPTY; AC-05 DENIED; AC-06 out-of-order response/status retention; AC-07 native alert invocation/block; AC-08 nonempty boundary subset; AC-10 other result; review reset/toggle.
+LIMIT: minimal fake DOM, not a browser; native dialog presentation, layout, focus, network panel and real initialization/API/business execution are unverified.
+
+Revision 0.2 actual verification, 2026-10-12:
+$ python3 artifacts/renovation/fixture-case/checks/static.py
+PASS V-01: all manifest snapshot hashes unchanged; source UTF-8/LF.
+PASS V-02a: Markdown/HTML local links and fragments resolve; no template placeholders.
+PASS V-02b: source visual constants, UI/FLOW/CMP IDs and local-only prototype structure checked.
+PASS V-02c: known selected API identifiers/fields/results retained; handoffs and explicit gaps present.
+LIMIT: these are static checks; browser rendering, actual authentication/transport and backend business execution unverified.
+PASS V-07: all expanded affected contract definitions contain actual TODO and follow-up links; location table addresses actual IDs.
+PASS V-08: eight independent API contract cases include absent/empty/null/length/type and known response shape; unsupported AC-02 coverage claim removed.
+LIMIT V-08: documentation comparison only; no service call or backend validator executed.
+PASS V-09: prior scope IDs and evidence references retained across all five Markdown artifacts.
+PASS V-07 integration: API-01 and three HANDOFF actual sections retain linked gaps and follow-up tasks.
+Exit code: 0
+
+$ node artifacts/renovation/fixture-case/checks/prototype.js
+PASS V-03: generated prototype script syntax and local DOM reactions executed.
+PASS: AC-01 visible initial subset; AC-02 trim/status/old-row timing; AC-03 synthetic rows; AC-04 EMPTY; AC-05 DENIED; AC-06 out-of-order response/status retention; AC-07 native alert invocation/block; AC-08 nonempty boundary subset; AC-10 other result; review reset/toggle.
+LIMIT: minimal fake DOM, not a browser; native dialog presentation, layout, focus, network panel and real initialization/API/business execution are unverified.
+Exit code: 0
+Browser availability probe performed for this revision: PATH chromium/chromium-browser/google-chrome/playwright/firefox: None; Python playwright: unavailable, selenium: available; Node playwright/puppeteer: unavailable. No browser session, driver download, server/service, legacy runtime or network call performed. Browser rendering/native alert presentation/focus/console/network-panel and real API/business integration remain unverified. Deployment state unconfirmed. TODO-01 through TODO-06 remain open; partial delivery.

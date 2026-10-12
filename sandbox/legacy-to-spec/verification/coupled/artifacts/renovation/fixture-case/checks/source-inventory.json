@@ -1,0 +1,120 @@
+{
+  "files": [
+    {
+      "path": "inputs/frontend/Case.jsp",
+      "sha256": "90f46177654b8276566c96686c667dac1352f2a398fae3d7c50ec930636c1154",
+      "bytes": 2333,
+      "physical_lines": 60,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 60,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/styles/base.css",
+      "sha256": "447252200c775df2b42ee0656df20334a806d91799a20602cc8f8b71d8debd99",
+      "bytes": 245,
+      "physical_lines": 4,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 4,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/components/action-bar.jspf",
+      "sha256": "61f70725865ae2fc7e49b2aea291e420255f4b1e5049728fc48740431871ff9e",
+      "bytes": 91,
+      "physical_lines": 1,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 1,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/legacy-bridge.js",
+      "sha256": "f008cb043d31d427d923e66ae33e1e98c13dd1dc9dd3f668c2fd3faf72eda09a",
+      "bytes": 264,
+      "physical_lines": 8,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 8,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/specs/action-bar.md",
+      "sha256": "ad476cde1e96947d8a96acf928082ab78b796a8c53eb88d9eb6cfc32b5e1e141",
+      "bytes": 723,
+      "physical_lines": 11,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 11,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/backend/api-contract.md",
+      "sha256": "04215f381bc195b357b184c89d90e6f4fba521580feb7147c141a25cdb1ca802",
+      "bytes": 1302,
+      "physical_lines": 27,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 27,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/backend/business-rules.md",
+      "sha256": "35e4253d281cacc662c065ed690337ae8a71f04233df8289c065828aba7614b7",
+      "bytes": 356,
+      "physical_lines": 6,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 6,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Strict decode validity is not proof of intended encoding or readable meaning.",
+    "No input files changed; no replacement decoding used."
+  ]
+}

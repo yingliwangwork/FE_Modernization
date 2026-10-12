@@ -1,0 +1,34 @@
+{
+  "kind": "source-lifecycle-browser-check",
+  "checks": [
+    {
+      "id": "cover-window-focus-attempt",
+      "source": "CSRUtil.js:321-326 active control type contains button",
+      "status": "FAIL",
+      "observed": {
+        "activeType": "button",
+        "attempts": 0
+      },
+      "detail": "Source-defined window focus attempt was omitted"
+    },
+    {
+      "id": "detached-message-first-key-guard",
+      "source": "CSRUtil.js:1545-1555,1613-1625 detached message returns before stopping key",
+      "status": "FAIL",
+      "observed": {
+        "accepted": false,
+        "defaultPrevented": true,
+        "propagated": 0
+      },
+      "detail": "Detached message must not cancel the first closing key\n\ntrue !== false\n"
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "limits": [
+    "Synthetic keypress checks the source listener condition, not native Escape compatibility.",
+    "A focus-call observer verifies an attempt; it does not prove the operating system changed focus.",
+    "No legacy server or backend is executed."
+  ],
+  "status": "FAIL"
+}

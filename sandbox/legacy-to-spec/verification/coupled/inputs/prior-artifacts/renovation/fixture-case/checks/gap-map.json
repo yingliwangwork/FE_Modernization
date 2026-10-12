@@ -1,0 +1,162 @@
+{
+  "scope": "fixture-case",
+  "revision": "0.2",
+  "impacts": {
+    "TODO-01": {
+      "ids": [
+        "FLOW-01",
+        "BOUND-01",
+        "UI-02",
+        "DATA-02",
+        "ST-01",
+        "AC-01",
+        "AC-09"
+      ],
+      "task": "TASK-08",
+      "decision": "DEC-01"
+    },
+    "TODO-02": {
+      "ids": [
+        "FLOW-03",
+        "BOUND-02",
+        "DATA-05",
+        "UI-05",
+        "ST-03",
+        "AC-03",
+        "AC-06"
+      ],
+      "task": "TASK-09",
+      "decision": "DEC-01"
+    },
+    "TODO-03": {
+      "ids": [
+        "FLOW-01",
+        "FLOW-04",
+        "FLOW-05",
+        "BOUND-03",
+        "DATA-06",
+        "DATA-07",
+        "DATA-08",
+        "DATA-09",
+        "UI-07",
+        "UI-08",
+        "ST-01",
+        "ST-07",
+        "BR-04",
+        "AC-07",
+        "AC-08",
+        "AC-09"
+      ],
+      "task": "TASK-08",
+      "decision": "DEC-01"
+    },
+    "TODO-04": {
+      "ids": [
+        "FLOW-02",
+        "FLOW-03",
+        "BOUND-02",
+        "DATA-08",
+        "ST-02",
+        "ST-08",
+        "TR-07",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-10"
+      ],
+      "task": "TASK-09",
+      "decision": "DEC-01"
+    },
+    "TODO-05": {
+      "ids": [
+        "SCR-01",
+        "UI-01",
+        "UI-02",
+        "UI-03",
+        "UI-04",
+        "UI-05",
+        "UI-06",
+        "UI-07",
+        "UI-08",
+        "ST-01",
+        "ST-02",
+        "ST-03",
+        "ST-04",
+        "ST-05",
+        "ST-06",
+        "ST-07",
+        "ST-08",
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-09",
+        "AC-10",
+        "AC-11"
+      ],
+      "task": "TASK-10",
+      "decision": "environment-limit"
+    },
+    "TODO-06": {
+      "ids": [
+        "CMP-02",
+        "SCR-01",
+        "UI-05",
+        "FLOW-02",
+        "FLOW-03",
+        "BOUND-02",
+        "ST-02",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-10",
+        "AC-11"
+      ],
+      "task": "TASK-07",
+      "decision": "DEC-01"
+    }
+  },
+  "integration_impacts": {
+    "TODO-01": [
+      {
+        "id": "HANDOFF-01",
+        "file": "integration/fixture-case/backend-handoff.md",
+        "task": "TASK-08"
+      }
+    ],
+    "TODO-02": [
+      {
+        "id": "HANDOFF-03",
+        "file": "integration/fixture-case/backend-handoff.md",
+        "task": "TASK-09"
+      },
+      {
+        "id": "API-01",
+        "file": "integration/fixture-case/api-spec.md",
+        "task": "TASK-09"
+      }
+    ],
+    "TODO-03": [
+      {
+        "id": "HANDOFF-02",
+        "file": "integration/fixture-case/backend-handoff.md",
+        "task": "TASK-08"
+      }
+    ],
+    "TODO-04": [
+      {
+        "id": "API-01",
+        "file": "integration/fixture-case/api-spec.md",
+        "task": "TASK-09"
+      }
+    ]
+  }
+}

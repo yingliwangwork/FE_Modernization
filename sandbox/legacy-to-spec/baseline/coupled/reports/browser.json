@@ -1,0 +1,157 @@
+{
+  "case": "coupled",
+  "run": "baseline",
+  "engine": "151.0.7922.34",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "kind": "local-prototype-browser-check",
+  "mode": "scenarios",
+  "checks": [
+    {
+      "id": "initial-view",
+      "source": "inputs/frontend/Case.jsp:49-61; no initial query or rows",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "query-order-and-trim",
+      "source": "Case.jsp:20-34; clears status before request, retains rows until callback, trims input; two synthetic rows only supply scenario data",
+      "status": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "empty-response",
+      "source": "Case.jsp:24,32-33; contract EMPTY maps legacy NONE",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "denied-response",
+      "source": "Case.jsp:24,34-35; contract DENIED maps legacy BLOCK",
+      "status": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "empty-quantity-rejected",
+      "source": "Case.jsp:41-44; exact empty-string guard and alert",
+      "status": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "nonempty-quantity-stops-at-boundary",
+      "source": "Case.jsp:41-46; whitespace is nonempty; target quantity logic has no API contract, no backend execution may be claimed",
+      "status": "PASS",
+      "assertions": 3
+    }
+  ],
+  "errors": [],
+  "networkAttempts": [],
+  "snapshots": [
+    {
+      "file": "SCR-01.html",
+      "visibleText": "審閱工具（可折疊）\n\n部分成果 v1。名稱與資料列是合成 legacy 展示資料；排序提示型別尚未知，不代表目標 API 欄位。沒有外部呼叫、數量計算、保存或真实受信任情境。\n\n規格 · 證據與限制\n\n待交付的 legacy 展示回應 \nDONE：兩筆合成資料（排序提示尚未被目標承接）\nNONE：沒有項目\nBLOCK：不允許查閱\n其他碼：只展示已知 legacy 分支前綴\n交付展示回應 重設展示\n\n操作：先點產品「查閱」進入 ST-02，再交付回應。非空數量只記錄交接邊界（TODO-03），不假扮完成或失敗；空量使用來源原文警示。\n\n缺口：TODO-01 名稱來源；TODO-02 排序提示；TODO-03 數量後端；TODO-04 身份；TODO-05 非既定回應；TODO-06 瀏覽器／原畫面未驗證。\n\nST-01；所有顯示資料均為合成。尚未執行瀏覽器驗證。\n項目查閱\n\n審閱者：展示審閱者\n\n關鍵字\n查閱\n\n項目代碼\t名稱\t排序提示\n數量 送出數量",
+      "controls": [
+        {
+          "tag": "SELECT",
+          "id": "review-result",
+          "type": "select-one",
+          "text": "DONE：兩筆合成資料（排序提示尚未被目標承接）\n   NONE：沒有項目\n   BLOCK：不允許查閱\n   其他碼：只展示已知 legacy 分支前綴",
+          "value": "DONE",
+          "disabled": false,
+          "options": [
+            {
+              "value": "DONE",
+              "text": "DONE：兩筆合成資料（排序提示尚未被目標承接）"
+            },
+            {
+              "value": "NONE",
+              "text": "NONE：沒有項目"
+            },
+            {
+              "value": "BLOCK",
+              "text": "BLOCK：不允許查閱"
+            },
+            {
+              "value": "OTHER",
+              "text": "其他碼：只展示已知 legacy 分支前綴"
+            }
+          ]
+        },
+        {
+          "tag": "BUTTON",
+          "id": "review-deliver",
+          "type": "button",
+          "text": "交付展示回應",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "review-reset",
+          "type": "button",
+          "text": "重設展示",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "filter",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "search",
+          "type": "button",
+          "text": "查閱",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "",
+          "type": "hidden",
+          "text": "",
+          "value": "commit",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "INPUT",
+          "id": "quantity",
+          "type": "text",
+          "text": "",
+          "value": "",
+          "disabled": false,
+          "options": null
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "type": "submit",
+          "text": "送出數量",
+          "value": "",
+          "disabled": false,
+          "options": null
+        }
+      ]
+    }
+  ],
+  "prototypeHashes": {
+    "SCR-01.html": "0d99f90c5daae7d0a13846fceb36983011470762542682ee82d7c57e28535953"
+  },
+  "limits": [
+    "Only generated local prototypes are executed; no legacy JSP runtime or real backend is executed.",
+    "Screenshots do not establish pixel equivalence to the legacy runtime."
+  ],
+  "status": "PASS",
+  "screenshots": "../../../../output/playwright/skill-sandbox/baseline/coupled"
+}

@@ -1,0 +1,8 @@
+Use the skill at skill/SKILL.md to renovate exactly the root JSP inputs/frontend/Case.jsp.
+Work only inside this case directory. Read manifest.json for inputs and scope.
+The selected backend baseline is inputs/backend/api-contract.md; use only provided input snapshots.
+Produce the applicable specification, HTML prototypes, API consumption spec, backend handoff, and separate tracking under artifacts/. Do not modify skill/, inputs/, or manifest.json.
+Missing dependencies remain unknown. Do not query or call external systems.
+Create plan before dependency analysis. Existing dependency contracts may be under inputs/specs/.
+Sandbox-only simulated user decision: reuse suitable existing contracts; defer every dependency lacking a suitable contract. This does not authorize formal project deferral. Record affected positions and follow-up tasks.
+Carry out the skill's applicable checks; report actual limits and output paths.

@@ -1,0 +1,10 @@
+Use the skill at skill/SKILL.md to renovate exactly the root JSP inputs/frontend/Case.jsp.
+Work only inside this case directory. Read manifest.json for inputs and scope.
+The selected backend baseline is inputs/backend/api-contract.md; use only provided input snapshots.
+Produce the applicable specification, HTML prototypes, API consumption spec, backend handoff, and separate tracking under artifacts/. Do not modify skill/, inputs/, or manifest.json.
+Missing dependencies remain unknown. Do not query or call external systems.
+Create plan before dependency analysis. Existing dependency contracts may be under inputs/specs/.
+No dependency expansion or deferral decision is pre-authorized. Report concrete choices and continue independent work only.
+Carry out the skill's applicable checks; report actual limits and output paths.
+
+Current realistic phase request overrides full-delivery scope: continue the existing dependency planning phase under current skill, verify records and provide a self-contained outgoing message with resources and impacts so the user can choose first-convert or defer. NO USER ANSWER has been supplied. Existing artifacts/ is an editable copy, immutable prior delivery is inputs/prior-artifacts/. Preserve IDs and evidence, update plan/tracking/checks as warranted, do not force dependent full-delivery files. This is simulated dialogue: final answer is the outgoing user message, never invoke real user-input tools or invent an answer.

@@ -1,0 +1,9 @@
+請使用 skill/SKILL.md 續作唯一根入口 inputs/frontend/sourceCode/AF/AFY10400.jsp，scope AF-AFY10400。
+這是有審查資訊的維護續作，不是盲測生成。manifest 鎖定新的 skill、原始 inputs、上一轮完整 artifacts 及審查資料。
+只讀取本 case 的 skill/、inputs/、manifest.json、task.txt 与既有 artifacts/；只修改 artifacts/，不修改 skill、inputs、manifest、task，不讀其他 case 或外部資源。勿啟動其他代理。
+先讀既有 plan/tracking，補本輪續作任務、依賴與影響，再回查原始來源修正。保留既有 ID、初輪 plan 建立順序與歷史，不將初輪改為已通過。
+按 inputs/review-semantic-review.md 的 F-01..08、review-structure.json 與 review-browser.json 修正確證缺陷；來源與新版 skill 是規則依據，不以審查取代原始來源。
+重點是：產品與審閱控制可正常點擊、共用樣式覆蓋所有產品掛載位置、結果格原有對齊、條件式視窗焦點嘗試、拖曳中首鍵 guard、正式契約技術中立、STYLE證據／token映射、DEP表欄位及未截斷引用。
+完整保留已知分支与未知邊界。新來源未提供，原 TODO 不能由本輪自行關閉；仍不執行真正業務、網路、下載或稽核。
+可執行 Node／metadata／文件檢查。父代理另做瀏覽器；不要修改其 scenario 或把未執行項目寫成通過。實際結果及限制寫 tracking。
+本輪依賴延後／先轉換仍是 task 的沙盒模擬決策，不能當正式擴張授權。請完成適用文件、原型与樣式同步，回報產物與實際檢查。

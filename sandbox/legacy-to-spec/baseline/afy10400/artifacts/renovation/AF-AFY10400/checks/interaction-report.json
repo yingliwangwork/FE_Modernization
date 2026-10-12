@@ -1,0 +1,51 @@
+{
+  "environment": "Node vm with a minimal local DOM substitute; no real browser, legacy JSP, network, service or file download.",
+  "results": [
+    {
+      "name": "Initial zero rows; defaults preserved; added row controls and alternating colors",
+      "result": "passed"
+    },
+    {
+      "name": "Deletion removes only selected row and recolors retained row",
+      "result": "passed"
+    },
+    {
+      "name": "Empty ID or policy shows exact first-row alert and leaves input/results intact",
+      "result": "passed"
+    },
+    {
+      "name": "Duplicate check in earlier nonempty row precedes later blank-policy check",
+      "result": "passed"
+    },
+    {
+      "name": "Zero-row export reaches boundary without alert",
+      "result": "passed"
+    },
+    {
+      "name": "Whitespace passes exact-empty front guard; multiline remains unmodified",
+      "result": "passed"
+    },
+    {
+      "name": "Review acceptance writes results before download-boundary state; no file generation",
+      "result": "passed"
+    },
+    {
+      "name": "Review rejection writes known synthetic per-row text without download",
+      "result": "passed"
+    },
+    {
+      "name": "Editing inputs and options leaves existing export result text",
+      "result": "passed"
+    },
+    {
+      "name": "Review reply injection requires prior export boundary",
+      "result": "passed"
+    }
+  ],
+  "passed": 10,
+  "failed": 0,
+  "limits": [
+    "Does not test layout, native maxlength/input/Enter/alert behavior, focus, keyboard, CSS, browser events, console or network monitor.",
+    "Does not test missing external message frames, conditional information protection, trusted context, watermark, target envelopes or binary transfer."
+  ]
+}

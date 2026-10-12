@@ -1,0 +1,28 @@
+{
+  "case": "coupled",
+  "run": "refinement",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 25,
+    "markdown_files": 5,
+    "html_files": 1,
+    "links": 86
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/design/fixture-case/prototypes/items.html": "ffcbfc4fb5b4a66b6f584be14906d788c5f072f2b43fa16ae85bd067f38a41a1",
+    "artifacts/design/fixture-case/specification.md": "90b2f4c6eb8afb766e7c24dfcf51c9074a1a81b42fd140b7bd20244feb17cb02",
+    "artifacts/integration/fixture-case/api-spec.md": "1eef8319043c9f5e3734985393f57a6cd0a92e9b553cbb21bb9ff1bea19d616d",
+    "artifacts/integration/fixture-case/backend-handoff.md": "02f8f108b45b3aa3d8bbca30fd652ca669dee2941603229becffac3266f77c8a",
+    "artifacts/renovation/fixture-case/checks/prototype.js": "5eed8daf58797ba66b0b92b28fda009c3df6cbe577f52ed5aded95df3bafae0e",
+    "artifacts/renovation/fixture-case/checks/results.txt": "4a2f15d2f0bac024a95954b98749d4df194921999c6db19e1f0a0c7bcc972ec6",
+    "artifacts/renovation/fixture-case/checks/static.py": "b7a2100799b0e368274ea48793606943bb219ce34bfdde6d53f3d132e0d68ef7",
+    "artifacts/renovation/fixture-case/plan.md": "f76bf769419c89b9cf6ab117ada6a586782c4b2f62b44e535ce0f9894611c02f",
+    "artifacts/renovation/fixture-case/tracking.md": "eccc7c9487612a38f1fade2e509a3be1e42cdcf7da1e1c7860062bf4bd141658"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "manifest_files_checked": 32,
+  "immutable_hash_matches": 32,
+  "root_lines": 246,
+  "markdown_files_checked": 5,
+  "prototype_root": {
+    "class": "product",
+    "id": "product",
+    "data-scope-id": "AF-AFY10400",
+    "data-screen-id": "SCR-01",
+    "data-state-id": "ST-01"
+  },
+  "external_network_constructs_found": false,
+  "errors": [],
+  "limitations": [
+    "HTMLParser checks structure/attributes, not browser validity or layout.",
+    "No API calls, JSP runtime, legacy pixel comparison, browser interaction, keyboard, console or network monitor executed.",
+    "Date helper strict encoding remains unknown."
+  ]
+}

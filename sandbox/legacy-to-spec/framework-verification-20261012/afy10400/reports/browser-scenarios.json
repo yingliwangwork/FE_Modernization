@@ -1,0 +1,642 @@
+{
+  "case": "afy10400",
+  "scenarios": [
+    {
+      "id": "initial-zero-rows",
+      "source": "AFY10400.jsp:27-31,199-211,223",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "value",
+          "selector": "#insrType",
+          "value": "L"
+        },
+        {
+          "action": "value",
+          "selector": "#prodType",
+          "value": "AT"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "add-delete-preserve-and-colors",
+      "source": "AFY10400.jsp:33-65,116-123",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#id-1",
+          "value": "A"
+        },
+        {
+          "action": "fill",
+          "selector": "#policy-1",
+          "value": "P1"
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#id-2",
+          "value": "B"
+        },
+        {
+          "action": "fill",
+          "selector": "#policy-2",
+          "value": "P2"
+        },
+        {
+          "action": "select",
+          "selector": "#prodType",
+          "value": "CB"
+        },
+        {
+          "action": "click",
+          "selector": "#row-1 input[type=button]"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 1
+        },
+        {
+          "action": "value",
+          "selector": "#id-2",
+          "value": "B"
+        },
+        {
+          "action": "value",
+          "selector": "#prodType",
+          "value": "CB"
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "count",
+          "selector": "#id-3",
+          "value": 1
+        },
+        {
+          "action": "css",
+          "selector": "#row-2",
+          "property": "background-color",
+          "value": "rgb(238, 241, 167)"
+        },
+        {
+          "action": "css",
+          "selector": "#row-3",
+          "property": "background-color",
+          "value": "rgb(250, 251, 225)"
+        }
+      ]
+    },
+    {
+      "id": "first-empty-exact-message",
+      "source": "AFY10400.jsp:77-85",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "dialog",
+          "value": "第1列的被保人ID或保單號碼不得為空值，若不需要請刪除該列"
+        },
+        {
+          "action": "count",
+          "selector": "#request-choice option",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "duplicate-before-later-empty",
+      "source": "AFY10400.jsp:77-92",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#id-1",
+          "value": "A"
+        },
+        {
+          "action": "fill",
+          "selector": "#policy-1",
+          "value": "P1"
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#id-2",
+          "value": "A"
+        },
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "dialog",
+          "value": "被保人ID：A有重覆出現，請合併在同一列處理"
+        },
+        {
+          "action": "count",
+          "selector": "#request-choice option",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "zero-row-boundary",
+      "source": "AFY10400.jsp:77-97",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "count",
+          "selector": "#request-choice option",
+          "value": 1
+        },
+        {
+          "action": "attribute",
+          "selector": "#cover",
+          "attribute": "hidden",
+          "value": null
+        },
+        {
+          "action": "contains",
+          "selector": "#review-log",
+          "value": "已知匯出邊界 R1"
+        }
+      ]
+    },
+    {
+      "id": "current-id-response-and-download",
+      "source": "AFY10400.jsp:98-106 live element collection",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#id-1",
+          "value": "A"
+        },
+        {
+          "action": "fill",
+          "selector": "#policy-1",
+          "value": "P1"
+        },
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#id-1",
+          "value": "B"
+        },
+        {
+          "action": "fill",
+          "selector": "#response-map",
+          "value": "{\"A\": \"from-A\", \"B\": \"from-B\"}"
+        },
+        {
+          "action": "fill",
+          "selector": "#file-name",
+          "value": "SYNTHETIC-FILE"
+        },
+        {
+          "action": "click",
+          "selector": "#inject"
+        },
+        {
+          "action": "content",
+          "selector": "#result-1",
+          "value": "from-B"
+        },
+        {
+          "action": "contains",
+          "selector": "#review-log",
+          "value": "回填後到下載邊界 R1：SYNTHETIC-FILE"
+        }
+      ]
+    },
+    {
+      "id": "legacy-rejection-results",
+      "source": "AFY10400.jsp:107-113; rejection results do not imply target API supports the same map",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#id-1",
+          "value": "A"
+        },
+        {
+          "action": "fill",
+          "selector": "#policy-1",
+          "value": "P1"
+        },
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#return-code",
+          "value": "9"
+        },
+        {
+          "action": "fill",
+          "selector": "#response-map",
+          "value": "{\"A\": \"\\u5408\\u6210\\u62d2\\u7d55\\u539f\\u56e0\"}"
+        },
+        {
+          "action": "click",
+          "selector": "#inject"
+        },
+        {
+          "action": "content",
+          "selector": "#result-1",
+          "value": "合成拒絕原因"
+        },
+        {
+          "action": "dialog",
+          "value": "訊息說明：\n"
+        }
+      ]
+    },
+    {
+      "id": "native-success-format",
+      "source": "CSRUtil.js:626-680 known formatter; response description is synthetic",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#response-msg",
+          "value": "合成完成"
+        },
+        {
+          "action": "click",
+          "selector": "#inject"
+        },
+        {
+          "action": "dialog",
+          "value": "訊息說明：\n合成完成"
+        }
+      ]
+    },
+    {
+      "id": "native-error-format",
+      "source": "CSRUtil.js:626-680 native error, msgid length >17",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#return-code",
+          "value": "9"
+        },
+        {
+          "action": "fill",
+          "selector": "#message-id",
+          "value": "DEMO-ERROR-0000000001"
+        },
+        {
+          "action": "fill",
+          "selector": "#response-msg",
+          "value": "合成錯誤"
+        },
+        {
+          "action": "click",
+          "selector": "#inject"
+        },
+        {
+          "action": "dialog",
+          "value": "錯誤編號：\nDEMO-ERROR-0000000001\n訊息說明：\n合成錯誤"
+        }
+      ]
+    },
+    {
+      "id": "empty-message-fallback",
+      "source": "CSRUtil.js:1592-1599",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#show-custom"
+        },
+        {
+          "action": "content",
+          "selector": "#message-content",
+          "value": "(無訊息內容)"
+        },
+        {
+          "action": "css",
+          "selector": "#message-content font",
+          "property": "color",
+          "value": "rgb(128, 128, 128)"
+        }
+      ]
+    },
+    {
+      "id": "accumulated-message-width",
+      "source": "CSRUtil.js:1603-1660 repeated display width cannot shrink",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "fill",
+          "selector": "#custom-msg",
+          "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+        },
+        {
+          "action": "click",
+          "selector": "#show-custom"
+        },
+        {
+          "action": "box_record",
+          "selector": "#message",
+          "key": "long-window"
+        },
+        {
+          "action": "fill",
+          "selector": "#custom-msg",
+          "value": "Z"
+        },
+        {
+          "action": "click",
+          "selector": "#show-custom"
+        },
+        {
+          "action": "contains",
+          "selector": "#message-content",
+          "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\nZ"
+        },
+        {
+          "action": "width_preserved",
+          "selector": "#message",
+          "key": "long-window"
+        }
+      ]
+    },
+    {
+      "id": "message-drag",
+      "source": "CSRUtil.js:1526-1568 title drag intermediate state",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "fill",
+          "selector": "#custom-msg",
+          "value": "合成訊息"
+        },
+        {
+          "action": "click",
+          "selector": "#show-custom"
+        },
+        {
+          "action": "drag",
+          "selector": "#message-title",
+          "target": "#message",
+          "dx": 80,
+          "dy": 50,
+          "outline": "#drag-frame"
+        }
+      ]
+    },
+    {
+      "id": "reopen-key-listener-identity",
+      "source": "CSRUtil.js:1609-1632; synthetic keypress tests source condition, not native Escape compatibility",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "fill",
+          "selector": "#custom-msg",
+          "value": "合成訊息"
+        },
+        {
+          "action": "click",
+          "selector": "#show-custom"
+        },
+        {
+          "action": "click",
+          "selector": "#message-ok"
+        },
+        {
+          "action": "click",
+          "selector": "#show-custom"
+        },
+        {
+          "action": "press",
+          "selector": "#message-ok",
+          "key": "a"
+        },
+        {
+          "action": "keyboard_event",
+          "selector": "#message-ok",
+          "type": "keypress",
+          "key": "Escape",
+          "keyCode": 27
+        },
+        {
+          "action": "attribute",
+          "selector": "#message",
+          "attribute": "hidden",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "window-keyboard-policy",
+      "source": "header.jsp:136-147 window capture policy",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "check",
+          "selector": "#policy-on",
+          "value": true
+        },
+        {
+          "action": "blur"
+        },
+        {
+          "action": "press_page",
+          "key": "Control+a"
+        },
+        {
+          "action": "dialog",
+          "value": "依據資安政策，不開放全選功能"
+        }
+      ]
+    },
+    {
+      "id": "independent-copy-expiration",
+      "source": "header.jsp:149-183 independent timers A@0 B@30 B@61",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "clock_install"
+        },
+        {
+          "action": "check",
+          "selector": "#policy-on",
+          "value": true
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "observe",
+          "selector": "#review-log"
+        },
+        {
+          "action": "fill",
+          "selector": "#policy-1",
+          "value": "A"
+        },
+        {
+          "action": "copy_selection",
+          "selector": "#policy-1",
+          "value": "A"
+        },
+        {
+          "action": "observations",
+          "value": 1,
+          "filter": "複製軌跡邊界"
+        },
+        {
+          "action": "clock_run",
+          "milliseconds": 30000
+        },
+        {
+          "action": "fill",
+          "selector": "#policy-1",
+          "value": "B"
+        },
+        {
+          "action": "copy_selection",
+          "selector": "#policy-1",
+          "value": "B"
+        },
+        {
+          "action": "observations",
+          "value": 2,
+          "filter": "複製軌跡邊界"
+        },
+        {
+          "action": "clock_run",
+          "milliseconds": 31000
+        },
+        {
+          "action": "copy_selection",
+          "selector": "#policy-1",
+          "value": "B"
+        },
+        {
+          "action": "observations",
+          "value": 3,
+          "filter": "複製軌跡邊界"
+        }
+      ]
+    },
+    {
+      "id": "button-padding-cascade",
+      "source": "cm.css:162-164 :root .button",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "css",
+          "selector": "#addBtn",
+          "property": "padding-left",
+          "value": "10px"
+        },
+        {
+          "action": "css",
+          "selector": "#addBtn",
+          "property": "padding-right",
+          "value": "10px"
+        }
+      ]
+    },
+    {
+      "id": "message-button-global-readonly-cascade",
+      "source": "cm.css global input:read-only; CSRUtil message confirm button is outside root product container",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#show-custom"
+        },
+        {
+          "action": "css",
+          "selector": "#message-ok",
+          "property": "border-top-style",
+          "value": "none"
+        },
+        {
+          "action": "css",
+          "selector": "#message-ok",
+          "property": "border-top-width",
+          "value": "0px"
+        }
+      ]
+    },
+    {
+      "id": "result-alignment-preserved",
+      "source": "AFY10400.jsp:40-58 centers only first three added cells; cm.css has no matching result-cell centering rule",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "css",
+          "selector": "#result-1",
+          "property": "text-align",
+          "value": "start"
+        }
+      ]
+    }
+  ]
+}

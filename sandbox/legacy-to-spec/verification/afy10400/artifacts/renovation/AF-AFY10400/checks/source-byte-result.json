@@ -1,0 +1,435 @@
+{
+  "files": [
+    {
+      "path": "inputs/frontend/sourceCode/AF/AFY10400.jsp",
+      "sha256": "fbf8f94aee2f03f830f5092ba280dca6f6707ce45d54a929e6ec7cecd4284b1a",
+      "bytes": 8966,
+      "physical_lines": 246,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 246,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 1152
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/header.jsp",
+      "sha256": "60508a333aa5411f59f252489e4ec50746a8ff84103c0083d777ec1b7283d44d",
+      "bytes": 14883,
+      "physical_lines": 413,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 412,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 10646
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/msgDisplayer.jsp",
+      "sha256": "e39c5526a4ee108bcd8561716ca1e25324e8ad12e3743b13681193c42c9a1ec6",
+      "bytes": 5748,
+      "physical_lines": 188,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 187,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 3058
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/css/cm.css",
+      "sha256": "92b0ad8c25e35c47d46e6f79391803f5f414046faa731712aa7f8478bfee535f",
+      "bytes": 21121,
+      "physical_lines": 957,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 957,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 433
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/ajax/prototype.js",
+      "sha256": "f727ce3e418c76558c3882064c7b0b4743cd1bcef0e25ebd19d807ad47850636",
+      "bytes": 205545,
+      "physical_lines": 7745,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 7744,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 7012
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/ajax/CSRUtil.js",
+      "sha256": "d71734e1cd4ec8cd978020cc670101de9b86ff70a96c0daf4c8d875d065a28e6",
+      "bytes": 75502,
+      "physical_lines": 2638,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 2637,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 624
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/ui/PageUI.js",
+      "sha256": "d733b2884aaf5f6853e4ea75f253117bf72940d0f6c725b4cce71ba18d814f74",
+      "bytes": 108554,
+      "physical_lines": 3428,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 3428,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 25
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/HotKey.js",
+      "sha256": "7501d3cdd52084dec29be7a18b6b5b232de4fa11447c7a7742a4f7f12b94576d",
+      "bytes": 2583,
+      "physical_lines": 107,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 107,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 4
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/Validator.js",
+      "sha256": "ed58fa05914cfa71b96ef79f47ecfa7dfa0c1622393fcc958bb658dcc41d77be",
+      "bytes": 10457,
+      "physical_lines": 372,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 371,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 4
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/RPTUtil.js",
+      "sha256": "0b54b047139f08ba233019885d102e095f48d92936a43c536ace524f397638e3",
+      "bytes": 25213,
+      "physical_lines": 764,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 763,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 480
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/calendar.js",
+      "sha256": "f39aadb9e108b0aea6ccf6f192cd601c0bc7eed1ea80a4ec7aee8faf1149d778",
+      "bytes": 61895,
+      "physical_lines": 1430,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 1429,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 935
+        },
+        "cp950": {
+          "status": "valid"
+        },
+        "big5": {
+          "status": "valid"
+        },
+        "big5hkscs": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "inputs/frontend/sourceCode/CM/js/date.js",
+      "sha256": "acf6883faeb16f97739af0f13b4a29940be97514b10e93fea39ba6dd7f214185",
+      "bytes": 37508,
+      "physical_lines": 1089,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 1088,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 8
+        },
+        "cp950": {
+          "status": "invalid",
+          "byte_offset": 40
+        },
+        "big5": {
+          "status": "invalid",
+          "byte_offset": 40
+        },
+        "big5hkscs": {
+          "status": "invalid",
+          "byte_offset": 40
+        }
+      }
+    },
+    {
+      "path": "inputs/backend/docs/OPENAPI.md",
+      "sha256": "13307ed1144946124179d6e02148999e64783e031d440aacc8ff54e03c32f1ef",
+      "bytes": 31847,
+      "physical_lines": 751,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 751,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        },
+        "cp950": {
+          "status": "invalid",
+          "byte_offset": 52
+        },
+        "big5": {
+          "status": "invalid",
+          "byte_offset": 52
+        },
+        "big5hkscs": {
+          "status": "invalid",
+          "byte_offset": 52
+        }
+      }
+    },
+    {
+      "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doPrompt.md",
+      "sha256": "082f353e384c1bc2484e07aacfaa57536f53b813fe080df8378e3009a5cb38fc",
+      "bytes": 1675,
+      "physical_lines": 35,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 35,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        },
+        "cp950": {
+          "status": "invalid",
+          "byte_offset": 41
+        },
+        "big5": {
+          "status": "invalid",
+          "byte_offset": 41
+        },
+        "big5hkscs": {
+          "status": "invalid",
+          "byte_offset": 41
+        }
+      }
+    },
+    {
+      "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doExport.md",
+      "sha256": "8ed2021657fc3f391f71deb9a556c71919ba06cd469781566e22ef07aface20e",
+      "bytes": 33150,
+      "physical_lines": 515,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 515,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        },
+        "cp950": {
+          "status": "invalid",
+          "byte_offset": 41
+        },
+        "big5": {
+          "status": "invalid",
+          "byte_offset": 41
+        },
+        "big5hkscs": {
+          "status": "invalid",
+          "byte_offset": 41
+        }
+      }
+    },
+    {
+      "path": "inputs/backend/docs/specs/AFY1_0400/AFY1_0400_doDownload.md",
+      "sha256": "1d07fcd0946717298ce25263901cebc369aa8db7c035efcbed16600d998d1d2c",
+      "bytes": 2883,
+      "physical_lines": 46,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 46,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "valid"
+        },
+        "cp950": {
+          "status": "invalid",
+          "byte_offset": 45
+        },
+        "big5": {
+          "status": "invalid",
+          "byte_offset": 45
+        },
+        "big5hkscs": {
+          "status": "invalid",
+          "byte_offset": 47
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Strict decode validity is not proof of intended encoding or readable meaning.",
+    "No input files changed; no replacement decoding used."
+  ]
+}

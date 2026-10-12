@@ -1,0 +1,41 @@
+{
+  "kind": "inherited-browser-evidence-with-unchanged-runtime-artifacts",
+  "status": "PASS",
+  "prior_report": "inputs/prior-browser.json",
+  "runtime_files": [
+    {
+      "file": "artifacts/design/fixture-case/prototypes/SCR-01.html",
+      "sha256": "331f40851377d368715ba49ce5ff1c3043c1b305ec82148b1663a2839325f244",
+      "byte_identical_to_prior": true
+    },
+    {
+      "file": "artifacts/design/fixture-case/prototypes/prototype.js",
+      "sha256": "6e845ab0a47c43de876335f826965baeca2ae5e928404e755f92c029af3ddb6a",
+      "byte_identical_to_prior": true
+    },
+    {
+      "file": "artifacts/design/fixture-case/styles/CMP-PAGE.css",
+      "sha256": "8a099c0ec0062caa1768b498fa5cc527021705a378a459ade636ef1b60643356",
+      "byte_identical_to_prior": true
+    },
+    {
+      "file": "artifacts/design/fixture-case/styles/CMP-SEARCH-ACTION.css",
+      "sha256": "9343cfba5a7a6b07fbfb2b37ad825289d651bb89ab1b56f1595bcbc3d2d1dc96",
+      "byte_identical_to_prior": true
+    },
+    {
+      "file": "artifacts/design/fixture-case/styles/CMP-TABLE.css",
+      "sha256": "3dc2355a010cc64fc22d0ed7e3e864a35bc66c2e52e93f83706b2fcaa7aa9220",
+      "byte_identical_to_prior": true
+    },
+    {
+      "file": "artifacts/design/fixture-case/styles/tokens.json",
+      "sha256": "e631928b73beaf88d737d4cf7b089201b746e1ef508a6db9401f54702f26189a",
+      "byte_identical_to_prior": true
+    }
+  ],
+  "limits": [
+    "No browser rerun in this continuation; actual run occurred in styles/coupled.",
+    "DESIGN.md metadata changed and is checked separately."
+  ]
+}

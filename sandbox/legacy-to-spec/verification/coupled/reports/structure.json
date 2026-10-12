@@ -1,0 +1,30 @@
+{
+  "case": "coupled",
+  "run": "verification",
+  "kind": "structural-and-input-integrity-check",
+  "status": "PASS",
+  "metrics": {
+    "snapshots": 37,
+    "markdown_files": 5,
+    "html_files": 1,
+    "links": 764
+  },
+  "findings": [],
+  "artifact_sha256": {
+    "artifacts/design/fixture-case/prototypes/items.html": "11d7bae5267cf6b797bace8ac3fa04c1cd1b24cd7219fc8c0a05d59440da30b9",
+    "artifacts/design/fixture-case/specification.md": "07dcb9bd621b18ccd827f417cac4fb8f6aedfd054c6d9d2bea6ef1369b4e547b",
+    "artifacts/integration/fixture-case/api-spec.md": "132d25b2a01fed4f70610598a394c90789edf79a5aadfffbd3d76060431e18e5",
+    "artifacts/integration/fixture-case/backend-handoff.md": "672634cfc336c99dab53d71a26fa4b6947a5a4a9fc6ef4cec64cabfd5f3faec8",
+    "artifacts/renovation/fixture-case/checks/gap-map.json": "2b4a00464f17a84e27b5ba39de4de6c25e32a282f905da7c8d0ea2ec6fac28f3",
+    "artifacts/renovation/fixture-case/checks/prototype.js": "f291a698c2b676681b39f9b514a31cc5067a3c1fbdc486dccc7133f33626b6dd",
+    "artifacts/renovation/fixture-case/checks/results.txt": "032d93d4e1163fefdd3a7c92b319241a16fb54bcad2b61884f812ab60c417115",
+    "artifacts/renovation/fixture-case/checks/source-inventory.json": "7f135b49e60c938d9029f08c8c2d01e65b2fae0a4cebd3e87f7466c77892efc4",
+    "artifacts/renovation/fixture-case/checks/static.py": "ccdaeb6d4e475da114673df528e9379ecb9124fec4427cba9802e8251565b42b",
+    "artifacts/renovation/fixture-case/plan.md": "20a8b4021ca3d1caf9d1634bcbfed541b5a07e763202e6a9afa2d23edeb84587",
+    "artifacts/renovation/fixture-case/tracking.md": "d008e423ddf7b2271fd0db8f406ecf4667d25e618ed7bdb7b051266822ef64ca"
+  },
+  "limits": [
+    "Does not establish semantic source coverage, visual fidelity, or integration with a backend.",
+    "Source-based independent review and browser checks are separate required evidence."
+  ]
+}

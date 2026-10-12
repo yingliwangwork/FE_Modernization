@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "path": "tool-documents/AGENTS.md",
+      "sha256": "f6d50e9b9ab8aab309d58fa30591f25215cdb86f717d8e2e08b23b71792f14a4"
+    },
+    {
+      "path": "tool-documents/README.md",
+      "sha256": "79afe7d73a62b4c4cbeac1a56617e603c0e40c622bc97d43c841182dc8486538"
+    },
+    {
+      "path": "tool-documents/docs/legacy-to-spec-manual.html",
+      "sha256": "08d0275f6d504d50e1b1d1d3d5169667d2b5f79adbeb8483448944db6c2293a3"
+    },
+    {
+      "path": "tool-documents/docs/legacy-to-spec-manual.md",
+      "sha256": "7335cec789eed34318e6b9998a6804e273a5270d1ca38e1359cfb0be3360660a"
+    },
+    {
+      "path": "tool-documents/scripts/skill-sandbox.py",
+      "sha256": "9c118e5cbe162418cd63816fcdcc82ba381612ab727bf09dce557c660a8a3905"
+    },
+    {
+      "path": "tool-documents/tests/legacy-to-spec/af-scope.json",
+      "sha256": "aa240f318504900224a21ee502887625949e1da6c58b673c7a43617de12e4169"
+    },
+    {
+      "path": "tool-documents/tests/legacy-to-spec/test_sandbox_harness.py",
+      "sha256": "abbe7e1d0615346a779cbc396a12b81ab9a3141a1faa1a75495dda62b105b035"
+    }
+  ]
+}
