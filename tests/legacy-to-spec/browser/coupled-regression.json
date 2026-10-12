@@ -1,0 +1,274 @@
+{
+  "case": "coupled",
+  "scenarios": [
+    {
+      "id": "initial-view",
+      "source": "inputs/frontend/Case.jsp:49-61; no initial query or rows",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "value",
+          "label": "關鍵字",
+          "value": ""
+        },
+        {
+          "action": "attribute",
+          "label": "關鍵字",
+          "attribute": "maxlength",
+          "value": "12"
+        },
+        {
+          "action": "count",
+          "selector": "#rows tr",
+          "value": 0
+        },
+        {
+          "action": "content",
+          "selector": "#status",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "query-order-and-trim",
+      "source": "Case.jsp:20-34; clears status before request, retains rows until callback, trims input; two synthetic rows only supply scenario data",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "check",
+          "selector": "#hold-response",
+          "value": true
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "查閱"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "交付下一個本機回應"
+        },
+        {
+          "action": "count",
+          "selector": "#rows tr",
+          "value": 2
+        },
+        {
+          "action": "fill",
+          "label": "關鍵字",
+          "value": "  Ab  "
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "查閱"
+        },
+        {
+          "action": "count",
+          "selector": "#rows tr",
+          "value": 2
+        },
+        {
+          "action": "contains",
+          "selector": "#boundary-log",
+          "value": "\"Ab\""
+        },
+        {
+          "action": "content",
+          "selector": "#status",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "empty-response",
+      "source": "Case.jsp:24,32-33; contract EMPTY maps legacy NONE",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "check",
+          "selector": "#hold-response",
+          "value": true
+        },
+        {
+          "action": "select",
+          "selector": "#response-scenario",
+          "value": "NONE"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "查閱"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "交付下一個本機回應"
+        },
+        {
+          "action": "count",
+          "selector": "#rows tr",
+          "value": 0
+        },
+        {
+          "action": "content",
+          "selector": "#status",
+          "value": "沒有項目"
+        }
+      ]
+    },
+    {
+      "id": "denied-response",
+      "source": "Case.jsp:24,34-35; contract DENIED maps legacy BLOCK",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "check",
+          "selector": "#hold-response",
+          "value": true
+        },
+        {
+          "action": "select",
+          "selector": "#response-scenario",
+          "value": "BLOCK"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "查閱"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "交付下一個本機回應"
+        },
+        {
+          "action": "count",
+          "selector": "#rows tr",
+          "value": 0
+        },
+        {
+          "action": "content",
+          "selector": "#status",
+          "value": "不允許查閱"
+        }
+      ]
+    },
+    {
+      "id": "empty-quantity-rejected",
+      "source": "Case.jsp:41-44; exact empty-string guard and alert",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "click",
+          "role": "button",
+          "name": "送出數量"
+        },
+        {
+          "action": "dialog",
+          "value": "數量不得為空"
+        },
+        {
+          "action": "value",
+          "label": "數量",
+          "value": ""
+        },
+        {
+          "action": "content",
+          "selector": "#status",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "nonempty-quantity-stops-at-boundary",
+      "source": "Case.jsp:41-46; whitespace is nonempty; target quantity logic has no API contract, no backend execution may be claimed",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "fill",
+          "label": "數量",
+          "value": " "
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "送出數量"
+        },
+        {
+          "action": "value",
+          "label": "數量",
+          "value": " "
+        },
+        {
+          "action": "contains",
+          "selector": "#boundary-log",
+          "value": "未計算"
+        },
+        {
+          "action": "content",
+          "selector": "#status",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "overlapping-callbacks-keep-previous-message",
+      "source": "Case.jsp:20,24-35; triggers clear status, DONE callback does not clear status written by another callback; supplied response order is only a local test fixture",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "check",
+          "selector": "#hold-response",
+          "value": true
+        },
+        {
+          "action": "select",
+          "selector": "#response-scenario",
+          "value": "BLOCK"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "查閱"
+        },
+        {
+          "action": "select",
+          "selector": "#response-scenario",
+          "value": "DONE"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "查閱"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "交付下一個本機回應"
+        },
+        {
+          "action": "content",
+          "selector": "#status",
+          "value": "不允許查閱"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "交付下一個本機回應"
+        },
+        {
+          "action": "count",
+          "selector": "#rows tr",
+          "value": 2
+        },
+        {
+          "action": "content",
+          "selector": "#status",
+          "value": "不允許查閱"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Legacy to Spec skill 操作手冊：單一 JSP 翻新、依賴決策、樣式雙份交付、客製化、驗證與續作。">
+<title>Legacy to Spec · 操作手冊</title>
+<style>
+:root{color-scheme:light;--ink:#18352c;--muted:#5a6c64;--accent:#167657;--line:#dbe4de;--paper:#fff;--canvas:#f3f6f3;--sidebar:#17392e}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--canvas);color:var(--ink);font:16px/1.8 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:#116c50;text-underline-offset:3px}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #dfac43;outline-offset:4px}button{font:inherit;cursor:pointer}.skip-link{position:fixed;left:16px;top:12px;z-index:3;padding:10px 18px;background:#fff;transform:translateY(-170%)}.skip-link:focus{transform:translateY(0)}
+.layout{display:grid;grid-template-columns:278px minmax(0,1fr);min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--sidebar);color:#e6f1eb;padding:32px 23px}.brand{margin:0;font-size:20px;font-weight:720;line-height:1.35}.brand small{display:block;font-size:12px;letter-spacing:.14em;color:#b5d0c1;margin-bottom:9px}.side-note{font-size:13px;line-height:1.7;color:#bdd1c5;margin:18px 0 27px}.sidebar summary{font-size:14px;font-weight:600;cursor:pointer;list-style:none}.sidebar summary::-webkit-details-marker{display:none}.toc-wrap nav{display:grid;gap:4px;margin-top:12px}.toc-wrap a{color:#d0e3d7;text-decoration:none;line-height:1.65;font-size:14px;padding:9px 11px;border-radius:6px;border-left:3px solid transparent}.toc-wrap a:hover,.toc-wrap a[aria-current]{background:#285342;color:#fff;border-left-color:#9cd6b8}.side-foot{font-size:12px;color:#bdd1c5;margin-top:32px;padding-top:18px;border-top:1px solid #476154}.side-foot a{color:#e1efdf}
+main{min-width:0;width:100%;max-width:1190px;margin:0 auto;padding:38px clamp(22px,4vw,64px) 70px}.top-bar{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:22px}.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted);font-weight:650;margin:0}.tools{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.tools a,.tools button{border:1px solid var(--line);border-radius:6px;background:#fff;padding:7px 12px;text-decoration:none;color:var(--ink);font-size:13px;line-height:1.5}.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;padding:0;margin:0 0 28px;list-style:none}.flow li{padding:12px 9px;border:1px solid var(--line);background:#e8f0e9;border-radius:7px;line-height:1.5;font-size:12px}.flow span{display:block;color:var(--muted);font-size:10px;letter-spacing:.1em;margin-bottom:4px}.article{padding:30px clamp(22px,3vw,38px) 40px;background:var(--paper);border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 24px #18352c06}.article h1{font-size:clamp(27px,3.3vw,40px);line-height:1.3;letter-spacing:-.035em;margin:0 0 16px}.article h1+p{color:var(--muted);font-size:17px}.article h2{font-size:25px;line-height:1.5;margin:48px 0 18px;padding-top:30px;border-top:1px solid var(--line);scroll-margin-top:24px}.inline-toc{margin:25px 0;padding:12px 16px;background:#f3f7f1;border:1px solid var(--line);border-radius:7px}.inline-toc summary{cursor:pointer;font-size:14px;font-weight:600}.inline-toc ul{columns:2}.article h3{font-size:18px;margin:28px 0 12px;line-height:1.6}.article p{margin:13px 0}.article ul,.article ol{padding-left:25px;margin:14px 0}.article li{padding-left:3px;margin:5px 0}.article strong{font-weight:700}.article :not(pre)>code{font-size:.88em;border:1px solid #e3eae5;border-radius:4px;background:#f2f5f1;padding:2px 5px;overflow-wrap:anywhere;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.table-wrap{max-width:100%;overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:8px}.table-wrap:focus-visible{outline-offset:2px}table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px;line-height:1.75}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:12px 14px}th{background:#eef4ee;font-weight:650;color:#21493b}tr:last-child td{border-bottom:0}tbody tr:nth-child(even){background:#fafcf9}.code-box{margin:18px 0;border:1px solid #d6e0d8;border-radius:8px;overflow:hidden;background:#162f27;color:#e4f1e5}.code-bar{display:flex;justify-content:space-between;align-items:center;padding:7px 12px;border-bottom:1px solid #3b5347;background:#1e3c30;font-size:11px;letter-spacing:.08em}.copy-button{font-size:12px;letter-spacing:0;border:1px solid #607c69;border-radius:4px;color:#e8f3e8;background:#2b4c3c;padding:3px 10px}.copy-button:hover{background:#3b604b}pre{margin:0;padding:17px;max-width:100%;overflow-x:auto;font-size:13px;line-height:1.8}pre code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;tab-size:2}.article input[type=checkbox]{accent-color:var(--accent);margin-right:6px}.article ul:has(input[type=checkbox]){list-style:none;padding-left:2px}.page-foot{font-size:12px;color:var(--muted);margin-top:22px}.status{position:fixed;right:20px;bottom:20px;max-width:calc(100vw - 40px);font-size:13px;background:#183d2e;color:#fff;padding:11px 16px;border-radius:6px;box-shadow:0 3px 10px #0002}.status:empty{display:none}
+@media(min-width:901px){.sidebar summary{pointer-events:none}}
+@media(max-width:900px){.layout{display:block}.sidebar{position:static;height:auto;overflow:visible;padding:20px 24px}.brand{font-size:18px}.brand small{font-size:11px;display:inline;margin-right:12px}.side-note,.side-foot{display:none}.sidebar summary{padding:12px 0 0}.sidebar summary:after{content:" ＋";float:right}.toc-wrap[open] summary:after{content:" −"}.toc-wrap nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.toc-wrap a{font-size:13px}.top-bar{margin-bottom:18px}main{padding:24px 16px 45px}.article{padding:24px 18px}.article h2{font-size:22px;margin-top:36px}.flow{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.flow li{padding:10px}.tools a,.tools button{padding:6px 9px;font-size:12px}.eyebrow{font-size:10px}.inline-toc ul{columns:1}.table-wrap table{min-width:540px}pre{font-size:12px;padding:13px}}
+@media(max-width:440px){.top-bar{align-items:flex-start;gap:8px}.eyebrow{max-width:120px}.tools{justify-content:flex-end}.toc-wrap nav{grid-template-columns:1fr}.article h1{font-size:27px}.article h1+p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{@page{size:A4;margin:15mm}html{scroll-behavior:auto}body{background:#fff;color:#000;font-size:10pt;line-height:1.6}.layout{display:block}.sidebar,.top-bar,.flow,.copy-button,.status,.skip-link,.page-foot,.inline-toc{display:none!important}main{padding:0;max-width:none}.article{border:0;border-radius:0;box-shadow:none;padding:0}.article h1{font-size:23pt}.article h2{font-size:16pt;padding-top:18px;margin-top:26px;break-after:avoid}.article h3{font-size:12pt;break-after:avoid}.table-wrap{overflow:visible;max-width:none;break-inside:auto}table{min-width:0!important;font-size:9pt}th,td{padding:7px;overflow-wrap:anywhere}thead{display:table-header-group}tr{break-inside:avoid}.code-box{background:#fafafa;color:#000;break-inside:auto}.code-bar{background:#eee;color:#000;border-color:#ccc}pre{font-size:8.5pt}a{color:#000}a[href^="http"]:after{content:" (" attr(href) ")";font-size:8pt}.article :not(pre)>code{background:#f7f7f7}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳到手冊內容</a>
+<div class="layout">
+<aside class="sidebar" aria-label="手冊導覽">
+<p class="brand"><small>LEGACY TO SPEC</small>使用與維護</p>
+<p class="side-note">一個入口、一組可追溯契約。從計劃到驗證，逐步處理已知與缺口。</p>
+<details class="toc-wrap" open><summary>章節目錄</summary><nav aria-label="章節"><a href="#1-快速開始">1. 快速開始</a>
+<a href="#2-準備本輪輸入">2. 準備本輪輸入</a>
+<a href="#3-一輪翻新的操作流程">3. 一輪翻新的操作流程</a>
+<a href="#4-外部依賴如何決策">4. 外部依賴如何決策</a>
+<a href="#5-找到與理解交付文件">5. 找到與理解交付文件</a>
+<a href="#6-檢視畫面與元件樣式">6. 檢視畫面與元件樣式</a>
+<a href="#7-客製範本與撰寫規則">7. 客製範本與撰寫規則</a>
+<a href="#8-輔助工具操作">8. 輔助工具操作</a>
+<a href="#9-驗證與交付判定">9. 驗證與交付判定</a>
+<a href="#10-續作與關閉待辦">10. 續作與關閉待辦</a>
+<a href="#11-沙盒練習">11. 沙盒練習</a>
+<a href="#12-常見問題與規則索引">12. 常見問題與規則索引</a></nav></details>
+<p class="side-foot">更新 2026-10-12<br><a href="../skills/legacy-to-spec/SKILL.md">檢視 skill 原則</a> · <a href="../README.md">專案說明</a></p>
+</aside>
+<main id="main-content" tabindex="-1">
+<div class="top-bar"><p class="eyebrow">操作手冊 · 離線閱讀</p><div class="tools"><a href="legacy-to-spec-manual.md">Markdown 版</a><button id="print-manual" type="button">列印手冊</button></div></div>
+<ol class="flow" aria-label="翻新六階段"><li><span>01</span>建立計劃</li><li><span>02</span>盤點依賴</li><li><span>03</span>處理決策</li><li><span>04</span>建立契約</li><li><span>05</span>視覺成果</li><li><span>06</span>驗證追蹤</li></ol>
+<article class="article"><h1>Legacy to Spec 操作手冊</h1>
+<p>以單一 JSP 為單位，建立有來源證據的技術中立規格、可審閱原型與獨立翻新紀錄。</p>
+<p><strong>適用套件</strong>：<a href="../skills/legacy-to-spec/SKILL.md">legacy-to-spec</a> · <strong>手冊更新日期</strong>：2026-10-12 · <strong>閱讀版本</strong>：<a href="legacy-to-spec-manual.html">HTML</a></p>
+<p>本手冊依目前專案內的 skill、guides、references 與腳本整理。你向 LLM 提供入口、材料與指令，由它依 skill 分析及產出；輔助腳本負責來源盤點、範本選用與檢查。規則的維護來源仍是 SKILL.md 及其引用文件。</p>
+<details class="inline-toc" id="目錄"><summary>查看全部章節</summary><ul>
+<li><a href="#1-%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B">1. 快速開始</a></li>
+<li><a href="#2-%E6%BA%96%E5%82%99%E6%9C%AC%E8%BC%AA%E8%BC%B8%E5%85%A5">2. 準備本輪輸入</a></li>
+<li><a href="#3-%E4%B8%80%E8%BC%AA%E7%BF%BB%E6%96%B0%E7%9A%84%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B">3. 一輪翻新的操作流程</a></li>
+<li><a href="#4-%E5%A4%96%E9%83%A8%E4%BE%9D%E8%B3%B4%E5%A6%82%E4%BD%95%E6%B1%BA%E7%AD%96">4. 外部依賴如何決策</a></li>
+<li><a href="#5-%E6%89%BE%E5%88%B0%E8%88%87%E7%90%86%E8%A7%A3%E4%BA%A4%E4%BB%98%E6%96%87%E4%BB%B6">5. 找到與理解交付文件</a></li>
+<li><a href="#6-%E6%AA%A2%E8%A6%96%E7%95%AB%E9%9D%A2%E8%88%87%E5%85%83%E4%BB%B6%E6%A8%A3%E5%BC%8F">6. 檢視畫面與元件樣式</a></li>
+<li><a href="#7-%E5%AE%A2%E8%A3%BD%E7%AF%84%E6%9C%AC%E8%88%87%E6%92%B0%E5%AF%AB%E8%A6%8F%E5%89%87">7. 客製範本與撰寫規則</a></li>
+<li><a href="#8-%E8%BC%94%E5%8A%A9%E5%B7%A5%E5%85%B7%E6%93%8D%E4%BD%9C">8. 輔助工具操作</a></li>
+<li><a href="#9-%E9%A9%97%E8%AD%89%E8%88%87%E4%BA%A4%E4%BB%98%E5%88%A4%E5%AE%9A">9. 驗證與交付判定</a></li>
+<li><a href="#10-%E7%BA%8C%E4%BD%9C%E8%88%87%E9%97%9C%E9%96%89%E5%BE%85%E8%BE%A6">10. 續作與關閉待辦</a></li>
+<li><a href="#11-%E6%B2%99%E7%9B%92%E7%B7%B4%E7%BF%92">11. 沙盒練習</a></li>
+<li><a href="#12-%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E8%88%87%E8%A6%8F%E5%89%87%E7%B4%A2%E5%BC%95">12. 常見問題與規則索引</a></li>
+</ul></details>
+<h2 id="1-快速開始">1. 快速開始</h2>
+<ol>
+<li>在 LLM 可讀取專案檔案的工作區開啟此專案。</li>
+<li>選定<strong>一個確切的 JSP 路徑</strong>，準備可取得的依賴與既有規格位置。</li>
+<li>有服務交換時，指定後端契約基準；尚未取得時明列缺口。</li>
+<li>替換下面指令中的尖括號內容，再送給 LLM。看到依賴決策問題時，依第 4 節回答。</li>
+</ol>
+<p>此專案目前以套件路徑使用 skill，不要求先安裝至環境的 skill 探索目錄。</p>
+<h3>可直接改填的啟動指令</h3>
+<div class="code-box"><div class="code-bar"><span>TEXT</span><button type="button" class="copy-button" aria-label="複製範例 1">複製</button></div><pre><code class="language-text">請讀取 skills/legacy-to-spec/SKILL.md，遵循其原則與按需引用文件，
+翻新唯一根入口：&lt;JSP 的確切相對路徑&gt;。
+Scope ID：&lt;不與既有 scope 衝突的識別碼&gt;。
+來源版本：&lt;提交版本、來源快照或可核對的版本資訊&gt;。
+既有中立規格查找範圍：&lt;規格目錄、交付索引或已提供材料&gt;。
+後端基準：&lt;後端根目錄、產物路徑、版本及適用環境；未取得則明列未取得&gt;。
+範本設定：&lt;設定檔路徑；沒有則使用內建範本&gt;。
+
+先建立 plan，登錄初始邊界、依賴盤點任務與完成條件，再分析入口及依賴。
+已有適用契約先核對版本、權威與使用範圍，直接引用。
+未轉換依賴先登錄資源、缺口與影響，在對話告知我，讓我選先翻新或延後。
+沿用已明確授權的決策；沒有答案時保持待決，只繼續獨立工作。
+
+產出技術中立前端規格、一份或多份離線 HTML prototype，
+並分開維護 plan 與 tracking。有樣式元件同時交付 DESIGN.md 與實際載入的 CSS。
+有 API 需求時，依指定後端產物建立 api-spec；
+JSP 中尚未承接的後端責任另建 backend-handoff。
+未知或衝突在每個受影響位置保留 TODO，連到 tracking 與 plan。
+執行可行核對，記錄實際結果與限制；必要契約或驗證缺少時標為部分交付。
+</code></pre></div>
+<p>未提供的輸入應寫「未取得／待指定」，不要保留尖括號提示並要求模型猜測。本輪指令啟動後，先檢查 plan 的唯一入口、範圍與依賴盤點任務，再查看後續產物。</p>
+<h2 id="2-準備本輪輸入">2. 準備本輪輸入</h2>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>輸入</th>
+<th>你需要提供什麼</th>
+<th>尚未提供時如何處理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>根入口</td>
+<td>一個確切 JSP 路徑與來源版本</td>
+<td>先選定入口，避免模型任選正式業務頁面</td>
+</tr>
+<tr>
+<td>Scope ID</td>
+<td>依相對路徑辨識、與既有交付不衝突的 ID</td>
+<td>由 LLM 核對後建立；同名不同目錄不得共用</td>
+</tr>
+<tr>
+<td>相依材料</td>
+<td>可取得的 include、script、樣式、圖像、共用元件、被呼叫來源</td>
+<td>盤點使用位置與影響，缺少的部分留待決／TODO</td>
+</tr>
+<tr>
+<td>既有規格位置</td>
+<td>可查找的目錄、索引、元件與其他 scope 契約</td>
+<td>如實記錄查找範圍，不宣稱整個系統沒有規格</td>
+</tr>
+<tr>
+<td>後端權威</td>
+<td>後端根目錄、指定契約產物、版本、發布／設計／stub 性質</td>
+<td>記錄介接或承接缺口，繼續不依賴它的前端分析</td>
+</tr>
+<tr>
+<td>執行觀察</td>
+<td>如有，提供畫面、前置資料、角色、重現步驟與環境</td>
+<td>以來源可證實部分生成；未比較執行畫面就不宣告像素等價</td>
+</tr>
+<tr>
+<td>補充規則</td>
+<td>已存在的 API、UI 或領域規則及其權威與適用範圍</td>
+<td>沿用內建規則，不自行生成業務知識</td>
+</tr>
+<tr>
+<td>客製設定</td>
+<td>選用範本、樣式 profile 與交付根目錄</td>
+<td>使用內建範本與 <code>design-md</code> profile</td>
+</tr>
+</tbody></table></div>
+<p><strong>權威分工</strong>：畫面、互動與共用元件以前端來源為依據；API 與業務能力以指定版本的後端產物為依據。後端工具的 <code>.github</code> 提供方法參考，不能當成已實作的 API 契約。</p>
+<p>詳見 <a href="../skills/legacy-to-spec/guides/workflow.md">工作方法</a> 與 <a href="../skills/legacy-to-spec/references/api/authority.md">權威分工</a>。</p>
+<h2 id="3-一輪翻新的操作流程">3. 一輪翻新的操作流程</h2>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>階段</th>
+<th>LLM 的工作</th>
+<th>你要核對的結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01 建立計劃</td>
+<td>先留下唯一入口、初始範圍、任務與完成條件；未盤點的依賴寫待盤點</td>
+<td>plan 的實際先後可追蹤，不是生成規格後補寫</td>
+</tr>
+<tr>
+<td>02 盤點依賴</td>
+<td>分析外部資源、使用條件與影響；查找並核對可重用契約</td>
+<td>每筆 DEP 有查找範圍、適用理由、版本與停止邊界</td>
+</tr>
+<tr>
+<td>03 處理決策</td>
+<td>引用適用契約；未轉換依賴告知缺口，由使用者決定</td>
+<td>DEC 有決策來源；未回覆維持待決</td>
+</tr>
+<tr>
+<td>04 建立契約</td>
+<td>盤點來源事實、混合責任、資料、狀態與被觸發流程；建立必要 API／移交文件</td>
+<td>每個主張有證據，已知分支保留，缺口在實際受影響位置可見</td>
+</tr>
+<tr>
+<td>05 建立視覺成果</td>
+<td>依已確認的 UI／流程生成 HTML、元件 DESIGN.md 與 CSS</td>
+<td>原型載入交付 CSS；資料替身與審閱工具有清楚標示</td>
+</tr>
+<tr>
+<td>06 驗證並追蹤</td>
+<td>比對來源、規格、原型與後端基準，執行可行檢查</td>
+<td>tracking 記錄實際結果、限制、缺陷及後續任務</td>
+</tr>
+</tbody></table></div>
+<p>階段可隨新證據回查、更新計劃。待決依賴不能被跳過並偷偷生成相依契約；原型中的展示資料不能用來證明未知的業務規則。</p>
+<p>只想先看規劃時，可在啟動指令追加：</p>
+<div class="code-box"><div class="code-bar"><span>TEXT</span><button type="button" class="copy-button" aria-label="複製範例 2">複製</button></div><pre><code class="language-text">本輪先完成 plan、依賴盤點與可重用契約核對，提供未轉換資源的影響及決策選項。
+尚未決策的相依設計留待決，先不生成其規格與原型。
+</code></pre></div>
+<h2 id="4-外部依賴如何決策">4. 外部依賴如何決策</h2>
+<h3>已有契約先重用</h3>
+<p>契約必須與來源版本、責任權威、所需行為、條件分支及本頁情境相符。**檔案存在、名稱相同或被標為完成，均不足以證明適用。**只有部分適用時，引用適用部分，其餘保留缺口。</p>
+<h3>尚未轉換時的選項</h3>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>狀態／選擇</th>
+<th>後續動作</th>
+<th>保留的紀錄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>先翻新</td>
+<td>在 plan 排必要依賴順序，完成後再引用；不可取得的部分仍列缺口</td>
+<td>決策來源、授權範圍、依賴任務、完成條件與驗證</td>
+</tr>
+<tr>
+<td>延後</td>
+<td>在每個受影響位置標 TODO，安排取得材料、補契約與重新驗證</td>
+<td>tracking 的具體缺口與 plan 的後續任務、依賴、順序</td>
+</tr>
+<tr>
+<td>尚未回答</td>
+<td>保持待決，只做不依賴該決策的工作</td>
+<td>已告知的資源與影響、待決 DEC；不記錄成同意延後</td>
+</tr>
+</tbody></table></div>
+<p>依賴告知至少要有資源位置、查找結果、未確認內容、受影響畫面／流程／資料與可獨立繼續部分。成組決策也要覆蓋該組的全部缺口。</p>
+<h3>回覆範例</h3>
+<p>以下 <code>DEP-xx</code> 與資源範圍必須改成實際對話中已告知的項目。</p>
+<div class="code-box"><div class="code-bar"><span>TEXT</span><button type="button" class="copy-button" aria-label="複製範例 3">複製</button></div><pre><code class="language-text">DEP-xx 先翻新：只建立本頁必要的共用契約，先完成再引用到根入口。
+其他未轉換依賴仍待決，不擴大本輪根入口。
+若依賴是另一個 JSP 的完整行為，請另建 scope 並留下交接引用。
+</code></pre></div>
+<div class="code-box"><div class="code-bar"><span>TEXT</span><button type="button" class="copy-button" aria-label="複製範例 4">複製</button></div><pre><code class="language-text">DEP-xx 本輪延後。請在所有受影響的 UI、CMP、FLOW、BOUND、DATA、ST 等位置
+保留具體 TODO 連結，tracking 記錄缺失資料與解決條件，
+plan 記錄取得材料後的補契約順序及重新驗證任務。
+</code></pre></div>
+<p>可以逐項決定，不必整組採同一策略。選擇先翻新但材料仍不可取得時，該部分仍需等待材料；決策本身不會證明未知行為。</p>
+<p>詳見 <a href="../skills/legacy-to-spec/guides/dependencies.md">依賴與決策</a>。</p>
+<h2 id="5-找到與理解交付文件">5. 找到與理解交付文件</h2>
+<p>可重用範本在 <code>skills/legacy-to-spec/templates/</code>，實際成果另存。以下是預設交付位置；有客製設定時，以本輪選用清單與有效連結為準。</p>
+<div class="code-box"><div class="code-bar"><span>TEXT</span><button type="button" class="copy-button" aria-label="複製範例 5">複製</button></div><pre><code class="language-text">artifacts/
+  design/&lt;scope-id&gt;/
+    specification.md
+    prototypes/&lt;screen-id&gt;.html
+    components/&lt;CMP-ID&gt;/DESIGN.md
+    styles/&lt;CMP-ID&gt;.css
+    styles/tokens.json                  # design-md+dtcg 時建立
+  integration/&lt;scope-id&gt;/
+    api-spec.md                        # 有 API 消費需求時建立
+    backend-handoff.md                 # 有未承接後端責任時建立
+  renovation/&lt;scope-id&gt;/
+    plan.md
+    tracking.md
+    template-selection.json            # 範本選用與版本紀錄
+</code></pre></div>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>文件</th>
+<th>讀它可以回答什麼</th>
+<th>維護責任</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>plan.md</td>
+<td>先做什麼？依賴與影響在哪裡？哪些決策仍待回答？</td>
+<td>任務、決策與後續順序</td>
+</tr>
+<tr>
+<td>tracking.md</td>
+<td>依據在哪裡？哪些缺口未解？實際測過什麼？</td>
+<td>來源、證據、覆蓋、TODO、執行與歷史</td>
+</tr>
+<tr>
+<td>specification.md</td>
+<td>誰在什麼狀態觸發事件？系統如何反應、改變資料與畫面？</td>
+<td>技術中立行為契約、驗收預期與文件索引</td>
+</tr>
+<tr>
+<td>HTML prototype</td>
+<td>已確認的資訊層級、畫面與互動如何呈現？</td>
+<td>可審閱畫面、已知操作與展示限制</td>
+</tr>
+<tr>
+<td>DESIGN.md + CSS</td>
+<td>元件在哪些條件使用哪些樣式？原型實際如何顯示？</td>
+<td>樣式值、變體、來源及文件／CSS 映射</td>
+</tr>
+<tr>
+<td>api-spec.md</td>
+<td>本頁如何消費選定的後端契約？兩端資料與結果如何映射？</td>
+<td>已確認 wire 契約、映射與介接缺口</td>
+</tr>
+<tr>
+<td>backend-handoff.md</td>
+<td>JSP 內哪些後端責任尚未被目標承接？</td>
+<td>已知觸發、規則、順序、受信任資料與副作用</td>
+</tr>
+</tbody></table></div>
+<p>JSP 可能混合呈現、資料轉換、業務判斷與儲存責任。LLM 需逐項建立 LOGIC 分類與去向，不能因邏輯寫在 JSP 就搬進前端。缺少目標承接時保留 HANDOFF／TODO，不能自行造端點或以原型計算代替後端。</p>
+<p>沒有適用需求的文件可不建立，並記錄不適用的依據；不要以空文件湊齊上述結構。</p>
+<h2 id="6-檢視畫面與元件樣式">6. 檢視畫面與元件樣式</h2>
+<ol>
+<li>從規格的 prototype 索引開啟本輪 HTML。實際原型可離線開啟，依索引步驟進入已確認狀態。</li>
+<li>核對標籤、選項、順序、初始值、操作條件、訊息與狀態轉移；檢查取消、重複操作、鍵盤、時間關係或拖曳等已證實行為。</li>
+<li>有樣式的元件須能沿 CMP 找到 DESIGN.md、CSS 與使用它的 HTML；共用定義可引用已核對的既有版本。</li>
+<li>在瀏覽器確認 CSS 實際載入、selector 命中、computed style 與必要幾何／層疊；只比文字內容不足以證明顯示一致。</li>
+<li>把觀察環境、操作、實際結果與截圖放進 tracking；驗收預期留在契約文件。</li>
+</ol>
+<p><strong>樣式 profile</strong>：<code>design-md</code> 使用本套件指定的 DESIGN.md alpha 格式；<code>design-md+dtcg</code> 再輸出 DTCG 2025.10 tokens。DESIGN.md frontmatter 與 DTCG JSON 是不同格式。格式細節以 <a href="../skills/legacy-to-spec/references/ui/style-spec.md">樣式規則</a> 為準。</p>
+<p>例如來源只證實字型族時，DESIGN.md 的 typography token 要是物件；不為格式完整而添加未確認的字級或行高：</p>
+<div class="code-box"><div class="code-bar"><span>YAML</span><button type="button" class="copy-button" aria-label="複製範例 6">複製</button></div><pre><code class="language-yaml">typography:
+  page:
+    fontFamily: &quot;sans-serif&quot;
+</code></pre></div>
+<p>百分比、複合宣告或動態公式需要保留精確語意；無法直接輸出成所選 token 型別時，在 DESIGN.md／CSS 保留並說明未輸出的項目。未取得的樣式、hover、色票與品牌意圖不可自行補造。</p>
+<p>審閱工具和合成資料只用來展示已確認的形狀與互動，不是產品需求，也不能證明 API 已有能力。缺少來源執行畫面時，記錄尚未完成的視覺比對。</p>
+<p>受控案例的元件文件與原型保存在測試備份分支，查閱方法見第 11 節。備份工作目錄中的 <code>sandbox/legacy-to-spec/styles-verification/coupled/artifacts/design/fixture-case/</code> 包含元件 DESIGN.md、CSS 與 prototype。它們是沙盒部分成果，不能用作其他頁面的業務來源。</p>
+<h2 id="7-客製範本與撰寫規則">7. 客製範本與撰寫規則</h2>
+<h3>只切換樣式 profile</h3>
+<p>如在專案建立 <code>config/legacy-to-spec.json</code>，可先使用下列設定；其中路徑相對於<strong>設定檔所在目錄</strong>，所以 <code>../artifacts</code> 會指向專案根的交付目錄。</p>
+<div class="code-box"><div class="code-bar"><span>JSON</span><button type="button" class="copy-button" aria-label="複製範例 7">複製</button></div><pre><code class="language-json">{
+  &quot;style_profile&quot;: &quot;design-md+dtcg&quot;,
+  &quot;output_root&quot;: &quot;../artifacts&quot;
+}
+</code></pre></div>
+<p>接著在啟動指令指定 <code>config/legacy-to-spec.json</code>。未指定設定檔時使用內建範本與 <code>design-md</code>。</p>
+<h3>加入專案範本與規則</h3>
+<p>以下是配置範例。先準備實際檔案，再填設定；不使用的項目應移除，避免引用不存在的路徑。</p>
+<div class="code-box"><div class="code-bar"><span>JSON</span><button type="button" class="copy-button" aria-label="複製範例 8">複製</button></div><pre><code class="language-json">{
+  &quot;template_root&quot;: &quot;../project-templates&quot;,
+  &quot;overrides&quot;: {
+    &quot;api-spec&quot;: &quot;../project-templates/integration/api-consumption.md&quot;
+  },
+  &quot;references&quot;: {
+    &quot;api&quot;: [&quot;../project-rules/api-writing.md&quot;],
+    &quot;ui&quot;: [&quot;../project-rules/ui-writing.md&quot;],
+    &quot;domain&quot;: []
+  },
+  &quot;style_profile&quot;: &quot;design-md+dtcg&quot;,
+  &quot;output_root&quot;: &quot;../artifacts&quot;
+}
+</code></pre></div>
+<p>選用優先序：<strong>逐角色 override → project template root 同相對路徑 → 內建範本</strong>。</p>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>角色</th>
+<th>template root 下的相對路徑</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>specification</td>
+<td>design/specification.md</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>design/prototype.html</td>
+</tr>
+<tr>
+<td>component-design</td>
+<td>design/DESIGN.md</td>
+</tr>
+<tr>
+<td>component-css</td>
+<td>design/component.css</td>
+</tr>
+<tr>
+<td>tokens</td>
+<td>design/tokens.json</td>
+</tr>
+<tr>
+<td>api-spec</td>
+<td>integration/api-spec.md</td>
+</tr>
+<tr>
+<td>backend-handoff</td>
+<td>integration/backend-handoff.md</td>
+</tr>
+<tr>
+<td>plan</td>
+<td>renovation/plan.md</td>
+</tr>
+<tr>
+<td>tracking</td>
+<td>renovation/tracking.md</td>
+</tr>
+</tbody></table></div>
+<p>指定的 override 或 template root 不存在會報設定錯誤；已存在的 custom root 只缺部分角色時，該角色可 fallback 到內建範本。</p>
+<p>可以調整章節、語言、版面與路徑，但必須保留必要資訊、穩定 ID、證據與缺口連結。補充 API／UI／domain 文件是撰寫規則，不能取代後端產物或前端來源的事實；提供風格指南不代表批准改變原系統設計。</p>
+<p>詳見 <a href="../skills/legacy-to-spec/guides/customization.md">客製化規則</a>。</p>
+<h2 id="8-輔助工具操作">8. 輔助工具操作</h2>
+<p>以下命令從<strong>專案根目錄</strong>執行。路徑有空白時加引號；範例只展示工具的檢查能力，不表示已正式翻新某個業務頁面。先建立本輪 plan，再進行來源盤點。工具輸出需由 LLM 登錄到本輪追蹤文件。</p>
+<h3>來源雜湊、物理行與解碼核對</h3>
+<p>這個可執行範例讀取倉庫的合成 JSP，不修改來源：</p>
+<div class="code-box"><div class="code-bar"><span>SH</span><button type="button" class="copy-button" aria-label="複製範例 9">複製</button></div><pre><code class="language-sh">python3 skills/legacy-to-spec/scripts/source_inventory.py \
+  tests/legacy-to-spec/fixtures/coupled/frontend/Case.jsp \
+  --candidate utf-8 --candidate cp950
+</code></pre></div>
+<p>實際翻新時改成根入口與本輪必要依賴的確切檔案。輸出包含 SHA-256、位元組數、物理行、行尾與 strict decoding 結果。<strong>成功解碼不代表已確認預期編碼</strong>；引用末行不能超過原始物理行數。</p>
+<h3>範本選用</h3>
+<div class="code-box"><div class="code-bar"><span>SH</span><button type="button" class="copy-button" aria-label="複製範例 10">複製</button></div><pre><code class="language-sh">python3 skills/legacy-to-spec/scripts/select_templates.py
+</code></pre></div>
+<p>若有第 7 節設定檔：</p>
+<div class="code-box"><div class="code-bar"><span>SH</span><button type="button" class="copy-button" aria-label="複製範例 11">複製</button></div><pre><code class="language-sh">python3 skills/legacy-to-spec/scripts/select_templates.py \
+  --config config/legacy-to-spec.json
+</code></pre></div>
+<p>輸出選用理由、實際檔案、SHA-256、補充 references 與 output root；它不生成規格，也不驗證範本必要資訊已完整。保留本輪清單，例如 renovation scope 的 <code>template-selection.json</code>，並從 plan／tracking 引用；設定變動時保留舊版。</p>
+<h3>DESIGN.md metadata 形狀檢查</h3>
+<p>先將下一段的引號內路徑換成已產出的元件 DESIGN.md，再執行。此工具需 Python 環境已提供 PyYAML；缺少時會明確回報未執行，不自動安裝。</p>
+<div class="code-box"><div class="code-bar"><span>SH</span><button type="button" class="copy-button" aria-label="複製範例 12">複製</button></div><pre><code class="language-sh">python3 skills/legacy-to-spec/scripts/check_design_metadata.py \
+  &quot;artifacts/design/&lt;scope-id&gt;/components/&lt;CMP-ID&gt;/DESIGN.md&quot;
+</code></pre></div>
+<p>實際翻新時改成自己的元件路徑。檢查範圍是 name、token 群組形狀與 typography 欄位；<strong>不等於完整官方 DESIGN.md／DTCG validator</strong>，也不驗證來源忠實度或瀏覽器顯示。</p>
+<h2 id="9-驗證與交付判定">9. 驗證與交付判定</h2>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>核對層次</th>
+<th>實際操作</th>
+<th>紀錄位置與限制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>來源與文字</td>
+<td>回查原始來源、條件分支、資料與副作用；反查每個主張的 E 證據</td>
+<td>tracking 覆蓋表；未知依賴不能省略以提高完成率</td>
+</tr>
+<tr>
+<td>文件關係</td>
+<td>核對 ID、錨點、版本、TODO 局部位置與 plan 後續任務</td>
+<td>tracking；只有缺口總索引不夠</td>
+</tr>
+<tr>
+<td>介接與移交</td>
+<td>對照後端指定基準、wire 契約、兩端映射及未承接 LOGIC</td>
+<td>api-spec／handoff 描述契約；tracking 管進度與驗證</td>
+</tr>
+<tr>
+<td>畫面與樣式</td>
+<td>開原型，測已知狀態、操作、動態樣式與 CSS 實際效果</td>
+<td>tracking V 記錄實測與截圖；未比較來源畫面不宣告像素等價</td>
+</tr>
+<tr>
+<td>驗收案例</td>
+<td>使用 AC 明列的前置資料、事件與具體預期執行核對</td>
+<td>預期在設計／介接，實際結果在 tracking；mock 通過不代表正式服務通過</td>
+</tr>
+</tbody></table></div>
+<p>交付前可逐項確認：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 唯一根入口、來源版本、邊界與排除理由明確。</li>
+<li><input disabled="" type="checkbox"> plan 先建立，每項任務的依賴、影響及完成條件可追蹤。</li>
+<li><input disabled="" type="checkbox"> 適用契約已核對後引用；未轉換資源有決策或明確待決。</li>
+<li><input disabled="" type="checkbox"> 所有已辨識的事件與已知分支都有契約去向，沒有推測行為。</li>
+<li><input disabled="" type="checkbox"> 每個受影響位置的 TODO 能連到 tracking，tracking 能連回 plan。</li>
+<li><input disabled="" type="checkbox"> prototype、樣式文件與實際載入 CSS 一致，使用的示例資料已標示。</li>
+<li><input disabled="" type="checkbox"> 必要 API 投影以後端為權威，未承接責任有 HANDOFF／TODO。</li>
+<li><input disabled="" type="checkbox"> 驗證結果反映實際執行，未執行的部分有具體理由與後續動作。</li>
+</ul>
+<p><strong>完整交付</strong>需要範圍內必要契約已確認、矛盾已解、覆蓋無缺口，且必要驗證完成。其餘情況標為<strong>部分交付</strong>，列出受影響內容與下一步；檔案齊全、測試通過數或 TODO 數歸零不能單獨證明完整。</p>
+<p>完整準則見 <a href="../skills/legacy-to-spec/guides/acceptance.md">驗收規則</a>。</p>
+<h2 id="10-續作與關閉待辦">10. 續作與關閉待辦</h2>
+<p>先讀既有 plan、tracking 與契約，確認來源、後端基準、共用元件及範本版本是否改變。沿用穩定 ID，保留失效／被取代的證據與先前驗證，不重新編號。</p>
+<h3>可直接改填的續作指令</h3>
+<div class="code-box"><div class="code-bar"><span>TEXT</span><button type="button" class="copy-button" aria-label="複製範例 13">複製</button></div><pre><code class="language-text">請依 skills/legacy-to-spec/SKILL.md 續作 scope：&lt;scope-id&gt;。
+先讀 artifacts/renovation/&lt;scope-id&gt;/plan.md、tracking.md 與既有設計／介接文件。
+本輪處理的 TODO：&lt;已存在的 TODO-ID 清單&gt;。
+新材料與版本：&lt;確切來源路徑、後端承接產物或確認紀錄&gt;。
+
+先更新 plan，記錄此次任務的依賴、影響及完成條件。
+核對新舊版本；保留既有 ID、決策與證據歷史，只更新有新依據的契約。
+同步更新受影響的規格、API／HANDOFF、DESIGN.md、CSS 及 prototype。
+依影響重新驗證，將實際結果記入 tracking。
+只有解決證據、契約更新及必要驗證均足夠時才關閉 TODO；其他缺口保持開啟。
+</code></pre></div>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>TODO 關閉條件</th>
+<th>要留下的依據</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>未知內容已取得</td>
+<td>新證據 E、權威、適用版本與實際解決範圍</td>
+</tr>
+<tr>
+<td>相依契約已承接</td>
+<td>契約引用、版本、前後端映射與有證據的責任去向</td>
+</tr>
+<tr>
+<td>文件與原型已更新</td>
+<td>受影響 FLOW／UI／ST／API／HANDOFF／STYLE 等 ID</td>
+</tr>
+<tr>
+<td>必要驗證已完成</td>
+<td>實際 V 結果與 CHANGE 歷史；仍未驗證部分分開保留</td>
+</tr>
+</tbody></table></div>
+<p>共用契約變動時回查消費它的其他 scope；只更新本輪授權範圍，新的影響或依賴決策需另記錄。</p>
+<h2 id="11-沙盒練習">11. 沙盒練習</h2>
+<p>沙盒適合練習依賴決策、驗證 skill 或比較不同版本的產物。它會複製輸入與 skill 快照並保留 SHA-256；準備腳本不產生設計規格。</p>
+<h3>準備受控案例</h3>
+<div class="code-box"><div class="code-bar"><span>SH</span><button type="button" class="copy-button" aria-label="複製範例 14">複製</button></div><pre><code class="language-sh">python3 scripts/skill-sandbox.py prepare \
+  --case coupled --run manual-practice-01
+</code></pre></div>
+<p>run ID 只能使用小寫英數與連字號；已存在時改用新的 ID，腳本不覆蓋舊試用。預設 <code>ask</code> 沒有預先同意依賴翻新或延後。</p>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>dependency-policy</th>
+<th>沙盒用意</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ask</td>
+<td>測試未預先決策的告知與待決行為；預設值</td>
+</tr>
+<tr>
+<td>defer</td>
+<td>明示模擬：引用適用契約，其他依賴延後</td>
+</tr>
+<tr>
+<td>convert-available</td>
+<td>明示模擬：先轉必要可取得依賴，不可取得者延後</td>
+</tr>
+</tbody></table></div>
+<p><code>defer</code>／<code>convert-available</code> 必須在 prepare 命令明確加入 <code>--dependency-policy</code>。這些是<strong>沙盒模擬決策</strong>，不代表正式業務翻新的範圍擴張或延後授權。</p>
+<h3>交給 LLM 實際操作</h3>
+<div class="code-box"><div class="code-bar"><span>TEXT</span><button type="button" class="copy-button" aria-label="複製範例 15">複製</button></div><pre><code class="language-text">請在 sandbox/legacy-to-spec/manual-practice-01/coupled 內工作。
+先讀 task.txt、manifest.json 與 skill/SKILL.md，按提供快照完成本輪任務。
+不要修改 inputs、skill 或 manifest；交付寫入 artifacts。
+遵守 task 的依賴政策，不查詢外部系統、不執行後端。
+記錄實際驗證與限制，待決依賴只繼續獨立工作。
+</code></pre></div>
+<h3>檢查交付</h3>
+<p>完成適用交付後再執行：</p>
+<div class="code-box"><div class="code-bar"><span>SH</span><button type="button" class="copy-button" aria-label="複製範例 16">複製</button></div><pre><code class="language-sh">python3 scripts/skill-sandbox.py check \
+  --case-dir sandbox/legacy-to-spec/manual-practice-01/coupled
+</code></pre></div>
+<p>此 checker 僅適用倉庫的 sandbox case，檢查快照、必要文件、ID、連結、佔位符與部分腳本語法。若仍在待決規劃階段，全交付 checker 會列出未產出的文件；應按目前階段檢查 plan／tracking／告知紀錄，不把它當成整輪生成失敗。</p>
+<p>本地瀏覽器觀察需要 Node.js、可用的 Playwright 模組與瀏覽器；將下一個命令的模組路徑替換為當前環境已存在的入口，再執行：</p>
+<div class="code-box"><div class="code-bar"><span>SH</span><button type="button" class="copy-button" aria-label="複製範例 17">複製</button></div><pre><code class="language-sh">SKILL_SANDBOX_PLAYWRIGHT=&quot;&lt;本機 playwright-core 模組入口&gt;&quot; \
+  node scripts/skill-sandbox-browser.mjs \
+  sandbox/legacy-to-spec/manual-practice-01/coupled
+</code></pre></div>
+<p>沒有 scenario 檔時產生 DOM／控制項觀察與截圖；依來源建立可觀察案例後，可將 scenario JSON 作為第二個參數另跑操作驗證。腳本使用獨立 context 並阻擋 HTTP。瀏覽器無法啟動時如實記錄未執行，保留其他已完成核對。</p>
+<p>最後另做來源審查，將來源語意、結構與瀏覽器結果分開判定。保留原產物和失敗，再用新快照重測；有既有審查意見的修補應標為審查引導續作。</p>
+<p>詳見 <a href="../tests/legacy-to-spec/README.md">沙盒操作說明</a>。</p>
+<h3>查閱既有測試備份</h3>
+<p>歷次測試記錄保存於本地分支 <code>backup/legacy-to-spec-tests-2026-10-12</code>，可另開工作目錄讀取：</p>
+<div class="code-box"><div class="code-bar"><span>SH</span><button type="button" class="copy-button" aria-label="複製範例 18">複製</button></div><pre><code class="language-sh">git worktree add ../FE_Modernization-test-backup backup/legacy-to-spec-tests-2026-10-12
+</code></pre></div>
+<p>目標目錄需尚未被使用。在該目錄開啟 <code>sandbox/legacy-to-spec/REPORT.md</code> 查看試用紀錄，或開啟 <code>output/playwright/</code> 下的截圖及手冊瀏覽器檢查報告。備份分支含其建立時的工具版本；目前工作分支保留可重跑的測試程式與 fixture，新的本地記錄由 <code>.gitignore</code> 排除。</p>
+<h2 id="12-常見問題與規則索引">12. 常見問題與規則索引</h2>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>問題</th>
+<th>處理方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LLM 找不到 skill</td>
+<td>提供 <code>skills/legacy-to-spec/SKILL.md</code> 的確切路徑，要求讀取及遵循，再核對其能存取的工作區</td>
+</tr>
+<tr>
+<td>JSP 有亂碼或 codec 結果不一致</td>
+<td>先登錄原始 bytes、hash、行號與 strict 解碼限制，取得正確來源；不從 replacement 字元猜文案</td>
+</tr>
+<tr>
+<td>依賴有來源，但沒有中立契約</td>
+<td>先登錄查找結果、缺口與影響，由使用者決定；有來源不自動授權翻新</td>
+</tr>
+<tr>
+<td>後端只有方法規格</td>
+<td>可作已知責任的依據，但不能直接推導 HTTP 操作；API 缺口保留，前端獨立部分繼續</td>
+</tr>
+<tr>
+<td>客製設定報檔案不存在</td>
+<td>回查相對於設定檔的路徑；刪除未使用項或補上實際檔案，不把指定 override 失效當 fallback</td>
+</tr>
+<tr>
+<td>DESIGN.md 檢查通過，但 CSS 不符合畫面</td>
+<td>回查載入、selector、cascade、繼承與動態狀態；metadata 檢查不包含瀏覽器效果</td>
+</tr>
+<tr>
+<td>原型有合成成功畫面</td>
+<td>核對是否只展示已證實的資料形狀與反應；未知後端成功不能由替身填補</td>
+</tr>
+<tr>
+<td>文件齊全但仍標為部分</td>
+<td>檢查必要契約與驗證缺口；依證據補齊後再更新判定，不只改狀態文字</td>
+</tr>
+</tbody></table></div>
+<div class="table-wrap" role="region" aria-label="資料對照表" tabindex="0"><table>
+<thead>
+<tr>
+<th>SKILL 編號</th>
+<th>主題</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>R1</td>
+<td>證據先於描述</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>保留意圖與體驗</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>權威依責任分配</td>
+</tr>
+<tr>
+<td>R4</td>
+<td>耦合必須拆責任</td>
+</tr>
+<tr>
+<td>R5</td>
+<td>以觸發與結果組織契約</td>
+</tr>
+<tr>
+<td>R6</td>
+<td>先計劃，再沿依賴推進</td>
+</tr>
+<tr>
+<td>R7</td>
+<td>小範圍累積</td>
+</tr>
+<tr>
+<td>R8</td>
+<td>契約與執行分離</td>
+</tr>
+<tr>
+<td>R9</td>
+<td>完整性必須能被檢查</td>
+</tr>
+</tbody></table></div>
+<p>SKILL.md 的 <strong>E1–E3 是原則示例</strong>；交付文件的 <em><em>E-</em> 是來源證據</em>*，兩者用途不同。其他常用 ID：DEP（依賴）、TASK（任務）、DEC（決策）、TODO（缺口）、AC（驗收預期）、V（驗證執行）、CHANGE（變更）。完整 ID 定義見 <a href="../skills/legacy-to-spec/guides/evidence.md">證據規則</a>。</p>
+<p>Markdown 與 HTML 是同一份手冊的兩種閱讀形式；維護時同步更新。HTML 正文、樣式與互動可離線使用，專案來源連結需保留 <code>docs/</code> 與倉庫的相對目錄結構。</p>
+</article>
+<p class="page-foot">正文由 Markdown 版本生成。章節與複製功能在本機執行，沒有外部資源請求。</p>
+</main>
+</div>
+<div id="copy-status" class="status" role="status" aria-live="polite"></div>
+<script>
+(() => {
+ const contents=document.querySelector('.toc-wrap');
+ const mobile=window.matchMedia('(max-width: 900px)');
+ function layoutChanged(){contents.open=!mobile.matches;}
+ layoutChanged();mobile.addEventListener('change',layoutChanged);
+ document.getElementById('print-manual').addEventListener('click',()=>window.print());
+ const status=document.getElementById('copy-status');
+ let resetStatus;
+ function say(text){status.textContent=text;clearTimeout(resetStatus);resetStatus=setTimeout(()=>{status.textContent='';},4500);}
+ function fallbackCopy(text){
+  const previous=document.activeElement;
+  const field=document.createElement('textarea');field.value=text;field.setAttribute('readonly','');field.style.position='fixed';field.style.left='-9999px';document.body.appendChild(field);
+  field.select();let copied=false;
+  try{copied=document.execCommand('copy');}finally{field.remove();if(previous instanceof HTMLElement)previous.focus();}
+  return copied;
+ }
+ document.querySelectorAll('.copy-button').forEach(button=>{
+  button.addEventListener('click',async()=>{
+   const text=button.closest('.code-box').querySelector('code').textContent.replace(/\n$/,'');
+   let copied=false;
+   if(navigator.clipboard?.writeText){try{await navigator.clipboard.writeText(text);copied=true;}catch{}}
+   if(!copied){try{copied=fallbackCopy(text);}catch{}}
+   if(copied){button.textContent='已複製';say('已複製。請先改填指令中的輸入與路徑。');setTimeout(()=>{button.textContent='複製';},1800);}
+   else{say('此瀏覽器未允許複製，請選取範例文字手動複製。');}
+  });
+ });
+ const links=[...document.querySelectorAll('nav a')];
+ const observer=new IntersectionObserver(entries=>{
+  const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top);
+  if(!visible.length)return;
+  const href='#'+visible[0].target.id;
+  links.forEach(link=>{if(link.getAttribute('href')===href)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
+ },{rootMargin:'-8% 0px -65% 0px'});
+ document.querySelectorAll('article h2[id]').forEach(heading=>observer.observe(heading));
+})();
+</script>
+</body>
+</html>

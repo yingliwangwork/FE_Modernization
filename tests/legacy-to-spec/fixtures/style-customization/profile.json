@@ -1,0 +1,7 @@
+{
+  "template_root": "./project-templates",
+  "overrides": {"api-spec": "./api-consumption.md"},
+  "references": {"api": ["./api-writing.md"]},
+  "style_profile": "design-md+dtcg",
+  "output_root": "../../artifacts"
+}

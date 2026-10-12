@@ -1,0 +1,519 @@
+{
+  "case": "afy10400",
+  "scenarios": [
+    {
+      "id": "initial-defaults-and-zero-rows",
+      "source": "AFY10400.jsp:27-31,199-211,223; source has no initial data row",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "value",
+          "label": "收承方式",
+          "value": "L"
+        },
+        {
+          "action": "value",
+          "label": "商品屬性",
+          "value": "AT"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 0
+        },
+        {
+          "action": "count",
+          "selector": "textarea[name=POLICY_NO]",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "add-delete-and-preserve-selections",
+      "source": "AFY10400.jsp:33-65; append empty row, remove specified row, preserve option values",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "select",
+          "label": "收承方式",
+          "value": "R"
+        },
+        {
+          "action": "select",
+          "label": "商品屬性",
+          "value": "CB"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 2
+        },
+        {
+          "action": "attribute",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "attribute": "maxlength",
+          "value": "10"
+        },
+        {
+          "action": "value",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "value": ""
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "刪除此列",
+          "nth": 0
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "刪除此列",
+          "nth": 0
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 0
+        },
+        {
+          "action": "value",
+          "label": "收承方式",
+          "value": "R"
+        },
+        {
+          "action": "value",
+          "label": "商品屬性",
+          "value": "CB"
+        }
+      ]
+    },
+    {
+      "id": "blank-row-rejected-exact-message",
+      "source": "AFY10400.jsp:77-85; exact-empty guard and first-row alert",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "dialog",
+          "value": "第1列的被保人ID或保單號碼不得為空值，若不需要請刪除該列"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "duplicate-check-before-later-row-blank",
+      "source": "AFY10400.jsp:77-92; first row blank check then later-ID duplicate, before later row blank check",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "value": "TEST000001"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 0,
+          "value": "P-01"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 1,
+          "value": "TEST000001"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "dialog",
+          "value": "被保人ID：TEST000001有重覆出現，請合併在同一列處理"
+        },
+        {
+          "action": "value",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 1,
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "zero-row-export-reaches-boundary",
+      "source": "AFY10400.jsp:77-97; zero rows skip validation and still initiate export",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 0
+        },
+        {
+          "action": "contains",
+          "selector": "#boundary-log",
+          "value": "BOUND-001"
+        }
+      ]
+    },
+    {
+      "id": "accepted-results-and-download-boundary",
+      "source": "AFY10400.jsp:98-106; update all rows, then hand filename to download; synthesis only supplies callback fixture",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "value": "TEST000001"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 0,
+          "value": "P-01"
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 1,
+          "value": "TEST000002"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 1,
+          "value": "P-02"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "check",
+          "selector": "#success-message",
+          "value": false
+        },
+        {
+          "action": "click",
+          "selector": "#inject-response"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 2
+        },
+        {
+          "action": "content",
+          "selector": "#table1 tr:nth-child(4) td:nth-child(4)",
+          "value": "已匯出"
+        },
+        {
+          "action": "content",
+          "selector": "#table1 tr:nth-child(5) td:nth-child(4)",
+          "value": "已匯出"
+        },
+        {
+          "action": "contains",
+          "selector": "#boundary-log",
+          "value": "BOUND-002"
+        }
+      ]
+    },
+    {
+      "id": "legacy-rejection-updates-without-download",
+      "source": "AFY10400.jsp:107-113; legacy rejection map updates result cells, does not trigger download; selected target error data=null remains a gap",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "value": "TEST000001"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 0,
+          "value": "P-01"
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 1,
+          "value": "TEST000002"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 1,
+          "value": "P-02"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "select",
+          "selector": "#response-case",
+          "value": "reject"
+        },
+        {
+          "action": "click",
+          "selector": "#inject-response"
+        },
+        {
+          "action": "content",
+          "selector": "#table1 tr:nth-child(4) td:nth-child(4)",
+          "value": "ID長度預為10碼"
+        },
+        {
+          "action": "contains",
+          "selector": "#review-status",
+          "value": "不下載"
+        }
+      ]
+    },
+    {
+      "id": "native-async-success",
+      "source": "CSRUtil.js:626-680 native success without bottom message",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "#response-description",
+          "value": "合成回應"
+        },
+        {
+          "action": "click",
+          "selector": "#inject-response"
+        },
+        {
+          "action": "dialog",
+          "value": "訊息說明：\n合成回應"
+        }
+      ]
+    },
+    {
+      "id": "native-async-error-with-id",
+      "source": "CSRUtil.js:626-680 native error msgid >17",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "select",
+          "selector": "#response-case",
+          "value": "reject"
+        },
+        {
+          "action": "fill",
+          "selector": "#response-description",
+          "value": "合成拒絕"
+        },
+        {
+          "action": "fill",
+          "selector": "#response-msgid",
+          "value": "DEMO-ERROR-000000001"
+        },
+        {
+          "action": "click",
+          "selector": "#inject-response"
+        },
+        {
+          "action": "dialog",
+          "value": "錯誤編號：\nDEMO-ERROR-000000001\n訊息說明：\n合成拒絕"
+        }
+      ]
+    },
+    {
+      "id": "global-keyboard-policy",
+      "source": "CM/header.jsp:136-147 listener registered on window",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "check",
+          "selector": "#policy-enabled",
+          "value": true
+        },
+        {
+          "action": "blur"
+        },
+        {
+          "action": "press_page",
+          "key": "Control+a"
+        },
+        {
+          "action": "dialog",
+          "value": "依據資安政策，不開放全選功能"
+        }
+      ]
+    },
+    {
+      "id": "message-title-drag",
+      "source": "CSRUtil.js:1526-1568 title pointer down/move/up moves message window",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "select",
+          "selector": "#message-mode",
+          "value": "custom"
+        },
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "click",
+          "selector": "#inject-response"
+        },
+        {
+          "action": "content",
+          "selector": "#msg-title",
+          "value": "網頁訊息"
+        },
+        {
+          "action": "drag",
+          "selector": "#msg-title",
+          "target": "#msg-win",
+          "dx": 80,
+          "dy": 50
+        }
+      ]
+    },
+    {
+      "id": "independent-copy-timers",
+      "source": "CM/header.jsp:149-183 A@0 B@30s B@61s independent timers clear shared state",
+      "file": "SCR-001.html",
+      "steps": [
+        {
+          "action": "clock_install"
+        },
+        {
+          "action": "check",
+          "selector": "#policy-enabled",
+          "value": true
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "observe",
+          "selector": "#boundary-log"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "value": "A"
+        },
+        {
+          "action": "copy_selection",
+          "selector": "input[name=I_ID]",
+          "value": "A"
+        },
+        {
+          "action": "observations",
+          "value": 1
+        },
+        {
+          "action": "clock_run",
+          "milliseconds": 30000
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "value": "B"
+        },
+        {
+          "action": "copy_selection",
+          "selector": "input[name=I_ID]",
+          "value": "B"
+        },
+        {
+          "action": "observations",
+          "value": 2
+        },
+        {
+          "action": "clock_run",
+          "milliseconds": 31000
+        },
+        {
+          "action": "copy_selection",
+          "selector": "input[name=I_ID]",
+          "value": "B"
+        },
+        {
+          "action": "observations",
+          "value": 3
+        }
+      ]
+    }
+  ]
+}

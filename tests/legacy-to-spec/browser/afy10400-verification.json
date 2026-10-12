@@ -1,0 +1,792 @@
+{
+  "case": "afy10400",
+  "scenarios": [
+    {
+      "id": "initial-defaults-and-zero-rows",
+      "source": "AFY10400.jsp:27-31,199-211,223; source has no initial data row",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "value",
+          "value": "L",
+          "selector": "#insrType"
+        },
+        {
+          "action": "value",
+          "value": "AT",
+          "selector": "#prodType"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 0
+        },
+        {
+          "action": "count",
+          "selector": "textarea[name=POLICY_NO]",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "add-delete-and-preserve-selections",
+      "source": "AFY10400.jsp:33-65; append empty row, remove specified row, preserve option values",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "select",
+          "value": "R",
+          "selector": "#insrType"
+        },
+        {
+          "action": "select",
+          "value": "CB",
+          "selector": "#prodType"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 2
+        },
+        {
+          "action": "attribute",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "attribute": "maxlength",
+          "value": "10"
+        },
+        {
+          "action": "value",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "value": ""
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "刪除此列",
+          "nth": 0
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "刪除此列",
+          "nth": 0
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 0
+        },
+        {
+          "action": "value",
+          "value": "R",
+          "selector": "#insrType"
+        },
+        {
+          "action": "value",
+          "value": "CB",
+          "selector": "#prodType"
+        }
+      ]
+    },
+    {
+      "id": "blank-row-rejected-exact-message",
+      "source": "AFY10400.jsp:77-85; exact-empty guard and first-row alert",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "dialog",
+          "value": "第1列的被保人ID或保單號碼不得為空值，若不需要請刪除該列"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "duplicate-check-before-later-row-blank",
+      "source": "AFY10400.jsp:77-92; first row blank check then later-ID duplicate, before later row blank check",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "新增一列"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "value": "TEST000001"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 0,
+          "value": "P-01"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 1,
+          "value": "TEST000001"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "dialog",
+          "value": "被保人ID：TEST000001有重覆出現，請合併在同一列處理"
+        },
+        {
+          "action": "value",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 1,
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "zero-row-export-reaches-boundary",
+      "source": "AFY10400.jsp:77-97; zero rows skip validation and still initiate export",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 0
+        },
+        {
+          "action": "contains",
+          "selector": "#review-log",
+          "value": "BOUND-01"
+        }
+      ]
+    },
+    {
+      "id": "accepted-results-and-download-boundary",
+      "source": "AFY10400.jsp:98-106; update all rows, then hand filename to download; synthesis only supplies callback fixture",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "value": "TEST000001"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 0,
+          "value": "P-01"
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 1,
+          "value": "TEST000002"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 1,
+          "value": "P-02"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "select",
+          "selector": "#message-mode",
+          "value": "board"
+        },
+        {
+          "action": "click",
+          "selector": "#respond"
+        },
+        {
+          "action": "wait_contains",
+          "selector": "#table1 tr:nth-child(4) td:nth-child(4)",
+          "value": "已匯出"
+        },
+        {
+          "action": "count",
+          "selector": "input[name=I_ID]",
+          "value": 2
+        },
+        {
+          "action": "content",
+          "selector": "#table1 tr:nth-child(4) td:nth-child(4)",
+          "value": "已匯出"
+        },
+        {
+          "action": "content",
+          "selector": "#table1 tr:nth-child(5) td:nth-child(4)",
+          "value": "已匯出"
+        },
+        {
+          "action": "contains",
+          "selector": "#review-log",
+          "value": "BOUND-02"
+        }
+      ]
+    },
+    {
+      "id": "legacy-rejection-updates-without-download",
+      "source": "AFY10400.jsp:107-113; legacy rejection map updates result cells, does not trigger download; selected target error data=null remains a gap",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 0,
+          "value": "TEST000001"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 0,
+          "value": "P-01"
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "fill",
+          "selector": "input[name=I_ID]",
+          "nth": 1,
+          "value": "TEST000002"
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "nth": 1,
+          "value": "P-02"
+        },
+        {
+          "action": "click",
+          "role": "button",
+          "name": "匯出檔案"
+        },
+        {
+          "action": "select",
+          "selector": "#response-mode",
+          "value": "failure"
+        },
+        {
+          "action": "click",
+          "selector": "#respond"
+        },
+        {
+          "action": "wait_contains",
+          "selector": "#table1 tr:nth-child(4) td:nth-child(4)",
+          "value": "被保人："
+        },
+        {
+          "action": "content",
+          "selector": "#table1 tr:nth-child(4) td:nth-child(4)",
+          "value": "被保人：TEST000001 查無保單號碼：DEMO。"
+        },
+        {
+          "action": "contains",
+          "selector": "#review-log",
+          "value": "TR-08"
+        }
+      ]
+    },
+    {
+      "id": "native-async-success",
+      "source": "CSRUtil.js:626-680 native success without bottom message",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "click",
+          "selector": "#respond"
+        },
+        {
+          "action": "wait_dialogs",
+          "value": 1
+        },
+        {
+          "action": "dialog",
+          "value": "訊息說明：\n已匯出"
+        }
+      ]
+    },
+    {
+      "id": "native-async-error-with-id",
+      "source": "CSRUtil.js:626-680 native error msgid >17",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "select",
+          "selector": "#response-mode",
+          "value": "failure"
+        },
+        {
+          "action": "click",
+          "selector": "#respond"
+        },
+        {
+          "action": "wait_dialogs",
+          "value": 1
+        },
+        {
+          "action": "dialog",
+          "value": "錯誤編號：\nDEMO-ERROR-0000000001\n訊息說明：\n查無資料"
+        }
+      ]
+    },
+    {
+      "id": "global-keyboard-policy",
+      "source": "CM/header.jsp:136-147 listener registered on window",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "check",
+          "selector": "#policy",
+          "value": true
+        },
+        {
+          "action": "blur"
+        },
+        {
+          "action": "press_page",
+          "key": "Control+a"
+        },
+        {
+          "action": "dialog",
+          "value": "依據資安政策，不開放全選功能"
+        }
+      ]
+    },
+    {
+      "id": "message-title-drag",
+      "source": "CSRUtil.js:1526-1568 title pointer down/move/up moves message window",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "select",
+          "selector": "#message-mode",
+          "value": "custom"
+        },
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "click",
+          "selector": "#respond"
+        },
+        {
+          "action": "wait_visible",
+          "selector": "#message-window"
+        },
+        {
+          "action": "content",
+          "selector": "#message-title",
+          "value": "網頁訊息"
+        },
+        {
+          "action": "drag",
+          "selector": "#message-title",
+          "target": "#message-window",
+          "dx": 80,
+          "dy": 50,
+          "outline": "#dragbox"
+        }
+      ]
+    },
+    {
+      "id": "independent-copy-timers",
+      "source": "CM/header.jsp:149-183 A@0 B@30s B@61s independent timers clear shared state",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "clock_install"
+        },
+        {
+          "action": "check",
+          "selector": "#policy",
+          "value": true
+        },
+        {
+          "action": "click",
+          "selector": "#addBtn"
+        },
+        {
+          "action": "observe",
+          "selector": "#review-log",
+          "value": null
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "value": "A"
+        },
+        {
+          "action": "copy_selection",
+          "selector": "textarea[name=POLICY_NO]",
+          "value": "A"
+        },
+        {
+          "action": "observations",
+          "value": 1,
+          "filter": "BOUND-03"
+        },
+        {
+          "action": "clock_run",
+          "milliseconds": 30000
+        },
+        {
+          "action": "fill",
+          "selector": "textarea[name=POLICY_NO]",
+          "value": "B"
+        },
+        {
+          "action": "copy_selection",
+          "selector": "textarea[name=POLICY_NO]",
+          "value": "B"
+        },
+        {
+          "action": "observations",
+          "value": 2,
+          "filter": "BOUND-03"
+        },
+        {
+          "action": "clock_run",
+          "milliseconds": 31000
+        },
+        {
+          "action": "copy_selection",
+          "selector": "textarea[name=POLICY_NO]",
+          "value": "B"
+        },
+        {
+          "action": "observations",
+          "value": 3,
+          "filter": "BOUND-03"
+        }
+      ]
+    },
+    {
+      "id": "message-empty-fallback",
+      "source": "CSRUtil.js:1592-1599 known gray placeholder for empty/null/undefined message",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "select",
+          "selector": "#modal-kind",
+          "value": "empty"
+        },
+        {
+          "action": "click",
+          "selector": "#modal-fixture"
+        },
+        {
+          "action": "content",
+          "selector": "#message-content",
+          "value": "(無訊息內容)"
+        },
+        {
+          "action": "css",
+          "text": "(無訊息內容)",
+          "property": "color",
+          "value": "rgb(128, 128, 128)"
+        }
+      ]
+    },
+    {
+      "id": "message-null-fallback",
+      "source": "CSRUtil.js:1592-1599 known gray placeholder for empty/null/undefined message",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "select",
+          "selector": "#modal-kind",
+          "value": "null"
+        },
+        {
+          "action": "click",
+          "selector": "#modal-fixture"
+        },
+        {
+          "action": "content",
+          "selector": "#message-content",
+          "value": "(無訊息內容)"
+        },
+        {
+          "action": "css",
+          "text": "(無訊息內容)",
+          "property": "color",
+          "value": "rgb(128, 128, 128)"
+        }
+      ]
+    },
+    {
+      "id": "message-undefined-fallback",
+      "source": "CSRUtil.js:1592-1599 known gray placeholder for empty/null/undefined message",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "select",
+          "selector": "#modal-kind",
+          "value": "undefined"
+        },
+        {
+          "action": "click",
+          "selector": "#modal-fixture"
+        },
+        {
+          "action": "content",
+          "selector": "#message-content",
+          "value": "(無訊息內容)"
+        },
+        {
+          "action": "css",
+          "text": "(無訊息內容)",
+          "property": "color",
+          "value": "rgb(128, 128, 128)"
+        }
+      ]
+    },
+    {
+      "id": "accumulated-message-width",
+      "source": "CSRUtil.js:1603-1660 repeated messages accumulate, existing width does not shrink for short added message",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "fill",
+          "selector": "#modal-text",
+          "value": "ABCDEFGHIJABCDEFGHIJABCDEFGHIJ"
+        },
+        {
+          "action": "click",
+          "selector": "#modal-fixture"
+        },
+        {
+          "action": "box_record",
+          "selector": "#message-window",
+          "key": "long-window"
+        },
+        {
+          "action": "fill",
+          "selector": "#modal-text",
+          "value": "Z"
+        },
+        {
+          "action": "click",
+          "selector": "#modal-fixture"
+        },
+        {
+          "action": "content",
+          "selector": "#message-content",
+          "value": "ABCDEFGHIJABCDEFGHIJABCDEFGHIJ\nZ"
+        },
+        {
+          "action": "width_preserved",
+          "selector": "#message-window",
+          "key": "long-window"
+        }
+      ]
+    },
+    {
+      "id": "processing-exception-diagnostic-and-completion",
+      "source": "CSRUtil.js:684-692,2620-2637 and prototype.js:1942-1963 registered exception diagnostic precedes complete feedback; synthetic response drives callback exception",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#sample"
+        },
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "select",
+          "selector": "#response-mode",
+          "value": "processing-exception"
+        },
+        {
+          "action": "click",
+          "selector": "#respond"
+        },
+        {
+          "action": "wait_dialogs",
+          "value": 2
+        },
+        {
+          "action": "dialogs",
+          "values": [
+            "Error :\nurl : DEMO-EXCHANGE\nparams: DEMO-PARAMETERS\nException: \n",
+            "訊息說明：\n已匯出"
+          ]
+        },
+        {
+          "action": "content",
+          "selector": "#table1 tr:nth-child(4) td:nth-child(4)",
+          "value": ""
+        },
+        {
+          "action": "contains",
+          "selector": "#review-log",
+          "value": "TR-12"
+        }
+      ]
+    },
+    {
+      "id": "source-button-cascade",
+      "source": "CM/css/cm.css:162-164 :root .button overrides padding to 0px 10px",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "css",
+          "selector": "#addBtn",
+          "property": "padding-left",
+          "value": "10px"
+        },
+        {
+          "action": "css",
+          "selector": "#addBtn",
+          "property": "padding-right",
+          "value": "10px"
+        }
+      ]
+    },
+    {
+      "id": "bottom-receiver-after-callback",
+      "source": "msgDisplayer.jsp click clears message when product trigger starts; CSRUtil.js:626-680 later complete forwards response to existing bottom receiver; review response injection is not a second product click",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "select",
+          "selector": "#message-mode",
+          "value": "board"
+        },
+        {
+          "action": "click",
+          "selector": "#sample"
+        },
+        {
+          "action": "click",
+          "selector": "#exportBtn"
+        },
+        {
+          "action": "click",
+          "selector": "#respond"
+        },
+        {
+          "action": "wait_contains",
+          "selector": "#bottom-msg",
+          "value": "已匯出"
+        },
+        {
+          "action": "contains",
+          "selector": "#bottom-msg",
+          "value": "已匯出"
+        }
+      ]
+    },
+    {
+      "id": "reopened-message-single-keypress-listeners",
+      "source": "CSRUtil.js:1609-1632 per-show callback removes itself; show/mouse-close/reopen/letter then synthetic Escape keypress must not leave a stale closer. Synthetic keypress tests the source conditional branch, not native Escape event compatibility.",
+      "file": "SCR-01.html",
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#modal-fixture"
+        },
+        {
+          "action": "click",
+          "selector": "#message-ok"
+        },
+        {
+          "action": "click",
+          "selector": "#modal-fixture"
+        },
+        {
+          "action": "press",
+          "selector": "#message-ok",
+          "key": "a"
+        },
+        {
+          "action": "keyboard_event",
+          "selector": "#message-ok",
+          "type": "keypress",
+          "key": "Escape",
+          "keyCode": 27
+        },
+        {
+          "action": "attribute",
+          "selector": "#message-window",
+          "attribute": "hidden",
+          "value": null
+        },
+        {
+          "action": "content",
+          "selector": "#message-content",
+          "value": "查無資料"
+        }
+      ]
+    }
+  ]
+}
