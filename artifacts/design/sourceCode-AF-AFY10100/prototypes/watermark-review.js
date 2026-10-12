@@ -1,0 +1,10 @@
+// Conditional demonstration only; identity/time are synthetic, not trusted production values.
+if(new URLSearchParams(location.search).get('watermark')==='Y'){
+ var is_same_origin=false;try{is_same_origin=window.top.document.domain==window.document.domain;}catch(err){console.log('==is_same_origin==error=='+err.message);}
+ if(is_same_origin&&window.name==='mainFrame'){window.top.watermark_funcIds=[];window.top.watermark_root=window;}
+ var root_wm=window;if(is_same_origin){if(window.top.watermark_root){root_wm=window.top.watermark_root;}else{window.top.watermark_root=window.top;root_wm=window.top;}}
+ var headerWatermarkOnloadFunction=function(){try{if(!root_wm.watermark_funcIds)root_wm.watermark_funcIds=[];root_wm.watermark_funcIds.push('AFY10100');window.__watermarkDemo=new WatermarkPlus.Watermark({contentType:'multi-line-text',content:'DEMO_USER\n2020-01-01 12:00:00',width:190,height:85,lineHeight:20,fontColor:'#000',fontWeight:'normal',fontSize:'16px',fontFamily:'Microsoft JhengHei',rotate:17,globalAlpha:0.07,mutationObserve:true,monitorProtection:true,layout:'grid',gridLayoutOptions:{rows:2,cols:2,gap:[-18,-8],matrix:[[1,0],[0,1]]}});window.__watermarkDemo.create();}catch(err){console.log('==headerWatermark==onload==error=='+err.message);}};
+ var headerWatermarkOnberforeunloadFunction=function(){try{if(!root_wm.watermark_funcIds)return;var idx=root_wm.watermark_funcIds.indexOf('AFY10100');if(idx===-1)return;root_wm.watermark_funcIds=root_wm.watermark_funcIds.splice(idx,1);}catch(err){console.log('==headerWatermark==onberforeunload==error=='+err.message);}};
+ // Preserve the evidenced misspelling and differing handler branch; do not silently fix it.
+ if(typeof window.addEventListener!=='undefined'){window.addEventListener('load',headerWatermarkOnloadFunction);window.addEventListener('berforeunload',headerWatermarkOnloadFunction);}else{window.attachEvent('onload',headerWatermarkOnberforeunloadFunction);window.attachEvent('onberforeunload',headerWatermarkOnberforeunloadFunction);}
+}

@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="zh-Hant" data-scope-id="sourceCode-AF-AFY10100" data-screen-id="SCR-01" data-state-id="ST-01"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'"><title>公會通報查詢 — 審閱原型</title><link rel="stylesheet" href="../styles/CMP-02.css"><link rel="stylesheet" href="../styles/CMP-01.css"><link rel="stylesheet" href="../styles/CMP-03.css"><link rel="stylesheet" href="../styles/CMP-04.css"><link rel="stylesheet" href="../styles/CMP-05.css"><link rel="stylesheet" href="../styles/review.css"><link rel="icon" href="data:,"></head><body><main id="product" data-screen-id="SCR-01" data-state-id="ST-01" data-component-id="CMP-01" data-source-id="product"><center>
+		<span id="bar1" data-source-id="bar1" data-ui-id="UI-001" class="root-style-001">
+			<table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="4"></td>
+					<td class="root-style-002 root-style-003">
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="4"></td>
+							</tr>
+						</table> <!-- InstanceBeginEditable name="title" -->
+						<table width="100%" border="0" cellpadding="2" cellspacing="0" class="subTitle">
+							<tr>
+								<td width="20" height="24">
+									<div class="root-style-004">
+										<font size="-5">●</font>
+									</div>
+								</td>
+								<td>公會通報查詢</td>
+								<td>
+									<div class="root-style-005">畫面編號：AFY10100</div>
+								</td>
+							</tr>
+						</table> <!-- InstanceEndEditable -->
+					</td>
+					<td width="4"></td>
+					<td width="5" class="tbBox"></td>
+				</tr>
+			</table>
+		</span>
+		<table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td> </td>
+			</tr>
+		</table>
+		<form name="frm" id="frm" method="post" action="" data-source-id="frm">
+		<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="4"></td>
+				<td width="100%" class="root-style-006 root-style-007">
+					<!-- InstanceBeginEditable name="content" -->
+					<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="root-style-008">
+								<table width="97%" border="0" cellpadding="0" cellspacing="1" class="root-style-009 root-style-010">
+									<tbody>
+										<tr>
+											<td class="tbBox2">
+												<p>
+													公會通報查詢
+												</p>
+											</td>
+										</tr>
+										<tr class="root-style-011">
+											<td><table width="100%" border="0" cellspacing="0" cellpadding="5">
+													<tr>
+														<td>
+															<table width="100%" border="0" cellpadding="0" cellspacing="1" class="tbBox2">
+																<tr>
+																	<td class="tbYellow root-style-012" rowspan="1" colspan="1" width="8%">
+																	身份證字號/統一編號
+																	</td>
+																	<td class="tbYellow2 root-style-013" rowspan="1" colspan="1">
+																		<input id="inputId" name="inputId" value="" type="text" class="textBox2" data-source-id="inputId" data-ui-id="UI-002">
+																		<span data-review-flag="return" data-ui-id="UI-003">
+																			<input type="checkbox" id="IS_RETURN" name="IS_RETURN" value="Y" data-source-id="IS_RETURN" data-ui-id="UI-004" data-context-flag="return">同步更新公會回檔狀態
+																		</span>
+																	</td>
+																	<td class="tbYellow root-style-014" rowspan="1" colspan="1" width="8%">
+																	契約角色
+																	</td>
+																	<td class="tbYellow2 root-style-015" rowspan="1" colspan="1">
+																	<select id="role" name="role" data-source-id="role" data-ui-id="UI-005">
+																		<option value="I">被保人</option>
+																		<option value="A">要保人</option>
+																	</select>
+																	</td>
+																	<td class="tbYellow root-style-016" rowspan="1" colspan="1" width="8%">
+																	保單效力
+																	</td>
+																	<td class="tbYellow2 root-style-017" rowspan="1" colspan="1">
+																	<select id="status" name="status" data-source-id="status" data-ui-id="UI-006">
+																		<option value="Y">有效</option>
+																		<option value="N">無效</option>
+																		<option value="A">全部</option>
+																	</select>
+																	</td>
+																	<td class="tbYellow2 root-style-018" rowspan="3" colspan="1">
+																		<input id="btn_query" name="btn_query" type="button" class="button" value="F2查詢" onclick="doQuery()" data-source-id="btn_query" data-ui-id="UI-007" data-flow-id="FLOW-02">
+																	</td>
+																</tr>
+																<tr>
+																	<td class="tbYellow root-style-019" rowspan="1" colspan="1" width="8%">
+																	姓名
+																	</td>
+																	<td class="tbYellow2 root-style-020" rowspan="1" colspan="1">
+																		<input alt="ch" class="textDisable" readonly value="展示姓名" data-ui-id="UI-008">
+																	</td>
+																	<td class="tbYellow root-style-021" rowspan="1" colspan="1" width="8%">
+																	生日
+																	</td>
+																	<td class="tbYellow2 root-style-022" rowspan="1" colspan="1">
+																	19900101
+																	</td>
+																	<td class="tbYellow root-style-023" rowspan="1" colspan="1" width="8%">
+																	公會資料取回日期
+																	</td>
+																	<td class="tbYellow2 root-style-024" rowspan="1" colspan="2">
+																	20200101120000
+																	</td>
+																</tr>
+															</table>
+															<table width="100%" cellpadding="1" cellspacing="1" class="tbBox2">
+																<tbody>
+																	<tr>
+																		<td class="" id="table_2_R0C0" rowspan="1" colspan="16" width="" data-source-id="table_2_R0C0"><span id="input-label_12" class="" data-source-id="input-label_12" data-ui-id="UI-009">保障項目彙整</span>
+																		</td>
+																	</tr>
+																	<tr>
+																		
+																		<td class="tbBlue2 root-style-025" id="table_2_R1C0" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C0">
+																			<span id="input-label_13" class="" data-source-id="input-label_13" data-ui-id="UI-010">項目</span>
+																		</td>
+																		<td class="tbBlue root-style-026" id="table_2_R1C1" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C1">
+																			<span id="input-label_14" class="" data-source-id="input-label_14" data-ui-id="UI-011">合計</span>
+																		</td>
+																		<td class="tbBlue root-style-027">同業合計</td>
+																		<td class="tbBlue root-style-028" id="table_2_R1C2" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C2">
+																			<span id="input-label_15" class="" data-source-id="input-label_15" data-ui-id="UI-012">收件</span>
+																		</td>
+																		<td class="tbBlue root-style-029" id="table_2_R1C3" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C3">
+																			<span id="input-label_16" class="" data-source-id="input-label_16" data-ui-id="UI-013">承保</span>
+																		</td>
+																		
+																		<td class="tbBlue2 root-style-030" id="table_2_R1C4" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C4">
+																			<span id="input-label_17" class="" data-source-id="input-label_17" data-ui-id="UI-014">項目</span>
+																		</td>
+																		<td class="tbBlue root-style-031" id="table_2_R1C5" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C5">
+																			<span id="input-label_18" class="" data-source-id="input-label_18" data-ui-id="UI-015">合計</span>
+																		</td>
+																		<td class="tbBlue root-style-032">同業合計</td>
+																		<td class="tbBlue root-style-033" id="table_2_R1C6" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C6">
+																			<span id="input-label_19" class="" data-source-id="input-label_19" data-ui-id="UI-016">收件</span>
+																		</td>
+																		<td class="tbBlue root-style-034" id="table_2_R1C7" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C7">
+																			<span id="input-label_20" class="" data-source-id="input-label_20" data-ui-id="UI-017">承保</span>
+																		</td>
+																		
+																		<td class="tbBlue2 root-style-035" id="table_2_R1C8" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C8">
+																			<span id="input-label_21" class="" data-source-id="input-label_21" data-ui-id="UI-018">項目</span>
+																		</td>
+																		<td class="tbBlue root-style-036" id="table_2_R1C9" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C9">
+																			<span id="input-label_22" class="" data-source-id="input-label_22" data-ui-id="UI-019">合計</span>
+																		</td>
+																		<td class="tbBlue root-style-037">同業合計</td>
+																		<td class="tbBlue root-style-038" id="table_2_R1C10" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C10">
+																			<span id="input-label_23" class="" data-source-id="input-label_23" data-ui-id="UI-020">收件</span>
+																		</td>
+																		<td class="tbBlue root-style-039" id="table_2_R1C11" rowspan="1" colspan="1" width="" data-source-id="table_2_R1C11">
+																			<span id="input-label_24" class="" data-source-id="input-label_24" data-ui-id="UI-021">承保</span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="tbBlue2 root-style-040" id="table_2_R2C0" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C0">
+																			<span id="input-label_29" class="" data-source-id="input-label_29" data-ui-id="UI-022">身故</span>
+																		</td>
+																		<td class="tbYellow2 root-style-041" id="table_2_R2C1" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C1">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-042">
+																			12,345
+																		</td>
+																		
+																		<td class="tbYellow2 root-style-043" id="table_2_R2C2" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C2">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-044" id="table_2_R2C3" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C3">
+																			12,345
+																		</td>																																					
+																		<td class="tbBlue2 root-style-045" id="table_2_R2C4" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C4">
+																			<span id="input-label_30" class="" data-source-id="input-label_30" data-ui-id="UI-023">完全失能或最高級失能</span>
+																		</td>																			
+																		<td class="tbYellow2 root-style-046" id="table_2_R2C5" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C5">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-047">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-048" id="table_2_R2C6" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C6">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-049" id="table_2_R2C7" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C7">
+																			12,345
+																		</td>																			
+																		<td class="tbBlue2 root-style-050" id="table_2_R2C8" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C8">
+																			<span id="input-label_31" class="" data-source-id="input-label_31" data-ui-id="UI-024">失能扶助金</span>
+																		</td>
+																		<td class="tbYellow2 root-style-051" id="table_2_R2C9" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C9">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-052">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-053" id="table_2_R2C10" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C10">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-054" id="table_2_R2C11" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C11">
+																			12,345
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="tbBlue2 root-style-055" id="table_2_R2C12" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C12">
+																			<span id="input-label_32" class="" data-source-id="input-label_32" data-ui-id="UI-025">特定事故</span>
+																		</td>
+																		<td class="tbYellow2 root-style-056" id="table_2_R2C13" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C13">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-057">
+																			12,345
+																		</td>																			
+																		<td class="tbYellow2 root-style-058" id="table_2_R2C14" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C14">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-059" id="table_2_R2C15" rowspan="1" colspan="1" width="" data-source-id="table_2_R2C15">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-060" id="table_2_R3C0" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C0">
+																			<span id="input-label_33" class="" data-source-id="input-label_33" data-ui-id="UI-026">初次罹患</span>
+																		</td>																			
+																		<td class="tbYellow3 root-style-061" id="table_2_R3C1" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C1">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-062">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-063" id="table_2_R3C2" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C2">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-064" id="table_2_R3C3" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C3">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-065" id="table_2_R3C4" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C4">
+																			<span id="input-label_34" class="" data-source-id="input-label_34" data-ui-id="UI-027">醫療限額</span>
+																		</td>																			
+																		<td class="tbYellow3 root-style-066" id="table_2_R3C5" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C5">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-067">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-068" id="table_2_R3C6" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C6">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-069" id="table_2_R3C7" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C7">
+																			12,345
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="tbBlue2 root-style-070" id="table_2_R3C8" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C8">
+																			<span id="input-label_35" class="" data-source-id="input-label_35" data-ui-id="UI-028">醫療限額自負</span>
+																		</td>																			
+																		<td class="tbYellow3 root-style-071" id="table_2_R3C9" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C9">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-072">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-073" id="table_2_R3C10" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C10">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-074" id="table_2_R3C11" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C11">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-075" id="table_2_R3C12" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C12">
+																			<span id="input-label_36" class="" data-source-id="input-label_36" data-ui-id="UI-029">醫療日額</span>
+																		</td>																			
+																		<td class="tbYellow3 root-style-076" id="table_2_R3C13" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C13">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-077">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-078" id="table_2_R3C14" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C14">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-079" id="table_2_R3C15" rowspan="1" colspan="1" width="" data-source-id="table_2_R3C15">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-080" id="table_2_R4C0" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C0">
+																			<span id="input-label_37" class="" data-source-id="input-label_37" data-ui-id="UI-030">住院手術</span>
+																		</td>																			
+																		<td class="tbYellow2 root-style-081" id="table_2_R4C1" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C1">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-082">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-083" id="table_2_R4C2" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C2">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-084" id="table_2_R4C3" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C3">
+																			12,345
+																		</td>
+																	</tr>
+																	<tr>																			
+																		<td class="tbBlue2 root-style-085" id="table_2_R4C4" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C4">
+																			<span id="input-label_38" class="" data-source-id="input-label_38" data-ui-id="UI-031">門診手術</span>
+																		</td>																			
+																		<td class="tbYellow2 root-style-086" id="table_2_R4C5" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C5">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-087">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-088" id="table_2_R4C6" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C6">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-089" id="table_2_R4C7" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C7">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-090" id="table_2_R4C8" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C8">
+																			<span id="input-label_39" class="" data-source-id="input-label_39" data-ui-id="UI-032">門診</span>
+																		</td>																			
+																		<td class="tbYellow2 root-style-091" id="table_2_R4C9" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C9">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-092">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-093" id="table_2_R4C10" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C10">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-094" id="table_2_R4C11" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C11">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-095" id="table_2_R4C12" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C12">
+																			<span id="input-label_40" class="" data-source-id="input-label_40" data-ui-id="UI-033">重大疾/傷病</span>
+																		</td>																			
+																		<td class="tbYellow2 root-style-096" id="table_2_R4C13" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C13">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-097">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-098" id="table_2_R4C14" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C14">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-099" id="table_2_R4C15" rowspan="1" colspan="1" width="" data-source-id="table_2_R4C15">
+																			12,345
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="tbBlue2 root-style-100" id="table_2_R5C0" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C0">
+																			<span id="input-label_41" class="" data-source-id="input-label_41" data-ui-id="UI-034">重大傷燙傷</span>
+																		</td>																			
+																		<td class="tbYellow3 root-style-101" id="table_2_R5C1" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C1">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-102">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-103" id="table_2_R5C2" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C2">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-104" id="table_2_R5C3" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C3">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-105" id="table_2_R5C4" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C4">
+																			<span id="input-label_42" class="" data-source-id="input-label_42" data-ui-id="UI-035">癌症療養</span>
+																		</td>																			
+																		<td class="tbYellow3 root-style-106" id="table_2_R5C5" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C5">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-107">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-108" id="table_2_R5C6" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C6">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-109" id="table_2_R5C7" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C7">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-110" id="table_2_R5C8" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C8">
+																			<span id="input-label_43" class="" data-source-id="input-label_43" data-ui-id="UI-036">出院療養</span>
+																		</td>
+																		<td class="tbYellow3 root-style-111" id="table_2_R5C9" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C9">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-112">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-113" id="table_2_R5C10" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C10">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-114" id="table_2_R5C11" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C11">
+																			12,345
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="tbBlue2 root-style-115" id="table_2_R5C12" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C12">
+																			<span id="input-label_44" class="" data-source-id="input-label_44" data-ui-id="UI-037">喪失工作能力</span>
+																		</td>																			
+																		<td class="tbYellow3 root-style-116" id="table_2_R5C13" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C13">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-117">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-118" id="table_2_R5C14" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C14">
+																			12,345
+																		</td>
+																		<td class="tbYellow3 root-style-119" id="table_2_R5C15" rowspan="1" colspan="1" width="" data-source-id="table_2_R5C15">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-120" id="table_2_R6C0" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C0">
+																			<span id="input-label_45" class="" data-source-id="input-label_45" data-ui-id="UI-038">喪葬費用</span>
+																		</td>																			
+																		<td class="tbYellow2 root-style-121" id="table_2_R6C1" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C1">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-122">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-123" id="table_2_R6C2" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C2">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-124" id="table_2_R6C3" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C3">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-125" id="table_2_R6C4" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C4">
+																			<span id="input-label_46" class="" data-source-id="input-label_46" data-ui-id="UI-039">銜接原醫療限額之自負額</span>
+																		</td>
+																		<td class="tbYellow2 root-style-126" id="table_2_R6C5" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C5">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-127">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-128" id="table_2_R6C6" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C6">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-129" id="table_2_R6C7" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C7">
+																			12,345
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="tbBlue2 root-style-130" id="table_2_R6C8" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C8">
+																			<span id="input-label_47" class="" data-source-id="input-label_47" data-ui-id="UI-040">分期給付</span>
+																		</td>																			
+																		<td class="tbYellow2 root-style-131" id="table_2_R6C9" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C9">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-132">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-133" id="table_2_R6C10" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C10">
+																			12,345
+																		</td>
+																		<td class="tbYellow2 root-style-134" id="table_2_R6C11" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C11">
+																			12,345
+																		</td>
+																		<td class="tbBlue2 root-style-135" id="table_2_R6C12" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C12">
+																		</td>
+																		<td class="tbYellow2 root-style-136" id="table_2_R6C13" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C13">
+																		</td>
+																		<td class="tbYellow2 root-style-137" id="table_2_R6C14" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C14">
+																		</td>
+																		<td class="tbYellow2 root-style-138" id="table_2_R6C15" rowspan="1" colspan="1" width="" data-source-id="table_2_R6C15">
+																		</td>
+																		<td class="tbYellow2"></td>
+																		<td class="tbBlue2"></td>
+																		<td class="tbYellow2"></td>
+																		<td class="tbYellow2"></td>
+																		<td class="tbYellow2"></td>
+																		<td class="tbYellow2"></td>
+																	</tr>
+																</tbody>
+															</table>  
+																<table width="100%" cellpadding="1" cellspacing="1" class="tbBox2">
+																	<tbody>
+																		<tr>
+																			<td class="" id="table_3_R0C0" rowspan="1" colspan="13" width="" data-source-id="table_3_R0C0"><span id="input-label_48" class="" data-source-id="input-label_48" data-ui-id="UI-041">保費資料彙整</span>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbBlue2 root-style-139" id="table_3_R1C0" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C0">
+																				<span id="input-label_49" class="" data-source-id="input-label_49" data-ui-id="UI-042">項目</span>
+
+																			</td>
+																			<td class="tbBlue root-style-140" id="table_3_R1C1" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C1">
+																				<span id="input-label_50" class="" data-source-id="input-label_50" data-ui-id="UI-043">合計</span>
+
+																			</td>
+																			<td class="tbBlue root-style-141" id="table_3_R1C2" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C2">
+																				<span id="input-label_51" class="" data-source-id="input-label_51" data-ui-id="UI-044">收件</span>
+
+																			</td>
+																			<td class="tbBlue root-style-142" id="table_3_R1C3" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C3">
+																				<span id="input-label_52" class="" data-source-id="input-label_52" data-ui-id="UI-045">承保</span>
+
+																			</td>
+																			<td class="tbBlue2 root-style-143" id="table_3_R1C4" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C4">
+																				<span id="input-label_53" class="" data-source-id="input-label_53" data-ui-id="UI-046">項目</span>
+
+																			</td>
+																			<td class="tbBlue root-style-144" id="table_3_R1C5" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C5">
+																				<span id="input-label_54" class="" data-source-id="input-label_54" data-ui-id="UI-047">合計</span>
+
+																			</td>
+																			<td class="tbBlue root-style-145" id="table_3_R1C6" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C6">
+																				<span id="input-label_55" class="" data-source-id="input-label_55" data-ui-id="UI-048">收件</span>
+
+																			</td>
+																			<td class="tbBlue root-style-146" id="table_3_R1C7" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C7">
+																				<span id="input-label_56" class="" data-source-id="input-label_56" data-ui-id="UI-049">承保</span>
+
+																			</td>
+																			<td class="tbBlue2 root-style-147" id="table_3_R1C8" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C8">
+																				<span id="input-label_57" class="" data-source-id="input-label_57" data-ui-id="UI-050">項目</span>
+
+																			</td>
+																			<td class="tbBlue root-style-148" id="table_3_R1C9" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C9">
+																				<span id="input-label_58" class="" data-source-id="input-label_58" data-ui-id="UI-051">合計</span>
+
+																			</td>
+																			<td class="tbBlue root-style-149" id="table_3_R1C10" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C10">
+																				<span id="input-label_59" class="" data-source-id="input-label_59" data-ui-id="UI-052">收件</span>
+
+																			</td>
+																			<td class="tbBlue root-style-150" id="table_3_R1C11" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C11">
+																				<span id="input-label_60" class="" data-source-id="input-label_60" data-ui-id="UI-053">承保</span>
+
+																			</td>
+																			<td class="tbBlue root-style-151" id="table_3_R1C12" rowspan="1" colspan="1" width="" data-source-id="table_3_R1C12">
+																				<span id="input-label_61" class="" data-source-id="input-label_61" data-ui-id="UI-054">操作者</span>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbBlue2 root-style-152" id="table_3_R2C0" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C0">
+																				<span id="input-label_62" class="" data-source-id="input-label_62" data-ui-id="UI-055">年繳保費</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-153" id="table_3_R2C1" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C1">
+																				12,345
+																			</td>
+																			<td class="tbYellow2 root-style-154" id="table_3_R2C2" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C2">
+																				12,345
+																			</td>
+																			<td class="tbYellow2 root-style-155" id="table_3_R2C3" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C3">
+																				12,345
+																			</td>
+																			<td class="tbBlue2 root-style-156" id="table_3_R2C4" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C4">
+																				<span id="input-label_63" class="" data-source-id="input-label_63" data-ui-id="UI-056">躉繳保費</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-157" id="table_3_R2C5" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C5">
+																				12,345
+																			</td>
+																			<td class="tbYellow2 root-style-158" id="table_3_R2C6" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C6">
+																				12,345
+																			</td>
+																			<td class="tbYellow2 root-style-159" id="table_3_R2C7" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C7">
+																				12,345
+																			</td>
+																			<td class="tbBlue2 root-style-160" id="table_3_R2C8" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C8">
+																				<span id="input-label_64" class="" data-source-id="input-label_64" data-ui-id="UI-057">超額(彈性)保險費</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-161" id="table_3_R2C9" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C9">
+																				12,345
+																			</td>
+																			<td class="tbYellow2 root-style-162" id="table_3_R2C10" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C10">
+																				12,345
+																			</td>
+																			<td class="tbYellow2 root-style-163" id="table_3_R2C11" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C11">
+																				12,345
+																			</td>
+																			<td class="tbYellow2 root-style-164" id="table_3_R2C12" rowspan="1" colspan="1" width="" data-source-id="table_3_R2C12">
+																				DEMO-USER
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<table id="editArea" class="tbBox2 root-style-165" width="100%" cellspacing="1" cellpadding="1" data-source-id="editArea" data-component-id="CMP-01">
+																	<tbody>
+																		<tr>
+																			<td class="root-style-166" id="table_4_R0C0" rowspan="1" colspan="10" width="10%" data-source-id="table_4_R0C0">
+																				<span id="input-label_63__179_20" class="" data-source-id="input-label_63" data-ui-id="UI-058">資料編輯區</span>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-167" id="table_4_R1C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C0">
+																				<span id="input-label_64__181_20" class="" data-source-id="input-label_64" data-ui-id="UI-059">通報方式</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-168" id="table_4_R1C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C1">
+																				<span id="INSR_TYPE_text" data-source-id="INSR_TYPE_text" data-ui-id="UI-060"></span>
+																				<input type="hidden" id="INSR_TYPE" name="INSR_TYPE" value="" data-source-id="INSR_TYPE">
+																			</td>
+																			<td class="tbYellow root-style-169" id="table_4_R1C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C2">
+																				<span id="input-label_66" class="" data-source-id="input-label_66" data-ui-id="UI-061">公司別</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-170" id="table_4_R1C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C3">
+																				<span id="CMNY_CODE_text" data-source-id="CMNY_CODE_text" data-ui-id="UI-062"></span>
+																				<input type="hidden" id="CMNY_CODE" name="CMNY_CODE" value="" data-source-id="CMNY_CODE">
+																			</td>
+																			<td class="tbYellow root-style-171" id="table_4_R1C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C4">
+																				<span id="input-label_68" class="" data-source-id="input-label_68" data-ui-id="UI-063">被保人ID</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-172" id="table_4_R1C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C5">
+																				<span id="I_ID_text" data-source-id="I_ID_text" data-ui-id="UI-064"></span>
+																				<input type="hidden" id="I_ID" name="I_ID" value="" data-source-id="I_ID">
+																			</td>
+																			<td class="tbYellow root-style-173" id="table_4_R1C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C6">
+																				<span id="input-label_70" class="" data-source-id="input-label_70" data-ui-id="UI-065">被保人生日</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-174" id="table_4_R1C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C7">
+																				<span id="I_BIRTHDAY_text" data-source-id="I_BIRTHDAY_text" data-ui-id="UI-066"></span>
+																				<input type="hidden" id="I_BIRTHDAY" name="I_BIRTHDAY" value="" data-source-id="I_BIRTHDAY">
+																			</td>
+																			<td class="tbYellow root-style-175" id="table_4_R1C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C8">
+																				<span id="input-label_72" class="" data-source-id="input-label_72" data-ui-id="UI-067">保單號碼</span>
+																			</td>
+																			<td class="tbYellow2 root-style-176" id="table_4_R1C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R1C9">
+																				<span id="POLICY_NO_text" data-source-id="POLICY_NO_text" data-ui-id="UI-068"></span>
+																				<input type="hidden" id="POLICY_NO" name="POLICY_NO" value="" data-source-id="POLICY_NO">
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-177" id="table_4_R2C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C0">
+																				<span id="input-label_74" class="" data-source-id="input-label_74" data-ui-id="UI-069">保單分類</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-178" id="table_4_R2C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C1">
+																				<span id="POLICY_CAT_text" data-source-id="POLICY_CAT_text" data-ui-id="UI-070"></span>
+																				<input type="hidden" id="POLICY_CAT" name="POLICY_CAT" value="" data-source-id="POLICY_CAT">
+																			</td>
+																			<td class="tbYellow root-style-179" id="table_4_R2C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C2">
+																				<span id="input-label_76" class="" data-source-id="input-label_76" data-ui-id="UI-071">險種分類</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-180" id="table_4_R2C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C3">
+																				<span id="POLICY_DUTY_text" data-source-id="POLICY_DUTY_text" data-ui-id="UI-072"></span>
+																				<input type="hidden" id="POLICY_DUTY" name="POLICY_DUTY" value="" data-source-id="POLICY_DUTY">
+																			</td>
+																			<td class="tbYellow root-style-181" id="table_4_R2C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C4">
+																				<span id="input-label_78" class="" data-source-id="input-label_78" data-ui-id="UI-073">險種</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-182" id="table_4_R2C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C5">
+																				<span id="PROD_KIND_text" data-source-id="PROD_KIND_text" data-ui-id="UI-074"></span>
+																				<input type="hidden" id="PROD_KIND" name="PROD_KIND" value="" data-source-id="PROD_KIND">
+																			</td>
+																			<td class="tbYellow root-style-183" id="table_4_R2C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C6">
+																				<span id="input-label_80" class="" data-source-id="input-label_80" data-ui-id="UI-075">保單狀況</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-184" id="table_4_R2C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C7">
+																				<span id="STATUS_text" data-source-id="STATUS_text" data-ui-id="UI-076"></span>
+																				<input type="hidden" id="STATUS" name="STATUS" value="" data-source-id="STATUS">
+																			</td>
+																			<td class="tbYellow root-style-185" id="table_4_R2C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C8">
+																				<span id="input-label_82" class="" data-source-id="input-label_82" data-ui-id="UI-077">保單狀況生效日期(受理理賠日、身故日)</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-186" id="table_4_R2C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R2C9">
+																				<span id="LST_CHG_DATE_text" data-source-id="LST_CHG_DATE_text" data-ui-id="UI-078"></span>
+																				<input type="hidden" id="LST_CHG_DATE" name="LST_CHG_DATE" value="" data-source-id="LST_CHG_DATE">
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-187" id="table_4_R3C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C0">
+																				<span id="input-label_84" class="" data-source-id="input-label_84" data-ui-id="UI-079">主約保單號碼</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-188" id="table_4_R3C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C1">
+																				<span id="MAIN_POLICY_NO_text" data-source-id="MAIN_POLICY_NO_text" data-ui-id="UI-080"></span>
+																				<input type="hidden" id="MAIN_POLICY_NO" name="MAIN_POLICY_NO" value="" data-source-id="MAIN_POLICY_NO">
+
+																			</td>
+																			<td class="tbYellow root-style-189" id="table_4_R3C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C2">
+																				<span id="input-label_86" class="" data-source-id="input-label_86" data-ui-id="UI-081">契約生效日</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-190" id="table_4_R3C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C3">
+																				<span id="ISSUE_DATE_text" data-source-id="ISSUE_DATE_text" data-ui-id="UI-082"></span>
+																				<input type="hidden" id="ISSUE_DATE" name="ISSUE_DATE" value="" data-source-id="ISSUE_DATE">
+
+																			</td>
+																			<td class="tbYellow root-style-191" id="table_4_R3C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C4">
+																				<span id="input-label_88" class="" data-source-id="input-label_88" data-ui-id="UI-083">契約生效時分</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-192" id="table_4_R3C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C5">
+																				<span id="ISSUE_TIME_text" data-source-id="ISSUE_TIME_text" data-ui-id="UI-084"></span>
+																				<input type="hidden" id="ISSUE_TIME" name="ISSUE_TIME" value="" data-source-id="ISSUE_TIME">
+
+																			</td>
+																			<td class="tbYellow root-style-193" id="table_4_R3C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C6">
+																				<span id="input-label_90" class="" data-source-id="input-label_90" data-ui-id="UI-085">契約滿期日</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-194" id="table_4_R3C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C7">
+																				<span id="LPS_DATE_text" data-source-id="LPS_DATE_text" data-ui-id="UI-086"></span>
+																				<input type="hidden" id="LPS_DATE" name="LPS_DATE" value="" data-source-id="LPS_DATE">
+
+																			</td>
+																			<td class="tbYellow root-style-195" id="table_4_R3C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C8">
+																				<span id="input-label_92" class="" data-source-id="input-label_92" data-ui-id="UI-087">契約滿期時分</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-196" id="table_4_R3C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R3C9">
+																				<span id="LPS_TIME_text" data-source-id="LPS_TIME_text" data-ui-id="UI-088"></span>
+																				<input type="hidden" id="LPS_TIME" name="LPS_TIME" value="" data-source-id="LPS_TIME">
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-197" id="table_4_R4C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C0">
+																				<span id="input-label_94" class="" data-source-id="input-label_94" data-ui-id="UI-089">要保書填寫日</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-198" id="table_4_R4C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C1">
+																				<span id="SIGN_DATE_text" data-source-id="SIGN_DATE_text" data-ui-id="UI-090"></span>
+																				<input type="hidden" id="SIGN_DATE" name="SIGN_DATE" value="" data-source-id="SIGN_DATE">
+
+																			</td>
+																			<td class="tbYellow root-style-199" id="table_4_R4C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C2">
+																				<span id="input-label_96" class="" data-source-id="input-label_96" data-ui-id="UI-091">保費</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-200" id="table_4_R4C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C3">
+																				<span id="PREM_text" data-source-id="PREM_text" data-ui-id="UI-092"></span>
+																				<input type="hidden" id="PREM" name="PREM" value="" data-source-id="PREM">
+
+																			</td>
+																			<td class="tbYellow root-style-201" id="table_4_R4C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C4">
+																				<span id="input-label_98" class="" data-source-id="input-label_98" data-ui-id="UI-093">保費繳別</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-202" id="table_4_R4C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C5">
+																				<span id="PAY_FREQ_text" data-source-id="PAY_FREQ_text" data-ui-id="UI-094"></span>
+																				<input type="hidden" id="PAY_FREQ" name="PAY_FREQ" value="" data-source-id="PAY_FREQ">
+
+																			</td>
+																			<td class="tbYellow root-style-203" id="table_4_R4C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C6">
+																				<span id="input-label_100" class="" data-source-id="input-label_100" data-ui-id="UI-095">保費繳費年期</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-204" id="table_4_R4C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C7">
+																				<span id="PAY_PERIOD_text" data-source-id="PAY_PERIOD_text" data-ui-id="UI-096"></span>
+																				<input type="hidden" id="PAY_PERIOD" name="PAY_PERIOD" value="" data-source-id="PAY_PERIOD">
+
+																			</td>
+																			<td class="tbYellow root-style-205" id="table_4_R4C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C8">
+																				<span id="input-label_102" class="" data-source-id="input-label_102" data-ui-id="UI-097">保單狀況生效時分</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-206" id="table_4_R4C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R4C9">
+																				<span id="LST_CHG_TIME_text" data-source-id="LST_CHG_TIME_text" data-ui-id="UI-098"></span>
+																				<input type="hidden" id="LST_CHG_TIME" name="LST_CHG_TIME" value="" data-source-id="LST_CHG_TIME">
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-207" id="table_4_R5C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C0">
+																				<span id="input-label_104" class="" data-source-id="input-label_104" data-ui-id="UI-099">身故</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-208" id="table_4_R5C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C1">
+																				<input type="text" class="textBox2" id="PAY_AMT1" name="PAY_AMT1" title="" maxlength="" size="" value="" data-source-id="PAY_AMT1" data-ui-id="UI-100">
+
+																			</td>
+																			<td class="tbYellow root-style-209" id="table_4_R5C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C2">
+																				<span id="input-label_105" class="" data-source-id="input-label_105" data-ui-id="UI-101">完全失能或最高級失能</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-210" id="table_4_R5C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C3">
+																				<input type="text" class="textBox2" id="PAY_AMT2" name="PAY_AMT2" title="" maxlength="" size="" value="" data-source-id="PAY_AMT2" data-ui-id="UI-102">
+
+																			</td>
+																			<td class="tbYellow root-style-211" id="table_4_R5C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C4">
+																				<span id="input-label_106" class="" data-source-id="input-label_106" data-ui-id="UI-103">失能扶助金</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-212" id="table_4_R5C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C5">
+																				<input type="text" class="textBox2" id="PAY_AMT3" name="PAY_AMT3" title="" maxlength="" size="" value="" data-source-id="PAY_AMT3" data-ui-id="UI-104">
+
+																			</td>
+																			<td class="tbYellow root-style-213" id="table_4_R5C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C6">
+																				<span id="input-label_107" class="" data-source-id="input-label_107" data-ui-id="UI-105">特定事故</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-214" id="table_4_R5C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C7">
+																				<input type="text" class="textBox2" id="PAY_AMT4" name="PAY_AMT4" title="" maxlength="" size="" value="" data-source-id="PAY_AMT4" data-ui-id="UI-106">
+
+																			</td>
+																			<td class="tbYellow root-style-215" id="table_4_R5C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C8">
+																				<span id="input-label_108" class="" data-source-id="input-label_108" data-ui-id="UI-107">初次罹患</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-216" id="table_4_R5C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R5C9">
+																				<input type="text" class="textBox2" id="PAY_AMT5" name="PAY_AMT5" title="" maxlength="" size="" value="" data-source-id="PAY_AMT5" data-ui-id="UI-108">
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-217" id="table_4_R6C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C0">
+																				<span id="input-label_109" class="" data-source-id="input-label_109" data-ui-id="UI-109">醫療限額</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-218" id="table_4_R6C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C1">
+																				<input type="text" class="textBox2" id="PAY_AMT6" name="PAY_AMT6" title="" maxlength="" size="" value="" data-source-id="PAY_AMT6" data-ui-id="UI-110">
+
+																			</td>
+																			<td class="tbYellow root-style-219" id="table_4_R6C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C2">
+																				<span id="input-label_110" class="" data-source-id="input-label_110" data-ui-id="UI-111">醫療限額自負</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-220" id="table_4_R6C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C3">
+																				<input type="text" class="textBox2" id="PAY_AMT7" name="PAY_AMT7" title="" maxlength="" size="" value="" data-source-id="PAY_AMT7" data-ui-id="UI-112">
+
+																			</td>
+																			<td class="tbYellow root-style-221" id="table_4_R6C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C4">
+																				<span id="input-label_111" class="" data-source-id="input-label_111" data-ui-id="UI-113">醫療日額</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-222" id="table_4_R6C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C5">
+																				<input type="text" class="textBox2" id="PAY_AMT8" name="PAY_AMT8" title="" maxlength="" size="" value="" data-source-id="PAY_AMT8" data-ui-id="UI-114">
+
+																			</td>
+																			<td class="tbYellow root-style-223" id="table_4_R6C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C6">
+																				<span id="input-label_112" class="" data-source-id="input-label_112" data-ui-id="UI-115">住院手術</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-224" id="table_4_R6C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C7">
+																				<input type="text" class="textBox2" id="PAY_AMT9" name="PAY_AMT9" title="" maxlength="" size="" value="" data-source-id="PAY_AMT9" data-ui-id="UI-116">
+
+																			</td>
+																			<td class="tbYellow root-style-225" id="table_4_R6C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C8">
+																				<span id="input-label_113" class="" data-source-id="input-label_113" data-ui-id="UI-117">門診手術</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-226" id="table_4_R6C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R6C9">
+																				<input type="text" class="textBox2" id="PAY_AMT10" name="PAY_AMT10" title="" maxlength="" size="" value="" data-source-id="PAY_AMT10" data-ui-id="UI-118">
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-227" id="table_4_R7C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C0">
+																				<span id="input-label_114" class="" data-source-id="input-label_114" data-ui-id="UI-119">門診</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-228" id="table_4_R7C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C1">
+																				<input type="text" class="textBox2" id="PAY_AMT11" name="PAY_AMT11" title="" maxlength="" size="" value="" data-source-id="PAY_AMT11" data-ui-id="UI-120">
+
+																			</td>
+																			<td class="tbYellow root-style-229" id="table_4_R7C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C2">
+																				<span id="input-label_115" class="" data-source-id="input-label_115" data-ui-id="UI-121">重大疾/傷病</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-230" id="table_4_R7C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C3">
+																				<input type="text" class="textBox2" id="PAY_AMT12" name="PAY_AMT12" title="" maxlength="" size="" value="" data-source-id="PAY_AMT12" data-ui-id="UI-122">
+
+																			</td>
+																			<td class="tbYellow root-style-231" id="table_4_R7C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C4">
+																				<span id="input-label_116" class="" data-source-id="input-label_116" data-ui-id="UI-123">重大燒燙傷</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-232" id="table_4_R7C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C5">
+																				<input type="text" class="textBox2" id="PAY_AMT13" name="PAY_AMT13" title="" maxlength="" size="" value="" data-source-id="PAY_AMT13" data-ui-id="UI-124">
+
+																			</td>
+																			<td class="tbYellow root-style-233" id="table_4_R7C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C6">
+																				<span id="input-label_117" class="" data-source-id="input-label_117" data-ui-id="UI-125">癌症療養</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-234" id="table_4_R7C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C7">
+																				<input type="text" class="textBox2" id="PAY_AMT14" name="PAY_AMT14" title="" maxlength="" size="" value="" data-source-id="PAY_AMT14" data-ui-id="UI-126">
+
+																			</td>
+																			<td class="tbYellow root-style-235" id="table_4_R7C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C8">
+																				<span id="input-label_118" class="" data-source-id="input-label_118" data-ui-id="UI-127">出院療養</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-236" id="table_4_R7C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R7C9">
+																				<input type="text" class="textBox2" id="PAY_AMT15" name="PAY_AMT15" title="" maxlength="" size="" value="" data-source-id="PAY_AMT15" data-ui-id="UI-128">
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-237" id="table_4_R8C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C0">
+																				<span id="input-label_119" class="" data-source-id="input-label_119" data-ui-id="UI-129">喪失工作能力</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-238" id="table_4_R8C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C1">
+																				<input type="text" class="textBox2" id="PAY_AMT16" name="PAY_AMT16" title="" maxlength="" size="" value="" data-source-id="PAY_AMT16" data-ui-id="UI-130">
+
+																			</td>
+																			<td class="tbYellow root-style-239" id="table_4_R8C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C2">
+																				<span id="input-label_120" class="" data-source-id="input-label_120" data-ui-id="UI-131">喪葬費用</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-240" id="table_4_R8C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C3">
+																				<input type="text" class="textBox2" id="PAY_AMT17" name="PAY_AMT17" title="" maxlength="" size="" value="" data-source-id="PAY_AMT17" data-ui-id="UI-132">
+
+																			</td>
+																			<td class="tbYellow root-style-241" id="table_4_R8C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C4">
+																				<span id="input-label_121" class="" data-source-id="input-label_121" data-ui-id="UI-133">銜接原醫療限額之自負額</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-242" id="table_4_R8C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C5">
+																				<input type="text" class="textBox2" id="PAY_AMT18" name="PAY_AMT18" title="" maxlength="" size="" value="" data-source-id="PAY_AMT18" data-ui-id="UI-134">
+
+																			</td>
+																			<td class="tbYellow root-style-243" id="table_4_R8C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C6">
+																				<span id="input-label_122" class="" data-source-id="input-label_122" data-ui-id="UI-135">分期給付</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-244" id="table_4_R8C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C7">
+																				<input type="text" class="textBox2" id="PAY_AMT19" name="PAY_AMT19" title="" maxlength="" size="" value="" data-source-id="PAY_AMT19" data-ui-id="UI-136">
+
+																			</td>
+																			<td class="tbYellow root-style-245" id="table_4_R8C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C8">
+																				<span id="input-label_123" class="" data-source-id="input-label_123" data-ui-id="UI-137">保經代分類</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-246" id="table_4_R8C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R8C9">
+																				<input type="text" class="textBox2" id="BROKTYPE" name="BROKTYPE" title="" maxlength="" size="" value="" data-source-id="BROKTYPE" data-ui-id="UI-138">
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-247" id="table_4_R9C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C0">
+																				<span id="input-label_124" class="" data-source-id="input-label_124" data-ui-id="UI-139">要保人姓名</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-248" id="table_4_R9C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C1">
+																				<input type="text" class="textBox2" name="A_NAME" id="A_NAME" value="" alt="ch" data-source-id="A_NAME" data-ui-id="UI-140">
+																			</td>
+																			<td class="tbYellow root-style-249" id="table_4_R9C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C2">
+																				<span id="input-label_125" class="" data-source-id="input-label_125" data-ui-id="UI-141">要保人身分證號碼</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-250" id="table_4_R9C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C3">
+																				<input type="text" class="textBox2" id="A_ID" name="A_ID" title="" maxlength="" size="" value="" data-source-id="A_ID" data-ui-id="UI-142">
+
+																			</td>
+																			<td class="tbYellow root-style-251" id="table_4_R9C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C4">
+																				<span id="input-label_126" class="" data-source-id="input-label_126" data-ui-id="UI-143">要保人出生日期</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-252" id="table_4_R9C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C5">
+																				<input type="text" class="textBox2" id="A_BIRTHDAY" name="A_BIRTHDAY" title="" maxlength="" size="" value="" data-source-id="A_BIRTHDAY" data-ui-id="UI-144">
+
+																			</td>
+																			<td class="tbYellow root-style-253" id="table_4_R9C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C6">
+																				<span id="input-label_127" class="" data-source-id="input-label_127" data-ui-id="UI-145">要保人與被保險人關係</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-254" id="table_4_R9C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C7">
+																				<input type="text" class="textBox2" id="RELATION" name="RELATION" title="" maxlength="" size="" value="" data-source-id="RELATION" data-ui-id="UI-146">
+
+																			</td>
+																			<td class="tbYellow root-style-255" id="table_4_R9C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C8">
+																				<span id="input-label_128" class="" data-source-id="input-label_128" data-ui-id="UI-147">資料寫入時間</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-256" id="table_4_R9C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R9C9">
+																				<span id="UPDATE_TIME_text" data-source-id="UPDATE_TIME_text" data-ui-id="UI-148"></span>
+																				<input type="hidden" id="UPDATE_TIME" name="UPDATE_TIME" value="" data-source-id="UPDATE_TIME">
+																				<input type="hidden" id="TBL_NAME" name="TBL_NAME" value="DEMO_TABLE" data-source-id="TBL_NAME">
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow root-style-257">被保險人性別</td>
+																			<td class="tbYellow2 root-style-258">
+																				<select id="I_GENDER" name="I_GENDER" data-source-id="I_GENDER" data-ui-id="UI-149">
+																					<option value="1">男</option>
+																					<option value="2">女</option>
+																				</select>
+																			</td>
+																			<td class="tbYellow root-style-259">公、自費件</td>
+																			<td class="tbYellow2 root-style-260">
+																				<select id="PAY_TYPE" name="PAY_TYPE" data-source-id="PAY_TYPE" data-ui-id="UI-150">
+																					<option value="0">無</option>
+																					<option value="1">公費</option>
+																					<option value="2">自費</option>
+																				</select>																			
+																			</td>
+																			<td class="tbYellow root-style-261">來源別</td>
+																			<td class="tbYellow2 root-style-262"><span id="OIU_IND" data-source-id="OIU_IND" data-ui-id="UI-151"></span></td>
+																			<td class="tbYellow root-style-263">銷售通路</td>
+																			<td class="tbYellow2 root-style-264"><span id="SALE_CHNL" data-source-id="SALE_CHNL" data-ui-id="UI-152"></span></td>
+																			<td class="tbYellow root-style-265">商品代碼</td>
+																			<td class="tbYellow2 root-style-266"><span id="PROD_CODE" data-source-id="PROD_CODE" data-ui-id="UI-153"></span></td>																			
+																		</tr>																		
+																		<tr>
+																			<td class="tbYellow root-style-267" id="table_4_R10C0" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C0">
+																				<span id="input-label_130" class="" data-source-id="input-label_130" data-ui-id="UI-154">公會取回序號</span>
+
+																			</td>
+																			<td class="tbYellow2 root-style-268" id="table_4_R10C1" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C1">
+																				<span id="SER_NO_text" data-source-id="SER_NO_text" data-ui-id="UI-155"></span>
+																				<input type="hidden" id="SER_NO" name="SER_NO" value="" data-source-id="SER_NO">
+
+																			</td>
+																			<td class="tbYellow root-style-269" id="table_4_R10C2" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C2">
+
+																			</td>
+																			<td class="tbYellow2 root-style-270" id="table_4_R10C3" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C3">
+
+																			</td>
+																			<td class="tbYellow root-style-271" id="table_4_R10C4" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C4">
+
+																			</td>
+																			<td class="tbYellow2 root-style-272" id="table_4_R10C5" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C5">
+
+																			</td>
+																			<td class="tbYellow root-style-273" id="table_4_R10C6" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C6">
+
+																			</td>
+																			<td class="tbYellow2 root-style-274" id="table_4_R10C7" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C7">
+
+																			</td>
+																			<td class="tbYellow root-style-275" id="table_4_R10C8" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C8">
+
+																			</td>
+																			<td class="tbYellow2 root-style-276" id="table_4_R10C9" rowspan="1" colspan="1" width="10%" data-source-id="table_4_R10C9">
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow2 root-style-277" id="table_4_R11C0" rowspan="1" colspan="10" width="10%" data-source-id="table_4_R11C0">
+																				<button type="button" id="editBtn" disabled class="button" onclick="doEdit()" data-source-id="editBtn" data-ui-id="UI-156" data-flow-id="FLOW-06">F9修改</button>
+																				<button type="button" id="deleteBtn" disabled class="button" onclick="doDelete()" data-source-id="deleteBtn" data-ui-id="UI-157" data-flow-id="FLOW-07">F10刪除</button>
+																				<button type="button" id="cleanAllBtn" disabled class="button" onclick="doCleanAll()" data-source-id="cleanAllBtn" data-ui-id="UI-158" data-flow-id="FLOW-05">取消</button>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<table id="rtnTable" class="tbBox2" width="100%" cellspacing="1" cellpadding="1" data-source-id="rtnTable">
+																	<tbody>
+																		<tr>
+																			<td class="" id="table_5_R0C0" rowspan="1" colspan="18" width="" data-source-id="table_5_R0C0"><span id="input-label_132" class="" data-source-id="input-label_132" data-ui-id="UI-159">新制通報資料明細</span>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbBlue root-style-278">序號</td>																																					
+																			<td class="tbBlue root-style-279" id="table_5_R1C0" data-source-id="table_5_R1C0">
+																				<span id="input-label_133" class="" data-source-id="input-label_133" data-ui-id="UI-160">選取</span>
+																			</td>
+																			<td class="tbBlue root-style-280" id="table_5_R1C1" data-source-id="table_5_R1C1">
+																				<a href="#" onclick="sortTable1(2, document.getElementById('rtnTable'), 'rtnID', 0, 'sort2');return false;" data-ui-id="UI-161" data-flow-id="FLOW-09">通報方式<span id="sort2" data-source-id="sort2" data-ui-id="UI-162">▼</span></a>
+																			</td>
+																			
+																			<td class="tbBlue root-style-281" id="table_5_R1C2" data-source-id="table_5_R1C2">
+																				<a href="#" onclick="sortTable1(3, document.getElementById('rtnTable'), 'rtnID', 0, 'sort3');return false;" data-ui-id="UI-163" data-flow-id="FLOW-09">公司別<span id="sort3" data-source-id="sort3" data-ui-id="UI-164">▼</span></a>
+																			</td>
+																			<td class="tbBlue root-style-282" id="table_5_R1C3" data-source-id="table_5_R1C3">
+																				<a href="#" onclick="sortTable1(4, document.getElementById('rtnTable'), 'rtnID', 0, 'sort4');return false;" data-ui-id="UI-165" data-flow-id="FLOW-09">保單號碼<span id="sort4" data-source-id="sort4" data-ui-id="UI-166">▼</span></a>
+																			</td>
+																			<td class="tbBlue root-style-283" id="table_5_R1C4" data-source-id="table_5_R1C4">
+																				<span id="input-label_137" class="" data-source-id="input-label_137" data-ui-id="UI-167">銷售通路</span>
+
+																			</td>
+																			<td class="tbBlue root-style-284" id="table_5_R1C5" data-source-id="table_5_R1C5">
+																				<span id="input-label_141" class="" data-source-id="input-label_141" data-ui-id="UI-168">商品代碼</span>
+
+																			</td>
+																			<td class="tbBlue root-style-285" id="table_5_R1C6" data-source-id="table_5_R1C6">
+																				<span id="input-label_142" class="" data-source-id="input-label_142" data-ui-id="UI-169">保單分類</span>
+
+																			</td>
+																			<td class="tbBlue root-style-286" id="table_5_R1C7" data-source-id="table_5_R1C7">
+																				<span id="input-label_138" class="" data-source-id="input-label_138" data-ui-id="UI-170">險種分類</span>
+
+																			</td>
+																			<td class="tbBlue root-style-287" id="table_5_R1C8" data-source-id="table_5_R1C8">
+																				<a href="#" onclick="sortTable1(9, document.getElementById('rtnTable'), 'rtnID', 0, 'sort9');return false;" data-ui-id="UI-171" data-flow-id="FLOW-09">險種<span id="sort9" data-source-id="sort9" data-ui-id="UI-172">▼</span></a>
+																			</td>
+																			<td class="tbBlue root-style-288" id="table_5_R1C9" data-source-id="table_5_R1C9">
+																				<span id="input-label_140" class="" data-source-id="input-label_140" data-ui-id="UI-173">保單狀況</span>
+
+																			</td>
+																			<td class="tbBlue root-style-289" id="table_5_R1C10" data-source-id="table_5_R1C10">
+																				<span id="input-label_150" class="" data-source-id="input-label_150" data-ui-id="UI-174">身故保額</span>
+
+																			</td>
+																			<td class="tbBlue root-style-290" id="table_5_R1C11" data-source-id="table_5_R1C11">
+																				<span id="input-label_151" class="" data-source-id="input-label_151" data-ui-id="UI-175">醫療限額</span>
+
+																			</td>
+																			<td class="tbBlue root-style-291" id="table_5_R1C12" data-source-id="table_5_R1C12">
+																				<span id="input-label_152" class="" data-source-id="input-label_152" data-ui-id="UI-176">醫療日額</span>
+
+																			</td>
+																			<td class="tbBlue root-style-292" id="table_5_R1C13" data-source-id="table_5_R1C13">
+																				<a href="#" onclick="sortTable1(14, document.getElementById('rtnTable'), 'rtnID', 0, 'sort14');return false;" data-ui-id="UI-177" data-flow-id="FLOW-09">契約生效日<span id="sort14" data-source-id="sort14" data-ui-id="UI-178">▼</span></a>
+																			</td>																																						
+																			<td class="tbBlue root-style-293" id="table_5_R1C14" rowspan="1" colspan="1" width="" data-source-id="table_5_R1C14">
+																				<span id="input-label_154" class="" data-source-id="input-label_154" data-ui-id="UI-179">契約滿期日</span>
+
+																			</td>
+																			<td class="tbBlue root-style-294" id="table_5_R1C15" rowspan="1" colspan="1" width="" data-source-id="table_5_R1C15">
+																				<span id="input-label_155" class="" data-source-id="input-label_155" data-ui-id="UI-180">要保人姓名</span>
+
+																			</td>
+																			<td class="tbBlue root-style-295" id="table_5_R1C16" rowspan="1" colspan="1" width="" data-source-id="table_5_R1C16">
+																				<span id="input-label_143" class="" data-source-id="input-label_143" data-ui-id="UI-181">通報時間</span>
+
+																			</td>
+																		</tr>
+																		
+																		<tr id="rtnID" data-source-id="rtnID">
+																			<td class="tbYellow2 root-style-296">1</td>
+																			<td class="tbYellow2 root-style-297" id="table_5_R2C0" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C0">
+																				<span id="input-input_radio_1" data-source-id="input-input_radio_1" data-ui-id="UI-182">
+																				<label> 
+																				<input type="radio" id="item0" name="item" onclick="selectItem(this);" value="0" data-source-id="item0" data-ui-id="UI-183" data-flow-id="FLOW-04">
+																				    
+																				</label>   
+																				</span>
+																				<input type="hidden" id="TBL_NAME0" value="DEMO_TABLE" data-source-id="TBL_NAME0">
+																				<input type="hidden" id="INSR_TYPE0" value="1" data-source-id="INSR_TYPE0">
+																				<input type="hidden" id="CMNY_CODE0" value="D1" data-source-id="CMNY_CODE0">
+																				<input type="hidden" id="I_ID0" value="DEMO000001" data-source-id="I_ID0">
+																				<input type="hidden" id="I_BIRTHDAY0" value="19900101" data-source-id="I_BIRTHDAY0">
+																				<input type="hidden" id="POLICY_NO0" value="DEMO-P001" data-source-id="POLICY_NO0">
+																				<input type="hidden" id="POLICY_CAT0" value="1" data-source-id="POLICY_CAT0">
+																				<input type="hidden" id="POLICY_DUTY0" value="1" data-source-id="POLICY_DUTY0">
+																				<input type="hidden" id="PROD_KIND0" value="01" data-source-id="PROD_KIND0">
+																				<input type="hidden" id="STATUS0" value="01" data-source-id="STATUS0">
+																				<input type="hidden" id="LST_CHG_DATE0" value="20200101" data-source-id="LST_CHG_DATE0">
+																				<input type="hidden" id="MAIN_POLICY_NO0" value="DEMO-M001" data-source-id="MAIN_POLICY_NO0">
+																				<input type="hidden" id="ISSUE_DATE0" value="20200101" data-source-id="ISSUE_DATE0">
+																				<input type="hidden" id="ISSUE_TIME0" value="0900" data-source-id="ISSUE_TIME0">
+																				<input type="hidden" id="LPS_DATE0" value="20300101" data-source-id="LPS_DATE0">
+																				<input type="hidden" id="LPS_TIME0" value="0900" data-source-id="LPS_TIME0">
+																				<input type="hidden" id="SIGN_DATE0" value="20191201" data-source-id="SIGN_DATE0">
+																				<input type="hidden" id="PREM0" value="12000" data-source-id="PREM0">
+																				<input type="hidden" id="PAY_FREQ0" value="2" data-source-id="PAY_FREQ0">
+																				<input type="hidden" id="PAY_PERIOD0" value="10" data-source-id="PAY_PERIOD0">
+																				<input type="hidden" id="LST_CHG_TIME0" value="0900" data-source-id="LST_CHG_TIME0">
+																				<input type="hidden" id="PAY_AMT1_0" value="1000" data-source-id="PAY_AMT1_0">
+																				<input type="hidden" id="PAY_AMT2_0" value="2000" data-source-id="PAY_AMT2_0">
+																				<input type="hidden" id="PAY_AMT3_0" value="3000" data-source-id="PAY_AMT3_0">
+																				<input type="hidden" id="PAY_AMT4_0" value="4000" data-source-id="PAY_AMT4_0">
+																				<input type="hidden" id="PAY_AMT5_0" value="5000" data-source-id="PAY_AMT5_0">
+																				<input type="hidden" id="PAY_AMT6_0" value="6000" data-source-id="PAY_AMT6_0">
+																				<input type="hidden" id="PAY_AMT7_0" value="7000" data-source-id="PAY_AMT7_0">
+																				<input type="hidden" id="PAY_AMT8_0" value="8000" data-source-id="PAY_AMT8_0">
+																				<input type="hidden" id="PAY_AMT9_0" value="9000" data-source-id="PAY_AMT9_0">
+																				<input type="hidden" id="PAY_AMT10_0" value="10000" data-source-id="PAY_AMT10_0">
+																				<input type="hidden" id="PAY_AMT11_0" value="11000" data-source-id="PAY_AMT11_0">
+																				<input type="hidden" id="PAY_AMT12_0" value="12000" data-source-id="PAY_AMT12_0">
+																				<input type="hidden" id="PAY_AMT13_0" value="13000" data-source-id="PAY_AMT13_0">
+																				<input type="hidden" id="PAY_AMT14_0" value="14000" data-source-id="PAY_AMT14_0">
+																				<input type="hidden" id="PAY_AMT15_0" value="15000" data-source-id="PAY_AMT15_0">
+																				<input type="hidden" id="PAY_AMT16_0" value="16000" data-source-id="PAY_AMT16_0">
+																				<input type="hidden" id="PAY_AMT17_0" value="17000" data-source-id="PAY_AMT17_0">
+																				<input type="hidden" id="PAY_AMT18_0" value="18000" data-source-id="PAY_AMT18_0">
+																				<input type="hidden" id="PAY_AMT19_0" value="19000" data-source-id="PAY_AMT19_0">
+																				<input type="hidden" id="BROKTYPE0" value="3" data-source-id="BROKTYPE0">
+																				<input type="hidden" id="A_NAME0" value="展示要保人1" data-source-id="A_NAME0">
+																				<input type="hidden" id="A_ID0" value="DEMO-A1" data-source-id="A_ID0">
+																				<input type="hidden" id="A_BIRTHDAY0" value="19800101" data-source-id="A_BIRTHDAY0">
+																				<input type="hidden" id="RELATION0" value="1" data-source-id="RELATION0">
+																				<input type="hidden" id="UPDATE_TIME0" value="20200101120000" data-source-id="UPDATE_TIME0">
+																				<input type="hidden" id="SER_NO0" value="DEMO-S1" data-source-id="SER_NO0">
+																				<input type="hidden" id="INPUT_TIME0" value="20200101110000" data-source-id="INPUT_TIME0">																				
+																				<input type="hidden" id="I_GENDER0" value="1" data-source-id="I_GENDER0">																				
+																				<input type="hidden" id="PAY_TYPE0" value="1" data-source-id="PAY_TYPE0">																				
+																				<input type="hidden" id="OIU_IND0" value="D" data-source-id="OIU_IND0">
+																				<input type="hidden" id="OIU_IND_DESC0" value="展示來源" data-source-id="OIU_IND_DESC0">
+																				<input type="hidden" id="SALE_CHNL0" value="3" data-source-id="SALE_CHNL0">
+																				<input type="hidden" id="SALE_CHNL_DESC0" value="展示通路" data-source-id="SALE_CHNL_DESC0">
+																				<input type="hidden" id="PROD_CODE0" value="DEMO-C1" data-source-id="PROD_CODE0">
+																			</td>
+																			<td class="tbYellow2 root-style-298" id="table_5_R2C1" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C1">
+																				<a href="#" id="input-hyperlink_1" title="" onclick="openDetail(0);" data-source-id="input-hyperlink_1" data-ui-id="UI-184" data-flow-id="FLOW-08">1 展示通報</a>
+																			</td>																			
+																			<td class="tbYellow2 root-style-299" id="table_5_R2C2" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C2">
+																				展示公司1
+																			</td>
+																			<td class="tbYellow2 root-style-300" id="table_5_R2C3" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C3">
+																				DEMO-P001
+																			</td>
+																			<td class="tbYellow2 root-style-301" id="table_5_R2C4" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C4">
+																				3
+																			</td>
+																			<td class="tbYellow2 root-style-302" id="table_5_R2C5" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C5">
+																				DEMO-C1
+																			</td>
+																			<td class="tbYellow2 root-style-303" id="table_5_R2C6" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C6">
+																				1
+																			</td>
+																			<td class="tbYellow2 root-style-304" id="table_5_R2C7" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C7">
+																				1
+																			</td>
+																			<td class="tbYellow2 root-style-305" id="table_5_R2C8" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C8">
+																				01
+																			</td>
+																			<td class="tbYellow2 root-style-306" id="table_5_R2C9" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C9">
+																				01
+																			</td>
+																			<td class="tbYellow2 root-style-307" id="table_5_R2C10" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C10">
+																				1,000
+																			</td>
+																			<td class="tbYellow2 root-style-308" id="table_5_R2C11" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C11">
+																				6,000
+																			</td>
+																			<td class="tbYellow2 root-style-309" id="table_5_R2C12" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C12">
+																				8,000
+																			</td>
+																			<td class="tbYellow2 root-style-310" id="table_5_R2C13" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C13">
+																				20200101
+																			</td>
+																			<td class="tbYellow2 root-style-311" id="table_5_R2C14" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C14">
+																				20300101
+																			</td>
+																			<td class="tbYellow2 root-style-312" id="table_5_R2C15" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C15">
+																				<input alt="ch" class="textDisable" readonly value="展示要保人1" data-ui-id="UI-185">
+																			</td>
+																			<td class="tbYellow2 root-style-313" id="table_5_R2C16" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C16">
+																				20200101120000
+																			</td>
+																		</tr>																		
+																		
+																		<tr id="rtnID" data-source-id="rtnID">
+																			<td class="tbYellow2 root-style-314">2</td>
+																			<td class="tbYellow2 root-style-315" id="table_5_R2C0__518_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C0">
+																				<span id="input-input_radio_1__519_20" data-source-id="input-input_radio_1" data-ui-id="UI-186">
+																				<label> 
+																				<input type="radio" id="item1" name="item" onclick="selectItem(this);" value="1" data-source-id="item1" data-ui-id="UI-187" data-flow-id="FLOW-04">
+																				    
+																				</label>   
+																				</span>
+																				<input type="hidden" id="TBL_NAME1" value="DEMO_TABLE" data-source-id="TBL_NAME1">
+																				<input type="hidden" id="INSR_TYPE1" value="2" data-source-id="INSR_TYPE1">
+																				<input type="hidden" id="CMNY_CODE1" value="D2" data-source-id="CMNY_CODE1">
+																				<input type="hidden" id="I_ID1" value="DEMO000002" data-source-id="I_ID1">
+																				<input type="hidden" id="I_BIRTHDAY1" value="19900101" data-source-id="I_BIRTHDAY1">
+																				<input type="hidden" id="POLICY_NO1" value="DEMO-P002" data-source-id="POLICY_NO1">
+																				<input type="hidden" id="POLICY_CAT1" value="1" data-source-id="POLICY_CAT1">
+																				<input type="hidden" id="POLICY_DUTY1" value="1" data-source-id="POLICY_DUTY1">
+																				<input type="hidden" id="PROD_KIND1" value="01" data-source-id="PROD_KIND1">
+																				<input type="hidden" id="STATUS1" value="01" data-source-id="STATUS1">
+																				<input type="hidden" id="LST_CHG_DATE1" value="20200101" data-source-id="LST_CHG_DATE1">
+																				<input type="hidden" id="MAIN_POLICY_NO1" value="DEMO-M002" data-source-id="MAIN_POLICY_NO1">
+																				<input type="hidden" id="ISSUE_DATE1" value="20200101" data-source-id="ISSUE_DATE1">
+																				<input type="hidden" id="ISSUE_TIME1" value="0900" data-source-id="ISSUE_TIME1">
+																				<input type="hidden" id="LPS_DATE1" value="20300101" data-source-id="LPS_DATE1">
+																				<input type="hidden" id="LPS_TIME1" value="0900" data-source-id="LPS_TIME1">
+																				<input type="hidden" id="SIGN_DATE1" value="20191201" data-source-id="SIGN_DATE1">
+																				<input type="hidden" id="PREM1" value="12000" data-source-id="PREM1">
+																				<input type="hidden" id="PAY_FREQ1" value="2" data-source-id="PAY_FREQ1">
+																				<input type="hidden" id="PAY_PERIOD1" value="10" data-source-id="PAY_PERIOD1">
+																				<input type="hidden" id="LST_CHG_TIME1" value="0900" data-source-id="LST_CHG_TIME1">
+																				<input type="hidden" id="PAY_AMT1_1" value="2000" data-source-id="PAY_AMT1_1">
+																				<input type="hidden" id="PAY_AMT2_1" value="4000" data-source-id="PAY_AMT2_1">
+																				<input type="hidden" id="PAY_AMT3_1" value="6000" data-source-id="PAY_AMT3_1">
+																				<input type="hidden" id="PAY_AMT4_1" value="8000" data-source-id="PAY_AMT4_1">
+																				<input type="hidden" id="PAY_AMT5_1" value="10000" data-source-id="PAY_AMT5_1">
+																				<input type="hidden" id="PAY_AMT6_1" value="12000" data-source-id="PAY_AMT6_1">
+																				<input type="hidden" id="PAY_AMT7_1" value="14000" data-source-id="PAY_AMT7_1">
+																				<input type="hidden" id="PAY_AMT8_1" value="16000" data-source-id="PAY_AMT8_1">
+																				<input type="hidden" id="PAY_AMT9_1" value="18000" data-source-id="PAY_AMT9_1">
+																				<input type="hidden" id="PAY_AMT10_1" value="20000" data-source-id="PAY_AMT10_1">
+																				<input type="hidden" id="PAY_AMT11_1" value="22000" data-source-id="PAY_AMT11_1">
+																				<input type="hidden" id="PAY_AMT12_1" value="24000" data-source-id="PAY_AMT12_1">
+																				<input type="hidden" id="PAY_AMT13_1" value="26000" data-source-id="PAY_AMT13_1">
+																				<input type="hidden" id="PAY_AMT14_1" value="28000" data-source-id="PAY_AMT14_1">
+																				<input type="hidden" id="PAY_AMT15_1" value="30000" data-source-id="PAY_AMT15_1">
+																				<input type="hidden" id="PAY_AMT16_1" value="32000" data-source-id="PAY_AMT16_1">
+																				<input type="hidden" id="PAY_AMT17_1" value="34000" data-source-id="PAY_AMT17_1">
+																				<input type="hidden" id="PAY_AMT18_1" value="36000" data-source-id="PAY_AMT18_1">
+																				<input type="hidden" id="PAY_AMT19_1" value="38000" data-source-id="PAY_AMT19_1">
+																				<input type="hidden" id="BROKTYPE1" value="3" data-source-id="BROKTYPE1">
+																				<input type="hidden" id="A_NAME1" value="展示要保人2" data-source-id="A_NAME1">
+																				<input type="hidden" id="A_ID1" value="DEMO-A2" data-source-id="A_ID1">
+																				<input type="hidden" id="A_BIRTHDAY1" value="19800101" data-source-id="A_BIRTHDAY1">
+																				<input type="hidden" id="RELATION1" value="1" data-source-id="RELATION1">
+																				<input type="hidden" id="UPDATE_TIME1" value="20200102120000" data-source-id="UPDATE_TIME1">
+																				<input type="hidden" id="SER_NO1" value="DEMO-S2" data-source-id="SER_NO1">
+																				<input type="hidden" id="INPUT_TIME1" value="20200102110000" data-source-id="INPUT_TIME1">																				
+																				<input type="hidden" id="I_GENDER1" value="2" data-source-id="I_GENDER1">																				
+																				<input type="hidden" id="PAY_TYPE1" value="2" data-source-id="PAY_TYPE1">																				
+																				<input type="hidden" id="OIU_IND1" value="D" data-source-id="OIU_IND1">
+																				<input type="hidden" id="OIU_IND_DESC1" value="展示來源" data-source-id="OIU_IND_DESC1">
+																				<input type="hidden" id="SALE_CHNL1" value="3" data-source-id="SALE_CHNL1">
+																				<input type="hidden" id="SALE_CHNL_DESC1" value="展示通路" data-source-id="SALE_CHNL_DESC1">
+																				<input type="hidden" id="PROD_CODE1" value="DEMO-C2" data-source-id="PROD_CODE1">
+																			</td>
+																			<td class="tbYellow2 root-style-316" id="table_5_R2C1__576_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C1">
+																				<a href="#" id="input-hyperlink_1__577_20" title="" onclick="openDetail(1);" data-source-id="input-hyperlink_1" data-ui-id="UI-188" data-flow-id="FLOW-08">2 展示通報</a>
+																			</td>																			
+																			<td class="tbYellow2 root-style-317" id="table_5_R2C2__578_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C2">
+																				展示公司2
+																			</td>
+																			<td class="tbYellow2 root-style-318" id="table_5_R2C3__579_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C3">
+																				DEMO-P002
+																			</td>
+																			<td class="tbYellow2 root-style-319" id="table_5_R2C4__580_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C4">
+																				3
+																			</td>
+																			<td class="tbYellow2 root-style-320" id="table_5_R2C5__581_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C5">
+																				DEMO-C2
+																			</td>
+																			<td class="tbYellow2 root-style-321" id="table_5_R2C6__582_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C6">
+																				1
+																			</td>
+																			<td class="tbYellow2 root-style-322" id="table_5_R2C7__583_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C7">
+																				1
+																			</td>
+																			<td class="tbYellow2 root-style-323" id="table_5_R2C8__584_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C8">
+																				01
+																			</td>
+																			<td class="tbYellow2 root-style-324" id="table_5_R2C9__585_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C9">
+																				01
+																			</td>
+																			<td class="tbYellow2 root-style-325" id="table_5_R2C10__586_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C10">
+																				2,000
+																			</td>
+																			<td class="tbYellow2 root-style-326" id="table_5_R2C11__587_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C11">
+																				12,000
+																			</td>
+																			<td class="tbYellow2 root-style-327" id="table_5_R2C12__588_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C12">
+																				16,000
+																			</td>
+																			<td class="tbYellow2 root-style-328" id="table_5_R2C13__589_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C13">
+																				20200101
+																			</td>
+																			<td class="tbYellow2 root-style-329" id="table_5_R2C14__590_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C14">
+																				20300101
+																			</td>
+																			<td class="tbYellow2 root-style-330" id="table_5_R2C15__591_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C15">
+																				<input alt="ch" class="textDisable" readonly value="展示要保人2" data-ui-id="UI-189">
+																			</td>
+																			<td class="tbYellow2 root-style-331" id="table_5_R2C16__592_19" rowspan="1" colspan="1" width="" data-source-id="table_5_R2C16">
+																				20200102120000
+																			</td>
+																		</tr>																		
+																		
+																		<span data-review-flag="allow" data-ui-id="UI-190">
+																		<tr>
+																			<td class="tbYellow2 root-style-332" id="table_5_R4C0" rowspan="1" colspan="18" width="" data-source-id="table_5_R4C0">
+																				<button type="button" id="btn_async" class="button" onclick="doASyncCheck()" data-source-id="btn_async" data-ui-id="UI-191" data-flow-id="FLOW-03" data-context-flag="allow">F8即時取回公會資料</button>
+																			</td>
+																		</tr>
+																		</span>
+																	</tbody>
+																</table>
+																<table class="tbBox2" width="100%" cellspacing="1" cellpadding="1">
+																	<tbody>
+																		<tr>
+																			<td class="tbYellow3 root-style-333" id="table_6_R0C0" data-source-id="table_6_R0C0">
+																				<span id="input-label_144" class="" data-source-id="input-label_144" data-ui-id="UI-192">
+																					1.	銷售通路:1網路投保 2業務員3保經、保代 4電話行銷 5機場櫃檯
+																				</span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow3 root-style-334" id="table_6_R1C0" data-source-id="table_6_R1C0">
+																				<span id="input-label_145" class="" data-source-id="input-label_145" data-ui-id="UI-193">
+																					2.	保單分類：1個人；2團體
+																				</span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow3 root-style-335" id="table_6_R2C0" data-source-id="table_6_R2C0">
+																				<span id="input-label_146" class="" data-source-id="input-label_146" data-ui-id="UI-194">
+																					3.	險種分類：1人壽保險；2傷害保險；3健康保險 4.年金保險。
+																				</span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow3 root-style-336" id="table_6_R3C0" data-source-id="table_6_R3C0">
+																				<span id="input-label_147" class="" data-source-id="input-label_147" data-ui-id="UI-195">
+																					4.	險種：01一般；02特定；03投資型；04日額型；05實支實付型；06日額或實支實付擇一型；07手術型；08重大疾病；09帳戶型；10長期看護型；11喪失工作能力；12防癌；13旅平險；14微型；15微型實支實付；16小額終老保險；17.失能扶助保險；18.登山綜合保險；19定期人壽保險(不含一年期)；20海域活動綜合保險；21一年期
+																				</span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow3 root-style-337" id="table_6_R4C0" data-source-id="table_6_R4C0">
+																				<span id="input-label_148" class="" data-source-id="input-label_148" data-ui-id="UI-196">
+																					5.	繳別：1躉繳；2年繳；3半年繳；4季繳；5月繳；6彈性繳；9繳費期滿
+																				</span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow3 root-style-338" id="table_6_R5C0" data-source-id="table_6_R5C0">
+																				<span id="input-label_149" class="" data-source-id="input-label_149" data-ui-id="UI-197">
+																					6.	保單狀況： 收件:
+																					01有效；06未承保取消件；07契約註銷；11滿期(契約到期)；12鍵值欄位通報錯誤終止；15通報更正;
+																					50一○七條/一○七條之一承保資料；51一○七條理賠資料（未滿14足歲之未成年人）；52一○七條/一○七條之一理賠資料（精神障礙或其他心智缺陷/受監護宣告尚未撤銷）。
+																					承保: 01有效；02增額；03減額；04展期；05繳清；06契約撤銷； 07停效;
+																					10解除契約；11滿期(契約到期)
+																					；12鍵值欄位通報錯誤終止；20終止1:由要保人提出終止契約效力;21.終止2:主被保險人死亡，其他被保險人附同時終止或完全失能或理賠給付後終止附約;30被保險人因自然死身故；31被保險人因意外身故;32被保險人因其他原因故;50一○七條/一○七條之一承保資料；51一○七條理賠資料（未滿14足歲之未成年人）；52一○七條/一○七條之一理賠資料（精神障礙或其他心智缺陷/受監護宣告尚未撤銷）。</span>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow3 root-style-339" id="table_6_R7C0" data-source-id="table_6_R7C0">
+																				<span id="input-label_148__608_20" class="" data-source-id="input-label_148" data-ui-id="UI-198">
+																					7.	保障及保費彙整欄位，金額依頁面上的筆數加總，含本公司及產、壽險通報資料。
+																				</span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="tbYellow3 root-style-340" id="table_6_R7C0__609_19" data-source-id="table_6_R7C0">
+																				<span id="input-label_148__610_20" class="" data-source-id="input-label_148" data-ui-id="UI-199">
+																					8.	即時捉取公會資料：輸入身份證字號∕統一證號，按F8即時捉取公會資料鈕
+																				</span>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</table> 
+				</td>
+			</tr>
+		</table>
+	</form></center>
+	
+</main><aside id="review-tools"><details open><summary>審閱工具（合成資料；部分交付）</summary><p>TODO-01：共用契約已建立，造字／自訂tag／底部框架來源及水印情境仍缺。TODO-02：候選共用CSS已載入，實際cssBase映射與圖片待確認。TODO-03：驗證、熱鍵、排序及Ajax回呼已還原；日期工具編碼未知。TODO-04：後端契約未取得；明細內部已延後。TODO-05：原系統執行畫面未取得。</p><label><input id="review-return" type="checkbox" checked>展示回檔選項條件成立</label> <label><input id="review-allow" type="checkbox" checked>展示取回按鈕條件成立</label><p><button id="inject-validation" type="button">注入共用檢核通過／建立請求</button> <select id="request-choice" aria-label="回應對應請求"></select> <select id="response-flag" aria-label="識別值檢核回應"><option value="Y">Y（需確認）</option><option value="N">非 Y（直接交接）</option></select> <button id="inject-response" type="button">交付所選請求的合成回應</button> <button id="inject-msg" type="button">注入自訂訊息視窗</button> <input id="review-msg" value="展示訊息" aria-label="合成訊息內容"> <select id="review-msg-kind" aria-label="訊息邊界"><option value="text">文字</option><option value="empty">空字串</option><option value="null">null</option><option value="undefined">undefined</option></select> <button id="hide-review" type="button">隱藏審閱工具</button></p><pre id="review-output" aria-live="polite"></pre><p>水印條件示例：<a href="?watermark=Y">啟用合成水印</a>／<a href="SCR-01.html">基準情境</a>。使用DEMO_USER與固定示例時間，未代表登入者或工作時間。</p><a href="../specification.md">系統規格</a></details></aside><script src="legacy-prototype.js"></script><script src="legacy-common.js"></script><script src="legacy-hotkey.js"></script><script src="legacy-validation.js"></script><script src="legacy-sort.js"></script><script src="legacy-entry-messages.js"></script><script src="SCR-01.js"></script><script src="shared-review.js"></script><script src="header-policy.js"></script><script src="legacy-watermark.js"></script><script src="watermark-review.js"></script></body></html>

@@ -1,0 +1,2 @@
+/* Source header.jsp print restriction branch; review context ?policy=Y. */
+@media print { body[data-copy-policy="Y"]>* {display:none !important;} body[data-copy-policy="Y"]::after {content:'依據資安政策，不開放列印功能';display:block !important;} }

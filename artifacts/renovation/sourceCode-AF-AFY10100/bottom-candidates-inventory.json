@@ -1,0 +1,68 @@
+{
+  "files": [
+    {
+      "path": "sourceCode/CM/skeletons/bottom_css.htm",
+      "sha256": "17f758fe8c6e92b83dbb760a9e39c4bccb5b20793e143c714b0ba251ebfe29e5",
+      "bytes": 2365,
+      "physical_lines": 96,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 95,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 296
+        },
+        "cp950": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "sourceCode/CM/skeletons/bottom.htm",
+      "sha256": "4e35227a618e2c73456f08ad2130ed140ba01898fbff7dfb6b4e15f8dff4e1bb",
+      "bytes": 4045,
+      "physical_lines": 128,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 127,
+      "lf": 0,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 287
+        },
+        "cp950": {
+          "status": "valid"
+        }
+      }
+    },
+    {
+      "path": "sourceCode/CM/skeletons/sys_menu.jsp",
+      "sha256": "305cfc68e028c05a74ae85ea658b9f697ce53242ee9a2ca940091ed7ab3082b6",
+      "bytes": 18116,
+      "physical_lines": 551,
+      "line_basis": "raw bytes splitlines; terminal newline adds no extra line",
+      "crlf": 0,
+      "lf": 550,
+      "cr": 0,
+      "encoding_conclusion": "unconfirmed",
+      "strict_decoding": {
+        "utf-8": {
+          "status": "invalid",
+          "byte_offset": 487
+        },
+        "cp950": {
+          "status": "valid"
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Strict decode validity is not proof of intended encoding or readable meaning.",
+    "No input files changed; no replacement decoding used."
+  ]
+}

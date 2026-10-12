@@ -1,0 +1,710 @@
+[
+  {
+    "id": "AC-01/styles",
+    "actual": {
+      "edit": "none",
+      "state": "ST-01",
+      "buttons": [
+        true,
+        true,
+        true
+      ],
+      "rows": 2,
+      "body": "rgb(240, 251, 198)",
+      "buttonPadding": "0px 10px",
+      "header": "rgb(153, 204, 255)"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-02",
+    "actual": {
+      "state": "ST-02",
+      "edit": "block",
+      "amount": "1000",
+      "displayTime": "20200101110000",
+      "sentTime": "20200101120000",
+      "buttons": [
+        false,
+        false,
+        false
+      ]
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-03",
+    "actual": "2000",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-04",
+    "actual": {
+      "state": "ST-01",
+      "edit": "none",
+      "selected": false,
+      "amount": "",
+      "gender": -1,
+      "input": "DEMO-Q",
+      "sync": true
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-05",
+    "actual": {
+      "reviewOnly": true,
+      "boundary": "BOUND-01",
+      "form": [
+        [
+          "inputId",
+          ""
+        ],
+        [
+          "IS_RETURN",
+          "Y"
+        ],
+        [
+          "role",
+          "I"
+        ],
+        [
+          "status",
+          "Y"
+        ],
+        [
+          "INSR_TYPE",
+          ""
+        ],
+        [
+          "CMNY_CODE",
+          ""
+        ],
+        [
+          "I_ID",
+          ""
+        ],
+        [
+          "I_BIRTHDAY",
+          ""
+        ],
+        [
+          "POLICY_NO",
+          ""
+        ],
+        [
+          "POLICY_CAT",
+          ""
+        ],
+        [
+          "POLICY_DUTY",
+          ""
+        ],
+        [
+          "PROD_KIND",
+          ""
+        ],
+        [
+          "STATUS",
+          ""
+        ],
+        [
+          "LST_CHG_DATE",
+          ""
+        ],
+        [
+          "MAIN_POLICY_NO",
+          ""
+        ],
+        [
+          "ISSUE_DATE",
+          ""
+        ],
+        [
+          "ISSUE_TIME",
+          ""
+        ],
+        [
+          "LPS_DATE",
+          ""
+        ],
+        [
+          "LPS_TIME",
+          ""
+        ],
+        [
+          "SIGN_DATE",
+          ""
+        ],
+        [
+          "PREM",
+          ""
+        ],
+        [
+          "PAY_FREQ",
+          ""
+        ],
+        [
+          "PAY_PERIOD",
+          ""
+        ],
+        [
+          "LST_CHG_TIME",
+          ""
+        ],
+        [
+          "PAY_AMT1",
+          ""
+        ],
+        [
+          "PAY_AMT2",
+          ""
+        ],
+        [
+          "PAY_AMT3",
+          ""
+        ],
+        [
+          "PAY_AMT4",
+          ""
+        ],
+        [
+          "PAY_AMT5",
+          ""
+        ],
+        [
+          "PAY_AMT6",
+          ""
+        ],
+        [
+          "PAY_AMT7",
+          ""
+        ],
+        [
+          "PAY_AMT8",
+          ""
+        ],
+        [
+          "PAY_AMT9",
+          ""
+        ],
+        [
+          "PAY_AMT10",
+          ""
+        ],
+        [
+          "PAY_AMT11",
+          ""
+        ],
+        [
+          "PAY_AMT12",
+          ""
+        ],
+        [
+          "PAY_AMT13",
+          ""
+        ],
+        [
+          "PAY_AMT14",
+          ""
+        ],
+        [
+          "PAY_AMT15",
+          ""
+        ],
+        [
+          "PAY_AMT16",
+          ""
+        ],
+        [
+          "PAY_AMT17",
+          ""
+        ],
+        [
+          "PAY_AMT18",
+          ""
+        ],
+        [
+          "PAY_AMT19",
+          ""
+        ],
+        [
+          "BROKTYPE",
+          ""
+        ],
+        [
+          "A_NAME",
+          ""
+        ],
+        [
+          "A_ID",
+          ""
+        ],
+        [
+          "A_BIRTHDAY",
+          ""
+        ],
+        [
+          "RELATION",
+          ""
+        ],
+        [
+          "UPDATE_TIME",
+          ""
+        ],
+        [
+          "TBL_NAME",
+          ""
+        ],
+        [
+          "SER_NO",
+          ""
+        ]
+      ]
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-06-edit",
+    "actual": "BOUND-04",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-06-delete",
+    "actual": "BOUND-05",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-13",
+    "actual": {
+      "reviewOnly": true,
+      "boundary": "BOUND-06",
+      "newWindow": true,
+      "rowIndex": 1,
+      "values": {
+        "INSR_TYPE": "2",
+        "CMNY_CODE": "D2",
+        "I_ID": "DEMO000002",
+        "I_BIRTHDAY": "19900101",
+        "POLICY_NO": "DEMO-P002",
+        "POLICY_CAT": "1",
+        "POLICY_DUTY": "1",
+        "PROD_KIND": "01",
+        "STATUS": "01",
+        "LST_CHG_DATE": "20200101",
+        "MAIN_POLICY_NO": "DEMO-M002",
+        "ISSUE_DATE": "20200101",
+        "ISSUE_TIME": "0900",
+        "LPS_DATE": "20300101",
+        "LPS_TIME": "0900",
+        "SIGN_DATE": "20191201",
+        "PREM": "12000",
+        "PAY_FREQ": "2",
+        "PAY_PERIOD": "10",
+        "LST_CHG_TIME": "0900",
+        "PAY_AMT1": "2000",
+        "PAY_AMT2": "4000",
+        "PAY_AMT3": "6000",
+        "PAY_AMT4": "8000",
+        "PAY_AMT5": "10000",
+        "PAY_AMT6": "12000",
+        "PAY_AMT7": "14000",
+        "PAY_AMT8": "16000",
+        "PAY_AMT9": "18000",
+        "PAY_AMT10": "20000",
+        "PAY_AMT11": "22000",
+        "PAY_AMT12": "24000",
+        "PAY_AMT13": "26000",
+        "PAY_AMT14": "28000",
+        "PAY_AMT15": "30000",
+        "PAY_AMT16": "32000",
+        "PAY_AMT17": "34000",
+        "PAY_AMT18": "36000",
+        "PAY_AMT19": "38000",
+        "BROKTYPE": "3",
+        "A_NAME": "展示要保人2",
+        "A_ID": "DEMO-A2",
+        "A_BIRTHDAY": "19800101",
+        "RELATION": "1",
+        "UPDATE_TIME": "20200102120000",
+        "SER_NO": "DEMO-S2",
+        "I_GENDER": "2",
+        "PAY_TYPE": "2",
+        "OIU_IND": "D",
+        "SALE_CHNL": "3",
+        "PROD_CODE": "DEMO-C2"
+      },
+      "TODO": "TODO-04"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-12/sort2",
+    "actual": {
+      "a": "▲",
+      "b": "▼"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-12/sort3",
+    "actual": {
+      "a": "▲",
+      "b": "▼"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-12/sort4",
+    "actual": {
+      "a": "▲",
+      "b": "▼"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-12/sort9",
+    "actual": {
+      "a": "▲",
+      "b": "▼"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-12/sort14",
+    "actual": {
+      "a": "▲",
+      "b": "▼"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-12/order",
+    "actual": [
+      "1",
+      "0"
+    ],
+    "result": "PASS"
+  },
+  {
+    "id": "AC-11-hidden",
+    "actual": {
+      "sync": false,
+      "fetch": false
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-17/empty",
+    "actual": "身份證字號/統一編號：不得為空值",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-17/whitespace",
+    "actual": 1,
+    "result": "PASS"
+  },
+  {
+    "id": "AC-09",
+    "actual": "BOUND-03",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-07/10-first",
+    "actual": {
+      "confirmText": "輸入值 DEMO2 不符身份證/統一證號檢核規則，請確認，是否要繼續作業?",
+      "out": {
+        "reviewOnly": true,
+        "boundary": "BOUND-03",
+        "form": [
+          [
+            "inputId",
+            "DEMO3"
+          ],
+          [
+            "IS_RETURN",
+            "Y"
+          ],
+          [
+            "role",
+            "I"
+          ],
+          [
+            "status",
+            "Y"
+          ],
+          [
+            "INSR_TYPE",
+            ""
+          ],
+          [
+            "CMNY_CODE",
+            ""
+          ],
+          [
+            "I_ID",
+            ""
+          ],
+          [
+            "I_BIRTHDAY",
+            ""
+          ],
+          [
+            "POLICY_NO",
+            ""
+          ],
+          [
+            "POLICY_CAT",
+            ""
+          ],
+          [
+            "POLICY_DUTY",
+            ""
+          ],
+          [
+            "PROD_KIND",
+            ""
+          ],
+          [
+            "STATUS",
+            ""
+          ],
+          [
+            "LST_CHG_DATE",
+            ""
+          ],
+          [
+            "MAIN_POLICY_NO",
+            ""
+          ],
+          [
+            "ISSUE_DATE",
+            ""
+          ],
+          [
+            "ISSUE_TIME",
+            ""
+          ],
+          [
+            "LPS_DATE",
+            ""
+          ],
+          [
+            "LPS_TIME",
+            ""
+          ],
+          [
+            "SIGN_DATE",
+            ""
+          ],
+          [
+            "PREM",
+            ""
+          ],
+          [
+            "PAY_FREQ",
+            ""
+          ],
+          [
+            "PAY_PERIOD",
+            ""
+          ],
+          [
+            "LST_CHG_TIME",
+            ""
+          ],
+          [
+            "PAY_AMT1",
+            ""
+          ],
+          [
+            "PAY_AMT2",
+            ""
+          ],
+          [
+            "PAY_AMT3",
+            ""
+          ],
+          [
+            "PAY_AMT4",
+            ""
+          ],
+          [
+            "PAY_AMT5",
+            ""
+          ],
+          [
+            "PAY_AMT6",
+            ""
+          ],
+          [
+            "PAY_AMT7",
+            ""
+          ],
+          [
+            "PAY_AMT8",
+            ""
+          ],
+          [
+            "PAY_AMT9",
+            ""
+          ],
+          [
+            "PAY_AMT10",
+            ""
+          ],
+          [
+            "PAY_AMT11",
+            ""
+          ],
+          [
+            "PAY_AMT12",
+            ""
+          ],
+          [
+            "PAY_AMT13",
+            ""
+          ],
+          [
+            "PAY_AMT14",
+            ""
+          ],
+          [
+            "PAY_AMT15",
+            ""
+          ],
+          [
+            "PAY_AMT16",
+            ""
+          ],
+          [
+            "PAY_AMT17",
+            ""
+          ],
+          [
+            "PAY_AMT18",
+            ""
+          ],
+          [
+            "PAY_AMT19",
+            ""
+          ],
+          [
+            "BROKTYPE",
+            ""
+          ],
+          [
+            "A_NAME",
+            ""
+          ],
+          [
+            "A_ID",
+            ""
+          ],
+          [
+            "A_BIRTHDAY",
+            ""
+          ],
+          [
+            "RELATION",
+            ""
+          ],
+          [
+            "UPDATE_TIME",
+            ""
+          ],
+          [
+            "TBL_NAME",
+            ""
+          ],
+          [
+            "SER_NO",
+            ""
+          ]
+        ]
+      }
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-18/pending",
+    "actual": {
+      "display": "block",
+      "active": 1
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-08/10-second",
+    "actual": "輸入值 DEMO1 不符身份證/統一證號檢核規則，請確認，是否要繼續作業?",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-18/complete",
+    "actual": {
+      "display": "none",
+      "active": 0
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-14/F2",
+    "actual": "BOUND-01",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-14/disabled-F9",
+    "actual": "BOUND-01",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-19/first",
+    "actual": {
+      "width": "180px",
+      "opacity": "0.95",
+      "z": "999",
+      "content": "展示訊息"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-19/duplicate",
+    "actual": "展示訊息",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-19/max",
+    "actual": "600px",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-19/null",
+    "actual": "展示訊息長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長長(無訊息內容)",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-20/first-other-key",
+    "actual": 1,
+    "result": "PASS"
+  },
+  {
+    "id": "AC-20/reopen-enter",
+    "actual": 0,
+    "result": "PASS"
+  },
+  {
+    "id": "AC-21/during",
+    "actual": 0,
+    "result": "PASS"
+  },
+  {
+    "id": "AC-21/end",
+    "actual": 1,
+    "result": "PASS"
+  },
+  {
+    "id": "console",
+    "actual": [],
+    "result": "PASS"
+  }
+]

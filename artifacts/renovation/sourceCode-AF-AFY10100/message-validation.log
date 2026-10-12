@@ -1,0 +1,31 @@
+### Ran Playwright code
+```js
+await (async(page)=>{
+const results=[];const check=async(id,actual,ok)=>{results.push({id,actual,result:ok?'PASS':'FAIL'});await page.evaluate(v=>window.__afyMessageResults=v,results);if(!ok)throw new Error('Failed '+id);};
+await page.goto('http://127.0.0.1:8765/prototypes/SCR-01.html');
+await page.evaluate(()=>{msgs=[['DEMO_ZERO','','SYS','','','0',''],['DEMO_BOARD','','SYS','','','99','']];displayMessage();});await check('AC-24/0-99',await page.locator('#msg-win').count(),await page.locator('#msg-win').count()===0);
+let alertText='';page.once('dialog',async d=>{alertText=d.message();await d.accept();});await page.evaluate(()=>{msgs=[['DEMO_REJECT','DEMO-ID','DEMO-SYS','','','1','']];displayMessage();});await check('AC-24/reject',alertText,alertText==='訊息說明:\nDEMO_REJECT\n\n錯誤編號：\nDEMO-ID');
+page.once('dialog',async d=>{alertText=d.message();await d.accept();});await page.evaluate(()=>{msgs=[['unused','','DEMO-SYS','','','1','DEMO_EXCEPTION']];displayMessage();});await check('AC-24/exception',alertText,alertText==='異常原因:DEMO_EXCEPTION\n\n程式ID:DEMO-SYS\n\n');
+await page.evaluate(()=>{window.WIUtil={displayMessage:function(o){window.__customEntryMessage=o.msg;}};window.jQuery={};msgs=[['DEMO_CUSTOM','','','','','1','']];displayMessage();});await check('AC-24/custom-present',await page.evaluate(()=>window.__customEntryMessage),await page.evaluate(()=>window.__customEntryMessage==='訊息說明:\nDEMO_CUSTOM\n'));
+await page.evaluate(()=>{delete window.WIUtil;delete window.jQuery;const f=document.createElement('iframe');f.name='bottomFrame';f.id='test-bottom-frame';f.hidden=true;document.body.appendChild(f);const w=f.contentWindow;w.txHasRollbackPage=true;w.showNotifyMsg=function(o){window.__bottomCalls=(window.__bottomCalls||[]).concat(o);};w.clearNotifyMsg=function(){window.__bottomClears=(window.__bottomClears||0)+1;};msgs=[['DEMO_SUPPRESSED','','','','','1','']];displayMessage();});await check('AC-24/rollback',await page.evaluate(()=>({flag:frames.bottomFrame.txHasRollbackPage,called:window.__bottomCalls})),await page.evaluate(()=>frames.bottomFrame.txHasRollbackPage===null&&!window.__bottomCalls));
+await page.evaluate(()=>{msgs=[['DEMO_NOTICE','','','','','0','']];displayMessage();});await check('AC-24/board-first',await page.evaluate(()=>window.__bottomCalls),await page.evaluate(()=>window.__bottomCalls.length===1&&window.__bottomCalls[0].returnMessage==='DEMO_NOTICE'));await page.locator('#btn_query').click();await check('AC-24/button-clear',await page.evaluate(()=>window.__bottomClears),await page.evaluate(()=>window.__bottomClears===1));await page.evaluate(()=>document.getElementById('test-bottom-frame').remove());
+await page.goto('http://127.0.0.1:8765/prototypes/SCR-01.html?subsystem=DS');
+await page.evaluate(()=>{const req={url:'DEMO_URL',options:{parameters:{inputId:'DEMO'}}};Ajax.Responders.dispatch('onCreate',req);Ajax.Responders.dispatch('onComplete',req,{responseJSON:{ErrMsg:{returnCode:1,msgid:'DEMO-ERROR-ID-123456789',displayMsgDescs:'DEMO_ONE\\nDEMO_TWO'}},responseText:''});});await check('AC-25/custom-error',await page.locator('#msg-win_content').textContent(),(await page.locator('#msg-win_content').textContent()).includes('錯誤編號：')&&(await page.locator('#msg-win_content').textContent()).includes('訊息說明：'));await page.locator('#msg-win input[type=button]').click();
+await page.goto('http://127.0.0.1:8765/prototypes/SCR-01.html?subsystem=EP');await page.evaluate(()=>{const req={options:{}};Ajax.Responders.dispatch('onCreate',req);Ajax.Responders.dispatch('onComplete',req,{responseJSON:{ErrMsg:{returnCode:0,msgid:'',displayMsgDescs:'DEMO_OK'}},responseText:''});});await check('AC-25/EP-success',await page.locator('#msg-win').count(),await page.locator('#msg-win').count()===0&&await page.locator('#_frontCover').evaluate(x=>getComputedStyle(x).display==='none'));
+await page.goto('http://127.0.0.1:8765/prototypes/SCR-01.html');page.once('dialog',async d=>{alertText=d.message();await d.accept();});await page.evaluate(()=>{const req={options:{}};Ajax.Responders.dispatch('onCreate',req);Ajax.Responders.dispatch('onComplete',req,{responseJSON:null,responseText:'<body>DEMO_BODY<br>DEMO_END</body>'});});await check('AC-25/non-json',alertText,alertText==='訊息說明：\nDEMO_BODY\nDEMO_END');
+page.once('dialog',async d=>{alertText=d.message();await d.accept();});await page.evaluate(()=>{Ajax.Responders.dispatch('onException',{url:'DEMO_URL',options:{parameters:'inputId=DEMO'}},{detail:'DEMO_EXCEPTION'});});await check('AC-25/diagnostic',alertText,alertText==='Error :\nurl : DEMO_URL\nparams: inputId=DEMO\nException: \ndetail=DEMO_EXCEPTION\n');
+return results;
+})(page);
+```
+### Open tabs
+- 0: (current) [](http://127.0.0.1:8765/prototypes/SCR-01.html)
+- 1: [Lib / ActiveSwitch - Default ⋅ Storybook](http://localhost:6006/?path=/story/lib-activeswitch--default)
+### Page
+- Page URL: http://127.0.0.1:8765/prototypes/SCR-01.html
+### Modal state
+- ["alert" dialog with message "訊息說明:
+DEMO_REJECT
+
+錯誤編號：
+DEMO-ID"]: can be handled by dialog-accept or dialog-dismiss
+

@@ -1,0 +1,10 @@
+/* MsgWin static source styles from CSRUtil.js E-21. */
+.common-style-1 { font-family: Verdana, Arial, sans-serif, 微軟正黑體; font-size: 10pt; border: solid 1px #000; position: absolute; padding: 0 5px 5px 5px; background-color: #0066CC; z-index: 999; opacity: 0.95; box-shadow: 0px 0px 10px 2px #000; }
+.common-style-2 { background-color: #0066CC; /* invalid source key fontWeight  ignored by CSS */ color: #fff; padding: 8px 0 8px 2px; cursor: move; }
+.common-style-3 { background-color: #FFFFFF; overflow: auto; height: 105px; border-left: 1px solid #000; border-right: 1px solid #000; border-top: 1px solid #000; padding-left: 15px; padding-top: 10px; position: relative; scrollbar-face-color: #D4D0C8; scrollbar-highlight-color: #FFFFFF; scrollbar-3dlight-color: #D4D0C8; scrollbar-darkshadow-color: #404040; scrollbar-shadow-color: #808080; scrollbar-arrow-color: #000000; scrollbar-track-color: #CCCCCC; }
+.common-style-4 { background-color: #EEEEEE; border-left: 1px solid #000; border-right: 1px solid #000; border-bottom: 1px solid #000; padding: 10px 0 10px 0; }
+.common-style-5 { position: absolute; border: 1px solid #000000; }
+
+
+:root .button.common-confirm { padding: 0 15px; }
+.common-cover { width:100%; height:100%; left:0; top:0; padding:0; margin:0 auto; }

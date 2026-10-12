@@ -1,0 +1,64 @@
+[
+  {
+    "id": "AC-24/0-99",
+    "actual": 0,
+    "result": "PASS"
+  },
+  {
+    "id": "AC-24/reject",
+    "actual": "訊息說明:\nDEMO_REJECT\n\n錯誤編號：\nDEMO-ID",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-24/exception",
+    "actual": "異常原因:DEMO_EXCEPTION\n\n程式ID:DEMO-SYS\n\n",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-24/custom-present",
+    "actual": "訊息說明:\nDEMO_CUSTOM\n",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-24/rollback",
+    "actual": {
+      "flag": null
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "AC-24/board-first",
+    "actual": [
+      {
+        "returnCode": "0",
+        "returnMessage": "DEMO_NOTICE"
+      }
+    ],
+    "result": "PASS"
+  },
+  {
+    "id": "AC-24/button-clear",
+    "actual": 1,
+    "result": "PASS"
+  },
+  {
+    "id": "AC-25/custom-error",
+    "actual": "錯誤編號：DEMO-ERROR-ID-123456789訊息說明：DEMO_ONEDEMO_TWO",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-25/EP-success",
+    "actual": 0,
+    "result": "PASS"
+  },
+  {
+    "id": "AC-25/non-json",
+    "actual": "訊息說明：\nDEMO_BODY\nDEMO_END",
+    "result": "PASS"
+  },
+  {
+    "id": "AC-25/diagnostic",
+    "actual": "Error :\nurl : DEMO_URL\nparams: inputId=DEMO\nException: \ndetail=DEMO_EXCEPTION\n",
+    "result": "PASS"
+  }
+]

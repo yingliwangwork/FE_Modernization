@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "markdown_links": 1401,
+  "root_style_declarations_checked": 347,
+  "dtcg_tokens_checked": 4,
+  "json_files": 17,
+  "js_files": 11,
+  "errors": [],
+  "limits": [
+    "Static source/style/link/syntax checks do not prove legacy visual equivalence or backend integration.",
+    "DTCG check validates only used color/dimension shapes, not a complete official validator."
+  ]
+}
