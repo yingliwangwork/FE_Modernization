@@ -1,0 +1,243 @@
+
+*{
+	margin:0px;
+	padding:0px;
+	cursor: default;
+}
+
+html { overflow: hidden;}
+
+body{
+	margin:0px !important;
+	padding:0px !important;
+	height: 50px !important;
+	font-family: 'Microsoft JhengHei', 微軟正黑體, Verdana, 'Trebuchet MS', Calibri, Meiryo, 明瞭體, PMingLiU, 新細明體, MingLiU, 細明體;
+	overflow:hidden;
+	z-index: 0;
+	border-top: 18px solid rgb(37, 74, 138);
+}
+
+body.cathayLife{
+	---background-image: url('../../../../images/CM/skeletons/top_logo_bg.jpg');
+    background-color: rgb(46, 93, 172);
+}
+
+body.CathayFinanical{
+	background-image: url('../../../../images/CM/skeletons/top_logo_bg2.jpg');
+}
+
+ul{
+	position: absolute;
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+li{
+	float:left;
+	display:block;
+	vertical-align:middle;
+}
+
+ul#main_logos{
+	top:0px;
+	left:0px;
+}
+
+ul#main_logos li#logo{
+	position: absolute;
+	top:17px;
+	left: 0px;
+	height: 40px;
+	width: 150px;
+	z-index: 10;
+	
+}
+
+ul#main_logos li#logo img{
+	height: 34px;
+	border: none;
+	cursor: pointer;
+}
+
+ul#main_logos li#platform_logo{
+	position:absolute;
+	top : 17px;
+	left : 155px;
+}
+
+ul#main_logos li#platform_logo img{
+	height: 34px;
+}
+
+
+ul#main_logos.prod li#platform_logo{
+	display: none;
+}
+ul#main_logos.stag li#platform_logo{
+}
+
+ul#main_logos.test li#platform_logo{
+}
+
+ul#main_logos.deve li#platform_logo{
+}
+
+ul#main_logos li#messageArea{
+	position:absolute;
+	top : 1px;
+	left : 160px;
+	width: 149px;
+	color: #FF0;
+	font-weight:bold;
+	font-size:11px; -webkit-transform:scale(0.91);
+	overflow: hidden;
+	
+}
+
+ul#menuBar{
+	top:0px;
+	right: 0px;
+	padding-top: 18px;
+}
+
+ul#menuBar li{
+	border-style: solid;
+	border-width: 0px 1px 0px 0px;
+	border-color: rgb(37, 74, 138);
+}
+
+ul#menuBar li.firstChild{
+	border-width: 0px 1px 0px 1px;
+}
+
+ul#menuBar li a{
+	display:block;
+	height: 32px;
+	line-height: 32px;
+	color: #96AED5;
+    color: rgba(255, 255, 255, 0.8);
+	padding: 0px 10px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul#menuBar li a img{
+	padding: 8px 0px;
+	height: 16px;
+	border: 0px;
+	float:left;
+	cursor: pointer;
+}
+
+ul#menuBar li a span{
+	line-height: 32px;
+	padding-left: 3px;
+	border: 0px;
+	display: none;
+	float:left;
+	cursor: pointer;
+}
+
+ul#menuBar li a:hover{
+	color: #FFF;
+	background-color: rgb(37, 74, 138);
+}
+
+ul#menuBar li a:hover span{
+	display: block;
+}
+
+ul#menuBar li.timer{
+	border: none;
+	width: 120px;
+	padding-top:1px;
+}
+
+ul#menuBar li.timer div#timeText{
+	line-height: 14px;
+	font-size:12px;
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+}
+
+ul#menuBar li.timer div#dateText
+{
+	color: #FFF;
+	font-size:9px;
+	-webkit-transform:scale(0.75);	
+	text-align: center;
+}
+
+
+ul#userInfo{ 
+	top: 0px;
+	right: 5px;
+	color: #FFF;
+	font-size:11px; -webkit-transform:scale(0.91);
+	color: #96AED5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+ul#userInfo li.user_data{
+	color: #FFF;
+	padding-right: 15px;
+} 
+
+ul#userInfo li#local-selecter{
+	padding: 0px;
+	padding-right: 8px;
+ 	width: 100px;
+	overflow-x: hidden;
+}
+
+ul#userInfo li#local-selecter select{
+	width: 130px;
+	border: none;
+	color: #FFF;
+	background-color: transparent;
+	border-color: #FFF;
+	font-size:11px; -webkit-transform:scale(0.91);
+	cursor: pointer;
+}
+
+ul#userInfo li#local-selecter option{
+	color: #FFF;
+	background: rgb(37, 74, 138);
+	font-size:11px; -webkit-transform:scale(0.91);
+}
+
+ul#userInfo li#browser_info{
+	background:left center no-repeat;
+	width:12px;
+	height:12px;
+	margin-top:2px;
+}
+
+ul#userInfo li#browser_info.ie{
+	background-image:url('../../../../images/CM/skeletons/browsers/internetexplorer.png');
+	padding-left:13px;
+	text-align: right;
+	vertical-align:bottom;
+	color: #fff;
+}
+
+ul#userInfo li#browser_info.Firefox{
+	background-image:url('../../../../images/CM/skeletons/browsers/firefox.png');
+}
+
+ul#userInfo li#browser_info.Opera{
+	background-image:url('../../../../images/CM/skeletons/browsers/opera.png');
+}
+
+ul#userInfo li#browser_info.Chrome{
+	background-image:url('../../../../images/CM/skeletons/browsers/chrome.png');
+}
+
+ul#userInfo li#browser_info.Safari{
+	background-image:url('../../../../images/CM/skeletons/browsers/safari.png');
+}
+
+ul#userInfo li#browser_info.Mozilla{
+	background-image:url('../../../../images/CM/skeletons/browsers/mozilla.png');
+}

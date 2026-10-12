@@ -1,0 +1,158 @@
+/*
+ *   Reset reset css....
+ *   ckeditor 
+ */
+.htmleditor {
+  font-size: 95%;
+  line-height: 140%;
+}
+.htmleditor blockquote {
+  font-style: italic;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  padding: 2px 0;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 0;
+  padding-left: 20px;
+  padding-right: 8px;
+  border-left-width: 5px;
+}
+.htmleditor h5, .htmleditor h6, .htmleditor strong, .htmleditor b {
+  font-weight: bold;
+}
+.htmleditor i, .htmleditor cite, .htmleditor em,
+.htmleditor var, .htmleditor address {
+  font-style: italic;
+}
+.htmleditor a {
+  color: #0782C1;
+  text-decoration: underline;
+}
+.htmleditor ol, .htmleditor ul, .htmleditor dl {
+  /* IE7: reset rtl list margin. (#7334) */
+  *margin-right: 0px;
+  /* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
+  padding: 0 40px;
+}
+.htmleditor ol {
+  list-style-type: decimal;
+}
+.htmleditor ul {
+  list-style-type: disc;
+}
+.htmleditor h1, .htmleditor h2, .htmleditor h3, .htmleditor h4, .htmleditor h5, .htmleditor h6 {
+  font-weight: normal;
+  line-height: 1.2;
+}
+.htmleditor h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+.htmleditor h2 {
+  font-size: 1.5em;
+  margin: 0.75em 0;
+}
+.htmleditor h3 {
+  font-size: 1.17em;
+  margin: 0.83em 0;
+}
+.htmleditor h4 {
+  margin: 1.12em 0;
+}
+.htmleditor big {
+  font-size: 1.17em;
+}
+.htmleditor small {
+  font-size: 0.83em;
+}
+.htmleditor pre, .htmleditor tt, .htmleditor code,
+.htmleditor kbd, .htmleditor samp {
+  font-family: monospace;
+}
+.htmleditor u, .htmleditor ins {
+  text-decoration: underline;
+}
+.htmleditor q {
+  quotes: initial;
+}
+.htmleditor q::before {
+  content: open-quote;
+}
+.htmleditor q::after {
+  content: close-quote;
+}
+.htmleditor hr {
+  border: 0px;
+  border-top: 1px solid #ccc;
+}
+.htmleditor img.right {
+  border: 1px solid #ccc;
+  float: right;
+  margin-left: 15px;
+  padding: 5px;
+}
+.htmleditor img.left {
+  border: 1px solid #ccc;
+  float: left;
+  margin-right: 15px;
+  padding: 5px;
+}
+.htmleditor pre {
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  word-wrap: break-word;
+  /* IE7 */
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  -webkit-tab-size: 4;
+  tab-size: 4;
+}
+.htmleditor .marker {
+  background-color: Yellow;
+}
+.htmleditor span[lang] {
+  font-style: italic;
+}
+.htmleditor figure {
+  text-align: center;
+  border: solid 1px #ccc;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  margin: 10px 20px;
+  display: inline-block;
+}
+.htmleditor figure > figcaption {
+  text-align: center;
+  display: block;
+  /* For IE8 */
+}
+.htmleditor a > img {
+  padding: 1px;
+  margin: 1px;
+  border: none;
+  outline: 1px solid #0782C1;
+}
+.htmleditor sub, .htmleditor sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 75%;
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+.htmleditor sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+.htmleditor sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em;
+}

@@ -1,0 +1,8 @@
+#abgne_float_ad {
+	display: none;
+	position: absolute;
+	z-index:100;
+}
+#abgne_float_ad img {
+	border: none;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+<link href="../css/cm.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+<!--
+.button {
+	font-family: "新細明體";
+	font-size: 10pt;
+	background-image:       url(../../../images/CM/bt_bg.gif);
+	border: 1px solid #6B8D6D;
+	color: #44774A;
+	height: 19px;
+	margin: 2px 2px 0px;
+	padding: 0px 2px;
+
+}
+//-->
+</style>
+<script type="text/javaScript" src="../js/ajax/prototype.js"></script>
+<script type="text/javaScript">
+
+var interval_id;
+var txHasRollbackPage;// Will be set if tx has rollback page.
+var in_err_msg;
+
+function rollbackPage(errMsg){
+	var getMainFrame = function(){
+		if(top.frames['mainFrame']){
+			return top.frames['mainFrame'];
+		}
+
+		if(parent.frames['mainFrame']){
+			return parent.frames['mainFrame'];
+		}
+
+		return null;
+	};
+
+	txHasRollbackPage = true;
+	in_err_msg = errMsg;
+
+	var mainFrame = getMainFrame();
+	if(mainFrame && mainFrame.history && mainFrame.history.length>0){
+    	mainFrame.history.back();
+    }
+
+    interval_id = window.setInterval('window.clearInterval(interval_id);clearNotifyMsg();if(in_err_msg){alert(in_err_msg);}', 300);
+}
+
+function nextMsg(){
+	parent.frames['mainFrame'].nextMessage();
+}
+
+function prevMsg(){
+	parent.frames['mainFrame'].prevMessage();
+}
+
+function clearNotifyMsg(){
+	$('cathay_common_msgBoard').update()
+}
+
+function showNotifyMsg(msgObj){
+	var msg = msgObj['returnMessage'];
+	var msgCode = msgObj['returnCode'];
+	if(msgObj){
+		msg = msgObj['returnMessage'];
+		msgCode = msgObj['returnCode'];
+	}else{
+		msg = '';
+		msgCode = 0;
+	}
+
+	var msgBoard = $('cathay_common_msgBoard').update();
+
+	var checkDisplayType = function(type){
+	    switch(type){
+	    	case "E": return "textError";
+	        case "N": return "textNotify";
+	        case "W":
+	        default: return "textWarning";
+	    }
+	}
+
+	if(msgCode!=0){
+		msgBoard.writeAttribute('className', checkDisplayType("E"));
+		msgBoard.update('<font color="red">'+msg+'</font>');
+	}else{
+		msgBoard.writeAttribute('className', checkDisplayType("N"));
+		msgBoard.update(msg);
+	}
+}
+</script>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	<table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		    <td width="4" background="../../../images/CM/skeletons/border_01.gif"><img src="../../../images/CM/skeletons/border_01.gif" width="4" height="4"></td>
+		    <td valign="top" bgcolor="#F0FBC6">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0"  background="../../../images/CM/skeletons/border_03.gif">
+					<tr>
+						<td height="4"><img src="../../../images/CM/skeletons/border_03.gif" width="12" height="4"></td>
+					</tr>
+				</table>
+				<table width="100%" height="25" border="0" cellpadding="0" cellspacing="0" bgcolor="#C8E1A2">
+					<tr>
+						<td><div id="cathay_common_msgBoard" style='padding-left: 10px'><span class="textNotify">&nbsp;</span></div></td>
+						<td id="msgController" align="right" >
+							<input type ="button" name="prevMsgButton" class="button" value="上" onClick="javascript:prevMsg();" disabled>
+							<input type ="button" name="nextMsgButton" class="button" value="下" onClick="javascript:nextMsg();" disabled>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" background="../../../images/CM/skeletons/border_03.gif">
+		        <tr>
+		          <td height="4"><img src="../../../images/CM/skeletons/border_03.gif" width="12" height="4"></td>
+		        </tr>
+				</table>
+			</td>
+			<td width="4" background="../../../images/CM/skeletons/border_02.gif"><img src="../../../images/CM/skeletons/border_02.gif" width="4" height="4"></td>
+			<td width="5" class="tbBox"><img src="../../../images/CM/skeletons/ecblank.gif" width="4" height="4"></td>
+		</tr>
+	</table>
+</body>
+</html>

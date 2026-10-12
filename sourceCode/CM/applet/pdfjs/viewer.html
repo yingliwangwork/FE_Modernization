@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="big5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PDF.js viewer</title>
+
+    <style>
+        body{
+            font-family: 'Microsoft JhengHei', 'Meiryo', 'Arial', 'Arial Unicode MS', 'Helvetica', 'sans-serif', 'Verdana', 'Trebuchet MS','PMingLiU','MingLiU';
+            padding: 0px;
+            margin: 0px;
+            padding-top: 65px;
+            background-color: #525659;
+        }
+
+        input, button{
+            font-family: 'Microsoft JhengHei', 'Meiryo', 'Arial', 'Arial Unicode MS', 'Helvetica', 'sans-serif', 'Verdana', 'Trebuchet MS','PMingLiU','MingLiU';
+        }
+
+        #size-dect {
+            position: absolute;
+            visibility: hidden;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #size-dect.cover-active{
+            position: fixed;
+            visibility: visible;
+            background-color: rgba( 0 , 0,0,0.3);
+            font-size: 14pt;
+            text-align: center;
+            padding-top: 100px;
+            color: White;
+            z-index: 10;
+        }
+
+        #header-bar {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 0 20px;
+            background-color: #323639;
+            border-bottom: 1px solid #616161;
+            text-align: center;
+            color: white;
+            line-height: 65px;
+            box-shadow:  0px 0px 2px #333333;
+        }
+
+        #fileName{
+            float: left;
+        }
+
+        #page_num{
+            background-color: #323639;
+            background-color: transparent;
+            border: 2px solid #323639;
+            border-radius: 3px;
+            color: white;
+            text-align: right;
+            font-size: 20px;
+            padding: 4px 2px;
+            margin: -8px 2px -8px 2px;
+            width: 50px;
+        }
+
+        #page_num:hover, #page_num:focus{
+            border: 2px solid #616161;
+        }
+
+        #download{
+            float: right;
+            margin-top: 19px;
+            margin-right: 35px;
+        }
+
+        .btn{
+            background-color: #323639;
+            background-color: transparent;
+            border: 2px solid #616161;
+            border-radius: 3px;
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            padding: 0px 10px;
+            cursor: pointer;
+        }
+
+        #download:hover{
+            background-color: #FFF;
+            color: #616161;
+        }
+
+        #ctrls {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+        }
+
+        #ctrls button {
+            margin-top: 10px;
+            width: 36px;
+            height: 36px;
+            color: #616161;
+            border-radius: 18px;
+            border: none;
+            background-color: #F2F2F2;
+            line-height: 36px;
+            box-shadow:  0px 1px 2px #B1B1B1;
+            cursor: pointer;
+            font-size: 30pt;
+            padding: 0px;
+        }
+
+        #fit{
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        #fit span{
+            position: absolute;
+            font-size: 10pt;
+            font-weight: 800;
+            line-height: 18px;
+        }
+
+        #ctrls button:focus {
+            border: none;
+            background-color: #818181;
+        }
+
+        #pages-container{
+            text-align: center;
+        }
+
+        .the-page {
+            margin: 5px auto;
+            border: 1px solid #000;
+            display: block;
+        }
+
+        #msg {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding-top: 10%;
+            z-index: 20;
+            background-color: rgba( 0 , 0,0,0.3);
+            display: none;
+        }
+
+        #msg-box {
+            display: inline-block;
+            min-width: 500px;
+            max-width: 90%;
+            background-color: #494949;
+            border: 1px solid #000;
+            border-radius: 3px;
+            color: #FFF;
+            box-shadow: 0px 0px 1px #FFF;
+            padding: 5px;
+        }
+
+        #msg-box hr {
+            border: 0px solid #000;
+            border-width: 1px 0 0 0;
+            box-shadow: 0px 0px 1px #FFF;
+            margin: 10px 0;
+        }
+
+        #msg-box-title {
+            font-size: 1.2em;
+            font-weight: 150;
+        }
+
+        #msg-box-content {
+            overflow: hidden;
+            text-align: left;
+        }
+        
+    </style>
+
+    <style type="text/css" media="print">
+        BODY {display:none;visibility:hidden;}
+    </style>
+
+</head>
+
+<body>
+    <div id="size-dect">Loading...<br>Please wait a moment.</div>
+
+    <div id="header-bar">
+            <button type="button" id="download" class="btn">下載</button>    
+            <span id="fileName">test.pdf</span>
+            <span><input type="number" id="page_num" value="1" min="1"> / <span id="page_count"></span></span>
+            
+    </div>
+
+    <div id="pages-container"></div>
+
+    <div id="ctrls">
+        <button type="button" id="fit" title="依頁面大小自動調整">
+            <span style="top:3px; left:7px;">&#x2518;</span>
+            <span style="top:3px; right:7px;">&#x2514;</span>
+            <span style="bottom:3px; left:7px;">&#x2510;</span>
+            <span style="bottom:3px; right:7px;">&#x250C;</span>
+        </button><br>
+        <button type="button" id="zoomin" title="放大">&#x002B;</button><br>
+        <button type="button" id="zoomout" title="縮小">&#x2212;</button>
+    </div>
+
+
+    <div id="msg">
+        <div id="msg-box">
+            <div id="msg-box-title">Error</div>
+            <hr>
+            <div id="msg-box-content">Content</div>
+            <hr>
+            <div id="msg-box-buttons">
+                <button type="button" class="btn" id="msg-box-confirm">確定</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="build/pdf.js"></script>
+    <script>
+        // If absolute URL from the remote server is provided, configure the CORS
+        // header on that server.
+        var url = 'http://10.180.106.148:9080/ZRWeb/FileDownload?downloadFileFullPath=Wu++A79F+zECoLdQqycbRg==&downloadFileName=xUIuG7Oj5btWHVn/6dJBQg==&lts=Tx6KYuPI46ybj0D+wM9TmQQRn49T9Z6O2Vk4N4ndYvQ=&lts2=aDBtIEdkgljw1CUhv1txiQQRn49T9Z6O2Vk4N4ndYvQ=';
+
+        // Disable workers to avoid yet another cross-origin issue (workers need
+        // the URL of the script to be loaded, and dynamically loading a cross-origin
+        // script does not work).
+        // PDFJS.disableWorker = true;
+
+        // The workerSrc property shall be specified.
+        PDFJS.workerSrc = 'build/pdf.worker.js';
+
+        var sizeDect = document.getElementById('size-dect');
+        var container = document.getElementById('pages-container');
+
+        var defaultWidth = Math.min(sizeDect.offsetWidth-20 , 800);
+
+        var pdfDoc = null;
+        var zoom = defaultWidth;
+
+        var pageScrollTop = [];
+
+        var loading_cnt = 0;
+        
+        /**
+         * Get page info from document, resize canvas accordingly, and render page.
+         * @param num Page number.
+         */
+        function renderPage(num) {
+            if(!loading_cnt++){
+                sizeDect.className = "cover-active";
+            }
+            // Using promise to fetch the page
+            pdfDoc.getPage(num).then(function (page) {
+                var viewport = page.getViewport(2.0);
+                var ppn = viewport.height / viewport.width;
+                var _height = parseInt((zoom * ppn) * 100, 10) / 100;
+
+                var canvas = document.createElement('canvas');
+                canvas.className = 'the-page';
+                canvas.setAttribute('data-ppn',ppn);
+                canvas.oncontextmenu = function(e){ e.stopPropagation(); return false; };
+                canvas.style.height = _height + 'px';
+                canvas.style.width = zoom + 'px';
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                container.appendChild(canvas);
+
+                // Render PDF page into canvas context
+                var renderContext = {
+                    canvasContext: canvas.getContext('2d'),
+                    viewport: viewport
+                };
+                
+                pageScrollTop[num-1] = canvas.offsetTop;
+
+                var renderTask = page.render(renderContext);
+                renderTask.then(function () {
+                    if(!--loading_cnt){
+                        sizeDect.className = "";
+                    }
+                });
+
+            });
+
+        }
+
+        var fit_mood = false;
+        function doFit(){
+            var pages = document.getElementsByTagName('canvas');
+            if(fit_mood == "height"){
+                zoom = sizeDect.offsetWidth-20;
+                fit_mood = "width";
+            }else if(fit_mood == "width"){
+                zoom = defaultWidth;
+                fit_mood = false;
+            }else{
+                var max_ppn = 0;
+                for(var i = 0 ; i < pages.length ; i++){
+                    max_ppn = Math.max( max_ppn , parseFloat(pages[i].getAttribute('data-ppn')));
+                }
+                var _height = Math.max( 100 , sizeDect.offsetHeight - 75) ;
+                zoom = parseInt((_height / max_ppn) * 100, 10) / 100;
+                fit_mood = "height";
+            }
+            for(var i = 0 ; i < pages.length ; i++){
+                var ppn = parseFloat(pages[i].getAttribute('data-ppn'));
+                var _height = parseInt((zoom * ppn) * 100, 10) / 100;
+                pages[i].style.height = _height + 'px';
+                pages[i].style.width = zoom + 'px';
+                pageScrollTop[i] = pages[i].offsetTop;
+            }
+        }
+        document.getElementById('fit').addEventListener('click', doFit);
+
+        function doZoom(x) {
+            fit_mood = false;
+            zoom = parseInt(zoom * x * 100)/100;
+            var pages = document.getElementsByTagName('canvas');
+            for(var i = 0 ; i < pages.length ; i++){
+                var ppn = parseFloat(pages[i].getAttribute('data-ppn'));
+                var _height = parseInt((zoom * ppn) * 100, 10) / 100;
+                pages[i].style.height = _height + 'px';
+                pages[i].style.width = zoom + 'px';
+                pageScrollTop[i] = pages[i].offsetTop;
+            }
+            
+        }
+        document.getElementById('zoomin').addEventListener('click', function(e){ doZoom(1.1); });
+        document.getElementById('zoomout').addEventListener('click', function(e){ doZoom(0.9); });
+
+        var btns = document.getElementById('ctrls').getElementsByTagName('button');
+        for(var i = 0 ; i < btns.length ; i++ ){
+            btns[i].tabIndex = -1;
+            btns[i].addEventListener('focus',function(e){ setTimeout( function(){ e.target.blur(); } , 250); });
+        }
+
+
+        document.body.addEventListener('resize' , function(){ fit_mood = false; });
+
+        function resetPage(){
+            var scrollTop = window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0);
+            for(var i = 0 ;  i < pageScrollTop.length ; i++ ){
+                if(scrollTop < pageScrollTop[i]){
+                    document.getElementById('page_num').value = Math.max(1,i);
+                    return;
+                }
+            }
+        }
+
+        document.addEventListener('scroll' , resetPage);
+
+        document.getElementById('page_num').addEventListener('change' , function(e){ 
+            var val = e.target.value + "";
+            if( !val.match(/^[0-9]{1,}$/)){
+                resetPage();
+                return;
+            }
+            val = parseInt(val , 10);
+            if(val < 1 || val > pageScrollTop.length ){
+                resetPage();
+                return;
+            }
+
+            if(document.documentElement){
+                document.documentElement.scrollTop = pageScrollTop[val-1];
+            }else{
+                document.body.scrollTop = pageScrollTop[val-1];
+            }
+
+         });
+
+         document.getElementById('msg-box-confirm').addEventListener('click',function(e){
+            history.back();
+         });
+
+         document.body.oncontextmenu = function(e){ e.stopPropagation(); return false; };
+         
+       
+        /**
+         * Asynchronously downloads PDF.
+         */
+        
+        PDFJS.getDocument(url).then(function (pdfDoc_) {
+            pdfDoc = pdfDoc_;
+            for(var i = 1 ; i <= pdfDoc.numPages ; i++ ){
+                renderPage(i);
+            }
+            document.getElementById('page_count').textContent = pdfDoc.numPages;
+            document.getElementById('page_num').max = pdfDoc.numPages;
+        }).catch(function(e){
+            var c = document.getElementById('msg-box-content');
+            c.innerHTML = 'Unexpected server response: ' + e.status + '<br>Can not open the file.';
+            document.getElementById('msg').style.display = 'block';
+        });
+
+    </script>
+</body>
+
+</html>

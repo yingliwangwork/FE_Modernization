@@ -1,0 +1,202 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	text-wrap: none;
+	font-family: 'Microsoft JhengHei', 微軟正黑體, Verdana, 'Trebuchet MS', Calibri, Meiryo, 明瞭體, PMingLiU, 新細明體, MingLiU, 細明體;
+	-webkit-overflow-scrolling:touch;
+}
+
+body{
+	margin:0px !important;
+	padding:0px !important;
+	height: 50px !important;
+	overflow:hidden;
+	border-top: 3px solid rgb(37, 74, 138);
+	font-size: 10pt;
+	overflow: hidden;
+	background-color: #FFF;
+}
+iframe{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	overflow:scroll !important;
+	overflow-y:visible !important;
+	-webkit-overflow-scrolling: touch !important;
+}
+#mainTable{
+	position:absolute;
+	border-spacing:0;
+	border-collapse:collapse;
+	margin: 0px;
+	padding: 0px;
+	height:100%;
+	width:100%;
+	border-width:0px;
+
+}
+#menuDiv{
+	width: 190px;
+	height:100%;
+	max-height:100%;
+	vertical-align:top;
+    border-right: 1px solid darkgray;
+}
+#mainFrameDiv{
+	max-height:100%;
+	width:100%;
+	vertical-align:top;
+}
+#bottomFrameDiv{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	max-height: 33px;
+}
+button.show_hide{
+	position:absolute;
+	height: 27px;
+    width: 28px;
+	background-color: white;
+	cursor:pointer;
+	text-align:left;
+	border: none;
+    vertical-align: middle;
+	overflow: hidden;
+    z-index: 9999;
+}
+
+button.show_hide:hover{
+    background-color: lightgray;
+}
+
+button#closeMenuButton {
+	left : 180px;
+	top: 3px;
+    width: 20px;
+}
+
+button#closeMenuButton:before {
+	content: "《　　";
+    font-size: 18px;
+    font-weight: 900;
+}
+
+button#openMenuButton {
+	left : -4px;
+	top: 10px;
+    border: 0px solid darkgray;
+    border-width: 1px;
+    text-align: center;
+    padding-left: 3px;
+    line-height: 24px;
+    border-radius: 0px 2px 2px 0px;
+    
+}
+
+button#openMenuButton:before {
+	content: "≡";
+    font-size: 20px;
+    font-weight: 900;
+}
+
+button#openMenuButton:hover{
+    background-color: lightgray;
+}
+
+
+
+
+#menutree{
+	padding-top: 0px;
+	padding-right: 5px;
+	padding-left: 5px;
+	width : 190px;
+	max-width : 190px; 
+	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#menutree ul{
+	list-style:none;
+	margin:5px 0px;
+	padding: 0px;
+}
+
+#menutree li{
+	margin:0px;
+	padding:0px;
+}
+
+#menutree li div{
+	padding: 3px 6px;
+}
+
+#menutree li.rootItem{
+	text-align: center;
+	border-bottom: 1px dashed #333;
+	font-size: 16px;
+    padding-right: 20px;
+}
+
+#menutree li.rootItem div{
+	padding: 1px 0px;
+	margin-top: -1px;
+}
+
+#menutree li.rootItem a{
+	color: #333;
+	text-decoration: none;
+}
+
+#menutree li.rootItem a:hover{
+	color: #F60;
+}
+
+
+#menutree li.folder{
+	border: 1px solid #BBB;
+	border-radius: 3px;
+	background-color: #EDEFF0;
+	margin-top: 5px; 
+	cursor: pointer;
+}
+
+#menutree li.folder:hover {
+	background-color: #D6DADC;
+}
+
+#menutree li.folder div.open_folder {
+	background-color: #D6DADC;
+	border-bottom: 1px dashed #BBB;
+}
+
+#menutree li.folder ul {
+	background-color: #FFF;
+	padding: 10px 0px !important;
+	margin: 0px !important;
+}
+
+
+#menutree li.folder li.item{
+	padding-left: 10px;
+}
+
+#menutree li.folder li.item a{
+	color: #000;
+    line-height: 24px;
+	text-decoration:  none;
+}
+
+#menutree li.folder li.item a:hover{
+	color: #F60;
+	font-weight: bold;
+}
+
+#menutree li.folder li.item a.active{
+	color: #900;
+	font-weight: bold;
+}
+
+
+

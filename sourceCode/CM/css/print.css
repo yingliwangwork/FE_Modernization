@@ -1,0 +1,52 @@
+.non-print {
+  display: none;
+}
+
+#non-print {
+  display: none;
+}
+
+#bar1 {
+  display: none;
+}
+
+.textBlue {
+  color: #000000;
+  font-weight: bold;
+}
+
+.tbBox {
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}
+
+.tbBox2 {
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-bottom-width: 0px;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+}
+
+.tbBox2 td {
+  border: inset 1px #000000;
+}
+
+.tbBox3 {
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}
+
+.tbBox4 {
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}

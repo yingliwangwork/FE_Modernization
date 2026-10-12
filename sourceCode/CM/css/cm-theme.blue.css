@@ -1,0 +1,751 @@
+BODY {
+	scrollbar: normal !important;
+	padding: 0px;
+	margin: 0px;
+	font-size:10pt;
+	font-family: 'Verdana' 'Trebuchet MS' 'Calibri' 'Microsoft JhengHei' '微軟正黑體' 'Meiryo' '明瞭體' 'PMingLiU' '新細明體' 'MingLiU' '細明體';
+	font-weight: normal;
+	line-height: normal;
+	color: #000000;
+	background-color: #F8F8F8;
+}
+
+form{
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+a:link , a:visited {
+	color: rgb(46, 93, 172);
+	text-decoration: underline;
+}
+
+a:hover, a:active {
+	color: rgb(235, 90, 70);
+	text-decoration: underline;
+}
+
+.text10,.text13,.textError,.textWarning,.textNotify,.textGray,.textGreen,.textBlue,.textBlue2,.textBlue3,.textYellow,.textYellow2,.textRed,.textRedBold,.textBold,.subTitle,.textBox1,.textBox2,.textBox3,.textBox4,.textBox5,.textDisable,.tbBox,.tbBox2,.tbBox3,.tbBox4,.borderText,.contentsTh,.PageUI{
+	font-family: 'Verdana' 'Trebuchet MS' 'Calibri' 'Microsoft JhengHei' '微軟正黑體' 'Meiryo' '明瞭體' 'PMingLiU' '新細明體' 'MingLiU' '細明體';
+	font-size: 10pt;
+}
+
+.text10 {
+}
+
+.text13 {
+	font-size: 13pt;
+}
+
+.textError {
+	font-size: 12pt;
+	color: #FF0000;
+	font-weight: bold;
+}
+.textWarning {
+	font-size: 12pt;
+	color: #FFCC00;
+	font-weight: bold;
+}
+.textNotify {
+	font-size: 12pt;
+	color: blue;
+	font-weight: bold;
+}
+
+.textGray {
+	color: #6F6F88;
+}
+.textGreen {
+	color: #00AA00;
+}
+.textBlue {
+	background: #99CCFF;
+	color: #0066CC;
+	border: dotted 0;
+}
+.textBlue2 {
+	background: #DFEFFF;
+	color: black;
+	border: dotted 0;
+}
+.textBlue3 {
+	background: #F0F8FF;
+	color: black;
+	border: dotted 0;
+}
+.textYellow {
+	background: #EEF1A7;
+	color: black;
+	border: dotted 0;
+}
+.textYellow2 {
+	background: #FAFBE1;
+	color: black;
+	border: dotted 0;
+}
+.textRed {
+	color: #FF0000;
+}
+.textRedBold {
+	font-weight: bold;
+	color: #FF0000;
+}
+.textBold {
+	font-weight: bold;
+	line-height: 21px;
+}
+
+.textBox {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #ADC891;
+	border-right-color: #F2F9EC;
+	border-bottom-color: #F2F9EC;
+	border-left-color: #ADC891;
+	
+	
+	text-decoration: none;
+}
+.textBox2 {
+	font-size: 12px;
+	
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+}
+.textBox3 {
+	font-size: 14px;
+	
+	color: #0000FF;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-style:none;
+	background-color: #FAFBE1;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+}
+.textBox4 {
+	font-size: 12px;
+	
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+	text-align:right;
+}
+.textBox5 {
+	
+	
+	text-align: center;
+	text-decoration: none;
+	border-style:none;
+	background-color: #F0F8FF;
+}
+.textDisable {
+	font-size: 12px;
+	
+	text-decoration: none;
+	letter-spacing: 1pt;
+	background-color:transparent;
+	border:none;
+}
+
+
+.button , .button1, .buttonRed {
+	
+	background-image: none;
+	background-color: #298FCA;
+	color: #FFF;
+	border-width: 0px;
+	border-color: #026AA7;
+	border-style: solid;
+	border-radius: 3px;
+	margin: 0px 3px;
+	padding: 0px 10px;
+	vertical-align:middle;
+	height: 22px;
+	cursor: pointer;
+	
+	*height : 20px;
+	*border-width: 1px;
+	*font-family: Verdana 'Trebuchet MS' Calibri 'Microsoft JhengHei' 微軟正黑體 Meiryo 明瞭體 PMingLiU 新細明體 MingLiU 細明體;
+	*padding-top: -4px;
+}
+
+.button:hover , .button1:hover, .buttonRed:hover {
+	border-width: 0px 2px 2px 0px;
+	padding:1px 9px 0px 9px;
+}
+
+.button:active , .button1:active, .buttonRed:active {
+	border-width: 2px 0px 0px 2px;
+	padding:0px 9px 1px 9px;
+}
+
+.button:disabled , .button1:disabled, .buttonRed:disabled {
+	background-color: #EEE;
+	color: #CCC;
+	border-color: #CCC;
+	cursor: default;
+	border-width: 1px !important;
+	padding:0px 10px !important;
+}
+
+.button1 {
+	background-color: #61BD4F;
+	border-color: #519839;
+}
+.buttonRed{
+	background-color: #EB5A46;
+	border-color: #B04632;
+}
+
+.tbBox, .tbBox2 , .tbBox3, .tbBox4{
+	border: 1px solid #888;
+	border-collapse: collapse !important;
+	border-spacing: 0px;
+}
+
+.tbBox th, .tbBox2 th, .tbBox3 th, .tbBox4 th, .tbBox td, .tbBox2 td, .tbBox3 td, .tbBox4 td{
+	border: 1px solid #888;
+	padding: 2px 4px; 
+}
+
+.tbBox2 {
+	text-indent: 1pt;
+	padding: 1pt;
+	line-height: 21px;
+}
+.tbBox3 {
+	text-decoration: none;
+	height: 20px;
+}
+.tbBox4 {
+}
+
+
+
+
+
+.subTitle {
+	font-weight: bold;
+	color: #339900;
+	/* letter-spacing: 3pt; */
+	
+}
+
+.tbRed,.tbYellow0,.tbYellow,.tbYellow2,.tbYellow3,.tbBlue,.tbBlue2,.tbBlue3,.tbRec,.tbLayer{
+	
+}
+
+.tbRed {
+	border-radius: 3px;
+	background-color: #EB5A46;
+	color: #FFF;
+}
+.tbYellow0 {
+	background-color: transparent;
+	padding: 5px 10px;
+	color: #4D4D4D;
+	font-weight:  200;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.tbYellow {
+	background-color: rgb(184, 207, 234);
+	font-weight: bold;
+	color: #000;
+}
+
+.tbYellow3 {
+	background-color: #F8F8F8;
+}
+.tbYellow2 {
+	background-color: transparent;
+}
+.tbBlue {
+	background-color: #99CCFF;
+}
+.tbBlue2 {
+	background-color: #DFEFFF;
+}
+.tbBlue3 {
+	background-color: #F0F8FF;
+}
+
+.tbRec {
+	background-color: #FAFBE1;
+	
+	
+}
+.self_display_yellow{
+	background: "#FAFBE1";
+	color: black;
+	border: dotted 0;
+}
+.menuDisable {
+	
+	
+	color: #C4944D;
+	text-decoration: none;
+}
+.tbLayer {
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #003366;
+	border-bottom-color: #003366;
+	border-left-color: #003366;
+}
+.textBoxDisable {
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+	background-color: #FFFFCC;
+}
+.textBoxDisable2 {
+	font-size: 12px;
+	
+	color: #0000FF;
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+	background-color: #FFFFCC;
+}
+.textBoxDisableB {
+	font-size: 12px;
+	
+	text-decoration: none;
+	letter-spacing: 1pt;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+	background-color: #FFFFCC;
+	color: #FF0000;
+	text-align: right;
+}
+.BoxCase {
+	visibility: hidden;
+	position: absolute;
+	border-right: 2px outset;
+	padding-right: 6px;
+	border-top: 2px outset;
+	padding-left: 6px;
+	background: #e8e4dc;
+	padding-bottom: 6px;
+	border-left: 2px outset;
+	
+	padding-top: 6px;
+	border-bottom: 2px outset;
+	text-align: left            
+	font-size: 13px;
+	line-height: 17px;
+	
+	letter-spacing: 2px            
+}
+.textBoxNew {
+	font-size: 11px;
+	color: #666666;
+	background-color: #FFFFFF;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	border: 1px solid #8F9D7B;
+}
+.listType{
+	
+	font-family: "????";
+	border-top: 1px solid #999999;
+	border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	border-left: 1px solid #999999;
+}
+.print {
+  display: none;
+}
+#print {
+  display: none;
+}
+table.grid {
+    
+    border:1px solid #C7E49C;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+}
+table.grid td {
+    margin: 0px;
+    padding: 2px;
+    padding-top: 5px;
+    border:1px solid #C7E49C;
+}
+table.grid th {
+    margin: 0px;
+    padding: 2px;
+    padding-top: 5px;
+    border:1px solid #C7E49C;
+}
+/* 增加calendar.js所需的CSS，參考CXLWeb 第17版calendar部分樣式 */
+.calendarTable{
+	background-color: #444;
+	border: 3px double #CCC;
+	position: absolute;
+	z-index: 10;
+}
+.calendarTable table table{
+	border: none;
+}
+.calendarTable th {
+	margin: 0px;
+	border-collapse:collapse;
+	border:medium none #000;
+	background-color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	
+}
+.calendarTable td {
+	border-collapse:collapse;
+	border:1px solid #FFF;
+	background-color: #EEE;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+	overflow:hidden;
+	
+}
+.calendarTable .subTitle { 
+	background: #FFF; 
+	color: #000;
+	font-weight: bold;
+}
+.calendarTable .colorGray{ 
+	color:#FFF; 
+	background: #CCC;
+}
+.calendarTable .selectBlock{ 
+	background: #FAC574;
+	color:#000; 
+	border-color: #FC6;
+}
+.calendarTable .linkCursor{ cursor: pointer; }
+.calendarTable .linkCursor :hover{ font-size:16px; }
+.calendarImg{
+	background: url('../../../images/CM/calendar.gif') no-repeat;
+	display : inline-block;
+	width: 16px;
+	height: 16px;
+}
+input.disabled, input:disabled, textarea.disabled, textarea:disabled {
+	border: 1px solid #F2F2F2;
+	background-color: #F2F2F2;
+}
+input:read-only, textarea:read-only {
+	background-color: transparent;
+	border: none;
+}
+.panel {
+	clear: both;
+	display: none;
+	border: 3px solid #CCC;
+	padding: 1em;
+}
+	.panel.active-tab-body {
+		display: block;
+	}
+/* for ui/validation.js */
+input.required, textarea.required {
+	border: 1px solid #00A8E6;
+}
+.validation-failed, .m_validation-failed {
+	border: 1px solid #FF3300;
+	color: #FF3300;
+}
+.validation-passed {
+	border: 1px solid #00CC00;
+	color: #000;
+}
+.validator-failed, .m_validator-failed {
+	background: #FFB0AF;
+}
+.validator-passed {
+	border: 1px solid #3CF;
+	color: #000;
+}
+.validation-advice {
+	margin: 5px 0;
+	padding: 5px;
+	background-color: #FF3300;
+	color: #FFF;
+	font-weight: bold;
+}
+.custom-advice {
+	margin: 5px 0;
+	padding: 5px;
+	background-color: #C8AA00;
+	color: #FFF;
+	font-weight: bold;
+}
+fieldset {
+	padding: 1em;
+	margin-bottom: 0.5em;
+}
+label {
+	font-weight: bold;
+}
+.form-row {
+	clear: both;
+	padding: 0.5em;
+}
+.field-label {
+}
+.field-widget {
+}
+/* rb 的索引元件圖示 */
+.x-grid-del_icon {
+	background-image: url("/RBWeb/images/CM/icon_del.gif") !important;
+}
+.x-grid-index_icon {
+	background-image: url("/RBWeb/images/CM/gif06.gif") !important;
+}
+
+	
+	
+/* PageUI 2011-11 */
+
+.PageUI {
+	width: 100%;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	background-color: #FFF;
+}
+.titleBar {
+	background-color: #F8F8F8;
+	border-bottom: 1px solid #DDD;
+	padding: 5px 10px;
+}
+.borderTop, .borderTopLeft, .borderTopRight {
+	display: none;
+}
+
+.borderText {
+	height: 4px;
+	font-size: 8px;
+	color: #666;
+	/* letter-spacing: 3pt; */
+	margin: 0px;
+	border: none;
+}
+
+.borderText[align="right"] {
+	color: #BBB;
+	font-weight: normal;
+	/* letter-spacing: normal; */
+}
+
+
+.subTable {
+	position:relative;
+	padding:10px;
+	margin: 0px;
+	vertical-align: top;
+	
+}
+
+.subTable .overDiv {
+	overflow-x: visible;
+	overflow-y: auto;
+	padding: 0px 3px 0px 0px;
+}
+
+.contents {
+	border: none;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: #E2E4E6;
+	border-radius: 10px;
+}
+
+.contentsTh {
+	background-color:transparent;
+	line-height: 30px;
+	text-align: left;
+	padding: 10px 10px 0px 10px;
+	margin: 0px;
+	border: none;
+	font-size: 16px;
+}
+.contentsTh * {
+	color: #4D4D4D !important;
+}
+
+.contentsTd {
+	border:none;
+	padding: 0px 10px 10px 10px;
+	margin: 0px;
+}
+
+.contentDiv {
+	margin: 10px 0px;
+	padding: 5px 0px;
+	border: none;
+	border-collapse: collapse;
+	border-radius: 5px;
+	background: #FFF;
+	min-height: 20px;
+	box-shadow: #666 0px 0px 5px;
+	*border: 1px solid #666;
+}
+
+
+.contentDivTable {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+.contentDivTh {
+	background-color: transparent;
+	text-align: left;
+	padding: 5px 10px 5px 20px;
+	color: #4D4D4D;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 20px;
+	border: none;
+
+}
+.contentDivTd {
+	margin: 0px;
+	padding: 5px 10px;
+	border: none;
+	background: #FFF;
+	position:relative;
+}
+
+.contentDivTd>*{
+	border:none;
+	background-color: transparent;
+}
+
+div.tableParent {
+	border: 1px solid #888;
+}
+
+div.tableParent div.childOfTableParent{
+	
+}
+
+div.tableParent div.fixedDataArea{
+	border: none;
+	padding-right: 1px;
+}
+
+div.tableParent div.displayDataArea{
+	border: none;
+}
+
+div.tableParent div.displayDataArea *.lastOfLine{
+	border-right: none;
+}
+
+div.tableParent table.tableGrid{
+	margin: -1px;
+}
+
+div.tableParent table.tableGrid tbody {
+    background-color: #FFF;
+}
+
+div.tableParent  table.tableGrid th{
+	background-color: rgb(184, 207, 234);
+	border: 1px solid #888 !important;
+}
+
+div.tableParent  table.tableGrid td{
+	border: 1px solid #888  !important;
+}
+
+div.tableParent  table.tableGrid tr{
+	background: none;
+}
+
+div.tableParent  table.tableGrid th.sortable{
+	background-image: none;
+	border-top-left-radius: 3px;
+}
+
+
+div.tableParent  table.tableGrid tr.recordSelected{
+	background-color: #F8F8F8 !important;
+}
+
+div.tableParent  table.tableGrid tr.recordHighlight{
+	background-color: #FF0 !important;
+}
+
+div.tableParent  div.tableControl{
+	background-color: #FFF;
+	border-top: 1px solid #888;
+}
+
+div.tableParent  div.tableControl button{
+	background-color: #999;
+	border: none;
+	border-radius: 3px;
+	*border: 1px solid #666;
+}
+
+div.tableParent  div.tableControl button:hover{
+	background-color: #298FCA;
+	border-bottom: 2px solid #026AA7;
+	border-right: 2px solid #026AA7;
+}
+
+div.tableParent  div.tableControl select{
+	line-height: 22px;
+	height: 22px;
+	padding: 0px 3px;
+	border-radius: 3px;
+	border: 1px solid #888;
+}
+
+
+

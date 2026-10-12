@@ -1,0 +1,3 @@
+.sticky { background-color: #fff; position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 1000; }
+.sticky .function_bar { margin-left: 15px; margin-right: 15px; }
+.step { word-wrap: break-word; word-break: break-all; }

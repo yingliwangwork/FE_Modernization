@@ -1,0 +1,26 @@
+a {text-decoration:none}
+.TreeLink {
+	font:normal 12px "·s²Ó©úÅé";
+	text-decoration: none;
+}
+.Tree_Out {
+	height:16px;
+	padding:2 3 0 3;
+	color:#464528;
+	cursor:hand;
+	text-decoration: none;
+}
+.Tree_Over{
+	height:16px;
+	padding:2 3 0 3;
+	color:#CC0000;
+	cursor:hand;
+	text-decoration: none;
+}
+.Tree_Down{
+	height:16px;
+	padding:2 3 0 3;
+	color:#FF9900;
+	cursor:default;
+	text-decoration: none;
+}

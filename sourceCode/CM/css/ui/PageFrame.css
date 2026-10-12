@@ -1,0 +1,827 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* cathaylife website style */
+
+body{
+	background-color: white;
+}
+
+a{
+	color: rgb(30,87,153);
+	padding: 2px 5px;
+	margin: 3px;
+	text-decoration: underline;
+}
+
+a:hover{
+	color: #F40;
+	border-color: #F40;
+}
+
+a:focus{
+	color: #900;
+	border-color: #900;
+}
+
+label{
+	cursor: pointer;
+}
+
+.input{
+	font-family: 'Arial', 'Helvetica', 'sans-serif',  'Microsoft JhengHei', '微軟正黑體', 'Meiryo', '明瞭體', 'PMingLiU', '新細明體', 'MingLiU', '細明體';
+	font-size: 1.1666em;
+	line-height: 20px;
+	border:none;
+	border-bottom: 1px solid #000;
+	outline: none;
+	color: #333;
+	padding: 0px 5px;
+	margin: 4px;
+	
+}	
+
+.input:hover , .input:active , .input:focus{
+	border-bottom: 1px solid #000;
+	color: #000;
+	box-shadow: 0px 2px 2px -1px #999;
+}
+
+textarea.input{
+	padding: 5px;
+	border: 1px solid #000;
+}	
+
+textarea.input:hover , textarea.input:active , textarea.input:focus{
+	border: 1px solid #000;
+	color: #000;
+	box-shadow: 0px 0px 2px 0px #333;
+}
+
+.theme-primary .input:hover , .theme-primary .input:active ,.theme-primary .input:focus,
+.input-primary:hover , .input-primary:active , .input-primary:focus{
+	border-color:#337ab7 !important;
+}
+
+.theme-success .input:hover , .theme-success .input:active ,.theme-success .input:focus,
+.input-success:hover , .input-success:active , .input-success:focus{
+	border-color:#5cb85c !important;
+}
+
+.theme-info .input:hover , .theme-info .input:active ,.theme-info .input:focus,
+.input-info:hover , .input-info:active , .input-info:focus{
+	border-color:#5bc0de !important;
+}
+
+.theme-warning .input:hover , .theme-warning .input:active ,.theme-warning .input:focus,
+.input-warning:hover , .input-warning:active , .input-warning:focus{
+	border-color:#f0ad4e !important;
+}
+
+.theme-error .input:hover , .theme-error .input:active ,.theme-error .input:focus,
+.input-error:hover , .input-error:active , .input-error:focus{
+	border-color:#d9534f !important;
+}
+
+.input-disabled{
+	color: gray !important;
+	cursor: not-allowed;
+	border: none  !important;
+	box-shadow: none !important;
+}
+
+.button{
+	font-family: 'Arial', 'Helvetica', 'sans-serif',  'Microsoft JhengHei', '微軟正黑體', 'Meiryo', '明瞭體', 'PMingLiU', '新細明體', 'MingLiU', '細明體';
+	font-size: 1.1666em;
+	line-height: 26px;
+	letter-spacing: 1px;
+	border: 1px solid darkgray;
+	border-radius: 3px;
+	outline: none;
+	background-color: gray;
+	color: #FFF;
+	padding: 0px 8px;
+	cursor: pointer;
+	margin: 3px 4px;
+}
+
+.button:hover , .button:active , .button:focus{
+	background-color: #888;
+	border-color: #FFF;
+	color: #FFF;
+	box-shadow: 0px 0px 4px 1px #999;
+}
+
+.button:disabled {
+	background-color: #888 !important;
+	border-color: #FFF;
+	color: #FFF;
+	box-shadow: none !important;
+}
+
+.button-lg{
+	font-size: 1.3333em;
+	line-height: 30px;
+}
+
+.button-sm{
+	font-size: 0.83em;
+	line-height: 22px;
+    -webkit-transform : scale(0.83);
+}
+
+.theme-primary .button,
+.button-primary{
+	color: #FFF;
+    background-color: #337ab7;
+}
+
+.theme-primary .button:hover , .theme-primary .button:active , .theme-primary .button:focus,
+.button-primary:hover , .button-primary:active , .button-primary:focus{
+	background-color: #183854;
+	box-shadow: 0px 0px 4px 1px #337ab7;
+}
+
+.theme-success .button , .button-success{
+	background-color: #5cb85c;
+	color: #FFF;
+}
+
+.theme-success .button:hover , .theme-success .button:active , .theme-success .button:focus,
+.button-success:hover , .button-success:active , .button-success:focus{
+	background-color: #3D8A3D;
+	box-shadow: 0px 0px 4px 1px #5cb85c;
+}
+
+.theme-info .button , .button-info{
+	background-color: #5bc0de;
+	color: #FFF;
+}
+
+.theme-info .button:hover , .theme-info .button:active , .theme-info .button:focus,
+.button-info:hover , .button-info:active , .button-info:focus{
+	background-color: #289FC3;
+	box-shadow: 0px 0px 4px 1px #5bc0de;
+}
+
+.theme-warning .button , .button-warning{
+	background-color: #f0ad4e;
+	color: #FFF;
+}
+
+.theme-warning .button:hover , .theme-warning .button:active , .theme-warning .button:focus,
+.button-warning:hover , .button-warning:active , .button-warning:focus{
+	background-color: #DD8913;
+	box-shadow: 0px 0px 4px 1px #f0ad4e;
+}
+
+.theme-error .button , .button-error{
+	background-color: #d9534f;
+	color: #FFF;
+}
+
+.theme-error .button:hover , .theme-error .button:active , .theme-error .button:focus,
+.button-error:hover , .button-error:active , .button-error:focus{
+	background-color: #B42C27;
+	box-shadow: 0px 0px 4px 1px #d9534f;
+}
+
+
+.table{
+	width:100%;
+		
+}
+.table th , .table td{
+	border: 1px solid darkgray;
+	text-align: left;
+	padding: 3px 6px;
+}
+
+.table thead th , .table thead td{
+	text-align: center;
+	background-color:#0069D1;
+	color: #FFF;
+	font-weight: bold;	
+}
+
+.table tfoot th , .table tfoot td{
+	text-align: center;
+	background-color:#B3D9FF;
+	font-weight: normal;
+}
+
+.table .darker{
+	background-color:#E5F3FF;
+}
+
+.table .itemName{
+	background-color:#E5F3FF;
+	text-align: right;
+	font-weight: bold;	
+}
+
+.text-left, .text-left td, .text-left th, .text-left span, .text-left div{
+	text-align: left !important;
+	vertical-align: middle;
+}
+
+.text-right, .text-right td, .text-right th, .text-right span, .text-right div{
+	text-align: right !important;
+	vertical-align: middle;
+}
+
+.text-center, .text-center td, .text-center th, .text-center span, .text-center div{
+	text-align: center !important;
+	vertical-align: middle;
+}
+
+.text-sm{
+	font-size: 0.83em;
+	-webkit-transform : scale(0.83);
+}
+
+.text-lg{
+	font-size: 1.3333em;
+}
+
+.text-primary{
+	color: #337ab7;
+}
+
+.text-success{
+	color: #5cb85c;
+}
+
+.text-info{
+	color: #5bc0de;
+}
+
+.text-warning{
+	color: #f0ad4e;
+}
+
+.text-danger, .text-error{
+	color: #d9534f;
+}
+
+.text-bold{
+	font-weight: bold;
+}
+
+.m_validator-failed{
+	border-color: #d9534f !important;
+	box-shadow: #d9534f 1px 1px 3px 1px;
+}
+
+
+/* PageUI.js styles */
+html{
+	font-size: 0.75em; 
+	font-family: 'Arial', 'Helvetica', 'sans-serif',  'Microsoft JhengHei', '微軟正黑體', 'Meiryo', '明瞭體', 'PMingLiU', '新細明體', 'MingLiU', '細明體';
+}
+
+body{
+	padding-top: 28px;
+}
+
+body.pageFrame-noFrame{
+	padding-top: 0px;
+	margin-top: -10px;
+}
+
+body.pageFrame-noFrame .pageFrame-content-block{
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+#pageFrame-hidden-content{
+	display: none;
+}
+
+#pageFrame-nav{
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	background-color: #FFF;
+	border-bottom: 1px solid darkgray;
+	font-size: 1.1666rem;
+	line-height: 26px;
+	vertical-align: middle;
+	z-index:99;
+}
+
+.pageFrame-nav-code{
+	color: #666;
+}
+
+.pageFrame-nav-left{
+	padding-left: 15px;
+}
+
+.pageFrame-nav-right{
+	float: right;
+	padding-right: 15px;
+}
+
+.pageFrame-nav-block{
+	display: inline-block;
+}
+
+.pageFrame-nav-marker{
+	padding: 0px 7px;
+	color: darkgray;
+	cursor: default;
+}
+
+.pageFrame-nav-title{
+	font-weight: bold;
+	/* letter-spacing: 3px; */
+	cursor: default;
+}
+
+#fontSizeChange{
+	position: relative;
+	padding: 0px 4px 0px 0px;
+	margin:0px;
+	line-height: 23px;
+}
+
+#fontSizeChangeTitle{
+	position: absolute;
+	right: 100%;
+	height:16px;
+	line-height: 22px;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	padding-right: 4px;
+	display: none;
+	white-space: nowrap;
+}
+
+#fontSizeChange:hover #fontSizeChangeTitle{
+	display: inline-block;
+}
+
+.pageFrame-nav-button{
+	display: inline-block;
+	height:16px;
+	width:16px;
+	line-height: 16px;
+	padding:0px;
+	vertical-align: middle;
+	text-align: center;
+	letter-spacing: 0px;
+	margin: 4px 4px 0px 0px;
+	background: #EEE !important;
+	border-color: #EEE !important;
+	box-shadow: none !important;
+	color: #999 !important;
+	font-size: 12px;
+}
+
+.pageFrame-nav-button.active,
+.pageFrame-nav-button:hover, 
+.pageFrame-nav-button:active, 
+.pageFrame-nav-button:focus{
+	background: #CCC !important;
+	border-color: #999 !important;
+	color: #333 !important;
+}
+/*
+#font-sm.pageFrame-nav-button{
+	font-size: 1rem;
+}
+
+#font-md.pageFrame-nav-button{
+	font-size: 1.25rem;
+}
+
+#font-lg.pageFrame-nav-button{
+	font-size: 1.5rem;
+}
+*/
+#pageFrame-back-top{
+	display: block;
+	_display : none;
+    position: fixed;
+    font-size: 0.83rem;
+	bottom: 5px;
+	right: 5px;
+	line-height: 20px;
+	height: 20px;
+	width: 20px;
+	padding:0px;
+	margin:0px;
+	letter-spacing: 0px;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.pageFrame-content-hidden{
+	display:none !important;
+}
+
+.pageFrame-content-block{
+	margin: 10px;
+	border-collapse: collapse;
+}
+
+.pageFrame-content-block-header{
+	height: 30px;
+	border: 1px solid darkgray;
+	border-radius: 5px 5px 0px 0px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,1e5799+100 */
+	background-color: rgb(30,87,153); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkYjllOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZTU3OTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(125,185,232,1) 0%, rgba(30,87,153,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(30,87,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(125,185,232,1) 0%,rgba(30,87,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); /* IE6-8 */
+
+	padding: 0px 10px;
+}
+
+.pageFrame-content-block-title{
+	display: inline-block;
+	color: white;
+	font-weight: bold; 
+	font-size: 1.5em;
+	/* letter-spacing: 3px; */
+	line-height: 30px;
+	vertical-align: middle;
+	
+}
+
+.pageFrame-content-block-buttons{
+	display: inline-block;
+	float: right;
+}
+
+.pageFrame-content-block-buttons .button{
+	background-color: transparent;
+	border-color: #FFF;
+	color: #FFF;
+	font-weight: bold;
+	line-height: 22px;
+}
+
+.pageFrame-content-block-buttons .button:hover,
+.pageFrame-content-block-buttons .button:active, 
+.pageFrame-content-block-buttons .button:focus {
+	background-color: #FFF;
+	color: rgb(30,87,153);
+	border-color: none;
+	box-shadow: 0px 0px 2px 1px rgb(30,87,153) inset;
+}
+
+.pageFrame-content-block-body{
+	border: 1px solid darkgray;
+	border-top: none;
+	border-radius: 0px 0px 5px 5px;
+	background-color: #EEE;	
+	margin: 0px;
+	padding: 1px;
+}
+
+.pageFrame-content-block-noHeader .pageFrame-content-block-body{
+	border-top: 1px solid darkgray;
+	border-radius: 5px;
+}
+
+.pageFrame-content-block-noOutter .pageFrame-content-block-body,
+.pageFrame-content-block-noOutter .pageFrame-content-block-detail{
+	border-width: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.pageFrame-content-close .pageFrame-content-block-header{
+	border-radius: 5px;
+	background: #999;
+}
+
+.pageFrame-content-close .pageFrame-content-block-buttons .button,
+.pageFrame-content-close .pageFrame-content-block-body{
+	display: none;
+}
+
+.pageFrame-content-block-buttons .close-btn{
+	display: inline !important;
+	letter-spacing: 0;
+}
+
+.pageFrame-content-block-detail{
+	border: 1px solid darkgray;
+	border-radius: 3px;
+	background-color: #FFF;	
+	margin: 5px;
+	border-collapse: collapse;
+}
+
+.pageFrame-content-block-detail.noBorder{
+	border-width: 0px;
+}
+
+.pageFrame-content-block-body.noPadding{
+	border-width: 0px;
+}
+
+.pageFrame-content-block-body.noPadding .pageFrame-content-block-detail{
+	border-width: 0px;
+	margin: 0px;
+}
+
+.pageFrame-content-block-detail .border-radius{
+	border-radius: 3px;
+}
+
+
+/* TableUI styles override */
+.tableParent, .tableGrid{
+	font-size: 1em;
+}
+
+.tableParent div.tableTitle{
+	text-align: center;
+	background-color:#0069D1;
+	color: #FFF;
+	font-weight: bold;	
+}
+
+
+.tableParent th, .tableParent td{
+	border-color: darkgray;
+	padding: 2px 5px;
+	line-height: 200%;
+}
+
+.tableParent div.tableControl{
+	padding: 0px 5px;
+	border: 1px solid darkgray;
+    border-top: none;
+	background-color: #EEE;
+
+}
+
+.tableParent div.tableControl select{
+	height: 24px;
+	line-height:  24px;
+	border: 0px;
+	background-color: white;
+	outline: none;
+	margin: 0px;
+	/* color: white; */
+	color: #000;
+    cursor: pointer;
+}
+
+.tableParent div.tableControl button{
+	width: 25px;
+	margin: 0px;
+	border: none;
+	background-color: gray;
+    box-shadow: 0px 0px 2px 0px #000;
+    border-collapse: collapse;
+    border-radius: 20px;
+	outline: none;
+	padding: 2px 4px;
+    margin: 5px;
+	cursor: pointer;
+}
+
+.tableParent div.tableControl button:hover,
+.tableParent div.tableControl button:active,
+.tableParent div.tableControl button:focus{
+	background-color: #333;
+}
+
+.tableParent div.tableControl button.first{
+	border-right:none;
+}
+
+.tableParent div.tableControl button.last{
+	border-left:none;
+	margin-right: 10px;
+}
+
+.tableParent .oddRecordBody{
+	background-color: #FFF;
+}
+
+.tableParent .evenRecordBody{
+	background-color: #E5F3FF;
+}
+
+.tableGrid thead{
+	/* background-color:rgb(30,87,153); color:#FFF; */
+	background-color: #99CCFF;
+	color: #000;
+}
+/*
+.tableGrid thead th{
+	position: static;
+}
+
+.tableGrid thead th a{
+	border-color: #FFF;
+	color: #FFF;
+}
+*/
+.tableGrid thead th a:hover{
+	border-color: #F40;
+	color: #F40;
+}
+
+.tableGrid thead th.sortable{
+	background-image: none;
+}
+
+.tableGrid thead th.sortable:hover{
+    color: #F40;
+}
+
+
+.tableGrid tbody{
+	background-color:#FFF;
+}
+
+.tableGrid tfoot tr.count_data{
+	background-color:#CCE7FF;
+}
+
+.tableGrid tr.recordHighlight {
+	background: rgb(255,242,0) !important;
+}
+
+.tableGrid tr.recordSelected {
+	background: #f2dede !important;
+}
+
+.validation-advice{
+	margin: 2px 10px; 
+	padding: 3px 10px; 
+	border-radius: 3px; 
+	border: 1px solid red; 
+	color: red; 
+	display: inline !important;
+}
+
+.validation-advice-disabled{
+    display: none !important;
+}
+
+/* 業管單位負責人新增 2019-7 */
+span.pageSupporters{
+	font-family: 'Microsoft JhengHei', 'Meiryo', 'PMingLiU', 'MingLiU', 'Arial', 'Arial Unicode MS', 'Helvetica', 'sans-serif', 'Verdana', 'Trebuchet MS';
+	position: relative;
+	letter-spacing: 0px;
+	white-space: nowrap;
+	text-align: left;
+	*display: none;
+}
+
+span.pageSupporters button#icon-button{
+	display: inline-block;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 0px;
+    margin: 4px 0px 0px -11px;
+    background: transparent;
+	border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+	box-shadow: none !important;
+    color: #333 !important;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+span.pageSupporters button#icon-button:hover{
+	color: rgba(125,185,232,1) !important;
+	font-weight: bold;
+}
+
+
+span.pageSupporters div#personInChargeShowDiv{
+	position: absolute;
+	top: 33px;
+	right: 5px;
+	z-index: 99;
+	box-shadow: #333 0px 0px 5px;
+	background-color: #FFF;
+	border: 1px solid rgba(125,185,232,1);
+	cursor: default !important;
+	display: none;
+}
+
+span.pageSupporters.active div#personInChargeShowDiv{
+	display: block;
+}
+
+span.pageSupporters div.empty-msg{
+	padding:25px;
+	color: #666;
+}
+
+span.pageSupporters div.support-group{
+	margin: 10px;
+}
+
+span.pageSupporters h3{
+	text-align: center;
+	padding: 2px 25px;
+	margin: 5px;
+	color: rgb(30,87,153);
+	border-bottom: 2px solid rgb(30,87,153);
+	border-collapse: collapse;
+}
+
+span.pageSupporters div.supporter{
+	margin: 5px;
+	padding: 5px;
+	border-collapse: collapse;
+	border-radius: 3px;
+	background-color: #EEF1A7;
+	letter-spacing: 1px;
+	color: #666;
+}
+
+span.pageSupporters div.supporter-div{
+	padding-bottom: 3px;
+}
+
+span.pageSupporters div.supporter-name{
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #333;
+}
+
+span.pageSupporters div.supporter-ext{
+	display: inline-block;
+	padding-left: 10px;
+	letter-spacing: 2px;
+	color: #333;
+}
+
+span.pageSupporters div.supporter-memo{
+	padding-top: 3px;
+	margin-top: 3px;
+	border-top: 1px solid #FFF;
+
+}

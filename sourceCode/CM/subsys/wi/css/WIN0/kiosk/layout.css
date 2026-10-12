@@ -1,0 +1,145 @@
+body {
+	font-family: "Microsoft JhengHei", "Arial Unicode MS";
+	margin: 0 auto;	
+	width: 100%;
+}
+.layout {
+	position: relative;
+	background: #231815;
+	height: auto;
+	margin: 0 auto;
+}
+img.kiosk {
+	width: 100%;
+}
+/*background*/
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix {
+ *zoom: 1; /*For IE 6&7 only*/
+}
+.bg_title {
+	height: 3em;
+	background-color: #FFF;
+}
+.logo {
+	position: absolute;
+	padding: 0.5em 0.5em;
+	height:2em;
+}
+
+.logo img{
+    height:2em;
+    width:auto;
+}
+.cont {
+	padding-bottom: 2%;
+	background-color: #f0ebd2;
+}
+.cont2 {
+	width: 40%;
+	padding-top: 1em;
+}
+.footer1 {
+	padding: 0.3em 0px;
+	background-color: #fff000;
+}
+.footer2 {
+	font-size: 1.2em;
+	color: #FFF;
+	position: relative;
+	padding: 0.5em 1em;
+	height: 1em;
+	background-color: #4ab134;
+}
+a:visited {
+	color: #FFF;
+}
+.font {
+	width: 40%;
+	padding-top: 0.7em;
+}
+.font2 {
+	font-size: 0.8em;
+	float: left;
+}
+.font3 {
+	font-size: 0.8em;
+	float: right;
+}
+.font4 {
+	font-size: 3em;
+}
+.font5 {
+	font-size: 5em;
+}
+.font4em {
+	font-size: 4em;
+}
+.font8em {
+	font-size: 1.8em;
+}
+.fontw {
+	font-weight: bolder;
+}
+.white {
+	color: #FFF;
+}
+.yellow {
+	color: #ffed93;
+}
+.boton {
+	position: absolute;
+	width: 15%;
+	z-index: 999;
+}
+
+/*prize*/
+.prizebg {
+	background-image: url(/WIWeb/images/CM/subsys/wi/WIN0/kiosk/prize_bg1.png);
+	background-repeat: no-repeat;
+	height: 60em;
+}
+.prizecont {
+	position: relative;
+	font-family: "Microsoft JhengHei", "Arial Unicode MS";
+}
+.prizecont2 {
+	position: absolute;
+	padding: 3% 5%;
+	line-height: initial;
+}
+.prizecont3 {
+	width: 50%
+}
+.prizecont4 {
+	width: 70%;
+}
+.prizecont5 {
+	position: absolute;
+	width: 100%;
+	line-height: initial;
+}
+.prizebg2 {
+ background:images/prize_bg2.png;
+}
+.h2em {
+	margin-top: 2em;
+}
+.h10 {
+	margin-top: 10%;
+}
+.prizel {
+	position: absolute;
+	width: 45%;
+}
+.prizer {
+	position: absolute;
+	width: 60%;
+	margin: 6% 0 0 40%;
+}
+.prizer img {
+	width: 50%;
+}
