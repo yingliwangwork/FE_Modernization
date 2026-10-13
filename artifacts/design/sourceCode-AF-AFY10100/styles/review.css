@@ -1,8 +1,0 @@
-/* Review UI only; not legacy product design. */
-#review-tools { padding: 12px; background: #fff; border-top: 2px solid #555; text-align: left; }
-#review-output { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 20em; overflow: auto; }
-
-/* Keep review controls beside the center-positioned message window at the verification viewport. */
-#review-tools { width:260px; box-sizing:border-box; overflow-wrap:anywhere; }
-#review-tools input:not([type=checkbox]), #review-tools select, #review-tools button { max-width:100%; }
-#review-tools { position:relative; z-index:1001; } /* Only review controls; the center message window remains fully clickable. */
