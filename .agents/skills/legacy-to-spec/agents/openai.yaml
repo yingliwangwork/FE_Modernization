@@ -1,4 +1,4 @@
 interface:
-  display_name: "Legacy 規格翻新"
-  short_description: "依來源證據保留互動與業務意圖，產生技術中立規格及視覺原型"
-  default_prompt: "Use $legacy-to-spec jsp=<path_to_jsp> to create a single-file plan, inspect dependencies, and let me choose task types from a multi-select menu with required/optional labels before executing the selected work."
+  display_name: "Legacy 規格與高保真原型"
+  short_description: "先交 AI 可理解規格，再列案件狀態與待辦供選擇；auto=all 自動完成高保真原型"
+  default_prompt: "Use $legacy-to-spec jsp=<path_to_jsp> to first deliver an AI-readable, evidence-backed specification with traceable TODOs, then report case status and remaining tasks and wait for task selection; with auto=all, report the same milestone and automatically execute all feasible in-scope specification, review, high-fidelity prototype and verification tasks in dependency order."

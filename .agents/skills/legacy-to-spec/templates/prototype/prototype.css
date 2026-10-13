@@ -1,0 +1,20 @@
+/* Role: readability of the labelled scaffold, not product style evidence.
+   Replace these declarations with reviewed UI spec STYLE values.
+   Record STYLE -> component/selector/property/value mapping in the prototype index.
+   Source and cascade rules: references/ui/style-spec.md. */
+body {
+  margin: 2rem;
+  color: #222;
+  background: #fff;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.prototype-skeleton {
+  padding: 1rem;
+  border: 1px dashed currentColor;
+}
+
+[data-template-only="true"] {
+  overflow-wrap: anywhere;
+}

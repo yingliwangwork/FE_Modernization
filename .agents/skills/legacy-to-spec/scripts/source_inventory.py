@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Report byte facts and strict decoding results without guessing an encoding."""
+"""Inventory source bytes and candidate decoding results without changing files.
+
+- Report hashes, byte counts, physical line counts and line endings.
+- Decode each candidate strictly; validity does not select the intended encoding.
+- Evidence interpretation belongs to guides/evidence.md and JSP analysis guidance.
+"""
 import argparse
 import codecs
 import hashlib

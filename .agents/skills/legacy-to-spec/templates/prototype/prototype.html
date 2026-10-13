@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="prototype-stack" content="html-css-javascript">
+  <meta name="reviewed-spec-version" content="{{reviewed-spec-version}}">
+  <meta name="source-evidence" content="{{E-IDs-and-history-evidence-location}}">
+  <title>Prototype scaffold — 尚未建立產品行為</title>
+  <link rel="stylesheet" href="prototype.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body>
+  <header class="scaffold-notice" data-template-only="true">
+    <h1>原型骨架，不是已完成產品</h1>
+    <p>此範本只提供本機實作骨架；高保真畫面及互動須依已審閱規格建立。</p>
+    <p>填寫規則見 guides/customization.md，UI 對照見 references/ui/writing-rules.md。</p>
+  </header>
+  <!-- Replace IDs from reviewed specs, not from invented product defaults.
+       Genuine controls use data-ui-id and data-flow-id; state changes update
+       data-state-id. Remove this labelled scaffold when implementing the view. -->
+  <main class="prototype-skeleton" aria-labelledby="skeleton-label"
+    data-template-only="true" data-scope-id="{{scope-id}}"
+    data-screen-id="{{SCR-ID}}" data-ui-id="{{UI-ID}}"
+    data-flow-id="{{FLOW-ID}}" data-state-id="{{ST-ID}}">
+    <h2 id="skeleton-label">畫面標籤佔位：{{reviewed-screen-label}}</h2>
+    <p>規格：{{reviewed-spec-path-and-version}}；來源：{{E-ID}}。</p>
+    <p>STYLE 契約以 UI spec 為準；實作映射留原型索引，CSS 骨架值不是產品樣式證據。</p>
+    <p>未知行為：{{TODO-ID-and-specific-gap}}。ID、區塊、文案與資料須由已審閱規格填入。</p>
+  </main>
+  <footer data-template-only="true">
+    <p>此區是模板說明，實作時移除；產品 UI、審閱工具與實測紀錄分開保存。</p>
+  </footer>
+</body>
+</html>
