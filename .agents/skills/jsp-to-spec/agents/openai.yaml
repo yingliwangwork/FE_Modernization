@@ -1,0 +1,5 @@
+interface:
+  display_name: "JSP to Spec"
+  short_description: "將單一 JSP 轉為技術中立系統設計規格與逐狀態靜態 HTML"
+policy:
+  allow_implicit_invocation: false

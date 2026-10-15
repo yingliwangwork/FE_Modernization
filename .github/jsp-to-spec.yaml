@@ -1,0 +1,8 @@
+# 路徑相對於專案根目錄；也可填入既有來源的絕對路徑。
+# 在此固定設定位置，呼叫 skill 時只傳 jsp。
+source_roots:
+  - "."
+sot_roots:
+  - ".agents/docs"
+  - ".github/docs"
+output_root: ".agents/docs"

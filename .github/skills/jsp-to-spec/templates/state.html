@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{頁面名稱}} — {{狀態ID}} {{狀態名稱}}</title>
+  <style>
+    body { margin: 0; color: #20262e; background: #f5f6f8; font: 16px/1.6 system-ui, sans-serif; }
+    main { max-width: 64rem; margin: 2rem auto; padding: 1.5rem; background: white; }
+    .spec-note { padding: .75rem 1rem; border: 1px solid #98a3b2; background: #f1f4f8; }
+    .suspending-point { padding: .75rem; border: 1px dashed #8b6300; background: #fff8df; }
+    label { display: block; margin-top: 1rem; }
+    input, select, button { font: inherit; padding: .4rem .6rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { text-align: left; border: 1px solid #bbc3ce; padding: .5rem; }
+    :focus-visible { outline: 3px solid #235fbd; outline-offset: 2px; }
+  </style>
+</head>
+<body data-state-id="{{狀態ID}}">
+  <main>
+    <aside class="spec-note" aria-label="規格註記">
+      {{狀態ID}} {{狀態名稱}}。視覺示例資料，非 SOT；固定畫面不執行業務操作。
+    </aside>
+    <!-- 製作時以來源支持的區域、文案、固定欄位值與完整資料列取代下方內容。
+         交付前必須展開全部佔位內容；沒有未決項目時移除 suspending-point 區塊。
+         原始可提交操作在視覺規格以 type="button" 呈現。 -->
+    <h1>{{頁面標題}}</h1>
+    <section aria-label="{{區域名稱}}">{{該狀態的完整固定內容}}</section>
+    <aside class="suspending-point">{{SP-ID}}：{{未確認內容及影響}}</aside>
+  </main>
+</body>
+</html>
